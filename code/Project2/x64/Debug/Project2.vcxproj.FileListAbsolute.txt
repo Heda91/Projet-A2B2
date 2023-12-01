@@ -36,8 +36,9 @@ C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git\code\Project2\x
 C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git\code\Project2\x64\Debug\Project2.ModifCommand.resources
 C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git\code\Project2\x64\Debug\Project2.ModifPersonnel.resources
 C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git\code\Project2\x64\Debug\Project2.AddClient.resources
-<<<<<<< HEAD
+C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git\code\Project2\x64\Debug\Project2.AddAdress.resources
 C:\cours\A2\bloc 2 (POO)\projet\code\Project2\x64\Debug\Project2.vcxproj.AssemblyReference.cache
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\x64\Debug\Project2.AddAdress.resources
 C:\cours\A2\bloc 2 (POO)\projet\code\Project2\x64\Debug\Project2.AddClient.resources
 C:\cours\A2\bloc 2 (POO)\projet\code\Project2\x64\Debug\Project2.AddPersonnel.resources
 C:\cours\A2\bloc 2 (POO)\projet\code\Project2\x64\Debug\Project2.Commandes.resources
@@ -50,6 +51,3 @@ C:\cours\A2\bloc 2 (POO)\projet\code\Project2\x64\Debug\Project2.Client.resource
 C:\cours\A2\bloc 2 (POO)\projet\code\Project2\x64\Debug\Project2.Statistiques.resources
 C:\cours\A2\bloc 2 (POO)\projet\code\Project2\x64\Debug\Project2.Stock.resources
 C:\cours\A2\bloc 2 (POO)\projet\code\Project2\x64\Debug\Project2.vcxproj.GenerateResource.cache
-=======
-C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git\code\Project2\x64\Debug\Project2.AddAdress.resources
->>>>>>> 3ae675af2ea17ef0ff78ec83fee6e235a9a2fc7c
