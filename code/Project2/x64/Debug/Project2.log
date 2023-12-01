@@ -1,2 +1,21 @@
-﻿  Project2.vcxproj -> C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git\code\x64\Debug\Project2.exe
-C:\Program Files\Microsoft Visual Studio\2022\Enterprise\MSBuild\Current\Bin\amd64\Microsoft.Common.CurrentVersion.targets(5476,5): error MSB3541: Files comporte la valeur non valide "<<<<<<< HEAD". Caractères non conformes dans le chemin d'accès.
+﻿  AddAdress.cpp
+  BDD.cpp
+  Commandes.cpp
+  main.cpp
+  ModifClient.cpp
+  ModifPersonnel.cpp
+  ModifCommand.cpp
+  ModifStock.cpp
+  MyForm.cpp
+  Personnel.cpp
+  Client.cpp
+  Statistiques.cpp
+  Stock.cpp
+  ViewClient.cpp
+  ViewCommand.cpp
+  ViewPersonnel.cpp
+  ViewStock.cpp
+  .NETFramework,Version=v4.8.AssemblyAttributes.cpp
+  Génération de code en cours...
+  AddAdress.obj : module MSIL détecté ; liens incrémentiels désactivés pour MSIL ; édition de liens complète en cours
+  Project2.vcxproj -> C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git\code\x64\Debug\Project2.exe
