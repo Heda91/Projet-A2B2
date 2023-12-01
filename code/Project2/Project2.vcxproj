@@ -121,19 +121,42 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="AddAdress.cpp" />
+    <ClCompile Include="AddClient.cpp" />
+    <ClCompile Include="AddCommand.cpp" />
     <ClCompile Include="AddPersonnel.cpp" />
+    <ClCompile Include="AddStock.cpp" />
     <ClCompile Include="BDD.cpp" />
     <ClCompile Include="Commandes.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="ModifClient.cpp" />
     <ClCompile Include="ModifPersonnel.cpp" />
+    <ClCompile Include="ModifCommand.cpp" />
+    <ClCompile Include="ModifStock.cpp" />
     <ClCompile Include="MyForm.cpp" />
-    <ClCompile Include="MyForm1.cpp" />
-    <ClCompile Include="MyForm2.cpp" />
+    <ClCompile Include="Personnel.cpp" />
+    <ClCompile Include="Client.cpp" />
     <ClCompile Include="Statistiques.cpp" />
     <ClCompile Include="Stock.cpp" />
+    <ClCompile Include="ViewClient.cpp" />
+    <ClCompile Include="ViewCommand.cpp" />
+    <ClCompile Include="ViewPersonnel.cpp" />
+    <ClCompile Include="ViewStock.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AddAdress.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="AddClient.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="AddCommand.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="AddPersonnel.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="AddStock.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="BDD.h" />
@@ -141,22 +164,43 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="main.h" />
+    <ClInclude Include="ModifClient.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="ModifPersonnel.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="ModifCommand.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="ModifStock.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="MyForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="MyForm1.h">
+    <ClInclude Include="Personnel.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="MyForm2.h">
+    <ClInclude Include="Client.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="Statistiques.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="Stock.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="ViewClient.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="ViewCommand.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="ViewPersonnel.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="ViewStock.h">
       <FileType>CppForm</FileType>
     </ClInclude>
   </ItemGroup>
@@ -167,14 +211,23 @@
     <EmbeddedResource Include="Commandes.resx">
       <DependentUpon>Commandes.h</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ModifClient.resx">
+      <DependentUpon>ModifClient.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModifCommand.resx">
+      <DependentUpon>ModifCommand.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModifPersonnel.resx">
+      <DependentUpon>ModifPersonnel.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MyForm.resx">
       <DependentUpon>MyForm.h</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MyForm1.resx">
-      <DependentUpon>MyForm1.h</DependentUpon>
+    <EmbeddedResource Include="Personnel.resx">
+      <DependentUpon>Personnel.h</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MyForm2.resx">
-      <DependentUpon>MyForm2.h</DependentUpon>
+    <EmbeddedResource Include="Client.resx">
+      <DependentUpon>Client.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Statistiques.resx">
       <DependentUpon>Statistiques.h</DependentUpon>

@@ -1,7 +1,7 @@
 #pragma once
 #include "BDD.h"
-#include "MyForm1.h"
-#include "MyForm2.h"
+#include "Personnel.h"
+#include "Client.h"
 #include "Commandes.h"
 #include "Stock.h"
 #include "Statistiques.h"
