@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿  AddAdress.cpp
   AddClient.cpp
   AddCommand.cpp
@@ -5,6 +6,10 @@
   AddStock.cpp
   BDD.cpp
   Commandes.cpp
+=======
+﻿  Commandes.cpp
+  MyForm.cpp
+>>>>>>> 3ae675af2ea17ef0ff78ec83fee6e235a9a2fc7c
   main.cpp
   ModifClient.cpp
   ModifPersonnel.cpp

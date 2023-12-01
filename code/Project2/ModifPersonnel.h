@@ -235,7 +235,7 @@ namespace Project2 {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(681, 534);
+			this->ClientSize = System::Drawing::Size(527, 355);
 			this->Controls->Add(this->textBox4);
 			this->Controls->Add(this->label6);
 			this->Controls->Add(this->button3);

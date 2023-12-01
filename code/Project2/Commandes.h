@@ -1,5 +1,4 @@
 #pragma once
-#include "AddCommand.h"
 #include "ModifCommand.h"
 #include "ViewCommand.h"
 
@@ -141,7 +140,7 @@ private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e
 	ModifCommandF.ShowDialog();
 }
 private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
-	AddCommand AddCommandF;
+	ModifCommand AddCommandF;
 	AddCommandF.ShowDialog();
 }
 private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
