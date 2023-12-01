@@ -119,6 +119,7 @@ namespace Project2 {
 			this->dataGridView1->RowHeadersWidth = 51;
 			this->dataGridView1->Size = System::Drawing::Size(690, 417);
 			this->dataGridView1->TabIndex = 0;
+			this->dataGridView1->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &MyForm1::dataGridView1_CellContentClick);
 			// 
 			// MyForm1
 			// 
@@ -154,6 +155,9 @@ private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e
 private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
 	ViewPersonnel ViewPersonnelF;
 	ViewPersonnelF.ShowDialog();
+}
+private: System::Void dataGridView1_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
+
 }
 };
 }

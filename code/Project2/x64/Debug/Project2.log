@@ -1,27 +1,3 @@
-﻿  AddAdress.cpp
-  AddClient.cpp
-  AddCommand.cpp
-  AddPersonnel.cpp
-  AddStock.cpp
-  BDD.cpp
-  Commandes.cpp
-  main.cpp
-  ModifClient.cpp
-  ModifPersonnel.cpp
-  ModifCommand.cpp
-  ModifStock.cpp
-  MyForm.cpp
-  Personnel.cpp
-  Client.cpp
-  Statistiques.cpp
-  Stock.cpp
-  ViewClient.cpp
-  ViewCommand.cpp
-  ViewPersonnel.cpp
-  Generating Code...
-  Compiling...
-  ViewStock.cpp
-  .NETFramework,Version=v4.8.AssemblyAttributes.cpp
-  Generating Code...
+﻿  main.cpp
   AddAdress.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
   Project2.vcxproj -> C:\cours\A2\bloc 2 (POO)\projet\code\x64\Debug\Project2.exe
