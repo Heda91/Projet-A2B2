@@ -50,7 +50,7 @@ namespace Project2 {
 
 
 	private: System::Windows::Forms::Button^ button1;
-	private: System::Windows::Forms::Button^ button5;
+
 	private: System::Windows::Forms::Button^ button2;
 	private: System::Windows::Forms::Button^ button3;
 	private: System::Windows::Forms::Button^ button4;
@@ -76,7 +76,6 @@ namespace Project2 {
 		void InitializeComponent(void)
 		{
 			this->button1 = (gcnew System::Windows::Forms::Button());
-			this->button5 = (gcnew System::Windows::Forms::Button());
 			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->button3 = (gcnew System::Windows::Forms::Button());
 			this->button4 = (gcnew System::Windows::Forms::Button());
@@ -85,31 +84,21 @@ namespace Project2 {
 			// 
 			// button1
 			// 
-			this->button1->Location = System::Drawing::Point(100, 34);
-			this->button1->Margin = System::Windows::Forms::Padding(2);
+			this->button1->Location = System::Drawing::Point(133, 42);
+			this->button1->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(216, 44);
+			this->button1->Size = System::Drawing::Size(288, 54);
 			this->button1->TabIndex = 2;
 			this->button1->Text = L"Personnel";
 			this->button1->UseVisualStyleBackColor = true;
 			this->button1->Click += gcnew System::EventHandler(this, &MyForm::button1_Click);
 			// 
-			// button5
-			// 
-			this->button5->Location = System::Drawing::Point(671, 0);
-			this->button5->Margin = System::Windows::Forms::Padding(2);
-			this->button5->Name = L"button5";
-			this->button5->Size = System::Drawing::Size(56, 19);
-			this->button5->TabIndex = 6;
-			this->button5->Text = L"button5";
-			this->button5->UseVisualStyleBackColor = true;
-			// 
 			// button2
 			// 
-			this->button2->Location = System::Drawing::Point(100, 92);
-			this->button2->Margin = System::Windows::Forms::Padding(2);
+			this->button2->Location = System::Drawing::Point(133, 113);
+			this->button2->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(216, 43);
+			this->button2->Size = System::Drawing::Size(288, 53);
 			this->button2->TabIndex = 7;
 			this->button2->Text = L"Clients";
 			this->button2->UseVisualStyleBackColor = true;
@@ -117,10 +106,10 @@ namespace Project2 {
 			// 
 			// button3
 			// 
-			this->button3->Location = System::Drawing::Point(100, 154);
-			this->button3->Margin = System::Windows::Forms::Padding(2);
+			this->button3->Location = System::Drawing::Point(133, 190);
+			this->button3->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->button3->Name = L"button3";
-			this->button3->Size = System::Drawing::Size(216, 44);
+			this->button3->Size = System::Drawing::Size(288, 54);
 			this->button3->TabIndex = 8;
 			this->button3->Text = L"Commandes";
 			this->button3->UseVisualStyleBackColor = true;
@@ -128,10 +117,10 @@ namespace Project2 {
 			// 
 			// button4
 			// 
-			this->button4->Location = System::Drawing::Point(100, 224);
-			this->button4->Margin = System::Windows::Forms::Padding(2);
+			this->button4->Location = System::Drawing::Point(133, 276);
+			this->button4->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->button4->Name = L"button4";
-			this->button4->Size = System::Drawing::Size(216, 40);
+			this->button4->Size = System::Drawing::Size(288, 49);
 			this->button4->TabIndex = 9;
 			this->button4->Text = L"Stock";
 			this->button4->UseVisualStyleBackColor = true;
@@ -139,10 +128,10 @@ namespace Project2 {
 			// 
 			// button6
 			// 
-			this->button6->Location = System::Drawing::Point(100, 287);
-			this->button6->Margin = System::Windows::Forms::Padding(2);
+			this->button6->Location = System::Drawing::Point(133, 353);
+			this->button6->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->button6->Name = L"button6";
-			this->button6->Size = System::Drawing::Size(216, 41);
+			this->button6->Size = System::Drawing::Size(288, 50);
 			this->button6->TabIndex = 10;
 			this->button6->Text = L"Statistiques";
 			this->button6->UseVisualStyleBackColor = true;
@@ -150,15 +139,15 @@ namespace Project2 {
 			// 
 			// MyForm
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
+			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(444, 368);
+			this->ClientSize = System::Drawing::Size(556, 453);
 			this->Controls->Add(this->button6);
 			this->Controls->Add(this->button4);
 			this->Controls->Add(this->button3);
 			this->Controls->Add(this->button2);
-			this->Controls->Add(this->button5);
 			this->Controls->Add(this->button1);
+			this->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->Name = L"MyForm";
 			this->Text = L"MyForm";
 			this->ResumeLayout(false);

@@ -1,6 +1,3 @@
-  Project2.AddAdress.resources - Embedded, ContainedInManifestFile, 
-  Project2.AddClient.resources - Embedded, ContainedInManifestFile, 
-  Project2.AddPersonnel.resources - Embedded, ContainedInManifestFile, 
   Project2.Commandes.resources - Embedded, ContainedInManifestFile, 
   Project2.ModifClient.resources - Embedded, ContainedInManifestFile, 
   Project2.ModifCommand.resources - Embedded, ContainedInManifestFile, 
@@ -11,6 +8,9 @@
   Project2.Statistiques.resources - Embedded, ContainedInManifestFile, 
   Project2.Stock.resources - Embedded, ContainedInManifestFile, 
   Project2.ViewClient.resources - Embedded, ContainedInManifestFile, 
+  Project2.ViewCommand.resources - Embedded, ContainedInManifestFile, 
+  Project2.ViewPersonnel.resources - Embedded, ContainedInManifestFile, 
+  Project2.ViewStock.resources - Embedded, ContainedInManifestFile, 
 ImageRuntimeVersion: v4.0.30319
 Assembly Project2, Version=0.0.*, Culture=Langue indifférente (Pays indifférent): 
 	hash=SHA1, flags=PublicKey
@@ -27,18 +27,6 @@ Assembly System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=
 Assembly System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
 	hash=None, flags=None
 Class Project2.AddAdress: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
-  :System.Windows.Forms.Form
-    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
-Class Project2.AddClient: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
-  :System.Windows.Forms.Form
-    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
-Class Project2.AddCommand: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
-  :System.Windows.Forms.Form
-    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
-Class Project2.AddPersonnel: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
-  :System.Windows.Forms.Form
-    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
-Class Project2.AddStock: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
 Class BDD: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit

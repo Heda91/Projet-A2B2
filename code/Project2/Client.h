@@ -1,6 +1,5 @@
 #pragma once
 #include "ModifClient.h"
-#include "AddClient.h"
 #include "ViewClient.h"
 
 namespace Project2 {
