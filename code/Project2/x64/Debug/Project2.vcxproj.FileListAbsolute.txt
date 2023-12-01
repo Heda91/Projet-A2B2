@@ -36,3 +36,4 @@ C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git\code\Project2\x
 C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git\code\Project2\x64\Debug\Project2.ModifCommand.resources
 C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git\code\Project2\x64\Debug\Project2.ModifPersonnel.resources
 C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git\code\Project2\x64\Debug\Project2.AddClient.resources
+C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git\code\Project2\x64\Debug\Project2.AddAdress.resources

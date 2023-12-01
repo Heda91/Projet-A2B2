@@ -205,6 +205,9 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AddAdress.resx">
+      <DependentUpon>AddAdress.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddClient.resx">
       <DependentUpon>AddClient.h</DependentUpon>
     </EmbeddedResource>

@@ -1,6 +1,5 @@
 #pragma once
 #include "ModifPersonnel.h"
-#include "AddPersonnel.h"
 #include "ViewPersonnel.h"
 
 namespace Project2 {
@@ -149,7 +148,7 @@ private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e
 	ModifPersonnelF.ShowDialog();
 }
 private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
-	AddPersonnel AddPersonnelF;
+	ModifPersonnel AddPersonnelF;
 	AddPersonnelF.ShowDialog();
 }
 private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
