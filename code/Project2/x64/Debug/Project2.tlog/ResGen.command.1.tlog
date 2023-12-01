@@ -1,25 +1,4 @@
-<<<<<<< HEAD
-^C:\COURS\A2\BLOC 2 (POO)\PROJET\CODE\PROJECT2\ADDCLIENT.RESX
-C:\cours\A2\bloc 2 (POO)\projet\code\Project2\Project2.vcxproj
-^C:\COURS\A2\BLOC 2 (POO)\PROJET\CODE\PROJECT2\ADDPERSONNEL.RESX
-C:\cours\A2\bloc 2 (POO)\projet\code\Project2\Project2.vcxproj
-^C:\COURS\A2\BLOC 2 (POO)\PROJET\CODE\PROJECT2\COMMANDES.RESX
-C:\cours\A2\bloc 2 (POO)\projet\code\Project2\Project2.vcxproj
-^C:\COURS\A2\BLOC 2 (POO)\PROJET\CODE\PROJECT2\MODIFCLIENT.RESX
-C:\cours\A2\bloc 2 (POO)\projet\code\Project2\Project2.vcxproj
-^C:\COURS\A2\BLOC 2 (POO)\PROJET\CODE\PROJECT2\MODIFCOMMAND.RESX
-C:\cours\A2\bloc 2 (POO)\projet\code\Project2\Project2.vcxproj
-^C:\COURS\A2\BLOC 2 (POO)\PROJET\CODE\PROJECT2\MODIFPERSONNEL.RESX
-C:\cours\A2\bloc 2 (POO)\projet\code\Project2\Project2.vcxproj
-^C:\COURS\A2\BLOC 2 (POO)\PROJET\CODE\PROJECT2\MYFORM.RESX
-C:\cours\A2\bloc 2 (POO)\projet\code\Project2\Project2.vcxproj
-^C:\COURS\A2\BLOC 2 (POO)\PROJET\CODE\PROJECT2\PERSONNEL.RESX
-C:\cours\A2\bloc 2 (POO)\projet\code\Project2\Project2.vcxproj
-^C:\COURS\A2\BLOC 2 (POO)\PROJET\CODE\PROJECT2\CLIENT.RESX
-C:\cours\A2\bloc 2 (POO)\projet\code\Project2\Project2.vcxproj
-^C:\COURS\A2\BLOC 2 (POO)\PROJET\CODE\PROJECT2\STATISTIQUES.RESX
-C:\cours\A2\bloc 2 (POO)\projet\code\Project2\Project2.vcxproj
-^C:\COURS\A2\BLOC 2 (POO)\PROJET\CODE\PROJECT2\STOCK.RESX
+^C:\COURS\A2\BLOC 2 (POO)\PROJET\CODE\PROJECT2\ADDADRESS.RESX
 C:\cours\A2\bloc 2 (POO)\projet\code\Project2\Project2.vcxproj
 ^C:\COURS\A2\BLOC 2 (POO)\PROJET\CODE\PROJECT2\ADDCLIENT.RESX
 C:\cours\A2\bloc 2 (POO)\projet\code\Project2\Project2.vcxproj
@@ -43,53 +22,27 @@ C:\cours\A2\bloc 2 (POO)\projet\code\Project2\Project2.vcxproj
 C:\cours\A2\bloc 2 (POO)\projet\code\Project2\Project2.vcxproj
 ^C:\COURS\A2\BLOC 2 (POO)\PROJET\CODE\PROJECT2\STOCK.RESX
 C:\cours\A2\bloc 2 (POO)\projet\code\Project2\Project2.vcxproj
-=======
-^C:\USERS\ALEO5\DESKTOP\BUREAU\TRAVAIL\A2\BLOC 2 - POO\PROJET\GIT\CODE\PROJECT2\ADDADRESS.RESX
-C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git\code\Project2\Project2.vcxproj
-^C:\USERS\ALEO5\DESKTOP\BUREAU\TRAVAIL\A2\BLOC 2 - POO\PROJET\GIT\CODE\PROJECT2\ADDCLIENT.RESX
-C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git\code\Project2\Project2.vcxproj
-^C:\USERS\ALEO5\DESKTOP\BUREAU\TRAVAIL\A2\BLOC 2 - POO\PROJET\GIT\CODE\PROJECT2\ADDPERSONNEL.RESX
-C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git\code\Project2\Project2.vcxproj
-^C:\USERS\ALEO5\DESKTOP\BUREAU\TRAVAIL\A2\BLOC 2 - POO\PROJET\GIT\CODE\PROJECT2\COMMANDES.RESX
-C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git\code\Project2\Project2.vcxproj
-^C:\USERS\ALEO5\DESKTOP\BUREAU\TRAVAIL\A2\BLOC 2 - POO\PROJET\GIT\CODE\PROJECT2\MODIFCLIENT.RESX
-C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git\code\Project2\Project2.vcxproj
-^C:\USERS\ALEO5\DESKTOP\BUREAU\TRAVAIL\A2\BLOC 2 - POO\PROJET\GIT\CODE\PROJECT2\MODIFCOMMAND.RESX
-C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git\code\Project2\Project2.vcxproj
-^C:\USERS\ALEO5\DESKTOP\BUREAU\TRAVAIL\A2\BLOC 2 - POO\PROJET\GIT\CODE\PROJECT2\MODIFPERSONNEL.RESX
-C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git\code\Project2\Project2.vcxproj
-^C:\USERS\ALEO5\DESKTOP\BUREAU\TRAVAIL\A2\BLOC 2 - POO\PROJET\GIT\CODE\PROJECT2\MYFORM.RESX
-C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git\code\Project2\Project2.vcxproj
-^C:\USERS\ALEO5\DESKTOP\BUREAU\TRAVAIL\A2\BLOC 2 - POO\PROJET\GIT\CODE\PROJECT2\PERSONNEL.RESX
-C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git\code\Project2\Project2.vcxproj
-^C:\USERS\ALEO5\DESKTOP\BUREAU\TRAVAIL\A2\BLOC 2 - POO\PROJET\GIT\CODE\PROJECT2\CLIENT.RESX
-C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git\code\Project2\Project2.vcxproj
-^C:\USERS\ALEO5\DESKTOP\BUREAU\TRAVAIL\A2\BLOC 2 - POO\PROJET\GIT\CODE\PROJECT2\STATISTIQUES.RESX
-C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git\code\Project2\Project2.vcxproj
-^C:\USERS\ALEO5\DESKTOP\BUREAU\TRAVAIL\A2\BLOC 2 - POO\PROJET\GIT\CODE\PROJECT2\STOCK.RESX
-C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git\code\Project2\Project2.vcxproj
-^C:\USERS\ALEO5\DESKTOP\BUREAU\TRAVAIL\A2\BLOC 2 - POO\PROJET\GIT\CODE\PROJECT2\ADDADRESS.RESX
-C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git\code\Project2\Project2.vcxproj
-^C:\USERS\ALEO5\DESKTOP\BUREAU\TRAVAIL\A2\BLOC 2 - POO\PROJET\GIT\CODE\PROJECT2\ADDCLIENT.RESX
-C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git\code\Project2\Project2.vcxproj
-^C:\USERS\ALEO5\DESKTOP\BUREAU\TRAVAIL\A2\BLOC 2 - POO\PROJET\GIT\CODE\PROJECT2\ADDPERSONNEL.RESX
-C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git\code\Project2\Project2.vcxproj
-^C:\USERS\ALEO5\DESKTOP\BUREAU\TRAVAIL\A2\BLOC 2 - POO\PROJET\GIT\CODE\PROJECT2\COMMANDES.RESX
-C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git\code\Project2\Project2.vcxproj
-^C:\USERS\ALEO5\DESKTOP\BUREAU\TRAVAIL\A2\BLOC 2 - POO\PROJET\GIT\CODE\PROJECT2\MODIFCLIENT.RESX
-C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git\code\Project2\Project2.vcxproj
-^C:\USERS\ALEO5\DESKTOP\BUREAU\TRAVAIL\A2\BLOC 2 - POO\PROJET\GIT\CODE\PROJECT2\MODIFCOMMAND.RESX
-C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git\code\Project2\Project2.vcxproj
-^C:\USERS\ALEO5\DESKTOP\BUREAU\TRAVAIL\A2\BLOC 2 - POO\PROJET\GIT\CODE\PROJECT2\MODIFPERSONNEL.RESX
-C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git\code\Project2\Project2.vcxproj
-^C:\USERS\ALEO5\DESKTOP\BUREAU\TRAVAIL\A2\BLOC 2 - POO\PROJET\GIT\CODE\PROJECT2\MYFORM.RESX
-C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git\code\Project2\Project2.vcxproj
-^C:\USERS\ALEO5\DESKTOP\BUREAU\TRAVAIL\A2\BLOC 2 - POO\PROJET\GIT\CODE\PROJECT2\PERSONNEL.RESX
-C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git\code\Project2\Project2.vcxproj
-^C:\USERS\ALEO5\DESKTOP\BUREAU\TRAVAIL\A2\BLOC 2 - POO\PROJET\GIT\CODE\PROJECT2\CLIENT.RESX
-C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git\code\Project2\Project2.vcxproj
-^C:\USERS\ALEO5\DESKTOP\BUREAU\TRAVAIL\A2\BLOC 2 - POO\PROJET\GIT\CODE\PROJECT2\STATISTIQUES.RESX
-C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git\code\Project2\Project2.vcxproj
-^C:\USERS\ALEO5\DESKTOP\BUREAU\TRAVAIL\A2\BLOC 2 - POO\PROJET\GIT\CODE\PROJECT2\STOCK.RESX
-C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git\code\Project2\Project2.vcxproj
->>>>>>> 3ae675af2ea17ef0ff78ec83fee6e235a9a2fc7c
+^C:\COURS\A2\BLOC 2 (POO)\PROJET\CODE\PROJECT2\ADDADRESS.RESX
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\Project2.vcxproj
+^C:\COURS\A2\BLOC 2 (POO)\PROJET\CODE\PROJECT2\ADDCLIENT.RESX
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\Project2.vcxproj
+^C:\COURS\A2\BLOC 2 (POO)\PROJET\CODE\PROJECT2\ADDPERSONNEL.RESX
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\Project2.vcxproj
+^C:\COURS\A2\BLOC 2 (POO)\PROJET\CODE\PROJECT2\COMMANDES.RESX
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\Project2.vcxproj
+^C:\COURS\A2\BLOC 2 (POO)\PROJET\CODE\PROJECT2\MODIFCLIENT.RESX
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\Project2.vcxproj
+^C:\COURS\A2\BLOC 2 (POO)\PROJET\CODE\PROJECT2\MODIFCOMMAND.RESX
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\Project2.vcxproj
+^C:\COURS\A2\BLOC 2 (POO)\PROJET\CODE\PROJECT2\MODIFPERSONNEL.RESX
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\Project2.vcxproj
+^C:\COURS\A2\BLOC 2 (POO)\PROJET\CODE\PROJECT2\MYFORM.RESX
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\Project2.vcxproj
+^C:\COURS\A2\BLOC 2 (POO)\PROJET\CODE\PROJECT2\PERSONNEL.RESX
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\Project2.vcxproj
+^C:\COURS\A2\BLOC 2 (POO)\PROJET\CODE\PROJECT2\CLIENT.RESX
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\Project2.vcxproj
+^C:\COURS\A2\BLOC 2 (POO)\PROJET\CODE\PROJECT2\STATISTIQUES.RESX
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\Project2.vcxproj
+^C:\COURS\A2\BLOC 2 (POO)\PROJET\CODE\PROJECT2\STOCK.RESX
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\Project2.vcxproj
