@@ -1,6 +1,5 @@
 #pragma once
 #include "ModifStock.h"
-#include "AddStock.h"
 #include "ViewStock.h"
 
 namespace Project2 {
@@ -141,7 +140,7 @@ private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e
 	ModifStockF.ShowDialog();
 }
 private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
-	AddStock AddStockF;
+	ModifStock AddStockF;
 	AddStockF.ShowDialog();
 }
 private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
