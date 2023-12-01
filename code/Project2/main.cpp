@@ -1,5 +1,5 @@
 ﻿#include "BDD.h"
-#include "MyForm.h"
+#include "MainForm.h"
 #include "main.h"
 using namespace System;
 using namespace System::Windows::Forms;
@@ -54,7 +54,7 @@ int __clrcall WinMain(array<String^>^ args)
     System::Diagnostics::Debug::WriteLine(mabdd->executeNonQuery(query));
     Application::EnableVisualStyles();
     Application::SetCompatibleTextRenderingDefault(false);
-    Project2::MyForm monFormulaire;//ATTENTION : ici testWin est le nom du projet. Vous devez l'adapter au nom de votre projet
+    Display::MainForm monFormulaire;//ATTENTION : ici testWin est le nom du projet. Vous devez l'adapter au nom de votre projet
 
     Application::Run(% monFormulaire);
 }

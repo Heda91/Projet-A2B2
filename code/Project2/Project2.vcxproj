@@ -121,112 +121,112 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="AddAdress.cpp" />
+    <ClCompile Include="AddAdressForm.cpp" />
     <ClCompile Include="BDD.cpp" />
-    <ClCompile Include="Commandes.cpp" />
+    <ClCompile Include="CommandesForm.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="ModifClient.cpp" />
-    <ClCompile Include="ModifPersonnel.cpp" />
-    <ClCompile Include="ModifCommand.cpp" />
-    <ClCompile Include="ModifStock.cpp" />
-    <ClCompile Include="MyForm.cpp" />
-    <ClCompile Include="Personnel.cpp" />
-    <ClCompile Include="Client.cpp" />
-    <ClCompile Include="Statistiques.cpp" />
-    <ClCompile Include="Stock.cpp" />
-    <ClCompile Include="ViewClient.cpp" />
-    <ClCompile Include="ViewCommand.cpp" />
-    <ClCompile Include="ViewPersonnel.cpp" />
-    <ClCompile Include="ViewStock.cpp" />
+    <ClCompile Include="ModifClientForm.cpp" />
+    <ClCompile Include="ModifPersonnelForm.cpp" />
+    <ClCompile Include="ModifCommandForm.cpp" />
+    <ClCompile Include="ModifStockForm.cpp" />
+    <ClCompile Include="MyFormForm.cpp" />
+    <ClCompile Include="PersonnelForm.cpp" />
+    <ClCompile Include="ClientForm.cpp" />
+    <ClCompile Include="StatistiquesForm.cpp" />
+    <ClCompile Include="StockForm.cpp" />
+    <ClCompile Include="ViewClientForm.cpp" />
+    <ClCompile Include="ViewCommandForm.cpp" />
+    <ClCompile Include="ViewPersonnelForm.cpp" />
+    <ClCompile Include="ViewStockForm.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="AddAdress.h">
+    <ClInclude Include="AddAdressForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="BDD.h" />
-    <ClInclude Include="Commandes.h">
+    <ClInclude Include="CommandesForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="main.h" />
-    <ClInclude Include="ModifClient.h">
+    <ClInclude Include="ModifClientForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="ModifPersonnel.h">
+    <ClInclude Include="ModifPersonnelForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="ModifCommand.h">
+    <ClInclude Include="ModifCommandForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="ModifStock.h">
+    <ClInclude Include="ModifStockForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="MyForm.h">
+    <ClInclude Include="MainForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="Personnel.h">
+    <ClInclude Include="PersonnelForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="Client.h">
+    <ClInclude Include="ClientForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="Statistiques.h">
+    <ClInclude Include="StatistiquesForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="Stock.h">
+    <ClInclude Include="StockForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="ViewClient.h">
+    <ClInclude Include="ViewClientForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="ViewCommand.h">
+    <ClInclude Include="ViewCommandForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="ViewPersonnel.h">
+    <ClInclude Include="ViewPersonnelForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="ViewStock.h">
+    <ClInclude Include="ViewStockForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Commandes.resx">
-      <DependentUpon>Commandes.h</DependentUpon>
+    <EmbeddedResource Include="CommandesForm.resx">
+      <DependentUpon>CommandesForm.h</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ModifClient.resx">
-      <DependentUpon>ModifClient.h</DependentUpon>
+    <EmbeddedResource Include="ModifClientForm.resx">
+      <DependentUpon>ModifClientForm.h</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ModifCommand.resx">
-      <DependentUpon>ModifCommand.h</DependentUpon>
+    <EmbeddedResource Include="ModifCommandForm.resx">
+      <DependentUpon>ModifCommandForm.h</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ModifPersonnel.resx">
-      <DependentUpon>ModifPersonnel.h</DependentUpon>
+    <EmbeddedResource Include="ModifPersonnelForm.resx">
+      <DependentUpon>ModifPersonnelForm.h</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MyForm.resx">
-      <DependentUpon>MyForm.h</DependentUpon>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.h</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Personnel.resx">
-      <DependentUpon>Personnel.h</DependentUpon>
+    <EmbeddedResource Include="PersonnelForm.resx">
+      <DependentUpon>PersonnelForm.h</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Client.resx">
-      <DependentUpon>Client.h</DependentUpon>
+    <EmbeddedResource Include="ClientForm.resx">
+      <DependentUpon>ClientForm.h</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Statistiques.resx">
-      <DependentUpon>Statistiques.h</DependentUpon>
+    <EmbeddedResource Include="StatistiquesForm.resx">
+      <DependentUpon>StatistiquesForm.h</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Stock.resx">
-      <DependentUpon>Stock.h</DependentUpon>
+    <EmbeddedResource Include="StockForm.resx">
+      <DependentUpon>StockForm.h</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ViewClient.resx">
-      <DependentUpon>ViewClient.h</DependentUpon>
+    <EmbeddedResource Include="ViewClientForm.resx">
+      <DependentUpon>ViewClientForm.h</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ViewCommand.resx">
-      <DependentUpon>ViewCommand.h</DependentUpon>
+    <EmbeddedResource Include="ViewCommandForm.resx">
+      <DependentUpon>ViewCommandForm.h</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ViewPersonnel.resx">
-      <DependentUpon>ViewPersonnel.h</DependentUpon>
+    <EmbeddedResource Include="ViewPersonnelForm.resx">
+      <DependentUpon>ViewPersonnelForm.h</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ViewStock.resx">
-      <DependentUpon>ViewStock.h</DependentUpon>
+    <EmbeddedResource Include="ViewStockForm.resx">
+      <DependentUpon>ViewStockForm.h</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

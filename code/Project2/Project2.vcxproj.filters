@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="MyForm.cpp">
+    <ClCompile Include="MyFormForm.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
     <ClCompile Include="BDD.cpp">
@@ -24,51 +24,51 @@
     <ClCompile Include="main.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="Personnel.cpp">
+    <ClCompile Include="PersonnelForm.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="Client.cpp">
+    <ClCompile Include="ClientForm.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="Commandes.cpp">
+    <ClCompile Include="CommandesForm.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="Stock.cpp">
+    <ClCompile Include="StockForm.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="Statistiques.cpp">
+    <ClCompile Include="StatistiquesForm.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="ModifPersonnel.cpp">
+    <ClCompile Include="ModifPersonnelForm.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="ModifClient.cpp">
+    <ClCompile Include="ModifClientForm.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="ModifCommand.cpp">
+    <ClCompile Include="ModifCommandForm.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="ViewClient.cpp">
+    <ClCompile Include="ViewClientForm.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="ViewCommand.cpp">
+    <ClCompile Include="ViewCommandForm.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="ViewPersonnel.cpp">
+    <ClCompile Include="ViewPersonnelForm.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="ViewStock.cpp">
+    <ClCompile Include="ViewStockForm.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="ModifStock.cpp">
+    <ClCompile Include="ModifStockForm.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="AddAdress.cpp">
+    <ClCompile Include="AddAdressForm.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="MyForm.h">
+    <ClInclude Include="MainForm.h">
       <Filter>Fichiers sources</Filter>
     </ClInclude>
     <ClInclude Include="BDD.h">
@@ -77,46 +77,46 @@
     <ClInclude Include="main.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="Personnel.h">
+    <ClInclude Include="PersonnelForm.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="Client.h">
+    <ClInclude Include="ClientForm.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="Commandes.h">
+    <ClInclude Include="CommandesForm.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="Stock.h">
+    <ClInclude Include="StockForm.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="Statistiques.h">
+    <ClInclude Include="StatistiquesForm.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="ModifPersonnel.h">
+    <ClInclude Include="ModifPersonnelForm.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="ModifClient.h">
+    <ClInclude Include="ModifClientForm.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="ModifCommand.h">
+    <ClInclude Include="ModifCommandForm.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="ViewClient.h">
+    <ClInclude Include="ViewClientForm.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="ViewCommand.h">
+    <ClInclude Include="ViewCommandForm.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="ViewPersonnel.h">
+    <ClInclude Include="ViewPersonnelForm.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="ViewStock.h">
+    <ClInclude Include="ViewStockForm.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="ModifStock.h">
+    <ClInclude Include="ModifStockForm.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="AddAdress.h">
+    <ClInclude Include="AddAdressForm.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
   </ItemGroup>
