@@ -44,12 +44,16 @@ namespace Project2 {
 
 	private: System::Windows::Forms::Label^ label4;
 	private: System::Windows::Forms::ComboBox^ comboBox1;
-	private: System::Windows::Forms::Button^ button1;
-	private: System::Windows::Forms::Button^ button2;
+
+
 	private: System::Windows::Forms::ComboBox^ comboBox2;
 	private: System::Windows::Forms::Label^ label5;
-	private: System::Windows::Forms::Button^ button3;
+	private: System::Windows::Forms::Button^ button1;
+	private: System::Windows::Forms::Button^ button2;
 	private: System::Windows::Forms::Button^ button4;
+	private: System::Windows::Forms::Button^ button3;
+
+
 
 	private:
 		/// <summary>
@@ -72,12 +76,12 @@ namespace Project2 {
 			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
 			this->label4 = (gcnew System::Windows::Forms::Label());
 			this->comboBox1 = (gcnew System::Windows::Forms::ComboBox());
-			this->button1 = (gcnew System::Windows::Forms::Button());
-			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->comboBox2 = (gcnew System::Windows::Forms::ComboBox());
 			this->label5 = (gcnew System::Windows::Forms::Label());
-			this->button3 = (gcnew System::Windows::Forms::Button());
+			this->button1 = (gcnew System::Windows::Forms::Button());
+			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->button4 = (gcnew System::Windows::Forms::Button());
+			this->button3 = (gcnew System::Windows::Forms::Button());
 			this->SuspendLayout();
 			// 
 			// label1
@@ -154,24 +158,6 @@ namespace Project2 {
 			this->comboBox1->Size = System::Drawing::Size(121, 24);
 			this->comboBox1->TabIndex = 7;
 			// 
-			// button1
-			// 
-			this->button1->Location = System::Drawing::Point(442, 190);
-			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(24, 23);
-			this->button1->TabIndex = 8;
-			this->button1->Text = L"+";
-			this->button1->UseVisualStyleBackColor = true;
-			// 
-			// button2
-			// 
-			this->button2->Location = System::Drawing::Point(442, 247);
-			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(24, 23);
-			this->button2->TabIndex = 11;
-			this->button2->Text = L"+";
-			this->button2->UseVisualStyleBackColor = true;
-			// 
 			// comboBox2
 			// 
 			this->comboBox2->FormattingEnabled = true;
@@ -191,15 +177,23 @@ namespace Project2 {
 			this->label5->TabIndex = 9;
 			this->label5->Text = L"Adresse de facturation";
 			// 
-			// button3
+			// button1
 			// 
-			this->button3->Location = System::Drawing::Point(479, 247);
-			this->button3->Name = L"button3";
-			this->button3->Size = System::Drawing::Size(24, 23);
-			this->button3->TabIndex = 13;
-			this->button3->Text = L"-";
-			this->button3->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
-			this->button3->UseVisualStyleBackColor = true;
+			this->button1->Location = System::Drawing::Point(442, 190);
+			this->button1->Name = L"button1";
+			this->button1->Size = System::Drawing::Size(24, 23);
+			this->button1->TabIndex = 8;
+			this->button1->Text = L"+";
+			this->button1->UseVisualStyleBackColor = true;
+			// 
+			// button2
+			// 
+			this->button2->Location = System::Drawing::Point(442, 247);
+			this->button2->Name = L"button2";
+			this->button2->Size = System::Drawing::Size(24, 23);
+			this->button2->TabIndex = 11;
+			this->button2->Text = L"+";
+			this->button2->UseVisualStyleBackColor = true;
 			// 
 			// button4
 			// 
@@ -210,6 +204,16 @@ namespace Project2 {
 			this->button4->Text = L"-";
 			this->button4->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
 			this->button4->UseVisualStyleBackColor = true;
+			// 
+			// button3
+			// 
+			this->button3->Location = System::Drawing::Point(479, 247);
+			this->button3->Name = L"button3";
+			this->button3->Size = System::Drawing::Size(24, 23);
+			this->button3->TabIndex = 13;
+			this->button3->Text = L"-";
+			this->button3->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
+			this->button3->UseVisualStyleBackColor = true;
 			// 
 			// ModifClient
 			// 

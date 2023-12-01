@@ -122,10 +122,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AddAdress.cpp" />
-    <ClCompile Include="AddClient.cpp" />
-    <ClCompile Include="AddCommand.cpp" />
-    <ClCompile Include="AddPersonnel.cpp" />
-    <ClCompile Include="AddStock.cpp" />
     <ClCompile Include="BDD.cpp" />
     <ClCompile Include="Commandes.cpp" />
     <ClCompile Include="main.cpp" />
@@ -145,18 +141,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AddAdress.h">
-      <FileType>CppForm</FileType>
-    </ClInclude>
-    <ClInclude Include="AddClient.h">
-      <FileType>CppForm</FileType>
-    </ClInclude>
-    <ClInclude Include="AddCommand.h">
-      <FileType>CppForm</FileType>
-    </ClInclude>
-    <ClInclude Include="AddPersonnel.h">
-      <FileType>CppForm</FileType>
-    </ClInclude>
-    <ClInclude Include="AddStock.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="BDD.h" />
@@ -205,15 +189,6 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="AddAdress.resx">
-      <DependentUpon>AddAdress.h</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AddClient.resx">
-      <DependentUpon>AddClient.h</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AddPersonnel.resx">
-      <DependentUpon>AddPersonnel.h</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Commandes.resx">
       <DependentUpon>Commandes.h</DependentUpon>
     </EmbeddedResource>
@@ -240,6 +215,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Stock.resx">
       <DependentUpon>Stock.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewClient.resx">
+      <DependentUpon>ViewClient.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewCommand.resx">
+      <DependentUpon>ViewCommand.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPersonnel.resx">
+      <DependentUpon>ViewPersonnel.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewStock.resx">
+      <DependentUpon>ViewStock.h</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

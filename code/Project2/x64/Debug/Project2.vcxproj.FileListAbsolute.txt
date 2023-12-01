@@ -1,40 +1,9 @@
-C:\Users\gille\source\repos\Project2\Project2\x64\Debug\Project2.vcxproj.AssemblyReference.cache
-C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\Project 2\Project2\x64\Debug\Project2.vcxproj.AssemblyReference.cache
-C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\Project 2\Project2\x64\Debug\Project2.MyForm.resources
-C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\Project 2\Project2\x64\Debug\Project2.vcxproj.GenerateResource.cache
-C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\test git\Project2\x64\Debug\Project2.vcxproj.AssemblyReference.cache
-C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\test git\Project2\x64\Debug\Project2.MyForm.resources
-C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\test git\Project2\x64\Debug\Project2.vcxproj.GenerateResource.cache
-C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\2\winform-template\Project2\x64\Debug\Project2.vcxproj.AssemblyReference.cache
-C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\2\winform-template\Project2\x64\Debug\Project2.MyForm.resources
-C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\2\winform-template\Project2\x64\Debug\Project2.vcxproj.GenerateResource.cache
-C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\2\winform-template\Project2\x64\Debug\Project2.MyForm1.resources
-C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\2\winform-template\Project2\x64\Debug\Project2.MyForm2.resources
-C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\2\winform-template\Project2\x64\Debug\Project2.Commandes.resources
-C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\2\winform-template\Project2\x64\Debug\Project2.Statistiques.resources
-C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\2\winform-template\Project2\x64\Debug\Project2.Stock.resources
-C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\2\winform-template\Project2\x64\Debug\Project2.AddPersonnel.resources
-C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git_fork\code\Project2\x64\Debug\Project2.vcxproj.AssemblyReference.cache
-C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git_fork\code\Project2\x64\Debug\Project2.AddPersonnel.resources
-C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git_fork\code\Project2\x64\Debug\Project2.Commandes.resources
-C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git_fork\code\Project2\x64\Debug\Project2.MyForm.resources
-C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git_fork\code\Project2\x64\Debug\Project2.MyForm1.resources
-C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git_fork\code\Project2\x64\Debug\Project2.MyForm2.resources
-C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git_fork\code\Project2\x64\Debug\Project2.Statistiques.resources
-C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git_fork\code\Project2\x64\Debug\Project2.Stock.resources
-C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git_fork\code\Project2\x64\Debug\Project2.vcxproj.GenerateResource.cache
 C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git\code\Project2\x64\Debug\Project2.vcxproj.AssemblyReference.cache
-C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git\code\Project2\x64\Debug\Project2.AddPersonnel.resources
 C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git\code\Project2\x64\Debug\Project2.Commandes.resources
-C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git\code\Project2\x64\Debug\Project2.MyForm.resources
-C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git\code\Project2\x64\Debug\Project2.Statistiques.resources
-C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git\code\Project2\x64\Debug\Project2.Stock.resources
-C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git\code\Project2\x64\Debug\Project2.vcxproj.GenerateResource.cache
-C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git\code\Project2\x64\Debug\Project2.Personnel.resources
-C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git\code\Project2\x64\Debug\Project2.Client.resources
 C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git\code\Project2\x64\Debug\Project2.ModifClient.resources
 C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git\code\Project2\x64\Debug\Project2.ModifCommand.resources
 C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git\code\Project2\x64\Debug\Project2.ModifPersonnel.resources
+<<<<<<< HEAD
 C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git\code\Project2\x64\Debug\Project2.AddClient.resources
 C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git\code\Project2\x64\Debug\Project2.AddAdress.resources
 C:\cours\A2\bloc 2 (POO)\projet\code\Project2\x64\Debug\Project2.vcxproj.AssemblyReference.cache
@@ -51,3 +20,15 @@ C:\cours\A2\bloc 2 (POO)\projet\code\Project2\x64\Debug\Project2.Client.resource
 C:\cours\A2\bloc 2 (POO)\projet\code\Project2\x64\Debug\Project2.Statistiques.resources
 C:\cours\A2\bloc 2 (POO)\projet\code\Project2\x64\Debug\Project2.Stock.resources
 C:\cours\A2\bloc 2 (POO)\projet\code\Project2\x64\Debug\Project2.vcxproj.GenerateResource.cache
+=======
+C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git\code\Project2\x64\Debug\Project2.MyForm.resources
+C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git\code\Project2\x64\Debug\Project2.Personnel.resources
+C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git\code\Project2\x64\Debug\Project2.Client.resources
+C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git\code\Project2\x64\Debug\Project2.Statistiques.resources
+C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git\code\Project2\x64\Debug\Project2.Stock.resources
+C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git\code\Project2\x64\Debug\Project2.ViewClient.resources
+C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git\code\Project2\x64\Debug\Project2.ViewCommand.resources
+C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git\code\Project2\x64\Debug\Project2.ViewPersonnel.resources
+C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git\code\Project2\x64\Debug\Project2.ViewStock.resources
+C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git\code\Project2\x64\Debug\Project2.vcxproj.GenerateResource.cache
+>>>>>>> d0ceb267c630e4753f0e32839a039d077f5b22c2
