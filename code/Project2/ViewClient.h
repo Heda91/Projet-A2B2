@@ -48,11 +48,17 @@ namespace Project2 {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			this->components = gcnew System::ComponentModel::Container();
-			this->Size = System::Drawing::Size(300,300);
-			this->Text = L"ViewClient";
-			this->Padding = System::Windows::Forms::Padding(0);
+			this->SuspendLayout();
+			// 
+			// ViewClient
+			// 
+			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->ClientSize = System::Drawing::Size(511, 426);
+			this->Name = L"ViewClient";
+			this->Text = L"ViewClient";
+			this->ResumeLayout(false);
+
 		}
 #pragma endregion
 	};

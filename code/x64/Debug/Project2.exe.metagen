@@ -10,6 +10,7 @@
   Project2.Client.resources - Embedded, ContainedInManifestFile, 
   Project2.Statistiques.resources - Embedded, ContainedInManifestFile, 
   Project2.Stock.resources - Embedded, ContainedInManifestFile, 
+  Project2.ViewClient.resources - Embedded, ContainedInManifestFile, 
 ImageRuntimeVersion: v4.0.30319
 Assembly Project2, Version=0.0.*, Culture=Langue indifférente (Pays indifférent): 
 	hash=SHA1, flags=PublicKey
