@@ -12,10 +12,10 @@ namespace Project2 {
 	/// <summary>
 	/// Description résumée de ModifyCommand
 	/// </summary>
-	public ref class ModifyCommand : public System::Windows::Forms::Form
+	public ref class ModifCommand : public System::Windows::Forms::Form
 	{
 	public:
-		ModifyCommand(void)
+		ModifCommand(void)
 		{
 			InitializeComponent();
 			//
@@ -27,7 +27,7 @@ namespace Project2 {
 		/// <summary>
 		/// Nettoyage des ressources utilisées.
 		/// </summary>
-		~ModifyCommand()
+		~ModifCommand()
 		{
 			if (components)
 			{
@@ -110,7 +110,7 @@ namespace Project2 {
 			this->button4->Text = L"-";
 			this->button4->TextAlign = System::Drawing::ContentAlignment::BottomCenter;
 			this->button4->UseVisualStyleBackColor = true;
-			this->button4->Click += gcnew System::EventHandler(this, &ModifyCommand::button4_Click);
+			this->button4->Click += gcnew System::EventHandler(this, &ModifCommand::button4_Click);
 			// 
 			// label5
 			// 
@@ -122,7 +122,7 @@ namespace Project2 {
 			this->label5->Size = System::Drawing::Size(266, 29);
 			this->label5->TabIndex = 23;
 			this->label5->Text = L"Adresse de facturation";
-			this->label5->Click += gcnew System::EventHandler(this, &ModifyCommand::label5_Click);
+			this->label5->Click += gcnew System::EventHandler(this, &ModifCommand::label5_Click);
 			// 
 			// button1
 			// 
@@ -132,7 +132,7 @@ namespace Project2 {
 			this->button1->TabIndex = 22;
 			this->button1->Text = L"+";
 			this->button1->UseVisualStyleBackColor = true;
-			this->button1->Click += gcnew System::EventHandler(this, &ModifyCommand::button1_Click);
+			this->button1->Click += gcnew System::EventHandler(this, &ModifCommand::button1_Click);
 			// 
 			// label4
 			// 
@@ -144,7 +144,7 @@ namespace Project2 {
 			this->label4->Size = System::Drawing::Size(242, 29);
 			this->label4->TabIndex = 20;
 			this->label4->Text = L"Adresse de livraison";
-			this->label4->Click += gcnew System::EventHandler(this, &ModifyCommand::label4_Click);
+			this->label4->Click += gcnew System::EventHandler(this, &ModifCommand::label4_Click);
 			// 
 			// textBox2
 			// 
@@ -152,7 +152,7 @@ namespace Project2 {
 			this->textBox2->Name = L"textBox2";
 			this->textBox2->Size = System::Drawing::Size(100, 22);
 			this->textBox2->TabIndex = 18;
-			this->textBox2->TextChanged += gcnew System::EventHandler(this, &ModifyCommand::textBox2_TextChanged);
+			this->textBox2->TextChanged += gcnew System::EventHandler(this, &ModifCommand::textBox2_TextChanged);
 			// 
 			// textBox1
 			// 
@@ -160,7 +160,7 @@ namespace Project2 {
 			this->textBox1->Name = L"textBox1";
 			this->textBox1->Size = System::Drawing::Size(100, 22);
 			this->textBox1->TabIndex = 17;
-			this->textBox1->TextChanged += gcnew System::EventHandler(this, &ModifyCommand::textBox1_TextChanged);
+			this->textBox1->TextChanged += gcnew System::EventHandler(this, &ModifCommand::textBox1_TextChanged);
 			// 
 			// label2
 			// 
@@ -172,7 +172,7 @@ namespace Project2 {
 			this->label2->Size = System::Drawing::Size(109, 29);
 			this->label2->TabIndex = 15;
 			this->label2->Text = L"ID Client";
-			this->label2->Click += gcnew System::EventHandler(this, &ModifyCommand::label2_Click);
+			this->label2->Click += gcnew System::EventHandler(this, &ModifCommand::label2_Click);
 			// 
 			// label1
 			// 
@@ -184,7 +184,7 @@ namespace Project2 {
 			this->label1->Size = System::Drawing::Size(129, 29);
 			this->label1->TabIndex = 14;
 			this->label1->Text = L"Référence";
-			this->label1->Click += gcnew System::EventHandler(this, &ModifyCommand::label1_Click);
+			this->label1->Click += gcnew System::EventHandler(this, &ModifCommand::label1_Click);
 			// 
 			// textBox6
 			// 
@@ -203,7 +203,7 @@ namespace Project2 {
 			this->label6->Size = System::Drawing::Size(97, 29);
 			this->label6->TabIndex = 30;
 			this->label6->Text = L"Articles";
-			this->label6->Click += gcnew System::EventHandler(this, &ModifyCommand::label6_Click);
+			this->label6->Click += gcnew System::EventHandler(this, &ModifCommand::label6_Click);
 			// 
 			// comboBox2
 			// 
@@ -306,8 +306,8 @@ namespace Project2 {
 			this->Controls->Add(this->textBox1);
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->label1);
-			this->Name = L"ModifyCommand";
-			this->Text = L"ModifyCommand";
+			this->Name = L"ModifCommand";
+			this->Text = L"ModifCommand";
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView2))->EndInit();
 			this->ResumeLayout(false);

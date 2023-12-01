@@ -232,6 +232,7 @@ namespace Project2 {
 			this->Controls->Add(this->label1);
 			this->Name = L"ModifClient";
 			this->Text = L"ModifClient";
+			this->Load += gcnew System::EventHandler(this, &ModifClient::ModifClient_Load);
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -239,5 +240,7 @@ namespace Project2 {
 #pragma endregion
 	private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
+private: System::Void ModifClient_Load(System::Object^ sender, System::EventArgs^ e) {
+}
 };
 }

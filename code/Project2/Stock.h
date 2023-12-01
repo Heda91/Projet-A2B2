@@ -1,4 +1,7 @@
 #pragma once
+#include "ModifStock.h"
+#include "AddStock.h"
+#include "ViewStock.h"
 
 namespace Project2 {
 
@@ -64,58 +67,68 @@ namespace Project2 {
 			// 
 			// button4
 			// 
-			this->button4->Location = System::Drawing::Point(239, 2);
+			this->button4->Location = System::Drawing::Point(319, 2);
+			this->button4->Margin = System::Windows::Forms::Padding(4);
 			this->button4->Name = L"button4";
-			this->button4->Size = System::Drawing::Size(75, 23);
+			this->button4->Size = System::Drawing::Size(100, 28);
 			this->button4->TabIndex = 9;
 			this->button4->Text = L"button4";
 			this->button4->UseVisualStyleBackColor = true;
 			// 
 			// button3
 			// 
-			this->button3->Location = System::Drawing::Point(158, 2);
+			this->button3->Location = System::Drawing::Point(211, 2);
+			this->button3->Margin = System::Windows::Forms::Padding(4);
 			this->button3->Name = L"button3";
-			this->button3->Size = System::Drawing::Size(75, 23);
+			this->button3->Size = System::Drawing::Size(100, 28);
 			this->button3->TabIndex = 8;
-			this->button3->Text = L"button3";
+			this->button3->Text = L"ViewStock";
 			this->button3->UseVisualStyleBackColor = true;
+			this->button3->Click += gcnew System::EventHandler(this, &Stock::button3_Click);
 			// 
 			// button2
 			// 
-			this->button2->Location = System::Drawing::Point(77, 2);
+			this->button2->Location = System::Drawing::Point(103, 2);
+			this->button2->Margin = System::Windows::Forms::Padding(4);
 			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(75, 23);
+			this->button2->Size = System::Drawing::Size(100, 28);
 			this->button2->TabIndex = 7;
-			this->button2->Text = L"button2";
+			this->button2->Text = L"AddStock";
 			this->button2->UseVisualStyleBackColor = true;
+			this->button2->Click += gcnew System::EventHandler(this, &Stock::button2_Click);
 			// 
 			// button1
 			// 
-			this->button1->Location = System::Drawing::Point(2, 2);
+			this->button1->Location = System::Drawing::Point(3, 2);
+			this->button1->Margin = System::Windows::Forms::Padding(4);
 			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(75, 23);
+			this->button1->Size = System::Drawing::Size(100, 28);
 			this->button1->TabIndex = 6;
-			this->button1->Text = L"button1";
+			this->button1->Text = L"ModifStock";
 			this->button1->UseVisualStyleBackColor = true;
+			this->button1->Click += gcnew System::EventHandler(this, &Stock::button1_Click);
 			// 
 			// dataGridView1
 			// 
 			this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dataGridView1->Location = System::Drawing::Point(2, 31);
+			this->dataGridView1->Location = System::Drawing::Point(3, 38);
+			this->dataGridView1->Margin = System::Windows::Forms::Padding(4);
 			this->dataGridView1->Name = L"dataGridView1";
-			this->dataGridView1->Size = System::Drawing::Size(528, 342);
+			this->dataGridView1->RowHeadersWidth = 51;
+			this->dataGridView1->Size = System::Drawing::Size(704, 421);
 			this->dataGridView1->TabIndex = 5;
 			// 
 			// Stock
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
+			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(535, 376);
+			this->ClientSize = System::Drawing::Size(713, 463);
 			this->Controls->Add(this->button4);
 			this->Controls->Add(this->button3);
 			this->Controls->Add(this->button2);
 			this->Controls->Add(this->button1);
 			this->Controls->Add(this->dataGridView1);
+			this->Margin = System::Windows::Forms::Padding(4);
 			this->Name = L"Stock";
 			this->Text = L"Stock";
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
@@ -123,5 +136,17 @@ namespace Project2 {
 
 		}
 #pragma endregion
-	};
+private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+	ModifStock ModifStockF;
+	ModifStockF.ShowDialog();
+}
+private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
+	AddStock AddStockF;
+	AddStockF.ShowDialog();
+}
+private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
+	ViewStock ViewStockF;
+	ViewStockF.ShowDialog();
+}
+};
 }

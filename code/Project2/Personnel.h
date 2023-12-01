@@ -1,5 +1,7 @@
 #pragma once
 #include "ModifPersonnel.h"
+#include "AddPersonnel.h"
+#include "ViewPersonnel.h"
 
 namespace Project2 {
 
@@ -69,7 +71,7 @@ namespace Project2 {
 			// button1
 			// 
 			this->button1->Location = System::Drawing::Point(4, 6);
-			this->button1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->button1->Margin = System::Windows::Forms::Padding(4);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(100, 28);
 			this->button1->TabIndex = 1;
@@ -80,38 +82,40 @@ namespace Project2 {
 			// button2
 			// 
 			this->button2->Location = System::Drawing::Point(104, 6);
-			this->button2->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->button2->Margin = System::Windows::Forms::Padding(4);
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(100, 28);
 			this->button2->TabIndex = 2;
-			this->button2->Text = L"button2";
+			this->button2->Text = L"AddPerson";
 			this->button2->UseVisualStyleBackColor = true;
+			this->button2->Click += gcnew System::EventHandler(this, &MyForm1::button2_Click);
 			// 
 			// button3
 			// 
 			this->button3->Location = System::Drawing::Point(212, 6);
-			this->button3->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->button3->Margin = System::Windows::Forms::Padding(4);
 			this->button3->Name = L"button3";
 			this->button3->Size = System::Drawing::Size(100, 28);
 			this->button3->TabIndex = 3;
-			this->button3->Text = L"button3";
+			this->button3->Text = L"ViewPerson";
 			this->button3->UseVisualStyleBackColor = true;
+			this->button3->Click += gcnew System::EventHandler(this, &MyForm1::button3_Click);
 			// 
 			// button4
 			// 
 			this->button4->Location = System::Drawing::Point(320, 6);
-			this->button4->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->button4->Margin = System::Windows::Forms::Padding(4);
 			this->button4->Name = L"button4";
 			this->button4->Size = System::Drawing::Size(100, 28);
 			this->button4->TabIndex = 4;
-			this->button4->Text = L"button4";
+			this->button4->Text = L"DelPerson";
 			this->button4->UseVisualStyleBackColor = true;
 			// 
 			// dataGridView1
 			// 
 			this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
 			this->dataGridView1->Location = System::Drawing::Point(4, 42);
-			this->dataGridView1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->dataGridView1->Margin = System::Windows::Forms::Padding(4);
 			this->dataGridView1->Name = L"dataGridView1";
 			this->dataGridView1->RowHeadersWidth = 51;
 			this->dataGridView1->Size = System::Drawing::Size(690, 417);
@@ -127,7 +131,7 @@ namespace Project2 {
 			this->Controls->Add(this->button2);
 			this->Controls->Add(this->button1);
 			this->Controls->Add(this->dataGridView1);
-			this->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->Margin = System::Windows::Forms::Padding(4);
 			this->Name = L"MyForm1";
 			this->Text = L"Personnel";
 			this->Load += gcnew System::EventHandler(this, &MyForm1::MyForm1_Load);
@@ -141,8 +145,16 @@ namespace Project2 {
 	private: System::Void MyForm1_Load(System::Object^ sender, System::EventArgs^ e) {
 	}
 private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
-	ModifPersonnel ModifPersonnel;
-	ModifPersonnel.ShowDialog();
+	ModifPersonnel ModifPersonnelF;
+	ModifPersonnelF.ShowDialog();
+}
+private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
+	AddPersonnel AddPersonnelF;
+	AddPersonnelF.ShowDialog();
+}
+private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
+	ViewPersonnel ViewPersonnelF;
+	ViewPersonnelF.ShowDialog();
 }
 };
 }
