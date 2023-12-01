@@ -1,5 +1,27 @@
-﻿  MyForm.cpp
+﻿  AddAdress.cpp
+  AddClient.cpp
+  AddCommand.cpp
+  AddPersonnel.cpp
+  AddStock.cpp
+  BDD.cpp
+  Commandes.cpp
   main.cpp
-  Génération de code en cours...
-  AddAdress.obj : module MSIL détecté ; liens incrémentiels désactivés pour MSIL ; édition de liens complète en cours
-  Project2.vcxproj -> C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git\code\x64\Debug\Project2.exe
+  ModifClient.cpp
+  ModifPersonnel.cpp
+  ModifCommand.cpp
+  ModifStock.cpp
+  MyForm.cpp
+  Personnel.cpp
+  Client.cpp
+  Statistiques.cpp
+  Stock.cpp
+  ViewClient.cpp
+  ViewCommand.cpp
+  ViewPersonnel.cpp
+  Generating Code...
+  Compiling...
+  ViewStock.cpp
+  .NETFramework,Version=v4.8.AssemblyAttributes.cpp
+  Generating Code...
+  AddAdress.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
+  Project2.vcxproj -> C:\cours\A2\bloc 2 (POO)\projet\code\x64\Debug\Project2.exe

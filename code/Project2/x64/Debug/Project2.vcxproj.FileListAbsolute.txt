@@ -36,3 +36,16 @@ C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git\code\Project2\x
 C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git\code\Project2\x64\Debug\Project2.ModifCommand.resources
 C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git\code\Project2\x64\Debug\Project2.ModifPersonnel.resources
 C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git\code\Project2\x64\Debug\Project2.AddClient.resources
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\x64\Debug\Project2.vcxproj.AssemblyReference.cache
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\x64\Debug\Project2.AddClient.resources
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\x64\Debug\Project2.AddPersonnel.resources
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\x64\Debug\Project2.Commandes.resources
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\x64\Debug\Project2.ModifClient.resources
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\x64\Debug\Project2.ModifCommand.resources
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\x64\Debug\Project2.ModifPersonnel.resources
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\x64\Debug\Project2.MyForm.resources
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\x64\Debug\Project2.Personnel.resources
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\x64\Debug\Project2.Client.resources
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\x64\Debug\Project2.Statistiques.resources
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\x64\Debug\Project2.Stock.resources
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\x64\Debug\Project2.vcxproj.GenerateResource.cache
