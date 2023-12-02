@@ -42,9 +42,6 @@ namespace Display {
 	private: System::Windows::Forms::Button^ button3;
 	private: System::Windows::Forms::Button^ button4;
 	private: System::Windows::Forms::DataGridView^ dataGridView1;
-	protected:
-
-	protected:
 
 	private:
 		/// <summary>
@@ -145,15 +142,15 @@ namespace Display {
 	private: System::Void MyForm1_Load(System::Object^ sender, System::EventArgs^ e) {
 	}
 private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
-	ModifPersonnel ModifPersonnelF;
+	ModifPersonnelForm ModifPersonnelF;
 	ModifPersonnelF.ShowDialog();
 }
 private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
-	ModifPersonnel AddPersonnelF;
+	ModifPersonnelForm AddPersonnelF;
 	AddPersonnelF.ShowDialog();
 }
 private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
-	ViewPersonnel ViewPersonnelF;
+	ViewPersonnelForm ViewPersonnelF;
 	ViewPersonnelF.ShowDialog();
 }
 private: System::Void dataGridView1_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {

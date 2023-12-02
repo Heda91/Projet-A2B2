@@ -8,7 +8,7 @@ BDD::BDD()
     try
     {
         // Chaine de connexion
-        String^ connectString = "Data Source=127.0.0.1,1433;Initial Catalog =master;User ID=sa;Password=TestTest1!";
+        String^ connectString = "Data Source=127.0.0.1,1433;Initial Catalog =projet;User ID=sa;Password=TestTest1!";
         // Objet connection
         connection = gcnew SqlConnection(connectString);
         // Ouverture

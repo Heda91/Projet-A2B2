@@ -1,4 +1,3 @@
 .idea
 code/x64
 code/.vs
-code/Project2/x64

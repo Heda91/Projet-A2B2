@@ -37,7 +37,6 @@ namespace Display {
 			}
 		}
 	private: System::Windows::Forms::Button^ button4;
-	protected:
 	private: System::Windows::Forms::Button^ button3;
 	private: System::Windows::Forms::Button^ button2;
 	private: System::Windows::Forms::Button^ button1;
