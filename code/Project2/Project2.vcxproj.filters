@@ -30,10 +30,10 @@
     <ClCompile Include="ClientForm.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="CommandesForm.cpp">
+    <ClCompile Include="CommandForm.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="StockForm.cpp">
+    <ClCompile Include="ItemsForm.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
     <ClCompile Include="StatistiquesForm.cpp">
@@ -86,10 +86,10 @@
     <ClInclude Include="ClientForm.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="CommandesForm.h">
+    <ClInclude Include="CommandForm.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="StockForm.h">
+    <ClInclude Include="ItemsForm.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
     <ClInclude Include="StatistiquesForm.h">
@@ -113,10 +113,10 @@
     <ClInclude Include="ViewPersonnelForm.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="ViewStockForm.h">
+    <ClInclude Include="ViewItemsForm.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="ModifStockForm.h">
+    <ClInclude Include="ModifItemsForm.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
     <ClInclude Include="AddAdressForm.h">

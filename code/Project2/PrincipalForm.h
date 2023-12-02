@@ -6,7 +6,7 @@ namespace Display{
 	public ref class PrincipalForm : public System::Windows::Forms::Form
 	{
 	public:
-		PrincipalForm(String^ form_name) : form_name(form_name) {};
+		PrincipalForm(String^ form_name) : form_name(form_name) { this->InitializeComponent(); };
 	protected:
 		~PrincipalForm() { if (components) { delete components; } };
 		System::Windows::Forms::Button^ button_add;

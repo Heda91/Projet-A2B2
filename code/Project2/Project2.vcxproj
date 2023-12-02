@@ -123,7 +123,7 @@
   <ItemGroup>
     <ClCompile Include="AddAdressForm.cpp" />
     <ClCompile Include="BDD.cpp" />
-    <ClCompile Include="CommandesForm.cpp" />
+    <ClCompile Include="CommandForm.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="ModifClientForm.cpp" />
     <ClCompile Include="ModifPersonnelForm.cpp" />
@@ -134,7 +134,7 @@
     <ClCompile Include="ClientForm.cpp" />
     <ClCompile Include="PrincipalForm.cpp" />
     <ClCompile Include="StatistiquesForm.cpp" />
-    <ClCompile Include="StockForm.cpp" />
+    <ClCompile Include="ItemsForm.cpp" />
     <ClCompile Include="ViewClientForm.cpp" />
     <ClCompile Include="ViewCommandForm.cpp" />
     <ClCompile Include="ViewPersonnelForm.cpp" />
@@ -145,7 +145,7 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="BDD.h" />
-    <ClInclude Include="CommandesForm.h">
+    <ClInclude Include="CommandForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="main.h" />
@@ -158,7 +158,7 @@
     <ClInclude Include="ModifCommandForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="ModifStockForm.h">
+    <ClInclude Include="ModifItemsForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="MainForm.h">
@@ -174,7 +174,7 @@
     <ClInclude Include="StatistiquesForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="StockForm.h">
+    <ClInclude Include="ItemsForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="ViewClientForm.h">
@@ -186,13 +186,13 @@
     <ClInclude Include="ViewPersonnelForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="ViewStockForm.h">
+    <ClInclude Include="ViewItemsForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="CommandesForm.resx">
-      <DependentUpon>CommandesForm.h</DependentUpon>
+    <EmbeddedResource Include="CommandForm.resx">
+      <DependentUpon>CommandForm.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ModifClientForm.resx">
       <DependentUpon>ModifClientForm.h</DependentUpon>
@@ -215,8 +215,8 @@
     <EmbeddedResource Include="StatistiquesForm.resx">
       <DependentUpon>StatistiquesForm.h</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="StockForm.resx">
-      <DependentUpon>StockForm.h</DependentUpon>
+    <EmbeddedResource Include="ItemsForm.resx">
+      <DependentUpon>ItemsForm.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ViewClientForm.resx">
       <DependentUpon>ViewClientForm.h</DependentUpon>
@@ -227,8 +227,8 @@
     <EmbeddedResource Include="ViewPersonnelForm.resx">
       <DependentUpon>ViewPersonnelForm.h</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ViewStockForm.resx">
-      <DependentUpon>ViewStockForm.h</DependentUpon>
+    <EmbeddedResource Include="ViewItemsForm.resx">
+      <DependentUpon>ViewItemsForm.h</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

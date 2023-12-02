@@ -2,8 +2,8 @@
 #include "BDD.h"
 #include "PersonnelForm.h"
 #include "ClientForm.h"
-#include "CommandesForm.h"
-#include "StockForm.h"
+#include "CommandForm.h"
+#include "ItemsForm.h"
 #include "StatistiquesForm.h"
 #include <stdio.h>
 #include <iostream>
@@ -55,12 +55,6 @@ namespace Display {
 	private: System::Windows::Forms::Button^ button3;
 	private: System::Windows::Forms::Button^ button4;
 	private: System::Windows::Forms::Button^ button6;
-
-
-
-	protected:
-
-	protected:
 
 	private:
 		/// <summary>
@@ -163,11 +157,11 @@ namespace Display {
 private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 	System::Diagnostics::Debug::WriteLine("aaa\n\n\n\n\n\n\n\n\n\n\n\naaa");
 	//MyForm1^ form1 = gcnew MyForm1(); // Créez une instance de MyForm1
-	MyForm1 form1;
+	PersonnelForm form1;
 	form1.ShowDialog(); // Affichez MyForm1
 }
 private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
-	MyForm2 form2;
+	ClientForm form2;
 	form2.ShowDialog();
 }
 private: System::Void button7_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -175,15 +169,15 @@ private: System::Void button7_Click(System::Object^ sender, System::EventArgs^ e
 private: System::Void button8_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
-	Commandes Commandes;
+	CommandForm Commandes;
 	Commandes.ShowDialog(); // Affichez MyForm1
 }
 private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
-	Stock Stock;
+	ItemsForm Stock;
 	Stock.ShowDialog(); // Affichez MyForm1
 }
 private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e) {
-	Statistiques Statistiques;
+	StatistiquesForm Statistiques;
 	Statistiques.ShowDialog(); // Affichez MyForm1
 }
 };
