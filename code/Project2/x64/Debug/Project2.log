@@ -1,2 +1,3 @@
-﻿  Project2.vcxproj -> C:\cours\A2\bloc 2 (POO)\projet\code\x64\Debug\Project2.exe
-C:\Program Files\Microsoft Visual Studio\2022\Enterprise\MSBuild\Current\Bin\amd64\Microsoft.Common.CurrentVersion.targets(5445,5): error MSB3541: Files has invalid value "<<<<<<< HEAD". Illegal characters in path.
+﻿  main.cpp
+  AddAdressForm.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
+  Project2.vcxproj -> C:\cours\A2\bloc 2 (POO)\New folder\x64\Debug\Project2.exe

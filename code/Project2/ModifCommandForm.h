@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 
 namespace Display {
 
@@ -10,7 +10,7 @@ namespace Display {
 	using namespace System::Drawing;
 
 	/// <summary>
-	/// Description résumée de ModifyCommand
+	/// Description rï¿½sumï¿½e de ModifyCommand
 	/// </summary>
 	public ref class ModifCommandForm : public System::Windows::Forms::Form
 	{
@@ -25,7 +25,7 @@ namespace Display {
 
 	protected:
 		/// <summary>
-		/// Nettoyage des ressources utilisées.
+		/// Nettoyage des ressources utilisï¿½es.
 		/// </summary>
 		~ModifCommandForm()
 		{
@@ -67,14 +67,14 @@ namespace Display {
 
 	private:
 		/// <summary>
-		/// Variable nécessaire au concepteur.
+		/// Variable nï¿½cessaire au concepteur.
 		/// </summary>
-		System::ComponentModel::Container ^components;
+		System::ComponentModel::Container^ components;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
-		/// Méthode requise pour la prise en charge du concepteur - ne modifiez pas
-		/// le contenu de cette méthode avec l'éditeur de code.
+		/// Mï¿½thode requise pour la prise en charge du concepteur - ne modifiez pas
+		/// le contenu de cette mï¿½thode avec l'ï¿½diteur de code.
 		/// </summary>
 		void InitializeComponent(void)
 		{
@@ -183,7 +183,7 @@ namespace Display {
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(129, 29);
 			this->label1->TabIndex = 14;
-			this->label1->Text = L"Référence";
+			this->label1->Text = L"Rï¿½fï¿½rence";
 			this->label1->Click += gcnew System::EventHandler(this, &ModifCommandForm::label1_Click);
 			// 
 			// textBox6
@@ -317,33 +317,33 @@ namespace Display {
 #pragma endregion
 	private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
-private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
+	private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
-private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
+	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
-private: System::Void comboBox2_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
+	private: System::Void comboBox2_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
 	}
-private: System::Void label5_Click(System::Object^ sender, System::EventArgs^ e) {
+	private: System::Void label5_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
-private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
-private: System::Void comboBox1_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
+	private: System::Void comboBox1_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
 	}
-private: System::Void label4_Click(System::Object^ sender, System::EventArgs^ e) {
+	private: System::Void label4_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
-private: System::Void textBox3_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+	private: System::Void textBox3_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 	}
-private: System::Void textBox2_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+	private: System::Void textBox2_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 	}
-private: System::Void textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+	private: System::Void textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 	}
-private: System::Void label3_Click(System::Object^ sender, System::EventArgs^ e) {
+	private: System::Void label3_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
-private: System::Void label2_Click(System::Object^ sender, System::EventArgs^ e) {
+	private: System::Void label2_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
-private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
+	private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
-private: System::Void label6_Click(System::Object^ sender, System::EventArgs^ e) {
-}
-};
+	private: System::Void label6_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+	};
 }

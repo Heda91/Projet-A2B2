@@ -1,6 +1,6 @@
 #pragma once
 
-namespace Display{
+namespace Display {
 	using namespace System;
 
 	public ref class PrincipalForm : public System::Windows::Forms::Form

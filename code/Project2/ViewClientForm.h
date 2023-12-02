@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 
 namespace Display {
 
@@ -10,7 +10,7 @@ namespace Display {
 	using namespace System::Drawing;
 
 	/// <summary>
-	/// Description résumée de ViewClient
+	/// Description rï¿½sumï¿½e de ViewClient
 	/// </summary>
 	public ref class ViewClientForm : public System::Windows::Forms::Form
 	{
@@ -25,7 +25,7 @@ namespace Display {
 
 	protected:
 		/// <summary>
-		/// Nettoyage des ressources utilisées.
+		/// Nettoyage des ressources utilisï¿½es.
 		/// </summary>
 		~ViewClientForm()
 		{
@@ -67,14 +67,14 @@ namespace Display {
 
 	private:
 		/// <summary>
-		/// Variable nécessaire au concepteur.
+		/// Variable nï¿½cessaire au concepteur.
 		/// </summary>
-		System::ComponentModel::Container ^components;
+		System::ComponentModel::Container^ components;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
-		/// Méthode requise pour la prise en charge du concepteur - ne modifiez pas
-		/// le contenu de cette méthode avec l'éditeur de code.
+		/// Mï¿½thode requise pour la prise en charge du concepteur - ne modifiez pas
+		/// le contenu de cette mï¿½thode avec l'ï¿½diteur de code.
 		/// </summary>
 		void InitializeComponent(void)
 		{
@@ -120,7 +120,7 @@ namespace Display {
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(102, 29);
 			this->label2->TabIndex = 15;
-			this->label2->Text = L"Prénom";
+			this->label2->Text = L"Prï¿½nom";
 			// 
 			// label3
 			// 
@@ -236,7 +236,7 @@ namespace Display {
 #pragma endregion
 	private: System::Void ViewClient_Load(System::Object^ sender, System::EventArgs^ e) {
 	}
-private: System::Void label6_Click(System::Object^ sender, System::EventArgs^ e) {
-}
-};
+	private: System::Void label6_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+	};
 }

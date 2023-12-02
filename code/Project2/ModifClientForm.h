@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 
 namespace Display {
 
@@ -10,7 +10,7 @@ namespace Display {
 	using namespace System::Drawing;
 
 	/// <summary>
-	/// Description résumée de ModifClient
+	/// Description rï¿½sumï¿½e de ModifClient
 	/// </summary>
 	public ref class ModifClientForm : public System::Windows::Forms::Form
 	{
@@ -25,7 +25,7 @@ namespace Display {
 
 	protected:
 		/// <summary>
-		/// Nettoyage des ressources utilisées.
+		/// Nettoyage des ressources utilisï¿½es.
 		/// </summary>
 		~ModifClientForm()
 		{
@@ -57,14 +57,14 @@ namespace Display {
 
 	private:
 		/// <summary>
-		/// Variable nécessaire au concepteur.
+		/// Variable nï¿½cessaire au concepteur.
 		/// </summary>
-		System::ComponentModel::Container ^components;
+		System::ComponentModel::Container^ components;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
-		/// Méthode requise pour la prise en charge du concepteur - ne modifiez pas
-		/// le contenu de cette méthode avec l'éditeur de code.
+		/// Mï¿½thode requise pour la prise en charge du concepteur - ne modifiez pas
+		/// le contenu de cette mï¿½thode avec l'ï¿½diteur de code.
 		/// </summary>
 		void InitializeComponent(void)
 		{
@@ -105,7 +105,7 @@ namespace Display {
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(102, 29);
 			this->label2->TabIndex = 1;
-			this->label2->Text = L"Prénom";
+			this->label2->Text = L"Prï¿½nom";
 			// 
 			// label3
 			// 
@@ -244,7 +244,7 @@ namespace Display {
 #pragma endregion
 	private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
-private: System::Void ModifClient_Load(System::Object^ sender, System::EventArgs^ e) {
-}
-};
+	private: System::Void ModifClient_Load(System::Object^ sender, System::EventArgs^ e) {
+	}
+	};
 }

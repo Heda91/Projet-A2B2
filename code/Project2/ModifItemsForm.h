@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 
 namespace Display {
 
@@ -10,7 +10,7 @@ namespace Display {
 	using namespace System::Drawing;
 
 	/// <summary>
-	/// Description résumée de ModifStock
+	/// Description rï¿½sumï¿½e de ModifStock
 	/// </summary>
 	public ref class ModifItemsForm : public System::Windows::Forms::Form
 	{
@@ -25,7 +25,7 @@ namespace Display {
 
 	protected:
 		/// <summary>
-		/// Nettoyage des ressources utilisées.
+		/// Nettoyage des ressources utilisï¿½es.
 		/// </summary>
 		~ModifItemsForm()
 		{
@@ -37,19 +37,19 @@ namespace Display {
 
 	private:
 		/// <summary>
-		/// Variable nécessaire au concepteur.
+		/// Variable nï¿½cessaire au concepteur.
 		/// </summary>
-		System::ComponentModel::Container ^components;
+		System::ComponentModel::Container^ components;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
-		/// Méthode requise pour la prise en charge du concepteur - ne modifiez pas
-		/// le contenu de cette méthode avec l'éditeur de code.
+		/// Mï¿½thode requise pour la prise en charge du concepteur - ne modifiez pas
+		/// le contenu de cette mï¿½thode avec l'ï¿½diteur de code.
 		/// </summary>
 		void InitializeComponent(void)
 		{
 			this->components = gcnew System::ComponentModel::Container();
-			this->Size = System::Drawing::Size(300,300);
+			this->Size = System::Drawing::Size(300, 300);
 			this->Text = L"ModifStock";
 			this->Padding = System::Windows::Forms::Padding(0);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;

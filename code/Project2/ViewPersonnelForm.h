@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 
 namespace Display {
 
@@ -10,7 +10,7 @@ namespace Display {
 	using namespace System::Drawing;
 
 	/// <summary>
-	/// Description résumée de ViewPersonnel
+	/// Description rï¿½sumï¿½e de ViewPersonnel
 	/// </summary>
 	public ref class ViewPersonnelForm : public System::Windows::Forms::Form
 	{
@@ -25,7 +25,7 @@ namespace Display {
 
 	protected:
 		/// <summary>
-		/// Nettoyage des ressources utilisées.
+		/// Nettoyage des ressources utilisï¿½es.
 		/// </summary>
 		~ViewPersonnelForm()
 		{
@@ -54,14 +54,14 @@ namespace Display {
 
 	private:
 		/// <summary>
-		/// Variable nécessaire au concepteur.
+		/// Variable nï¿½cessaire au concepteur.
 		/// </summary>
-		System::ComponentModel::Container ^components;
+		System::ComponentModel::Container^ components;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
-		/// Méthode requise pour la prise en charge du concepteur - ne modifiez pas
-		/// le contenu de cette méthode avec l'éditeur de code.
+		/// Mï¿½thode requise pour la prise en charge du concepteur - ne modifiez pas
+		/// le contenu de cette mï¿½thode avec l'ï¿½diteur de code.
 		/// </summary>
 		void InitializeComponent(void)
 		{
@@ -166,7 +166,7 @@ namespace Display {
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(102, 29);
 			this->label2->TabIndex = 28;
-			this->label2->Text = L"Prénom";
+			this->label2->Text = L"Prï¿½nom";
 			// 
 			// label1
 			// 
@@ -215,7 +215,7 @@ namespace Display {
 			this->label3->Name = L"label3";
 			this->label3->Size = System::Drawing::Size(153, 29);
 			this->label3->TabIndex = 41;
-			this->label3->Text = L"ID Supérieur";
+			this->label3->Text = L"ID Supï¿½rieur";
 			// 
 			// ViewPersonnel
 			// 
@@ -245,5 +245,5 @@ namespace Display {
 #pragma endregion
 	private: System::Void label6_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
-};
+	};
 }

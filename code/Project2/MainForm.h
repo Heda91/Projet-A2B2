@@ -1,10 +1,10 @@
-#pragma once
+ï»¿#pragma once
 #include "BDD.h"
 #include "PersonnelForm.h"
 #include "ClientForm.h"
 #include "CommandForm.h"
 #include "ItemsForm.h"
-#include "StatistiquesForm.h"
+#include "StatisticsForm.h"
 #include <stdio.h>
 #include <iostream>
 
@@ -21,7 +21,7 @@ namespace Display {
 	using namespace System::Drawing;
 
 	/// <summary>
-	/// Description résumée de MyForm
+	/// Description resumee de MyForm
 	/// </summary>
 	public ref class MainForm : public System::Windows::Forms::Form
 	{
@@ -38,7 +38,7 @@ namespace Display {
 
 	protected:
 		/// <summary>
-		/// Nettoyage des ressources utilisées.
+		/// Nettoyage des ressources utilisees.
 		/// </summary>
 		~MainForm()
 		{
@@ -58,14 +58,14 @@ namespace Display {
 
 	private:
 		/// <summary>
-		/// Variable nécessaire au concepteur.
+		/// Variable nï¿½cessaire au concepteur.
 		/// </summary>
-		System::ComponentModel::Container ^components;
+		System::ComponentModel::Container^ components;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
-		/// Méthode requise pour la prise en charge du concepteur - ne modifiez pas
-		/// le contenu de cette méthode avec l'éditeur de code.
+		/// Methode requise pour la prise en charge du concepteur - ne modifiez pas
+		/// le contenu de cette methode avec l'editeur de code.
 		/// </summary>
 		void InitializeComponent(void)
 		{
@@ -116,7 +116,7 @@ namespace Display {
 			this->button4->Name = L"button4";
 			this->button4->Size = System::Drawing::Size(288, 49);
 			this->button4->TabIndex = 9;
-			this->button4->Text = L"Stock";
+			this->button4->Text = L"Articles";
 			this->button4->UseVisualStyleBackColor = true;
 			this->button4->Click += gcnew System::EventHandler(this, &MainForm::button4_Click);
 			// 
@@ -154,31 +154,27 @@ namespace Display {
 	}
 	private: System::Void textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 	}
-private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
-	System::Diagnostics::Debug::WriteLine("aaa\n\n\n\n\n\n\n\n\n\n\n\naaa");
-	//MyForm1^ form1 = gcnew MyForm1(); // Créez une instance de MyForm1
-	PersonnelForm form1;
-	form1.ShowDialog(); // Affichez MyForm1
-}
-private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
-	ClientForm form2;
-	form2.ShowDialog();
-}
-private: System::Void button7_Click(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void button8_Click(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
-	CommandForm Commandes;
-	Commandes.ShowDialog(); // Affichez MyForm1
-}
-private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
-	ItemsForm Stock;
-	Stock.ShowDialog(); // Affichez MyForm1
-}
-private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e) {
-	StatistiquesForm Statistiques;
-	Statistiques.ShowDialog(); // Affichez MyForm1
-}
-};
+	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+		System::Diagnostics::Debug::WriteLine("aaa\n\n\n\n\n\n\n\n\n\n\n\naaa");
+		//MyForm1^ form1 = gcnew MyForm1(); // Creez une instance de MyForm1
+		PersonnelForm form1;
+		form1.ShowDialog(); // Affichez MyForm1
+	}
+	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
+		ClientForm form2;
+		form2.ShowDialog();
+	}
+	private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
+		CommandForm Commandes;
+		Commandes.ShowDialog(); // Affichez MyForm1
+	}
+	private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
+		ItemsForm Stock;
+		Stock.ShowDialog(); // Affichez MyForm1
+	}
+	private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e) {
+		StatistiquesForm Statistiques;
+		Statistiques.ShowDialog(); // Affichez MyForm1
+	}
+	};
 }

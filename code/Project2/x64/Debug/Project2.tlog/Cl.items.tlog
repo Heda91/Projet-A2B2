@@ -1,43 +1,20 @@
-<<<<<<< HEAD
-C:\cours\A2\bloc 2 (POO)\projet\code\Project2\AddAdress.cpp;C:\cours\A2\bloc 2 (POO)\projet\code\Project2\x64\Debug\AddAdress.obj
-C:\cours\A2\bloc 2 (POO)\projet\code\Project2\AddClient.cpp;C:\cours\A2\bloc 2 (POO)\projet\code\Project2\x64\Debug\AddClient.obj
-C:\cours\A2\bloc 2 (POO)\projet\code\Project2\AddCommand.cpp;C:\cours\A2\bloc 2 (POO)\projet\code\Project2\x64\Debug\AddCommand.obj
-C:\cours\A2\bloc 2 (POO)\projet\code\Project2\AddPersonnel.cpp;C:\cours\A2\bloc 2 (POO)\projet\code\Project2\x64\Debug\AddPersonnel.obj
-C:\cours\A2\bloc 2 (POO)\projet\code\Project2\AddStock.cpp;C:\cours\A2\bloc 2 (POO)\projet\code\Project2\x64\Debug\AddStock.obj
-C:\cours\A2\bloc 2 (POO)\projet\code\Project2\BDD.cpp;C:\cours\A2\bloc 2 (POO)\projet\code\Project2\x64\Debug\BDD.obj
-C:\cours\A2\bloc 2 (POO)\projet\code\Project2\Commandes.cpp;C:\cours\A2\bloc 2 (POO)\projet\code\Project2\x64\Debug\Commandes.obj
-C:\cours\A2\bloc 2 (POO)\projet\code\Project2\main.cpp;C:\cours\A2\bloc 2 (POO)\projet\code\Project2\x64\Debug\main.obj
-C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ModifClient.cpp;C:\cours\A2\bloc 2 (POO)\projet\code\Project2\x64\Debug\ModifClient.obj
-C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ModifPersonnel.cpp;C:\cours\A2\bloc 2 (POO)\projet\code\Project2\x64\Debug\ModifPersonnel.obj
-C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ModifCommand.cpp;C:\cours\A2\bloc 2 (POO)\projet\code\Project2\x64\Debug\ModifCommand.obj
-C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ModifStock.cpp;C:\cours\A2\bloc 2 (POO)\projet\code\Project2\x64\Debug\ModifStock.obj
-C:\cours\A2\bloc 2 (POO)\projet\code\Project2\MyForm.cpp;C:\cours\A2\bloc 2 (POO)\projet\code\Project2\x64\Debug\MyForm.obj
-C:\cours\A2\bloc 2 (POO)\projet\code\Project2\Personnel.cpp;C:\cours\A2\bloc 2 (POO)\projet\code\Project2\x64\Debug\Personnel.obj
-C:\cours\A2\bloc 2 (POO)\projet\code\Project2\Client.cpp;C:\cours\A2\bloc 2 (POO)\projet\code\Project2\x64\Debug\Client.obj
-C:\cours\A2\bloc 2 (POO)\projet\code\Project2\Statistiques.cpp;C:\cours\A2\bloc 2 (POO)\projet\code\Project2\x64\Debug\Statistiques.obj
-C:\cours\A2\bloc 2 (POO)\projet\code\Project2\Stock.cpp;C:\cours\A2\bloc 2 (POO)\projet\code\Project2\x64\Debug\Stock.obj
-C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ViewClient.cpp;C:\cours\A2\bloc 2 (POO)\projet\code\Project2\x64\Debug\ViewClient.obj
-C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ViewCommand.cpp;C:\cours\A2\bloc 2 (POO)\projet\code\Project2\x64\Debug\ViewCommand.obj
-C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ViewPersonnel.cpp;C:\cours\A2\bloc 2 (POO)\projet\code\Project2\x64\Debug\ViewPersonnel.obj
-C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ViewStock.cpp;C:\cours\A2\bloc 2 (POO)\projet\code\Project2\x64\Debug\ViewStock.obj
-C:\cours\A2\bloc 2 (POO)\projet\code\Project2\x64\Debug\.NETFramework,Version=v4.8.AssemblyAttributes.cpp;C:\cours\A2\bloc 2 (POO)\projet\code\Project2\x64\Debug\.NETFramework,Version=v4.8.AssemblyAttributes.obj
-=======
-C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git\code\Project2\AddAdress.cpp;C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git\code\Project2\x64\Debug\AddAdress.obj
-C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git\code\Project2\BDD.cpp;C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git\code\Project2\x64\Debug\BDD.obj
-C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git\code\Project2\Commandes.cpp;C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git\code\Project2\x64\Debug\Commandes.obj
-C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git\code\Project2\main.cpp;C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git\code\Project2\x64\Debug\main.obj
-C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git\code\Project2\ModifClient.cpp;C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git\code\Project2\x64\Debug\ModifClient.obj
-C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git\code\Project2\ModifPersonnel.cpp;C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git\code\Project2\x64\Debug\ModifPersonnel.obj
-C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git\code\Project2\ModifCommand.cpp;C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git\code\Project2\x64\Debug\ModifCommand.obj
-C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git\code\Project2\ModifStock.cpp;C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git\code\Project2\x64\Debug\ModifStock.obj
-C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git\code\Project2\MyForm.cpp;C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git\code\Project2\x64\Debug\MyForm.obj
-C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git\code\Project2\Personnel.cpp;C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git\code\Project2\x64\Debug\Personnel.obj
-C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git\code\Project2\Client.cpp;C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git\code\Project2\x64\Debug\Client.obj
-C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git\code\Project2\Statistiques.cpp;C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git\code\Project2\x64\Debug\Statistiques.obj
-C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git\code\Project2\Stock.cpp;C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git\code\Project2\x64\Debug\Stock.obj
-C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git\code\Project2\ViewClient.cpp;C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git\code\Project2\x64\Debug\ViewClient.obj
-C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git\code\Project2\ViewCommand.cpp;C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git\code\Project2\x64\Debug\ViewCommand.obj
-C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git\code\Project2\ViewPersonnel.cpp;C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git\code\Project2\x64\Debug\ViewPersonnel.obj
-C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git\code\Project2\ViewStock.cpp;C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git\code\Project2\x64\Debug\ViewStock.obj
-C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git\code\Project2\x64\Debug\.NETFramework,Version=v4.8.AssemblyAttributes.cpp;C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git\code\Project2\x64\Debug\.NETFramework,Version=v4.8.AssemblyAttributes.obj
->>>>>>> d0ceb267c630e4753f0e32839a039d077f5b22c2
+C:\cours\A2\bloc 2 (POO)\New folder\Project2\AddAdressForm.cpp;C:\cours\A2\bloc 2 (POO)\New folder\Project2\x64\Debug\AddAdressForm.obj
+C:\cours\A2\bloc 2 (POO)\New folder\Project2\BDD.cpp;C:\cours\A2\bloc 2 (POO)\New folder\Project2\x64\Debug\BDD.obj
+C:\cours\A2\bloc 2 (POO)\New folder\Project2\ClientForm.cpp;C:\cours\A2\bloc 2 (POO)\New folder\Project2\x64\Debug\ClientForm.obj
+C:\cours\A2\bloc 2 (POO)\New folder\Project2\CommandForm.cpp;C:\cours\A2\bloc 2 (POO)\New folder\Project2\x64\Debug\CommandForm.obj
+C:\cours\A2\bloc 2 (POO)\New folder\Project2\FormProjet.cpp;C:\cours\A2\bloc 2 (POO)\New folder\Project2\x64\Debug\FormProjet.obj
+C:\cours\A2\bloc 2 (POO)\New folder\Project2\ItemsForm.cpp;C:\cours\A2\bloc 2 (POO)\New folder\Project2\x64\Debug\ItemsForm.obj
+C:\cours\A2\bloc 2 (POO)\New folder\Project2\main.cpp;C:\cours\A2\bloc 2 (POO)\New folder\Project2\x64\Debug\main.obj
+C:\cours\A2\bloc 2 (POO)\New folder\Project2\MainForm.cpp;C:\cours\A2\bloc 2 (POO)\New folder\Project2\x64\Debug\MainForm.obj
+C:\cours\A2\bloc 2 (POO)\New folder\Project2\ModifClientForm.cpp;C:\cours\A2\bloc 2 (POO)\New folder\Project2\x64\Debug\ModifClientForm.obj
+C:\cours\A2\bloc 2 (POO)\New folder\Project2\ModifCommandForm.cpp;C:\cours\A2\bloc 2 (POO)\New folder\Project2\x64\Debug\ModifCommandForm.obj
+C:\cours\A2\bloc 2 (POO)\New folder\Project2\ModifItemsForm.cpp;C:\cours\A2\bloc 2 (POO)\New folder\Project2\x64\Debug\ModifItemsForm.obj
+C:\cours\A2\bloc 2 (POO)\New folder\Project2\ModifPersonnelForm.cpp;C:\cours\A2\bloc 2 (POO)\New folder\Project2\x64\Debug\ModifPersonnelForm.obj
+C:\cours\A2\bloc 2 (POO)\New folder\Project2\PersonnelForm.cpp;C:\cours\A2\bloc 2 (POO)\New folder\Project2\x64\Debug\PersonnelForm.obj
+C:\cours\A2\bloc 2 (POO)\New folder\Project2\PrincipalForm.cpp;C:\cours\A2\bloc 2 (POO)\New folder\Project2\x64\Debug\PrincipalForm.obj
+C:\cours\A2\bloc 2 (POO)\New folder\Project2\StatisticsForm.cpp;C:\cours\A2\bloc 2 (POO)\New folder\Project2\x64\Debug\StatisticsForm.obj
+C:\cours\A2\bloc 2 (POO)\New folder\Project2\ViewClientForm.cpp;C:\cours\A2\bloc 2 (POO)\New folder\Project2\x64\Debug\ViewClientForm.obj
+C:\cours\A2\bloc 2 (POO)\New folder\Project2\ViewCommandForm.cpp;C:\cours\A2\bloc 2 (POO)\New folder\Project2\x64\Debug\ViewCommandForm.obj
+C:\cours\A2\bloc 2 (POO)\New folder\Project2\ViewItemsForm.cpp;C:\cours\A2\bloc 2 (POO)\New folder\Project2\x64\Debug\ViewItemsForm.obj
+C:\cours\A2\bloc 2 (POO)\New folder\Project2\ViewPersonnelForm.cpp;C:\cours\A2\bloc 2 (POO)\New folder\Project2\x64\Debug\ViewPersonnelForm.obj
+C:\cours\A2\bloc 2 (POO)\New folder\Project2\x64\Debug\.NETFramework,Version=v4.8.AssemblyAttributes.cpp;C:\cours\A2\bloc 2 (POO)\New folder\Project2\x64\Debug\.NETFramework,Version=v4.8.AssemblyAttributes.obj
