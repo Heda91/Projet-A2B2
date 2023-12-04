@@ -3,6 +3,7 @@
 #include <string>
 
 namespace Display {
+	using namespace System::Windows;
 	using namespace System;
 	using namespace std;
 

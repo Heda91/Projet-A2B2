@@ -35,6 +35,8 @@ Class Display.PrincipalForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldIn
 Class Display.ClientForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :Display.PrincipalForm
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    reload(): PrivateScope, Public, Virtual, HideBySig
 Class Display.ModifClientForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
@@ -44,6 +46,8 @@ Class Display.ViewClientForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldI
 Class Display.CommandForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :Display.PrincipalForm
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    reload(): PrivateScope, Public, Virtual, HideBySig
 Class Display.ModifCommandForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
@@ -56,6 +60,8 @@ Class Project2.FormProjet: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
 Class Display.ItemsForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :Display.PrincipalForm
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    reload(): PrivateScope, Public, Virtual, HideBySig
 Class Display.ModifItemsForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
@@ -65,6 +71,8 @@ Class Display.ViewItemsForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldIn
 Class Display.PersonnelForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :Display.PrincipalForm
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    reload(): PrivateScope, Public, Virtual, HideBySig
 Class Display.StatistiquesForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName

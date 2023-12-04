@@ -1,6 +1,7 @@
 #include "ClientForm.h"
 #include "ModifClientForm.h"
 #include "ViewClientForm.h"
+#include <vector>
 
 void Display::ClientForm::buttonAddClick(System::Object^ sender, System::EventArgs^ e) {
 	ModifClientForm add_client_form;
@@ -21,3 +22,20 @@ void Display::ClientForm::buttonDelClick(System::Object^ sender, System::EventAr
 	add_client_form.ShowDialog();
 }
 */
+
+void Display::ClientForm::reload() {
+	
+}
+
+void Display::ClientForm::initDataGridView() {
+	Forms::DataGridViewTextBoxColumn^ dgvtbc = gcnew Forms::DataGridViewTextBoxColumn();
+	dgvtbc->Name = "Numero Client";
+	this->data_grid_view->Columns->Add(dgvtbc);
+	Forms::DataGridViewTextBoxColumn^ dgvtbc2 = gcnew Forms::DataGridViewTextBoxColumn();
+	dgvtbc2->Name = "Nom";
+	this->data_grid_view->Columns->Add(dgvtbc2);
+	Forms::DataGridViewTextBoxColumn^ dgvtbc3 = gcnew Forms::DataGridViewTextBoxColumn();
+	dgvtbc3->Name = "Prenom";
+	this->data_grid_view->Columns->Add(dgvtbc3);
+}
+

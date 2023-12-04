@@ -124,6 +124,8 @@
     <ClCompile Include="AddAdressForm.cpp" />
     <ClCompile Include="BDD.cpp" />
     <ClCompile Include="ClientForm.cpp" />
+    <ClCompile Include="ClientObject.cpp" />
+    <ClCompile Include="ClientRepo.cpp" />
     <ClCompile Include="CommandForm.cpp" />
     <ClCompile Include="FormProjet.cpp" />
     <ClCompile Include="ItemsForm.cpp" />
@@ -145,6 +147,8 @@
     <ClInclude Include="AddAdressForm.h" />
     <ClInclude Include="BDD.h" />
     <ClInclude Include="ClientForm.h" />
+    <ClInclude Include="ClientObject.h" />
+    <ClInclude Include="ClientRepo.h" />
     <ClInclude Include="CommandForm.h" />
     <ClInclude Include="FormProjet.h">
       <FileType>CppForm</FileType>
