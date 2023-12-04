@@ -6,7 +6,7 @@ namespace Display {
 	public ref class CommandForm : public PrincipalForm
 	{
 	public:
-		CommandForm() : PrincipalForm("Commandes") {};
+		CommandForm(BDD^ bdd) : PrincipalForm(bdd, "Commandes") {};
 		void reload() override;
 
 	protected:

@@ -1,4 +1,6 @@
 #pragma once
+#include "BDD.h"
+#include "ClientRepo.h"
 #include "PrincipalForm.h"
 
 namespace Display {
@@ -6,7 +8,7 @@ namespace Display {
 	public ref class ClientForm : public PrincipalForm
 	{
 	public:
-		ClientForm() : PrincipalForm("Clients") {};
+		ClientForm(BDD^ bdd) : PrincipalForm(bdd, "Clients") {};
 		void reload() override;
 
 	protected:
@@ -16,5 +18,7 @@ namespace Display {
 		//void buttonDelClick(System::Object^ sender, System::EventArgs^ e) override;
 
 		void initDataGridView() override;
-		};
+	private:
+		Repository::ClientRepo^ cr;
+	};
 }

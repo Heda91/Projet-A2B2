@@ -26,8 +26,9 @@ namespace Display {
 	public ref class MainForm : public System::Windows::Forms::Form
 	{
 	public:
-		MainForm(void)
+		MainForm(BDD^ bdd)
 		{
+			my_bdd = bdd;
 			InitializeComponent();
 			//
 			//TODO: ajoutez ici le code du constructeur
@@ -57,6 +58,7 @@ namespace Display {
 	private: System::Windows::Forms::Button^ button6;
 
 	private:
+		BDD^ my_bdd;
 		/// <summary>
 		/// Variable n�cessaire au concepteur.
 		/// </summary>
@@ -157,20 +159,20 @@ namespace Display {
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 		System::Diagnostics::Debug::WriteLine("aaa\n\n\n\n\n\n\n\n\n\n\n\naaa");
 		//MyForm1^ form1 = gcnew MyForm1(); // Creez une instance de MyForm1
-		PersonnelForm form1;
-		form1.ShowDialog(); // Affichez MyForm1
+		PersonnelForm Personnel(my_bdd);
+		Personnel.ShowDialog(); // Affichez MyForm1
 	}
 	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
-		ClientForm form2;
-		form2.ShowDialog();
+		ClientForm Client(my_bdd);
+		Client.ShowDialog();
 	}
 	private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
-		CommandForm Commandes;
-		Commandes.ShowDialog(); // Affichez MyForm1
+		CommandForm Command(my_bdd);
+		Command.ShowDialog(); // Affichez MyForm1
 	}
 	private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
-		ItemsForm Stock;
-		Stock.ShowDialog(); // Affichez MyForm1
+		ItemsForm Items(my_bdd);
+		Items.ShowDialog(); // Affichez MyForm1
 	}
 	private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e) {
 		StatistiquesForm Statistiques;

@@ -6,7 +6,7 @@ namespace Display {
 	public ref class PersonnelForm : public PrincipalForm
 	{
 	public:
-		PersonnelForm() : PrincipalForm("Personnels") {};
+		PersonnelForm(BDD^ bdd) : PrincipalForm(bdd, "Personnels") {};
 		void reload() override;
 
 	protected:

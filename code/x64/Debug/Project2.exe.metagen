@@ -29,12 +29,12 @@ Class BDD: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
 Class Display.PrincipalForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
-    Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(BDD, System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
   Methods:
     reload(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
 Class Display.ClientForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :Display.PrincipalForm
-    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(BDD): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
   Methods:
     reload(): PrivateScope, Public, Virtual, HideBySig
 Class Display.ModifClientForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
@@ -45,7 +45,7 @@ Class Display.ViewClientForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldI
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
 Class Display.CommandForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :Display.PrincipalForm
-    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(BDD): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
   Methods:
     reload(): PrivateScope, Public, Virtual, HideBySig
 Class Display.ModifCommandForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
@@ -59,7 +59,7 @@ Class Project2.FormProjet: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
 Class Display.ItemsForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :Display.PrincipalForm
-    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(BDD): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
   Methods:
     reload(): PrivateScope, Public, Virtual, HideBySig
 Class Display.ModifItemsForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
@@ -70,7 +70,7 @@ Class Display.ViewItemsForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldIn
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
 Class Display.PersonnelForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :Display.PrincipalForm
-    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(BDD): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
   Methods:
     reload(): PrivateScope, Public, Virtual, HideBySig
 Class Display.StatistiquesForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
@@ -78,7 +78,7 @@ Class Display.StatistiquesForm: AutoLayout, AnsiClass, Class, Public, BeforeFiel
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
 Class Display.MainForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
-    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(BDD): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
 Class Display.ModifPersonnelForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName

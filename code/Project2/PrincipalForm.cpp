@@ -4,7 +4,8 @@ using namespace Display;
 using namespace System::Windows;
 using namespace System::Drawing;
 
-PrincipalForm::PrincipalForm(String^ form_name) {
+PrincipalForm::PrincipalForm(BDD^ bdd, String^ form_name) {
+	this->my_bdd = bdd;
 	this->form_name = form_name;
 	this->InitializeComponent();
 	this->initDataGridView();
@@ -73,6 +74,7 @@ void PrincipalForm::InitializeComponent() {
 	this->data_grid_view->Name = L"dataGirdView";
 	this->data_grid_view->RowHeadersWidth = 50;
 	this->data_grid_view->TabIndex = 5;
+	this->data_grid_view->ReadOnly = true;
 	//
 	//PrincipalForm
 	//

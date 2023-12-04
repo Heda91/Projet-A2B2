@@ -5,7 +5,7 @@ namespace Display {
 	using namespace System;
 	using namespace System::ComponentModel;
 	using namespace System::Collections;
-	using namespace System::Windows::Forms;
+	using namespace System::Windows;
 	using namespace System::Data;
 	using namespace System::Drawing;
 
@@ -34,36 +34,19 @@ namespace Display {
 				delete components;
 			}
 		}
-	private: System::Windows::Forms::TextBox^ textBox4;
-	protected:
-	private: System::Windows::Forms::Label^ label1;
-	private: System::Windows::Forms::Label^ label2;
-	private: System::Windows::Forms::Label^ label3;
-	private: System::Windows::Forms::TextBox^ textBox1;
-	private: System::Windows::Forms::TextBox^ textBox2;
-	private: System::Windows::Forms::TextBox^ textBox3;
-	private: System::Windows::Forms::Label^ label4;
-	private: System::Windows::Forms::ComboBox^ comboBox1;
-	private: System::Windows::Forms::Label^ label5;
-	private: System::Windows::Forms::ComboBox^ comboBox2;
-	private: System::Windows::Forms::Label^ label6;
-
-	protected:
-
-
-
-
-
-
-
-
-
-
-
-
-	protected:
-
-	protected:
+	private: //id, nom, prenom, naissance, livraison, factu
+		Forms::Label^ label_id;
+		Forms::Label^ label_view_id;
+		Forms::Label^ label_nom;
+		Forms::Label^ label_view_nom;
+		Forms::Label^ label_prenom;
+		Forms::Label^ label_view_prenom;
+		Forms::Label^ label_naissance;
+		Forms::Label^ label_view_naissance;
+		Forms::Label^ label_livraison;
+		Forms::ComboBox^ comboBox1;
+		Forms::Label^ label_facturation;
+		Forms::ComboBox^ comboBox2;
 
 	private:
 		/// <summary>
@@ -78,19 +61,20 @@ namespace Display {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			this->textBox4 = (gcnew System::Windows::Forms::TextBox());
-			this->label1 = (gcnew System::Windows::Forms::Label());
-			this->label2 = (gcnew System::Windows::Forms::Label());
-			this->label3 = (gcnew System::Windows::Forms::Label());
-			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
-			this->label4 = (gcnew System::Windows::Forms::Label());
+			this->label_id = (gcnew System::Windows::Forms::Label());
+			this->label_view_id = (gcnew System::Windows::Forms::Label());
+			this->label_nom = (gcnew System::Windows::Forms::Label());
+			this->label_view_nom = (gcnew System::Windows::Forms::Label());
+			this->label_prenom = (gcnew System::Windows::Forms::Label());
+			this->label_view_prenom = (gcnew System::Windows::Forms::Label());
+			this->label_naissance = (gcnew System::Windows::Forms::Label());
+			this->label_view_naissance = (gcnew System::Windows::Forms::Label());
+			this->label_livraison = (gcnew System::Windows::Forms::Label());
 			this->comboBox1 = (gcnew System::Windows::Forms::ComboBox());
-			this->label5 = (gcnew System::Windows::Forms::Label());
+			this->label_facturation = (gcnew System::Windows::Forms::Label());
 			this->comboBox2 = (gcnew System::Windows::Forms::ComboBox());
-			this->label6 = (gcnew System::Windows::Forms::Label());
 			this->SuspendLayout();
+			/*
 			// 
 			// textBox4
 			// 
@@ -120,7 +104,7 @@ namespace Display {
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(102, 29);
 			this->label2->TabIndex = 15;
-			this->label2->Text = L"Pr�nom";
+			this->label2->Text = L"Prenom";
 			// 
 			// label3
 			// 
@@ -229,6 +213,7 @@ namespace Display {
 			this->Name = L"ViewClientForm";
 			this->Text = L"ViewClient";
 			this->Load += gcnew System::EventHandler(this, &ViewClientForm::ViewClient_Load);
+			*/
 			this->ResumeLayout(false);
 			this->PerformLayout();
 

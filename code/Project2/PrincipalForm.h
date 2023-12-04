@@ -1,4 +1,5 @@
 #pragma once
+#include "BDD.h"
 #include <vector>
 #include <string>
 
@@ -10,9 +11,10 @@ namespace Display {
 	public ref class PrincipalForm : public System::Windows::Forms::Form
 	{
 	public:
-		PrincipalForm(String^ form_name);
+		PrincipalForm(BDD^ bdd, String^ form_name);
 		virtual void reload() {};
 	protected:
+		BDD^ my_bdd;
 		~PrincipalForm() { if (components) { delete components; } };
 		System::Windows::Forms::Button^ button_add;
 		System::Windows::Forms::Button^ button_modif;

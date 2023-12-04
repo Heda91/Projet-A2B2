@@ -1,7 +1,11 @@
 #include "ClientForm.h"
 #include "ModifClientForm.h"
 #include "ViewClientForm.h"
+#include "ClientObject.h"
+#include "ClientRepo.h"
 #include <vector>
+
+using namespace Object;
 
 void Display::ClientForm::buttonAddClick(System::Object^ sender, System::EventArgs^ e) {
 	ModifClientForm add_client_form;
@@ -24,10 +28,29 @@ void Display::ClientForm::buttonDelClick(System::Object^ sender, System::EventAr
 */
 
 void Display::ClientForm::reload() {
-	
+	System::Collections::Generic::List<ClientObject^>^ clients = cr->getClients();
+
+	this->data_grid_view->Rows->Clear();
+	for each (ClientObject ^ client in clients) {
+		DataGridViewRow^ dgvr = gcnew DataGridViewRow();
+		DataGridViewTextBoxCell^ dgvtbc = gcnew DataGridViewTextBoxCell();
+		dgvtbc->Value = Convert::ToString(client->getNumero_client());
+		dgvr->Cells->Add(dgvtbc);
+		DataGridViewTextBoxCell^ dgvtbc2 = gcnew DataGridViewTextBoxCell();
+		dgvtbc2->Value = client->getNom();
+		dgvr->Cells->Add(dgvtbc2);
+		DataGridViewTextBoxCell^ dgvtbc3 = gcnew DataGridViewTextBoxCell();
+		dgvtbc3->Value = client->getFirstName();
+		dgvr->Cells->Add(dgvtbc3);
+
+		dgvr->Tag = client;
+		this->data_grid_view->Rows->Add(dgvr);
+	}
 }
 
 void Display::ClientForm::initDataGridView() {
+	cr = gcnew Repository::ClientRepo(my_bdd);
+
 	Forms::DataGridViewTextBoxColumn^ dgvtbc = gcnew Forms::DataGridViewTextBoxColumn();
 	dgvtbc->Name = "Numero Client";
 	this->data_grid_view->Columns->Add(dgvtbc);
