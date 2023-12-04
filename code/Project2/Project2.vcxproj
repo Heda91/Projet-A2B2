@@ -124,7 +124,10 @@
     <ClCompile Include="AddAdressForm.cpp" />
     <ClCompile Include="BDD.cpp" />
     <ClCompile Include="ClientForm.cpp" />
+    <ClCompile Include="ClientObject.cpp" />
+    <ClCompile Include="ClientRepo.cpp" />
     <ClCompile Include="CommandForm.cpp" />
+    <ClCompile Include="CommandRepo.cpp" />
     <ClCompile Include="FormProjet.cpp" />
     <ClCompile Include="ItemsForm.cpp" />
     <ClCompile Include="main.cpp" />
@@ -134,6 +137,8 @@
     <ClCompile Include="ModifItemsForm.cpp" />
     <ClCompile Include="ModifPersonnelForm.cpp" />
     <ClCompile Include="PersonnelForm.cpp" />
+    <ClCompile Include="PersonnelObject.cpp" />
+    <ClCompile Include="PersonnelRepo.cpp" />
     <ClCompile Include="PrincipalForm.cpp" />
     <ClCompile Include="StatisticsForm.cpp" />
     <ClCompile Include="ViewClientForm.cpp" />
@@ -145,7 +150,11 @@
     <ClInclude Include="AddAdressForm.h" />
     <ClInclude Include="BDD.h" />
     <ClInclude Include="ClientForm.h" />
+    <ClInclude Include="ClientObject.h" />
+    <ClInclude Include="ClientRepo.h" />
+    <ClInclude Include="CommandObject.h" />
     <ClInclude Include="CommandForm.h" />
+    <ClInclude Include="CommandRepo.h" />
     <ClInclude Include="FormProjet.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -156,6 +165,8 @@
     <ClInclude Include="ModifItemsForm.h" />
     <ClInclude Include="ModifPersonnelForm.h" />
     <ClInclude Include="PersonnelForm.h" />
+    <ClInclude Include="PersonnelObject.h" />
+    <ClInclude Include="PersonnelRepo.h" />
     <ClInclude Include="PrincipalForm.h" />
     <ClInclude Include="StatisticsForm.h" />
     <ClInclude Include="ViewClientForm.h" />

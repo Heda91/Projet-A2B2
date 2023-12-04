@@ -1,3 +1,7 @@
-﻿  main.cpp
-  AddAdressForm.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
-  Project2.vcxproj -> C:\cours\A2\bloc 2 (POO)\projet\code\x64\Debug\Project2.exe
+﻿  PersonnelObject.cpp
+  PersonnelRepo.cpp
+  Génération de code en cours...
+  AddAdressForm.obj : module MSIL détecté ; liens incrémentiels désactivés pour MSIL ; édition de liens complète en cours
+PersonnelRepo.obj : error LNK2020: jeton non résolu (0600000D) Object.PersonnelObject::setDate_embauche
+PersonnelObject.obj : error LNK2020: jeton non résolu (06000006) Object.PersonnelObject::setDate_embauche
+C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git\code\x64\Debug\Project2.exe : fatal error LNK1120: 2 externes non résolus
