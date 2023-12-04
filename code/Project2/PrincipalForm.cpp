@@ -4,6 +4,13 @@ using namespace Display;
 using namespace System::Windows;
 using namespace System::Drawing;
 
+PrincipalForm::PrincipalForm(String^ form_name) {
+	this->form_name = form_name;
+	this->InitializeComponent();
+	this->initDataGridView();
+	this->reload();
+}
+
 void PrincipalForm::InitializeComponent() {
 	this->button_add = gcnew Forms::Button();
 	this->button_modif = gcnew Forms::Button();
@@ -85,3 +92,7 @@ void PrincipalForm::InitializeComponent() {
 	cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->data_grid_view)->EndInit();
 	this->ResumeLayout(false);
 }
+
+
+
+

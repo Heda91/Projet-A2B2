@@ -5,7 +5,7 @@ using namespace System;
 using namespace System::Windows::Forms;
 [STAThreadAttribute]
 
-int __clrcall WinMain(array<String^>^ args)
+int __clrcall WinMain()
 {
     //BDD^ mabdd = gcnew BDD();
     //System::String^ query = "SELECT TOP (10) [id_adresse], [numero_rue], [rue] FROM [projet].[dbo].[Adresse]";

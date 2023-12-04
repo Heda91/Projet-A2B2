@@ -13,6 +13,7 @@ namespace Display {
 		void buttonModifClick(System::Object^ sender, System::EventArgs^ e) override;
 		void buttonViewClick(System::Object^ sender, System::EventArgs^ e) override;
 		//void buttonDelClick(System::Object^ sender, System::EventArgs^ e) override;
+	private:
 
-	};
+		};
 }

@@ -1,12 +1,16 @@
 #pragma once
+#include <vector>
+#include <string>
 
 namespace Display {
 	using namespace System;
+	using namespace std;
 
 	public ref class PrincipalForm : public System::Windows::Forms::Form
 	{
 	public:
-		PrincipalForm(String^ form_name) : form_name(form_name) { this->InitializeComponent(); };
+		PrincipalForm(String^ form_name);
+		virtual void reload() {};
 	protected:
 		~PrincipalForm() { if (components) { delete components; } };
 		System::Windows::Forms::Button^ button_add;
@@ -19,6 +23,8 @@ namespace Display {
 		virtual void buttonModifClick(System::Object^ sender, System::EventArgs^ e) {};
 		virtual void buttonViewClick(System::Object^ sender, System::EventArgs^ e) {};
 		virtual void buttonDelClick(System::Object^ sender, System::EventArgs^ e) {};
+
+		virtual void initDataGridView() {};
 
 	private:
 		String^ form_name;
