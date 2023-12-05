@@ -7,10 +7,10 @@ namespace Object {
 
     private:
         int id_personnel = 0;
-        int id_superieur;
-        String^ nom;
-        String^ prenom;
-        DateTime^ date_embauche;
+        int id_superieur = 0;
+        String^ nom = "";
+        String^ prenom = "";
+        DateTime^ date_embauche = nullptr;
         bool supprime = false;
 
     public:

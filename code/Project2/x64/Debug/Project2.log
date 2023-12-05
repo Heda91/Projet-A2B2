@@ -1,9 +1,6 @@
-﻿  PersonnelForm.cpp
-C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ViewPersonnelForm.h(15,20): warning C4677: 'ViewPersonnelForm': signature of non-private member contains assembly private type 'Object::PersonnelObject'
-C:\cours\A2\bloc 2 (POO)\projet\code\Project2\PersonnelObject.h(5,15): message : see declaration of 'Object::PersonnelObject'
-  ViewPersonnelForm.cpp
-C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ViewPersonnelForm.h(15,20): warning C4677: 'ViewPersonnelForm': signature of non-private member contains assembly private type 'Object::PersonnelObject'
-C:\cours\A2\bloc 2 (POO)\projet\code\Project2\PersonnelObject.h(5,15): message : see declaration of 'Object::PersonnelObject'
-  Generating Code...
-  AddAdressForm.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
-  Project2.vcxproj -> C:\cours\A2\bloc 2 (POO)\projet\code\x64\Debug\Project2.exe
+﻿  AdressObject.cpp
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\AdressObject.cpp(5,37): error C2761: 'void Object::AdressObject::setIdAdresse(int)': redeclaration of member is not allowed
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\AdressObject.cpp(6,34): error C2761: 'void Object::AdressObject::setNumero(int)': redeclaration of member is not allowed
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\AdressObject.cpp(7,35): error C2761: 'void Object::AdressObject::setRue(System::String ^)': redeclaration of member is not allowed
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\AdressObject.cpp(8,43): error C2761: 'void Object::AdressObject::setCodePostale(System::String ^)': redeclaration of member is not allowed
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\AdressObject.cpp(9,37): error C2761: 'void Object::AdressObject::setVille(System::String ^)': redeclaration of member is not allowed

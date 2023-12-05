@@ -26,14 +26,19 @@ List<PersonnelObject^>^ PersonnelRepo::getPersonnels() {
 }
 
 void PersonnelRepo::editPersonnel(PersonnelObject^ u) {
-    bdd->executeNonQuery("UPDATE [Personnel] SET nom = '" + u->getNom() + "' WHERE [id_personnel] = " + u->getIdPersonnel());
+    String^ query = "UPDATE [Personnel] SET [nom] = '" + u->getNom() + "', [prenom]= '" + u->getPrenom() + "'";
+    query += ", [date_embauche] = '"+u->getDateEmbauche() + "', [id_superieur] = '"+u->getIdSuperieur() + "'";
+    query += "WHERE [id_personnel] = " + u->getIdPersonnel();
+    bdd->executeNonQuery(query);
 }
 
 void PersonnelRepo::deletePersonnel(PersonnelObject^ u) {
-    bdd->executeNonQuery("UPDATE [Personnel] SET nom = "" WHERE [id_personnel] = " + u->getIdPersonnel());
+    bdd->executeNonQuery("UPDATE [Personnel] SET [supprime] = 1 WHERE [id_personnel] = " + u->getIdPersonnel());
 }
 
 void PersonnelRepo::insertPersonnel(PersonnelObject^ u) {
-    int idUser = this->bdd->executeInsert("INSERT INTO [Personnel](nom) VALUES ('" + u->getNom() + "')");
+    String^ query = "INSRET INTO [Personnel] (nom, prenom, date_embauche, id_superieur, supprime)";
+    query += " VALUES ('" + u->getNom() + "', '" + u->getPrenom() + "', '" + u->getDateEmbauche() + "', '" + u->getIdSuperieur() + "', 0)";
+    int idUser = this->bdd->executeInsert(query);
     u->setIdPersonnel(idUser);
 }
