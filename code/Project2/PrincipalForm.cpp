@@ -75,6 +75,8 @@ void PrincipalForm::InitializeComponent() {
 	this->data_grid_view->RowHeadersWidth = 50;
 	this->data_grid_view->TabIndex = 5;
 	this->data_grid_view->ReadOnly = true;
+	this->data_grid_view->MultiSelect = false;
+	this->data_grid_view->SelectionMode = Forms::DataGridViewSelectionMode::FullRowSelect;
 	//
 	//PrincipalForm
 	//

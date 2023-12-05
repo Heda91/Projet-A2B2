@@ -84,4 +84,4 @@ Class Display.ModifPersonnelForm: AutoLayout, AnsiClass, Class, Public, BeforeFi
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
 Class Display.ViewPersonnelForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
-    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Object.PersonnelObject): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName

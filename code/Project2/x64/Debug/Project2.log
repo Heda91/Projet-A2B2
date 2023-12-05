@@ -1,3 +1,9 @@
-﻿  PersonnelRepo.cpp
+﻿  PersonnelForm.cpp
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ViewPersonnelForm.h(15,20): warning C4677: 'ViewPersonnelForm': signature of non-private member contains assembly private type 'Object::PersonnelObject'
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\PersonnelObject.h(5,15): message : see declaration of 'Object::PersonnelObject'
+  ViewPersonnelForm.cpp
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ViewPersonnelForm.h(15,20): warning C4677: 'ViewPersonnelForm': signature of non-private member contains assembly private type 'Object::PersonnelObject'
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\PersonnelObject.h(5,15): message : see declaration of 'Object::PersonnelObject'
+  Generating Code...
   AddAdressForm.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
   Project2.vcxproj -> C:\cours\A2\bloc 2 (POO)\projet\code\x64\Debug\Project2.exe

@@ -13,8 +13,9 @@ void Display::PersonnelForm::buttonModifClick(System::Object^ sender, System::Ev
 	modif_personnel_form.ShowDialog();
 }
 void Display::PersonnelForm::buttonViewClick(System::Object^ sender, System::EventArgs^ e) {
-	ViewPersonnelForm view_personnel_form;
-	view_personnel_form.ShowDialog();
+	this->data_grid_view->SelectedRows[0]->Tag;
+	ViewPersonnelForm^ view_personnel_form = gcnew ViewPersonnelForm((PersonnelObject^)this->data_grid_view->SelectedRows[0]->Tag);
+	view_personnel_form->ShowDialog();
 }
 /*
 void Display::PersonnelForm::buttonDelClick(System::Object^ sender, System::EventArgs^ e)

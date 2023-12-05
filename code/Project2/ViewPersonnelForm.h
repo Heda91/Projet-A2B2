@@ -1,13 +1,10 @@
 ﻿#pragma once
+#include "PersonnelObject.h"
 
 namespace Display {
 
-	using namespace System;
-	using namespace System::ComponentModel;
-	using namespace System::Collections;
-	using namespace System::Windows::Forms;
-	using namespace System::Data;
-	using namespace System::Drawing;
+	using namespace System::Windows;
+	using namespace Object;
 
 	/// <summary>
 	/// Description r�sum�e de ViewPersonnel
@@ -15,9 +12,9 @@ namespace Display {
 	public ref class ViewPersonnelForm : public System::Windows::Forms::Form
 	{
 	public:
-		ViewPersonnelForm(void)
+		ViewPersonnelForm(PersonnelObject^ po)
 		{
-			InitializeComponent();
+			InitializeComponent(po);
 			//
 			//TODO: ajoutez ici le code du constructeur
 			//
@@ -34,23 +31,19 @@ namespace Display {
 				delete components;
 			}
 		}
-	private: System::Windows::Forms::TextBox^ textBox4;
-	protected:
-	private: System::Windows::Forms::Label^ label6;
-	private: System::Windows::Forms::ComboBox^ comboBox2;
-	private: System::Windows::Forms::Label^ label5;
-	private: System::Windows::Forms::ComboBox^ comboBox1;
-	private: System::Windows::Forms::Label^ label4;
-
-	private: System::Windows::Forms::TextBox^ textBox2;
-	private: System::Windows::Forms::TextBox^ textBox1;
-
-	private: System::Windows::Forms::Label^ label2;
-	private: System::Windows::Forms::Label^ label1;
-	private: System::Windows::Forms::TextBox^ textBox5;
-	private: System::Windows::Forms::Label^ label7;
-	private: System::Windows::Forms::TextBox^ textBox3;
-	private: System::Windows::Forms::Label^ label3;
+	private:
+		Forms::Label^ label_id_personnel;
+		Forms::Label^ label_view_id_personnel;
+		Forms::Label^ label_nom;
+		Forms::Label^ label_view_nom;
+		Forms::Label^ label_prenom;
+		Forms::Label^ label_view_prenom;
+		Forms::Label^ label_id_superieur;
+		Forms::Label^ label_view_id_superieur;
+		Forms::Label^ label_date_embauche;
+		Forms::Label^ label_view_date_embauche;
+		Forms::Label^ label_id_adresse;
+		Forms::Label^ label_view_id_adresse;
 
 	private:
 		/// <summary>
@@ -63,186 +56,179 @@ namespace Display {
 		/// M�thode requise pour la prise en charge du concepteur - ne modifiez pas
 		/// le contenu de cette m�thode avec l'�diteur de code.
 		/// </summary>
-		void InitializeComponent(void)
+		void InitializeComponent(PersonnelObject^ po)
 		{
-			this->textBox4 = (gcnew System::Windows::Forms::TextBox());
-			this->label6 = (gcnew System::Windows::Forms::Label());
-			this->comboBox2 = (gcnew System::Windows::Forms::ComboBox());
-			this->label5 = (gcnew System::Windows::Forms::Label());
-			this->comboBox1 = (gcnew System::Windows::Forms::ComboBox());
-			this->label4 = (gcnew System::Windows::Forms::Label());
-			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
-			this->label2 = (gcnew System::Windows::Forms::Label());
-			this->label1 = (gcnew System::Windows::Forms::Label());
-			this->textBox5 = (gcnew System::Windows::Forms::TextBox());
-			this->label7 = (gcnew System::Windows::Forms::Label());
-			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
-			this->label3 = (gcnew System::Windows::Forms::Label());
+			this->label_id_personnel = (gcnew System::Windows::Forms::Label());
+			this->label_view_id_personnel = (gcnew System::Windows::Forms::Label());
+			this->label_nom = (gcnew System::Windows::Forms::Label());
+			this->label_view_nom = (gcnew System::Windows::Forms::Label());
+			this->label_prenom = (gcnew System::Windows::Forms::Label());
+			this->label_view_prenom = (gcnew System::Windows::Forms::Label());
+			this->label_id_superieur = (gcnew System::Windows::Forms::Label());
+			this->label_view_id_superieur = (gcnew System::Windows::Forms::Label());
+			this->label_date_embauche = (gcnew System::Windows::Forms::Label());
+			this->label_view_date_embauche = (gcnew System::Windows::Forms::Label());
+			this->label_id_adresse = (gcnew System::Windows::Forms::Label());
+			this->label_view_id_adresse = (gcnew System::Windows::Forms::Label());
 			this->SuspendLayout();
 			// 
-			// textBox4
+			// id personnel
 			// 
-			this->textBox4->Location = System::Drawing::Point(301, 9);
-			this->textBox4->Name = L"textBox4";
-			this->textBox4->ReadOnly = true;
-			this->textBox4->Size = System::Drawing::Size(100, 22);
-			this->textBox4->TabIndex = 38;
-			// 
-			// label6
-			// 
-			this->label6->AutoSize = true;
-			this->label6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label_id_personnel->AutoSize = true;
+			this->label_id_personnel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label6->Location = System::Drawing::Point(12, 9);
-			this->label6->Name = L"label6";
-			this->label6->Size = System::Drawing::Size(158, 29);
-			this->label6->TabIndex = 37;
-			this->label6->Text = L"ID Personnel";
-			this->label6->Click += gcnew System::EventHandler(this, &ViewPersonnelForm::label6_Click);
+			this->label_id_personnel->Location = System::Drawing::Point(15, 15);
+			this->label_id_personnel->Size = System::Drawing::Size(235, 30);
+			this->label_id_personnel->TabStop = true;
+			this->label_id_personnel->Name = L"label_id_personnel";
+			this->label_id_personnel->Text = L"id personnel";
 			// 
-			// comboBox2
+			// view id personnel
 			// 
-			this->comboBox2->Enabled = false;
-			this->comboBox2->FormattingEnabled = true;
-			this->comboBox2->Location = System::Drawing::Point(301, 339);
-			this->comboBox2->Name = L"comboBox2";
-			this->comboBox2->Size = System::Drawing::Size(121, 24);
-			this->comboBox2->TabIndex = 36;
-			// 
-			// label5
-			// 
-			this->label5->AutoSize = true;
-			this->label5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label_view_id_personnel->AutoSize = true;
+			this->label_view_id_personnel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label5->Location = System::Drawing::Point(12, 339);
-			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(279, 29);
-			this->label5->TabIndex = 35;
-			this->label5->Text = L"Adresses de facturation";
+			this->label_view_id_personnel->Location = System::Drawing::Point(250, 15);
+			this->label_view_id_personnel->Size = System::Drawing::Size(235, 30);
+			this->label_view_id_personnel->TabIndex = 1;
+			this->label_view_id_personnel->Name = L"label_view_id_personnel";
+			this->label_view_id_personnel->Text = po->getIdPersonnel();
 			// 
-			// comboBox1
+			// nom
 			// 
-			this->comboBox1->Enabled = false;
-			this->comboBox1->FormattingEnabled = true;
-			this->comboBox1->Location = System::Drawing::Point(301, 282);
-			this->comboBox1->Name = L"comboBox1";
-			this->comboBox1->Size = System::Drawing::Size(121, 24);
-			this->comboBox1->TabIndex = 34;
-			// 
-			// label4
-			// 
-			this->label4->AutoSize = true;
-			this->label4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label_nom->AutoSize = true;
+			this->label_nom->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label4->Location = System::Drawing::Point(12, 282);
-			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(255, 29);
-			this->label4->TabIndex = 33;
-			this->label4->Text = L"Adresses de livraison";
+			this->label_nom->Location = System::Drawing::Point(15, 50); //15+30+5
+			this->label_nom->Size = System::Drawing::Size(235, 30);
+			this->label_nom->TabStop = true;
+			this->label_nom->Name = L"label_nom";
+			this->label_nom->Text = L"Nom";
 			// 
-			// textBox2
+			// view nom
 			// 
-			this->textBox2->Location = System::Drawing::Point(301, 178);
-			this->textBox2->Name = L"textBox2";
-			this->textBox2->ReadOnly = true;
-			this->textBox2->Size = System::Drawing::Size(100, 22);
-			this->textBox2->TabIndex = 31;
-			// 
-			// textBox1
-			// 
-			this->textBox1->Location = System::Drawing::Point(301, 119);
-			this->textBox1->Name = L"textBox1";
-			this->textBox1->ReadOnly = true;
-			this->textBox1->Size = System::Drawing::Size(100, 22);
-			this->textBox1->TabIndex = 30;
-			// 
-			// label2
-			// 
-			this->label2->AutoSize = true;
-			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label_view_nom->AutoSize = true;
+			this->label_view_nom->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label2->Location = System::Drawing::Point(12, 178);
-			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(102, 29);
-			this->label2->TabIndex = 28;
-			this->label2->Text = L"Pr�nom";
+			this->label_view_nom->Location = System::Drawing::Point(250, 50);
+			this->label_view_nom->Size = System::Drawing::Size(235, 30);
+			this->label_view_nom->TabIndex = 2;
+			this->label_view_nom->Name = L"label_view_nom";
+			this->label_view_nom->Text = po->getNom();
 			// 
-			// label1
+			// prenom
 			// 
-			this->label1->AutoSize = true;
-			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label_prenom->AutoSize = true;
+			this->label_prenom->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label1->Location = System::Drawing::Point(12, 119);
-			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(67, 29);
-			this->label1->TabIndex = 27;
-			this->label1->Text = L"Nom";
+			this->label_prenom->Location = System::Drawing::Point(15, 85);//50+30+5
+			this->label_prenom->Size = System::Drawing::Size(235, 30);
+			this->label_prenom->TabStop = true;
+			this->label_prenom->Name = L"label_prenom";
+			this->label_prenom->Text = L"Prenom";
 			// 
-			// textBox5
+			// view prenom
 			// 
-			this->textBox5->Location = System::Drawing::Point(301, 230);
-			this->textBox5->Name = L"textBox5";
-			this->textBox5->ReadOnly = true;
-			this->textBox5->Size = System::Drawing::Size(100, 22);
-			this->textBox5->TabIndex = 40;
-			// 
-			// label7
-			// 
-			this->label7->AutoSize = true;
-			this->label7->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label_view_prenom->AutoSize = true;
+			this->label_view_prenom->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label7->Location = System::Drawing::Point(12, 230);
-			this->label7->Name = L"label7";
-			this->label7->Size = System::Drawing::Size(211, 29);
-			this->label7->TabIndex = 39;
-			this->label7->Text = L"Date d\'embauche";
+			this->label_view_prenom->Location = System::Drawing::Point(250, 85);
+			this->label_view_prenom->Size = System::Drawing::Size(235, 30);
+			this->label_view_prenom->TabIndex = 3;
+			this->label_view_prenom->Name = L"label_view_prenom";
+			this->label_view_prenom->Text = po->getPrenom();
 			// 
-			// textBox3
+			// id superieur
 			// 
-			this->textBox3->Location = System::Drawing::Point(301, 65);
-			this->textBox3->Name = L"textBox3";
-			this->textBox3->ReadOnly = true;
-			this->textBox3->Size = System::Drawing::Size(100, 22);
-			this->textBox3->TabIndex = 42;
-			// 
-			// label3
-			// 
-			this->label3->AutoSize = true;
-			this->label3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label_id_superieur->AutoSize = true;
+			this->label_id_superieur->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label3->Location = System::Drawing::Point(12, 65);
-			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(153, 29);
-			this->label3->TabIndex = 41;
-			this->label3->Text = L"ID Sup�rieur";
+			this->label_id_superieur->Location = System::Drawing::Point(15, 120);//85+30+5
+			this->label_id_superieur->Size = System::Drawing::Size(235, 30);
+			this->label_id_superieur->TabStop = true;
+			this->label_id_superieur->Name = L"label_id_superieur";
+			this->label_id_superieur->Text = L"Id Superieur";
 			// 
-			// ViewPersonnel
+			// view id superieur
+			// 
+			this->label_view_id_superieur->AutoSize = true;
+			this->label_view_id_superieur->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label_view_id_superieur->Location = System::Drawing::Point(250, 120);
+			this->label_view_id_superieur->Size = System::Drawing::Size(235, 30);
+			this->label_view_id_superieur->TabIndex = 4;
+			this->label_view_id_superieur->Name = L"label_view_id_superieur";
+			this->label_view_id_superieur->Text = po->getIdSuperieur();
+			// 
+			// date embauche
+			// 
+			this->label_date_embauche->AutoSize = true;
+			this->label_date_embauche->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label_date_embauche->Location = System::Drawing::Point(15, 155); //120+30+5
+			this->label_date_embauche->Size = System::Drawing::Size(235, 30);
+			this->label_date_embauche->TabStop = true;
+			this->label_date_embauche->Name = L"label_date_embauche";
+			this->label_date_embauche->Text = L"Date Embauche";
+			// 
+			// view date embauche
+			// 
+			this->label_view_date_embauche->AutoSize = true;
+			this->label_view_date_embauche->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label_view_date_embauche->Location = System::Drawing::Point(250, 155);
+			this->label_view_date_embauche->Size = System::Drawing::Size(235, 30);
+			this->label_view_date_embauche->TabIndex = 1;
+			this->label_view_date_embauche->Name = L"label_view_date_embauche";
+			this->label_view_date_embauche->Text = po->getDateEmbauche();
+			// 
+			// id adresse
+			// 
+			this->label_id_adresse->AutoSize = true;
+			this->label_id_adresse->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label_id_adresse->Location = System::Drawing::Point(15, 190);//155+30+5
+			this->label_id_adresse->Size = System::Drawing::Size(235, 30);
+			this->label_id_adresse->TabStop = true;
+			this->label_id_adresse->Name = L"label_id_adresse";
+			this->label_id_adresse->Text = L"Adresse";
+			// 
+			// view id adresse
+			// 
+			this->label_view_id_adresse->AutoSize = true;
+			this->label_view_id_adresse->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label_view_id_adresse->Location = System::Drawing::Point(250, 190);
+			this->label_view_id_adresse->Size = System::Drawing::Size(235, 30);
+			this->label_view_id_adresse->TabIndex = 1;
+			this->label_view_id_adresse->Name = L"label_view_id_adresse";
+			this->label_view_id_adresse->Text = "En attente";
+			// 
+			// ViewClient
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(454, 512);
-			this->Controls->Add(this->textBox3);
-			this->Controls->Add(this->label3);
-			this->Controls->Add(this->textBox5);
-			this->Controls->Add(this->label7);
-			this->Controls->Add(this->textBox4);
-			this->Controls->Add(this->label6);
-			this->Controls->Add(this->comboBox2);
-			this->Controls->Add(this->label5);
-			this->Controls->Add(this->comboBox1);
-			this->Controls->Add(this->label4);
-			this->Controls->Add(this->textBox2);
-			this->Controls->Add(this->textBox1);
-			this->Controls->Add(this->label2);
-			this->Controls->Add(this->label1);
+			this->ClientSize = System::Drawing::Size(500, 225);//190+30+5
+			this->Controls->Add(this->label_nom);
+			this->Controls->Add(this->label_view_nom);
+			this->Controls->Add(this->label_prenom);
+			this->Controls->Add(this->label_view_prenom);
+			this->Controls->Add(this->label_id_superieur);
+			this->Controls->Add(this->label_view_id_superieur);
+			this->Controls->Add(this->label_date_embauche);
+			this->Controls->Add(this->label_view_date_embauche);
+			this->Controls->Add(this->label_id_adresse);
+			this->Controls->Add(this->label_view_id_adresse);
 			this->Name = L"ViewPersonnelForm";
 			this->Text = L"ViewPersonnel";
+			this->Load += gcnew System::EventHandler(this, &ViewPersonnelForm::ViewPersonnelLoad);
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
 		}
 #pragma endregion
+	private: System::Void ViewPersonnelLoad(System::Object^ sender, System::EventArgs^ e) {
+	}
 	private: System::Void label6_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
 	};
