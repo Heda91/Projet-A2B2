@@ -136,6 +136,8 @@
     <ClCompile Include="ModifItemsForm.cpp" />
     <ClCompile Include="ModifPersonnelForm.cpp" />
     <ClCompile Include="PersonnelForm.cpp" />
+    <ClCompile Include="PersonnelObject.cpp" />
+    <ClCompile Include="PersonnelRepo.cpp" />
     <ClCompile Include="PrincipalForm.cpp" />
     <ClCompile Include="StatisticsForm.cpp" />
     <ClCompile Include="ViewClientForm.cpp" />
@@ -160,6 +162,8 @@
     <ClInclude Include="ModifItemsForm.h" />
     <ClInclude Include="ModifPersonnelForm.h" />
     <ClInclude Include="PersonnelForm.h" />
+    <ClInclude Include="PersonnelObject.h" />
+    <ClInclude Include="PersonnelRepo.h" />
     <ClInclude Include="PrincipalForm.h" />
     <ClInclude Include="StatisticsForm.h" />
     <ClInclude Include="ViewClientForm.h" />

@@ -1,6 +1,8 @@
 #include "PersonnelForm.h"
 #include "ModifPersonnelForm.h"
 #include "ViewPersonnelForm.h"
+#include "PersonnelObject.h"
+#include "PersonnelRepo.h"
 
 void Display::PersonnelForm::buttonAddClick(System::Object^ sender, System::EventArgs^ e) {
 	ModifPersonnelForm add_personnel_form;
@@ -23,18 +25,45 @@ void Display::PersonnelForm::buttonDelClick(System::Object^ sender, System::Even
 */
 
 void Display::PersonnelForm::reload() {
+	System::Collections::Generic::List<PersonnelObject^>^ personnels = pr->getPersonnels();
 
+	this->data_grid_view->Rows->Clear();
+	for each (PersonnelObject^ personnel in personnels) {
+		if (!personnel->isDelete()){
+			DataGridViewRow^ dgvr = gcnew DataGridViewRow();
+			DataGridViewTextBoxCell^ dgvtbc = gcnew DataGridViewTextBoxCell();
+			dgvtbc->Value = Convert::ToString(personnel->getIdPersonnel());
+			dgvr->Cells->Add(dgvtbc);
+			DataGridViewTextBoxCell^ dgvtbc2 = gcnew DataGridViewTextBoxCell();
+			dgvtbc2->Value = personnel->getNom();
+			dgvr->Cells->Add(dgvtbc2);
+			DataGridViewTextBoxCell^ dgvtbc3 = gcnew DataGridViewTextBoxCell();
+			dgvtbc3->Value = personnel->getPrenom();
+			dgvr->Cells->Add(dgvtbc3);
+			DataGridViewTextBoxCell^ dgvtbc4 = gcnew DataGridViewTextBoxCell();
+			dgvtbc4->Value = personnel->getDateEmbauche();
+			dgvr->Cells->Add(dgvtbc4);
+		
+			dgvr->Tag = personnel;
+			this->data_grid_view->Rows->Add(dgvr);
+		}
+	}
 }
 
 void Display::PersonnelForm::initDataGridView() {
+	pr = gcnew Repository::PersonnelRepo(my_bdd);
+
 	Forms::DataGridViewTextBoxColumn^ dgvtbc = gcnew Forms::DataGridViewTextBoxColumn();
-	dgvtbc->Name = "id personnel";
+	dgvtbc->Name = "Id personnel";
 	this->data_grid_view->Columns->Add(dgvtbc);
 	Forms::DataGridViewTextBoxColumn^ dgvtbc2 = gcnew Forms::DataGridViewTextBoxColumn();
-	dgvtbc2->Name = "nom";
+	dgvtbc2->Name = "Nom";
 	this->data_grid_view->Columns->Add(dgvtbc2);
 	Forms::DataGridViewTextBoxColumn^ dgvtbc3 = gcnew Forms::DataGridViewTextBoxColumn();
-	dgvtbc3->Name = "prenom";
+	dgvtbc3->Name = "Prenom";
 	this->data_grid_view->Columns->Add(dgvtbc3);
+	Forms::DataGridViewTextBoxColumn^ dgvtbc4 = gcnew Forms::DataGridViewTextBoxColumn();
+	dgvtbc4->Name = "Embauche";
+	this->data_grid_view->Columns->Add(dgvtbc4);
 }
 

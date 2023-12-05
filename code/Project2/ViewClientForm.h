@@ -44,9 +44,9 @@ namespace Display {
 		Forms::Label^ label_naissance;
 		Forms::Label^ label_view_naissance;
 		Forms::Label^ label_livraison;
-		Forms::ComboBox^ comboBox1;
+		Forms::ComboBox^ comboBox_livraison;
 		Forms::Label^ label_facturation;
-		Forms::ComboBox^ comboBox2;
+		Forms::ComboBox^ comboBox_facturation;
 
 	private:
 		/// <summary>
@@ -70,9 +70,9 @@ namespace Display {
 			this->label_naissance = (gcnew System::Windows::Forms::Label());
 			this->label_view_naissance = (gcnew System::Windows::Forms::Label());
 			this->label_livraison = (gcnew System::Windows::Forms::Label());
-			this->comboBox1 = (gcnew System::Windows::Forms::ComboBox());
+			this->comboBox_livraison = (gcnew System::Windows::Forms::ComboBox());
 			this->label_facturation = (gcnew System::Windows::Forms::Label());
-			this->comboBox2 = (gcnew System::Windows::Forms::ComboBox());
+			this->comboBox_facturation = (gcnew System::Windows::Forms::ComboBox());
 			this->SuspendLayout();
 			/*
 			// 

@@ -1,5 +1,7 @@
 #pragma once
+#include "BDD.h"
 #include "PrincipalForm.h"
+#include "PersonnelRepo.h"
 
 namespace Display {
 
@@ -16,5 +18,7 @@ namespace Display {
 		//void buttonDelClick(System::Object^ sender, System::EventArgs^ e) override;
 
 		void initDataGridView() override;
+	private:
+		Repository::PersonnelRepo^ pr;
 	};
 }

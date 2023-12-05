@@ -12,7 +12,7 @@ namespace Repository {
     ref class ClientRepo
     {
 
-    public:
+    private:
         BDD^ bdd;
     public:
         ClientRepo(BDD^ bdd) :bdd(bdd) {};
