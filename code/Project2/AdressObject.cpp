@@ -17,3 +17,5 @@ String^ AdressObject::getRue() { return rue; }
 String^ AdressObject::getCodePostale() { return code_postale; }
 String^ AdressObject::getVille() { return ville; }
 
+String^ AdressObject::ToString() { return this->getNumero() + " " + this->getRue() + ", " + this->getCodePostale() + " " + this->getVille(); }
+

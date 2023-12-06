@@ -1,29 +1,36 @@
 #pragma once
+#include "AdressObject.h"
 
 using namespace System;
+using namespace System::Collections::Generic;
 namespace Object {
     ref class ClientObject
     {
 
     private:
         int numero_client = 0;
-        String^ name;
-        String^ first_name;
-
+        String^ nom = "NULL";
+        String^ prenom = "NULL";
+        DateTime^ date_naissance = nullptr;
+        List<AdressObject^>^ adresse_livraison = gcnew List<AdressObject^>();
+        List<AdressObject^>^ adresse_emission = gcnew List<AdressObject^>();
     public:
-        void setNumero_client(int idUser);
+        void setNumeroClient(int num) { this->numero_client = num; }
+        void setNom(String^ nom) { this->nom = nom; }
+        void setPrenom(String^ prenom) { this->prenom = prenom; }
+        void setdateNaissance(DateTime^ date) { this->date_naissance = date; }
 
-        int getNumero_client(void);
+        void addAdresseLivraison(AdressObject^ adresse) { this->adresse_livraison->Add(adresse); }
+        void addAdresseEmission(AdressObject^ adresse) { this->adresse_emission->Add(adresse); }
+        void deleteAdresseLivraison(AdressObject^ adresse) { this->adresse_livraison->Remove(adresse); }
+        void deleteAdresseEmission(AdressObject^ adresse) { this->adresse_emission->Remove(adresse); }
 
-        void setNom(String^ name);
-
-        void setFirstName(String^ name) { this->first_name = name; }
-
+        String^ getNumeroClient();
         String^ getNom();
-
-        String^ getFirstName() { return this->first_name; }
-
-        String^ ToString() override;
-
+        String^ getPrenom();
+        String^ getDateNaissance();
+        String^ getDateNaissanceAff();
+        List<AdressObject^>^ getAdresseLivraison();
+        List<AdressObject^>^ getAdresseEmission();
     };
 }

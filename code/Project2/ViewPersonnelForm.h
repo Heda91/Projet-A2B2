@@ -159,7 +159,7 @@ namespace Display {
 			this->label_view_date_embauche->Size = System::Drawing::Size(220, 30);
 			this->label_view_date_embauche->TabIndex = 5;
 			this->label_view_date_embauche->Name = L"label_view_date_embauche";
-			this->label_view_date_embauche->Text = po->getDateEmbauche();
+			this->label_view_date_embauche->Text = po->getDateEmbaucheAff();
 			this->label_view_date_embauche->BorderStyle = Forms::BorderStyle::FixedSingle;
 			// 
 			// id adresse

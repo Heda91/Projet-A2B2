@@ -58,7 +58,7 @@ void Display::PersonnelForm::reload() {
 			dgvtbc3->Value = personnel->getPrenom();
 			dgvr->Cells->Add(dgvtbc3);
 			Forms::DataGridViewTextBoxCell^ dgvtbc4 = gcnew Forms::DataGridViewTextBoxCell();
-			dgvtbc4->Value = personnel->getDateEmbauche();
+			dgvtbc4->Value = personnel->getDateEmbaucheAff();
 			dgvr->Cells->Add(dgvtbc4);
 		
 			dgvr->Tag = personnel;

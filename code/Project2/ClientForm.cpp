@@ -16,8 +16,8 @@ void Display::ClientForm::buttonModifClick(System::Object^ sender, System::Event
 	modif_client_form.ShowDialog();
 }
 void Display::ClientForm::buttonViewClick(System::Object^ sender, System::EventArgs^ e) {
-	ViewClientForm view_client_form;
-	view_client_form.ShowDialog();
+	ViewClientForm^ view_client_form = gcnew ViewClientForm((ClientObject^)this->data_grid_view->SelectedRows[0]->Tag);
+	view_client_form->ShowDialog();
 }
 /*
 void Display::ClientForm::buttonDelClick(System::Object^ sender, System::EventArgs^ e)
@@ -34,13 +34,13 @@ void Display::ClientForm::reload() {
 	for each (ClientObject ^ client in clients) {
 		DataGridViewRow^ dgvr = gcnew DataGridViewRow();
 		DataGridViewTextBoxCell^ dgvtbc = gcnew DataGridViewTextBoxCell();
-		dgvtbc->Value = Convert::ToString(client->getNumero_client());
+		dgvtbc->Value = Convert::ToString(client->getNumeroClient());
 		dgvr->Cells->Add(dgvtbc);
 		DataGridViewTextBoxCell^ dgvtbc2 = gcnew DataGridViewTextBoxCell();
 		dgvtbc2->Value = client->getNom();
 		dgvr->Cells->Add(dgvtbc2);
 		DataGridViewTextBoxCell^ dgvtbc3 = gcnew DataGridViewTextBoxCell();
-		dgvtbc3->Value = client->getFirstName();
+		dgvtbc3->Value = client->getPrenom();
 		dgvr->Cells->Add(dgvtbc3);
 
 		dgvr->Tag = client;

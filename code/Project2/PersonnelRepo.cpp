@@ -4,23 +4,32 @@
 using namespace Repository;
 
 List<PersonnelObject^>^ PersonnelRepo::getPersonnels() {
-    DataSet^ ds = bdd->executeQuery("SELECT [id_personnel],[nom],[prenom],[date_embauche],[id_superieur],[supprime],[id_adresse] FROM [Personnel]");
+    String^ query = "SELECT id_personnel, nom,  prenom, date_embauche, id_superieur, [Personnel].supprime, [Personnel].id_adresse, numero_rue, rue, code_postale, [Adresse].supprime, ville";
+    query += " FROM [Personnel] JOIN [Adresse] ON [Personnel].id_adresse = [Adresse].id_adresse";
+    DataSet^ ds = bdd->executeQuery(query);
 
     List<PersonnelObject^>^ list = gcnew List<PersonnelObject^>();
 
     for each (DataRow ^ row in ds->Tables[0]->Rows)
     {
         PersonnelObject^ u = gcnew PersonnelObject();
-        u->setIdPersonnel((int)row[0]);
-        u->setNom((String^)row[1]);
-        u->setPrenom((String^)row[2]);
-        try { u->setDateEmbauche((DateTime^)row[3]); }
+        u->setIdPersonnel((int)row["id_personnel"]);
+        u->setNom((String^)row["nom"]);
+        u->setPrenom((String^)row["prenom"]);
+        try { u->setDateEmbauche((DateTime^)row["date_embauche"]); }
         catch (System::InvalidCastException^) { u->setDateEmbauche(nullptr); }
-        try { u->setIdSuperieur((int)row[4]); }
+        try { u->setIdSuperieur((int)row["id_superieur"]); }
         catch (System::InvalidCastException^) { u->setIdSuperieur(0); }
-        if ((bool)row[5] == true) { u->deletePersonnel(); }
+        if ((bool)row["supprime"] == true) { u->deletePersonnel(); }
         AdressRepo^ ar = gcnew AdressRepo(bdd);
-        u->setAdresse(ar->selectAdress((int)row[6]));
+        AdressObject^ ao = gcnew AdressObject();
+        ao->setIdAdresse((int)row["id_adresse"]);
+        ao->setNumero((int)row["numero_rue"]);
+        ao->setRue((String^)row["rue"]);
+        ao->setCodePostale((String^)row["code_postale"]);
+        if ((bool)row["supprime1"] == true) { ao->deleteAdresse(); }
+        u->setAdresse(ao);
+        
         list->Add(u);
     }
 

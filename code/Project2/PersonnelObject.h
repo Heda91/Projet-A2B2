@@ -30,6 +30,7 @@ namespace Object {
         String^ getNom();
         String^ getPrenom();
         String^ getDateEmbauche();
+        String^ getDateEmbaucheAff();
         String^ getIdSuperieur();
         String^ getAdresse();
         AdressObject^ getAdresseVar();
