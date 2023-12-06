@@ -27,8 +27,8 @@ namespace Display {
 		Forms::Label^ label_view_id_superieur;
 		Forms::Label^ label_date_embauche;
 		Forms::Label^ label_view_date_embauche;
-		Forms::Label^ label_id_adresse;
-		Forms::Label^ label_view_id_adresse;
+		Forms::Label^ label_adresse;
+		Forms::Label^ label_view_adresse;
 
 	private:
 		/// <summary>
@@ -53,8 +53,8 @@ namespace Display {
 			this->label_view_id_superieur = (gcnew System::Windows::Forms::Label());
 			this->label_date_embauche = (gcnew System::Windows::Forms::Label());
 			this->label_view_date_embauche = (gcnew System::Windows::Forms::Label());
-			this->label_id_adresse = (gcnew System::Windows::Forms::Label());
-			this->label_view_id_adresse = (gcnew System::Windows::Forms::Label());
+			this->label_adresse = (gcnew System::Windows::Forms::Label());
+			this->label_view_adresse = (gcnew System::Windows::Forms::Label());
 			this->SuspendLayout();
 			// 
 			// id personnel
@@ -164,24 +164,25 @@ namespace Display {
 			// 
 			// id adresse
 			// 
-			this->label_id_adresse->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label_adresse->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label_id_adresse->Location = System::Drawing::Point(15, 190);//155+30+5
-			this->label_id_adresse->Size = System::Drawing::Size(220, 30);
-			this->label_id_adresse->TabStop = true;
-			this->label_id_adresse->Name = L"label_id_adresse";
-			this->label_id_adresse->Text = L"Adresse";
+			this->label_adresse->Location = System::Drawing::Point(15, 190);//155+30+5
+			this->label_adresse->Size = System::Drawing::Size(220, 30);
+			this->label_adresse->TabStop = true;
+			this->label_adresse->Name = L"label_id_adresse";
+			this->label_adresse->Text = L"Adresse";
 			// 
 			// view id adresse
 			// 
-			this->label_view_id_adresse->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label_view_adresse->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label_view_id_adresse->Location = System::Drawing::Point(250, 190);
-			this->label_view_id_adresse->Size = System::Drawing::Size(220, 30);
-			this->label_view_id_adresse->TabIndex = 6;
-			this->label_view_id_adresse->Name = L"label_view_id_adresse";
-			this->label_view_id_adresse->Text = "En attente";
-			this->label_view_id_adresse->BorderStyle = Forms::BorderStyle::FixedSingle;
+			this->label_view_adresse->Location = System::Drawing::Point(250, 190);
+			this->label_view_adresse->Size = System::Drawing::Size(220, 30);
+			this->label_view_adresse->TabIndex = 6;
+			this->label_view_adresse->Name = L"label_view_id_adresse";
+			this->label_view_adresse->Text = po->getAdresse();
+			this->label_view_adresse->AutoEllipsis = true;
+			this->label_view_adresse->BorderStyle = Forms::BorderStyle::FixedSingle;
 			// 
 			// ViewClient
 			// 
@@ -200,8 +201,8 @@ namespace Display {
 			this->Controls->Add(this->label_view_id_superieur);
 			this->Controls->Add(this->label_date_embauche);
 			this->Controls->Add(this->label_view_date_embauche);
-			this->Controls->Add(this->label_id_adresse);
-			this->Controls->Add(this->label_view_id_adresse);
+			this->Controls->Add(this->label_adresse);
+			this->Controls->Add(this->label_view_adresse);
 			this->Name = L"ViewPersonnelForm";
 			this->Text = L"Personnel: "+po->getNom()+" "+po->getPrenom();
 			this->Load += gcnew System::EventHandler(this, &ViewPersonnelForm::ViewPersonnelLoad);

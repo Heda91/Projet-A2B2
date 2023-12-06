@@ -1,5 +1,6 @@
 ﻿#pragma once
 #include "PersonnelObject.h"
+#include "AddAdressForm.h"
 #include <iostream>
 #include <string>
 
@@ -30,8 +31,8 @@ namespace Display {
 		Forms::TextBox^ txtbx_id_superieur;
 		Forms::Label^ label_date_embauche;
 		Forms::TextBox^ txtbx_date_embauche;
-		Forms::Label^ label_id_adresse;
-		Forms::Label^ label_view_id_adresse;
+		Forms::Label^ label_adresse;
+		Forms::Label^ label_view_adresse;
 		Forms::Button^ button_add_adresse;
 		Forms::Button^ button_valid;
 
@@ -52,8 +53,8 @@ namespace Display {
 			this->txtbx_id_superieur = (gcnew System::Windows::Forms::TextBox());
 			this->label_date_embauche = (gcnew System::Windows::Forms::Label());
 			this->txtbx_date_embauche = (gcnew System::Windows::Forms::TextBox());
-			this->label_id_adresse = (gcnew System::Windows::Forms::Label());
-			this->label_view_id_adresse = (gcnew System::Windows::Forms::Label());
+			this->label_adresse = (gcnew System::Windows::Forms::Label());
+			this->label_view_adresse = (gcnew System::Windows::Forms::Label());
 			this->button_add_adresse = gcnew Forms::Button();
 			this->button_valid = gcnew Forms::Button();
 			this->SuspendLayout();
@@ -161,24 +162,25 @@ namespace Display {
 			// 
 			// id adresse
 			// 
-			this->label_id_adresse->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label_adresse->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label_id_adresse->Location = System::Drawing::Point(15, 190);//155+30+5
-			this->label_id_adresse->Size = System::Drawing::Size(220, 30);
-			this->label_id_adresse->TabStop = true;
-			this->label_id_adresse->Name = L"label_id_adresse";
-			this->label_id_adresse->Text = L"Adresse";
+			this->label_adresse->Location = System::Drawing::Point(15, 190);//155+30+5
+			this->label_adresse->Size = System::Drawing::Size(220, 30);
+			this->label_adresse->TabStop = true;
+			this->label_adresse->Name = L"label_id_adresse";
+			this->label_adresse->Text = L"Adresse";
 			// 
 			// view id adresse
 			// 
-			this->label_view_id_adresse->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label_view_adresse->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label_view_id_adresse->Location = System::Drawing::Point(250, 190);
-			this->label_view_id_adresse->Size = System::Drawing::Size(185, 30);
-			this->label_view_id_adresse->TabIndex = 6;
-			this->label_view_id_adresse->Name = L"txtbx_id_adresse";
-			this->label_view_id_adresse->Text = "En attente";
-			this->label_view_id_adresse->BorderStyle = Forms::BorderStyle::FixedSingle;
+			this->label_view_adresse->Location = System::Drawing::Point(250, 190);
+			this->label_view_adresse->Size = System::Drawing::Size(185, 30);
+			this->label_view_adresse->TabIndex = 6;
+			this->label_view_adresse->Name = L"txtbx_id_adresse";
+			this->label_view_adresse->Text = po->getAdresse();
+			this->label_view_adresse->AutoEllipsis = true;
+			this->label_view_adresse->BorderStyle = Forms::BorderStyle::FixedSingle;
 			//
 			// button add adresse
 			// 
@@ -219,8 +221,8 @@ namespace Display {
 			this->Controls->Add(this->txtbx_id_superieur);
 			this->Controls->Add(this->label_date_embauche);
 			this->Controls->Add(this->txtbx_date_embauche);
-			this->Controls->Add(this->label_id_adresse);
-			this->Controls->Add(this->label_view_id_adresse);
+			this->Controls->Add(this->label_adresse);
+			this->Controls->Add(this->label_view_adresse);
 			this->Controls->Add(this->button_add_adresse);
 			this->Controls->Add(this->button_valid);
 			this->Name = L"ModifPersonnelForm";
@@ -253,18 +255,30 @@ namespace Display {
 				reussi = false;
 				this->txtbx_date_embauche->BackColor = System::Drawing::Color::Red;
 			}
-			//id_adresse
-			//set id adresse
-
+			//adresse
+			if (po->getAdresseVar()->getNumero() == "0") {//dans le cas du "Add" regarde si il a modifie l'adresse
+				reussi = false;
+				this->label_view_adresse->BackColor = System::Drawing::Color::Red;
+			}
+			else { this->label_view_adresse->BackColor = System::Drawing::Color::White; }
 			if (reussi) { 
 				po->setNom(this->txtbx_nom->Text);
 				po->setPrenom(this->txtbx_prenom->Text);
 				po->setIdSuperieur(id_sup);
 				po->setDateEmbauche(date);
-				//set id_adresse
+				//adresse deja valider
 				this->Close();
 			}
 		};
-		void buttonAddAdresseClick(System::Object^ sender, System::EventArgs^ e){}
+		void buttonAddAdresseClick(System::Object^ sender, System::EventArgs^ e){
+			AdressObject^ adress_obj = gcnew AdressObject();
+			AddAdressForm^ add_adress_form = gcnew AddAdressForm(adress_obj);
+			add_adress_form->ShowDialog();
+			if (adress_obj->getNumero()!="0"){
+				po->setAdresse(adress_obj);
+				this->label_view_adresse->Text = po->getAdresse();
+				this->Refresh();
+			}//adresse créer
+		}
 	};
 }

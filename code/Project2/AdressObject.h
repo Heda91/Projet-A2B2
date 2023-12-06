@@ -18,7 +18,7 @@ namespace Object {
 		void setCodePostale(String^);
 		void setVille(String^);
 
-		void deleteVille();
+		void deleteAdresse();
 		bool isDelete();
 
 		String^ getIdAdresse();

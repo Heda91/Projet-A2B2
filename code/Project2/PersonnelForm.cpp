@@ -9,13 +9,21 @@ void Display::PersonnelForm::buttonAddClick(System::Object^ sender, System::Even
 	PersonnelObject^ po = gcnew PersonnelObject();
 	ModifPersonnelForm^ add_personnel_form = gcnew ModifPersonnelForm(po);
 	add_personnel_form->ShowDialog();
-	if (po->getNom() != "") { this->pr->insertPersonnel(po); }//regarde si le nom n'est pas vide (donc a validé)
+	if (po->getDateEmbauche() != "NULL") {//regarde si la date embauche n'est pas NULL (donc a validé)
+		Repository::AdressRepo^ ar = gcnew Repository::AdressRepo(this->my_bdd);
+		ar->insertAdress(po->getAdresseVar());
+		this->pr->insertPersonnel(po); 
+	}
 	this->reload();
 }
 void Display::PersonnelForm::buttonModifClick(System::Object^ sender, System::EventArgs^ e) {
 	PersonnelObject^ po = (PersonnelObject^)this->data_grid_view->SelectedRows[0]->Tag;
 	ModifPersonnelForm^ modif_personnel_form = gcnew ModifPersonnelForm(po);
 	modif_personnel_form->ShowDialog();
+	if (po->getAdresseVar()->getIdAdresse() == "0"){//nouvelle adresse
+		Repository::AdressRepo^ ar = gcnew Repository::AdressRepo(this->my_bdd);
+		ar->insertAdress(po->getAdresseVar());
+	}
 	this->pr->editPersonnel(po);
 	this->reload();
 }
@@ -25,7 +33,10 @@ void Display::PersonnelForm::buttonViewClick(System::Object^ sender, System::Eve
 }
 
 void Display::PersonnelForm::buttonDelClick(System::Object^ sender, System::EventArgs^ e){
-	this->pr->deletePersonnel((PersonnelObject^)this->data_grid_view->SelectedRows[0]->Tag);
+	Repository::AdressRepo^ ar = gcnew Repository::AdressRepo(this->my_bdd);
+	PersonnelObject^ pf = (PersonnelObject^)this->data_grid_view->SelectedRows[0]->Tag;
+	this->pr->deletePersonnel(pf);
+	ar->deleteAdress(pf->getAdresseVar());
 	this->reload();
 }
 

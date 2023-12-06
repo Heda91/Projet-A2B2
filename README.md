@@ -9,3 +9,4 @@ CONSTANT : MY_CONST
 
 ######################
 dans les data grid view il faut faire attention aux tri (tri par string et non par int)
+Dans le PersonnelForm /!\ ne check pas si id_superieur existe /!\

@@ -21,6 +21,10 @@ void PersonnelObject::setDateEmbauche(DateTime^ date_embauche){
     this->date_embauche = date_embauche;
 }
 
+void PersonnelObject::setAdresse(AdressObject^ adresse) {
+    this->adresse = adresse;
+}
+
 void PersonnelObject::deletePersonnel() {
     this->supprime = true;
 }
@@ -45,7 +49,7 @@ String^ PersonnelObject::getDateEmbauche() {
         else { day = Convert::ToString(date_embauche->Day); }
         if (date_embauche->Month < 10) { month = "0" + Convert::ToString(date_embauche->Month); }
         else { month = Convert::ToString(date_embauche->Month); }
-        return day + "/" + month + "/" + Convert::ToString(date_embauche->Year);
+        return month + "/" + day + "/" + Convert::ToString(date_embauche->Year);
     }
 }
 
@@ -54,6 +58,14 @@ bool PersonnelObject::isDelete() { return this->supprime; }
 String^ PersonnelObject::getIdSuperieur() {
     if (this->id_superieur == 0) { return "NULL"; }
     else { return this->id_superieur.ToString(); }
+}
+
+String^ PersonnelObject::getAdresse() {
+    return adresse->getNumero() +" "+ adresse->getRue()+", "+adresse->getCodePostale();
+}
+
+AdressObject^ PersonnelObject::getAdresseVar() {
+    return this->adresse;
 }
 
 String^ PersonnelObject::ToString() {

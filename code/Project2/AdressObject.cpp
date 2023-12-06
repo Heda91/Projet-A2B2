@@ -8,7 +8,7 @@ void AdressObject::setRue(String^ rue) { this->rue = rue; }
 void AdressObject::setCodePostale(String^ cp) { code_postale = cp; }
 void AdressObject::setVille(String^ ville) { this->ville = ville; }
 
-void AdressObject::deleteVille() { supprime = true; }
+void AdressObject::deleteAdresse() { supprime = true; }
 bool AdressObject::isDelete() { return supprime; }
 
 String^ AdressObject::getIdAdresse() { return id_adresse.ToString(); }

@@ -123,6 +123,7 @@
   <ItemGroup>
     <ClCompile Include="AddAdressForm.cpp" />
     <ClCompile Include="AdressObject.cpp" />
+    <ClCompile Include="AdressRepo.cpp" />
     <ClCompile Include="BDD.cpp" />
     <ClCompile Include="ClientForm.cpp" />
     <ClCompile Include="ClientObject.cpp" />
@@ -149,6 +150,7 @@
   <ItemGroup>
     <ClInclude Include="AddAdressForm.h" />
     <ClInclude Include="AdressObject.h" />
+    <ClInclude Include="AdressRepo.h" />
     <ClInclude Include="BDD.h" />
     <ClInclude Include="ClientForm.h" />
     <ClInclude Include="ClientObject.h" />
