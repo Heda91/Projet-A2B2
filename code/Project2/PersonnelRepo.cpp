@@ -4,7 +4,7 @@
 using namespace Repository;
 
 List<PersonnelObject^>^ PersonnelRepo::getPersonnels() {
-    DataSet^ ds = bdd->executeQuery("SELECT [id_personnel],[nom],[prenom],[date_embauche],[id_superieur],[supprime],[id_adresse] FROM [Personnel]");
+    DataSet^ ds = bdd->executeQuery("SELECT [id_personnel],[nom],[prenom],[date_embauchage],[id_superieur],[supprime],[id_adresse] FROM [Personnel]");
 
     List<PersonnelObject^>^ list = gcnew List<PersonnelObject^>();
 
@@ -29,7 +29,7 @@ List<PersonnelObject^>^ PersonnelRepo::getPersonnels() {
 
 void PersonnelRepo::editPersonnel(PersonnelObject^ u) {
     String^ query = "UPDATE [Personnel] SET [nom] = '" + u->getNom() + "', [prenom]= '" + u->getPrenom() + "'";
-    query += ", [date_embauche] = '" + u->getDateEmbauche() + "', [id_superieur] = " + u->getIdSuperieur();
+    query += ", [date_embauchage] = '" + u->getDateEmbauche() + "', [id_superieur] = " + u->getIdSuperieur();
     query += ", id_adresse = " + u->getAdresseVar()->getIdAdresse() + " WHERE[id_personnel] = " + u->getIdPersonnel();
     bdd->executeNonQuery(query);
 }
