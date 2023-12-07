@@ -9,8 +9,8 @@ namespace Object {
 
     private:
         int numero_client = 0;
-        String^ nom = "NULL";
-        String^ prenom = "NULL";
+        String^ nom = "";
+        String^ prenom = "";
         DateTime^ date_naissance = nullptr;
         List<AdressObject^>^ adresse_livraison = gcnew List<AdressObject^>();
         List<AdressObject^>^ adresse_emission = gcnew List<AdressObject^>();

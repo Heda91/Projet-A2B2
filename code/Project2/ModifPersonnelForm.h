@@ -65,7 +65,7 @@ namespace Display {
 			const int pos_x = 15;
 			const int pos_y_start = 15;
 			const int step_y = 15;
-			const int size_x_btn = 100;
+			const int size_x_valid = 100;
 			const int step_x_btn = 5;
 			const int pos_x_view = 15 + pos_x + size_x;
 			const int size_x_form = 30 + pos_x_view + size_x_view;
@@ -207,9 +207,9 @@ namespace Display {
 			//
 			// valider
 			// 
-			this->button_valid->Location = System::Drawing::Point(pos_x_view + size_x_view - size_x_btn, 6 * (size_y + step_y) + pos_y_start);
+			this->button_valid->Location = System::Drawing::Point(pos_x_view + size_x_view - size_x_valid, 6 * (size_y + step_y) + pos_y_start);
 			this->button_valid->Margin = Forms::Padding(1);
-			this->button_valid->Size = System::Drawing::Size(size_x_btn, size_y);
+			this->button_valid->Size = System::Drawing::Size(size_x_valid, size_y);
 			this->button_valid->UseVisualStyleBackColor = true;
 			this->button_valid->Name = L"button_valid";
 			this->button_valid->Text = L"Valider";

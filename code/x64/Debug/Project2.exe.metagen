@@ -39,7 +39,7 @@ Class Display.ClientForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     reload(): PrivateScope, Public, Virtual, HideBySig
 Class Display.ModifClientForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
-    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Object.ClientObject): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
 Class Display.ViewClientForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(Object.ClientObject): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName

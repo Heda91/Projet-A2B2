@@ -56,13 +56,23 @@ namespace Display {
 			this->label_adresse = (gcnew System::Windows::Forms::Label());
 			this->label_view_adresse = (gcnew System::Windows::Forms::Label());
 			this->SuspendLayout();
+			// set size
+			const int size_x = 220;
+			const int size_x_view = 400;
+			const int size_y = 30;
+			const int pos_x = 15;
+			const int pos_y_start = 15;
+			const int step_y = 15;
+			const int pos_x_view = 15 + pos_x + size_x;
+			const int size_x_form = 30 + pos_x_view + size_x_view;
+			const int size_y_form = 7 * (size_y + step_y) + pos_y_start;
 			// 
 			// id personnel
 			// 
 			this->label_id_personnel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label_id_personnel->Location = System::Drawing::Point(15, 15);
-			this->label_id_personnel->Size = System::Drawing::Size(220, 30);
+			this->label_id_personnel->Location = System::Drawing::Point(pos_x, pos_y_start);
+			this->label_id_personnel->Size = System::Drawing::Size(size_x, 30);
 			this->label_id_personnel->TabStop = true;
 			this->label_id_personnel->Name = L"label_id_personnel";
 			this->label_id_personnel->Text = L"id personnel";
@@ -71,8 +81,8 @@ namespace Display {
 			// 
 			this->label_view_id_personnel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label_view_id_personnel->Location = System::Drawing::Point(250, 15);
-			this->label_view_id_personnel->Size = System::Drawing::Size(220, 30);
+			this->label_view_id_personnel->Location = System::Drawing::Point(pos_x_view, pos_y_start);
+			this->label_view_id_personnel->Size = System::Drawing::Size(size_x_view, size_y);
 			this->label_view_id_personnel->TabIndex = 1;
 			this->label_view_id_personnel->Name = L"label_view_id_personnel";
 			this->label_view_id_personnel->Text = po->getIdPersonnel();
@@ -82,8 +92,8 @@ namespace Display {
 			// 
 			this->label_nom->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label_nom->Location = System::Drawing::Point(15, 50); //15+30+5
-			this->label_nom->Size = System::Drawing::Size(220, 30);
+			this->label_nom->Location = System::Drawing::Point(pos_x, 1 * (size_y + step_y) + pos_y_start); //15+30+5
+			this->label_nom->Size = System::Drawing::Size(size_x, size_y);
 			this->label_nom->TabStop = true;
 			this->label_nom->Name = L"label_nom";
 			this->label_nom->Text = L"Nom";
@@ -92,8 +102,8 @@ namespace Display {
 			// 
 			this->label_view_nom->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label_view_nom->Location = System::Drawing::Point(250, 50);
-			this->label_view_nom->Size = System::Drawing::Size(220, 30);
+			this->label_view_nom->Location = System::Drawing::Point(pos_x_view, 1 * (size_y + step_y) + pos_y_start);
+			this->label_view_nom->Size = System::Drawing::Size(size_x_view, size_y);
 			this->label_view_nom->TabIndex = 2;
 			this->label_view_nom->Name = L"label_view_nom";
 			this->label_view_nom->Text = po->getNom();
@@ -103,8 +113,8 @@ namespace Display {
 			// 
 			this->label_prenom->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label_prenom->Location = System::Drawing::Point(15, 85);//50+30+5
-			this->label_prenom->Size = System::Drawing::Size(220, 30);
+			this->label_prenom->Location = System::Drawing::Point(pos_x, 2 * (size_y + step_y) + pos_y_start);//50+30+5
+			this->label_prenom->Size = System::Drawing::Size(size_x, size_y);
 			this->label_prenom->TabStop = true;
 			this->label_prenom->Name = L"label_prenom";
 			this->label_prenom->Text = L"Prenom";
@@ -113,8 +123,8 @@ namespace Display {
 			// 
 			this->label_view_prenom->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label_view_prenom->Location = System::Drawing::Point(250, 85);
-			this->label_view_prenom->Size = System::Drawing::Size(220, 30);
+			this->label_view_prenom->Location = System::Drawing::Point(pos_x_view, 2 * (size_y + step_y) + pos_y_start);
+			this->label_view_prenom->Size = System::Drawing::Size(size_x_view, size_y);
 			this->label_view_prenom->TabIndex = 3;
 			this->label_view_prenom->Name = L"label_view_prenom";
 			this->label_view_prenom->Text = po->getPrenom();
@@ -124,8 +134,8 @@ namespace Display {
 			// 
 			this->label_id_superieur->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label_id_superieur->Location = System::Drawing::Point(15, 120);//85+30+5
-			this->label_id_superieur->Size = System::Drawing::Size(220, 30);
+			this->label_id_superieur->Location = System::Drawing::Point(pos_x, 3 * (size_y + step_y) + pos_y_start);//85+30+5
+			this->label_id_superieur->Size = System::Drawing::Size(size_x, size_y);
 			this->label_id_superieur->TabStop = true;
 			this->label_id_superieur->Name = L"label_id_superieur";
 			this->label_id_superieur->Text = L"Id Superieur";
@@ -134,8 +144,8 @@ namespace Display {
 			// 
 			this->label_view_id_superieur->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label_view_id_superieur->Location = System::Drawing::Point(250, 120);
-			this->label_view_id_superieur->Size = System::Drawing::Size(220, 30);
+			this->label_view_id_superieur->Location = System::Drawing::Point(pos_x_view, 3 * (size_y + step_y) + pos_y_start);
+			this->label_view_id_superieur->Size = System::Drawing::Size(size_x_view, size_y);
 			this->label_view_id_superieur->TabIndex = 4;
 			this->label_view_id_superieur->Name = L"label_view_id_superieur";
 			this->label_view_id_superieur->Text = po->getIdSuperieur();
@@ -145,8 +155,8 @@ namespace Display {
 			// 
 			this->label_date_embauche->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label_date_embauche->Location = System::Drawing::Point(15, 155); //120+30+5
-			this->label_date_embauche->Size = System::Drawing::Size(220, 30);
+			this->label_date_embauche->Location = System::Drawing::Point(pos_x, 4 * (size_y + step_y) + pos_y_start); //120+30+5
+			this->label_date_embauche->Size = System::Drawing::Size(size_x, size_y);
 			this->label_date_embauche->TabStop = true;
 			this->label_date_embauche->Name = L"label_date_embauche";
 			this->label_date_embauche->Text = L"Date Embauche";
@@ -155,8 +165,8 @@ namespace Display {
 			// 
 			this->label_view_date_embauche->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label_view_date_embauche->Location = System::Drawing::Point(250, 155);
-			this->label_view_date_embauche->Size = System::Drawing::Size(220, 30);
+			this->label_view_date_embauche->Location = System::Drawing::Point(pos_x_view, 4 * (size_y + step_y) + pos_y_start);
+			this->label_view_date_embauche->Size = System::Drawing::Size(size_x_view, size_y);
 			this->label_view_date_embauche->TabIndex = 5;
 			this->label_view_date_embauche->Name = L"label_view_date_embauche";
 			this->label_view_date_embauche->Text = po->getDateEmbaucheAff();
@@ -166,8 +176,8 @@ namespace Display {
 			// 
 			this->label_adresse->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label_adresse->Location = System::Drawing::Point(15, 190);//155+30+5
-			this->label_adresse->Size = System::Drawing::Size(220, 30);
+			this->label_adresse->Location = System::Drawing::Point(pos_x, 5 * (size_y + step_y) + pos_y_start);//155+30+5
+			this->label_adresse->Size = System::Drawing::Size(size_x, size_y);
 			this->label_adresse->TabStop = true;
 			this->label_adresse->Name = L"label_id_adresse";
 			this->label_adresse->Text = L"Adresse";
@@ -176,8 +186,8 @@ namespace Display {
 			// 
 			this->label_view_adresse->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label_view_adresse->Location = System::Drawing::Point(250, 190);
-			this->label_view_adresse->Size = System::Drawing::Size(220, 30);
+			this->label_view_adresse->Location = System::Drawing::Point(pos_x_view, 5 * (size_y + step_y) + pos_y_start);
+			this->label_view_adresse->Size = System::Drawing::Size(size_x_view, size_y);
 			this->label_view_adresse->TabIndex = 6;
 			this->label_view_adresse->Name = L"label_view_id_adresse";
 			this->label_view_adresse->Text = po->getAdresse();
@@ -188,7 +198,7 @@ namespace Display {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->Size = System::Drawing::Size(500, 300);//190+30+5
+			this->Size = System::Drawing::Size(size_x_form, size_y_form);//190+30+5
 			this->MinimumSize = this->Size;
 			this->MaximumSize = this->Size;
 			this->Controls->Add(this->label_id_personnel);
