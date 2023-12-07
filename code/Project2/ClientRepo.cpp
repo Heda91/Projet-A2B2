@@ -11,7 +11,8 @@ List<ClientObject^>^ ClientRepo::getClients(void) {
         ClientObject^ u = gcnew ClientObject();
         u->setNumero_client((int)row[0]);
         u->setNom((String^)row[1]);
-        u->setFirstName((String^)row[2]);
+        try { u->setFirstName((String^)row[2]); }
+        catch (System::InvalidCastException^) { u->setFirstName(""); };
         list->Add(u);
     }
 

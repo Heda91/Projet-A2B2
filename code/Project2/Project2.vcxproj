@@ -122,13 +122,15 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AddAdressForm.cpp" />
-    <ClCompile Include="AdressObject.cpp" />
-    <ClCompile Include="AdressRepo.cpp" />
+    <ClCompile Include="ArticleObject.cpp" />
+    <ClCompile Include="ArticleRepo.cpp" />
     <ClCompile Include="BDD.cpp" />
     <ClCompile Include="ClientForm.cpp" />
     <ClCompile Include="ClientObject.cpp" />
     <ClCompile Include="ClientRepo.cpp" />
     <ClCompile Include="CommandForm.cpp" />
+    <ClCompile Include="CommandObject.cpp" />
+    <ClCompile Include="CommandRepo.cpp" />
     <ClCompile Include="FormProjet.cpp" />
     <ClCompile Include="ItemsForm.cpp" />
     <ClCompile Include="main.cpp" />
@@ -149,13 +151,15 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AddAdressForm.h" />
-    <ClInclude Include="AdressObject.h" />
-    <ClInclude Include="AdressRepo.h" />
+    <ClInclude Include="ArticleObject.h" />
+    <ClInclude Include="ArticleRepo.h" />
     <ClInclude Include="BDD.h" />
     <ClInclude Include="ClientForm.h" />
     <ClInclude Include="ClientObject.h" />
     <ClInclude Include="ClientRepo.h" />
     <ClInclude Include="CommandForm.h" />
+    <ClInclude Include="CommandObject.h" />
+    <ClInclude Include="CommandRepo.h" />
     <ClInclude Include="FormProjet.h">
       <FileType>CppForm</FileType>
     </ClInclude>
