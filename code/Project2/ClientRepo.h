@@ -1,7 +1,6 @@
 #pragma once
 #include "BDD.h"
 #include "ClientObject.h"
-#include "AdressRepo.h"
 
 using namespace  System::Collections::Generic;
 
@@ -25,8 +24,6 @@ namespace Repository {
         void deleteClient(ClientObject^ u);
 
         void insertClient(ClientObject^ u);
-
-        void linkClientAdresse(int client, int adresse, int type);
     };
 
 }

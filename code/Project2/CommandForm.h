@@ -2,6 +2,7 @@
 #include "BDD.h"
 #include "PrincipalForm.h"
 #include "CommandRepo.h"
+#include "CommandObject.h"
 
 namespace Display {
 

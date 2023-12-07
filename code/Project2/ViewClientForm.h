@@ -48,7 +48,7 @@ namespace Display {
 			this->cbobx_adresse_emission = (gcnew System::Windows::Forms::ComboBox());
 			this->SuspendLayout();
 			//set size
-			const int size_x = 280;
+			const int size_x = 220;
 			const int size_x_view = 400;
 			const int size_y = 30;
 			const int pos_x = 15;
@@ -150,7 +150,7 @@ namespace Display {
 			this->label_adresse_livraison->Size = System::Drawing::Size(size_x, size_y);
 			this->label_adresse_livraison->TabStop = true;
 			this->label_adresse_livraison->Name = L"label_adresse_livraison";
-			this->label_adresse_livraison->Text = L"Adivresse de livraison";
+			this->label_adresse_livraison->Text = L"Ad. Livraison";
 			// 
 			// view date embauche
 			// 
@@ -161,11 +161,10 @@ namespace Display {
 			this->cbobx_adresse_livraison->TabIndex = 5;
 			this->cbobx_adresse_livraison->Name = L"cbobx_adresse_livraison";
 			for each (AdressObject ^ adresse in co->getAdresseLivraison()) {
-				this->cbobx_adresse_livraison->Items->Add(adresse);
+				this->cbobx_adresse_livraison->Items->Add(adresse->ToString());
 			}
 			this->cbobx_adresse_livraison->DropDownStyle = Forms::ComboBoxStyle::DropDownList;
-			this->cbobx_adresse_livraison->DefaultBackColor;
-			if (co->getAdresseLivraison()->Count != 0) { this->cbobx_adresse_livraison->SelectedIndex = 0; }
+			this->cbobx_adresse_livraison->SelectedIndex = 0;
 			// 
 			// id adresse
 			// 
@@ -175,7 +174,7 @@ namespace Display {
 			this->label_adresse_emission->Size = System::Drawing::Size(size_x, size_y);
 			this->label_adresse_emission->TabStop = true;
 			this->label_adresse_emission->Name = L"label_adresse_emission";
-			this->label_adresse_emission->Text = L"Adresse d'emission";
+			this->label_adresse_emission->Text = L"Ad. Emission";
 			// 
 			// view id adresse
 			// 
@@ -186,11 +185,10 @@ namespace Display {
 			this->cbobx_adresse_emission->TabIndex = 6;
 			this->cbobx_adresse_emission->Name = L"label_view_id_adresse";
 			for each (AdressObject ^ adresse in co->getAdresseEmission()) {
-				this->cbobx_adresse_emission->Items->Add(adresse);
+				this->cbobx_adresse_emission->Items->Add(adresse->ToString());
 			}
 			this->cbobx_adresse_emission->DropDownStyle = Forms::ComboBoxStyle::DropDownList;
-			this->cbobx_adresse_emission->DefaultBackColor;
-			if (co->getAdresseEmission()->Count != 0) { this->cbobx_adresse_emission->SelectedIndex = 0; }
+			this->cbobx_adresse_emission->SelectedIndex = 0;
 			// 
 			// ViewClient
 			// 

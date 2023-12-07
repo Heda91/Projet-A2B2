@@ -1,1 +1,27 @@
+<<<<<<< HEAD
 ﻿  Project2.vcxproj -> C:\cours\A2\bloc 2 (POO)\projet\code\x64\Debug\Project2.exe
+=======
+﻿  ModifPersonnelForm.cpp
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\AddAdressForm.h(15,16): warning C4677: 'AddAdressForm': signature of non-private member contains assembly private type 'Object::AdressObject'
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\AdressObject.h(5,12): message : see declaration of 'Object::AdressObject'
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\AddAdressForm.h(19,20): warning C4677: 'ao': signature of non-private member contains assembly private type 'Object::AdressObject'
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\AdressObject.h(5,12): message : see declaration of 'Object::AdressObject'
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ModifPersonnelForm.h(18,21): warning C4677: 'ModifPersonnelForm': signature of non-private member contains assembly private type 'Object::PersonnelObject'
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\PersonnelObject.h(6,15): message : see declaration of 'Object::PersonnelObject'
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ModifPersonnelForm.h(22,23): warning C4677: 'po': signature of non-private member contains assembly private type 'Object::PersonnelObject'
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\PersonnelObject.h(6,15): message : see declaration of 'Object::PersonnelObject'
+  PersonnelForm.cpp
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\AddAdressForm.h(15,16): warning C4677: 'AddAdressForm': signature of non-private member contains assembly private type 'Object::AdressObject'
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\AdressObject.h(5,12): message : see declaration of 'Object::AdressObject'
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\AddAdressForm.h(19,20): warning C4677: 'ao': signature of non-private member contains assembly private type 'Object::AdressObject'
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\AdressObject.h(5,12): message : see declaration of 'Object::AdressObject'
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ModifPersonnelForm.h(18,21): warning C4677: 'ModifPersonnelForm': signature of non-private member contains assembly private type 'Object::PersonnelObject'
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\PersonnelObject.h(6,15): message : see declaration of 'Object::PersonnelObject'
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ModifPersonnelForm.h(22,23): warning C4677: 'po': signature of non-private member contains assembly private type 'Object::PersonnelObject'
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\PersonnelObject.h(6,15): message : see declaration of 'Object::PersonnelObject'
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ViewPersonnelForm.h(15,20): warning C4677: 'ViewPersonnelForm': signature of non-private member contains assembly private type 'Object::PersonnelObject'
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\PersonnelObject.h(6,15): message : see declaration of 'Object::PersonnelObject'
+  Generating Code...
+  AddAdressForm.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
+  Project2.vcxproj -> C:\cours\A2\bloc 2 (POO)\projet\code\x64\Debug\Project2.exe
+>>>>>>> parent of 37375e6 (Client finito)

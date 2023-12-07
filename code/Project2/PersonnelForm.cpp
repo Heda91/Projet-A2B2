@@ -13,8 +13,8 @@ void Display::PersonnelForm::buttonAddClick(System::Object^ sender, System::Even
 		Repository::AdressRepo^ ar = gcnew Repository::AdressRepo(this->my_bdd);
 		ar->insertAdress(po->getAdresseVar());
 		this->pr->insertPersonnel(po); 
-		this->reload();
 	}
+	this->reload();
 }
 void Display::PersonnelForm::buttonModifClick(System::Object^ sender, System::EventArgs^ e) {
 	PersonnelObject^ po = (PersonnelObject^)this->data_grid_view->SelectedRows[0]->Tag;
