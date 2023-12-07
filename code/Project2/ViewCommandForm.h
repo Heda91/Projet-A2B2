@@ -1,4 +1,5 @@
 ﻿#pragma once
+#include "CommandObject.h"
 
 namespace Display {
 
@@ -8,6 +9,7 @@ namespace Display {
 	using namespace System::Windows::Forms;
 	using namespace System::Data;
 	using namespace System::Drawing;
+	using namespace Object;
 
 	/// <summary>
 	/// Description r�sum�e de ViewCommand
@@ -15,9 +17,9 @@ namespace Display {
 	public ref class ViewCommandForm : public System::Windows::Forms::Form
 	{
 	public:
-		ViewCommandForm(void)
+		ViewCommandForm(CommandObject^ co)
 		{
-			InitializeComponent();
+			InitializeComponent(co);
 			//
 			//TODO: ajoutez ici le code du constructeur
 			//
@@ -63,7 +65,7 @@ namespace Display {
 		/// M�thode requise pour la prise en charge du concepteur - ne modifiez pas
 		/// le contenu de cette m�thode avec l'�diteur de code.
 		/// </summary>
-		void InitializeComponent(void)
+		void InitializeComponent(CommandObject^ co)
 		{
 			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
 			this->label3 = (gcnew System::Windows::Forms::Label());
@@ -82,15 +84,17 @@ namespace Display {
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			this->SuspendLayout();
 			// 
-			// textBox3
+			// date_livraison
 			// 
 			this->textBox3->Location = System::Drawing::Point(301, 65);
 			this->textBox3->Name = L"textBox3";
 			this->textBox3->ReadOnly = true;
 			this->textBox3->Size = System::Drawing::Size(100, 22);
 			this->textBox3->TabIndex = 56;
+			this->textBox3->Text = co->getDateLivraison();
+
 			// 
-			// label3
+			// date_livraison
 			// 
 			this->label3->AutoSize = true;
 			this->label3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
@@ -101,13 +105,14 @@ namespace Display {
 			this->label3->TabIndex = 55;
 			this->label3->Text = L"Date de livraison";
 			// 
-			// textBox5
+			// Type_retrait
 			// 
 			this->textBox5->Location = System::Drawing::Point(301, 230);
 			this->textBox5->Name = L"textBox5";
 			this->textBox5->ReadOnly = true;
 			this->textBox5->Size = System::Drawing::Size(100, 22);
 			this->textBox5->TabIndex = 54;
+			this->textBox5->Text = co->getRetrait();
 			// 
 			// label7
 			// 
@@ -127,6 +132,7 @@ namespace Display {
 			this->textBox4->ReadOnly = true;
 			this->textBox4->Size = System::Drawing::Size(100, 22);
 			this->textBox4->TabIndex = 52;
+			this->textBox4->Text = co->getReferenceCommand();
 			// 
 			// label6
 			// 
@@ -168,6 +174,7 @@ namespace Display {
 			this->textBox2->ReadOnly = true;
 			this->textBox2->Size = System::Drawing::Size(100, 22);
 			this->textBox2->TabIndex = 46;
+			this->textBox2->Text = co->getRemise();
 			// 
 			// textBox1
 			// 
@@ -176,6 +183,8 @@ namespace Display {
 			this->textBox1->ReadOnly = true;
 			this->textBox1->Size = System::Drawing::Size(100, 22);
 			this->textBox1->TabIndex = 45;
+			this->textBox1->Text = co->getDateEmission();
+			
 			// 
 			// label2
 			// 
@@ -207,6 +216,7 @@ namespace Display {
 			this->textBox6->ReadOnly = true;
 			this->textBox6->Size = System::Drawing::Size(100, 22);
 			this->textBox6->TabIndex = 57;
+			this->textBox6->Text = co->getTotalCommand();
 			// 
 			// dataGridView1
 			// 
