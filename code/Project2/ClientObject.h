@@ -14,6 +14,7 @@ namespace Object {
         DateTime^ date_naissance = nullptr;
         List<AdressObject^>^ adresse_livraison = gcnew List<AdressObject^>();
         List<AdressObject^>^ adresse_emission = gcnew List<AdressObject^>();
+        bool supprime = false;
     public:
         void setNumeroClient(int num) { this->numero_client = num; }
         void setNom(String^ nom) { this->nom = nom; }
@@ -32,5 +33,8 @@ namespace Object {
         String^ getDateNaissanceAff();
         List<AdressObject^>^ getAdresseLivraison();
         List<AdressObject^>^ getAdresseEmission();
+
+        bool isDeleted() { return supprime; }
+        void deleteClient() { this->supprime = true; }
     };
 }

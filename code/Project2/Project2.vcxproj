@@ -124,18 +124,22 @@
     <ClCompile Include="AddAdressForm.cpp" />
     <ClCompile Include="AdressObject.cpp" />
     <ClCompile Include="AdressRepo.cpp" />
+    <ClCompile Include="ArticleObject.cpp" />
+    <ClCompile Include="ArticleRepo.cpp" />
     <ClCompile Include="BDD.cpp" />
     <ClCompile Include="ClientForm.cpp" />
     <ClCompile Include="ClientObject.cpp" />
     <ClCompile Include="ClientRepo.cpp" />
     <ClCompile Include="CommandForm.cpp" />
+    <ClCompile Include="CommandObject.cpp" />
+    <ClCompile Include="CommandRepo.cpp" />
     <ClCompile Include="FormProjet.cpp" />
-    <ClCompile Include="ItemsForm.cpp" />
+    <ClCompile Include="ArticleForm.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MainForm.cpp" />
     <ClCompile Include="ModifClientForm.cpp" />
     <ClCompile Include="ModifCommandForm.cpp" />
-    <ClCompile Include="ModifItemsForm.cpp" />
+    <ClCompile Include="ModifArticleForm.cpp" />
     <ClCompile Include="ModifPersonnelForm.cpp" />
     <ClCompile Include="PersonnelForm.cpp" />
     <ClCompile Include="PersonnelObject.cpp" />
@@ -144,26 +148,30 @@
     <ClCompile Include="StatisticsForm.cpp" />
     <ClCompile Include="ViewClientForm.cpp" />
     <ClCompile Include="ViewCommandForm.cpp" />
-    <ClCompile Include="ViewItemsForm.cpp" />
+    <ClCompile Include="ViewIArticleForm.cpp" />
     <ClCompile Include="ViewPersonnelForm.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AddAdressForm.h" />
     <ClInclude Include="AdressObject.h" />
     <ClInclude Include="AdressRepo.h" />
+    <ClInclude Include="ArticleObject.h" />
+    <ClInclude Include="ArticleRepo.h" />
     <ClInclude Include="BDD.h" />
     <ClInclude Include="ClientForm.h" />
     <ClInclude Include="ClientObject.h" />
     <ClInclude Include="ClientRepo.h" />
     <ClInclude Include="CommandForm.h" />
+    <ClInclude Include="CommandObject.h" />
+    <ClInclude Include="CommandRepo.h" />
     <ClInclude Include="FormProjet.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="ItemsForm.h" />
+    <ClInclude Include="ArticleForm.h" />
     <ClInclude Include="MainForm.h" />
     <ClInclude Include="ModifClientForm.h" />
     <ClInclude Include="ModifCommandForm.h" />
-    <ClInclude Include="ModifItemsForm.h" />
+    <ClInclude Include="ModifArticleForm.h" />
     <ClInclude Include="ModifPersonnelForm.h" />
     <ClInclude Include="PersonnelForm.h" />
     <ClInclude Include="PersonnelObject.h" />
@@ -172,7 +180,7 @@
     <ClInclude Include="StatisticsForm.h" />
     <ClInclude Include="ViewClientForm.h" />
     <ClInclude Include="ViewCommandForm.h" />
-    <ClInclude Include="ViewItemsForm.h" />
+    <ClInclude Include="ViewArticleForm.h" />
     <ClInclude Include="ViewPersonnelForm.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

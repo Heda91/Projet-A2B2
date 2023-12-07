@@ -3,7 +3,7 @@
 #include "PersonnelForm.h"
 #include "ClientForm.h"
 #include "CommandForm.h"
-#include "ItemsForm.h"
+#include "ArticleForm.h"
 #include "StatisticsForm.h"
 #include <stdio.h>
 #include <iostream>
@@ -171,8 +171,8 @@ namespace Display {
 		Command.ShowDialog(); // Affichez MyForm1
 	}
 	private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
-		ItemsForm Items(my_bdd);
-		Items.ShowDialog(); // Affichez MyForm1
+		ArticleForm Article(my_bdd);
+		Article.ShowDialog(); // Affichez MyForm1
 	}
 	private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e) {
 		StatistiquesForm Statistiques;
