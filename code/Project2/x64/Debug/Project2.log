@@ -1,20 +1,110 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 ﻿  Project2.vcxproj -> C:\cours\A2\bloc 2 (POO)\projet\code\x64\Debug\Project2.exe
 =======
 ﻿  ModifPersonnelForm.cpp
+=======
+﻿  ClientForm.cpp
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ClientForm.h(21,37): warning C4677: 'insertAdresses': signature of non-private member contains assembly private type 'Object::ClientObject'
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ClientObject.h(7,15): message : see declaration of 'Object::ClientObject'
+>>>>>>> temp-branch
 C:\cours\A2\bloc 2 (POO)\projet\code\Project2\AddAdressForm.h(15,16): warning C4677: 'AddAdressForm': signature of non-private member contains assembly private type 'Object::AdressObject'
 C:\cours\A2\bloc 2 (POO)\projet\code\Project2\AdressObject.h(5,12): message : see declaration of 'Object::AdressObject'
 C:\cours\A2\bloc 2 (POO)\projet\code\Project2\AddAdressForm.h(19,20): warning C4677: 'ao': signature of non-private member contains assembly private type 'Object::AdressObject'
 C:\cours\A2\bloc 2 (POO)\projet\code\Project2\AdressObject.h(5,12): message : see declaration of 'Object::AdressObject'
+<<<<<<< HEAD
 C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ModifPersonnelForm.h(18,21): warning C4677: 'ModifPersonnelForm': signature of non-private member contains assembly private type 'Object::PersonnelObject'
 C:\cours\A2\bloc 2 (POO)\projet\code\Project2\PersonnelObject.h(6,15): message : see declaration of 'Object::PersonnelObject'
 C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ModifPersonnelForm.h(22,23): warning C4677: 'po': signature of non-private member contains assembly private type 'Object::PersonnelObject'
 C:\cours\A2\bloc 2 (POO)\projet\code\Project2\PersonnelObject.h(6,15): message : see declaration of 'Object::PersonnelObject'
   PersonnelForm.cpp
+=======
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ModifClientForm.h(13,18): warning C4677: 'ModifClientForm': signature of non-private member contains assembly private type 'Object::ClientObject'
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ClientObject.h(7,15): message : see declaration of 'Object::ClientObject'
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ModifClientForm.h(17,20): warning C4677: 'co': signature of non-private member contains assembly private type 'Object::ClientObject'
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ClientObject.h(7,15): message : see declaration of 'Object::ClientObject'
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ViewClientForm.h(12,17): warning C4677: 'ViewClientForm': signature of non-private member contains assembly private type 'Object::ClientObject'
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ClientObject.h(7,15): message : see declaration of 'Object::ClientObject'
+  ClientObject.cpp
+  ClientRepo.cpp
+  CommandForm.cpp
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ModifCommandForm.h(19,19): warning C4677: 'ModifCommandForm': signature of non-private member contains assembly private type 'Object::CommandObject'
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\CommandObject.h(9,12): message : see declaration of 'Object::CommandObject'
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ModifCommandForm.h(23,21): warning C4677: 'co': signature of non-private member contains assembly private type 'Object::CommandObject'
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\CommandObject.h(9,12): message : see declaration of 'Object::CommandObject'
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ModifCommandForm.h(327,13): warning C4101: 'remise': unreferenced local variable
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ModifCommandForm.h(330,8): warning C4101: 'id_adresse_livraison': unreferenced local variable
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ModifCommandForm.h(332,8): warning C4101: 'id_adresse_facturation': unreferenced local variable
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ModifCommandForm.h(329,8): warning C4101: 'retrait': unreferenced local variable
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ModifCommandForm.h(331,8): warning C4101: 'numero_client': unreferenced local variable
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ModifCommandForm.h(328,13): warning C4101: 'total_remise': unreferenced local variable
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ModifCommandForm.h(324,12): warning C4101: 'reference_commande': unreferenced local variable
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ModifCommandForm.h(325,12): warning C4101: 'date_livraison': unreferenced local variable
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ModifCommandForm.h(326,12): warning C4101: 'date_emmision': unreferenced local variable
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ViewCommandForm.h(20,18): warning C4677: 'ViewCommandForm': signature of non-private member contains assembly private type 'Object::CommandObject'
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\CommandObject.h(9,12): message : see declaration of 'Object::CommandObject'
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ViewCommandForm.h(186,31): error C2039: 'getDateEmission': is not a member of 'Object::CommandObject'
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\CommandObject.h(9,12): message : see declaration of 'Object::CommandObject'
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\CommandForm.cpp(7,15): error C2039: 'CommandForm': is not a member of 'Display::Display'
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ViewCommandForm.h(4,11): message : see declaration of 'Display::Display'
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\CommandForm.cpp(7,15): error C3083: 'CommandForm': the symbol to the left of a '::' must be a type
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\CommandForm.cpp(7,28): error C2039: 'buttonAddClick': is not a member of 'Display::Display'
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ViewCommandForm.h(4,11): message : see declaration of 'Display::Display'
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\CommandForm.cpp(12,15): error C2039: 'CommandForm': is not a member of 'Display::Display'
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ViewCommandForm.h(4,11): message : see declaration of 'Display::Display'
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\CommandForm.cpp(12,15): error C3083: 'CommandForm': the symbol to the left of a '::' must be a type
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\CommandForm.cpp(12,28): error C2039: 'buttonModifClick': is not a member of 'Display::Display'
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ViewCommandForm.h(4,11): message : see declaration of 'Display::Display'
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\CommandForm.cpp(17,15): error C2039: 'CommandForm': is not a member of 'Display::Display'
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ViewCommandForm.h(4,11): message : see declaration of 'Display::Display'
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\CommandForm.cpp(17,15): error C3083: 'CommandForm': the symbol to the left of a '::' must be a type
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\CommandForm.cpp(17,28): error C2039: 'buttonViewClick': is not a member of 'Display::Display'
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ViewCommandForm.h(4,11): message : see declaration of 'Display::Display'
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\CommandForm.cpp(18,95): error C2355: 'this': can only be referenced inside non-static member functions or non-static data member initializers
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\CommandForm.cpp(18,78): error C2512: 'Display::Display::ViewCommandForm::ViewCommandForm': no appropriate default constructor available
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\CommandForm.cpp(18,78): message : while trying to match the argument list '()'
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\CommandForm.cpp(22,15): error C2039: 'CommandForm': is not a member of 'Display::Display'
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ViewCommandForm.h(4,11): message : see declaration of 'Display::Display'
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\CommandForm.cpp(22,15): error C3083: 'CommandForm': the symbol to the left of a '::' must be a type
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\CommandForm.cpp(22,28): error C2039: 'buttonDelClick': is not a member of 'Display::Display'
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ViewCommandForm.h(4,11): message : see declaration of 'Display::Display'
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\CommandForm.cpp(24,38): error C2355: 'this': can only be referenced inside non-static member functions or non-static data member initializers
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\CommandForm.cpp(26,2): error C2065: 'cr': undeclared identifier
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\CommandForm.cpp(27,2): error C2355: 'this': can only be referenced inside non-static member functions or non-static data member initializers
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\CommandForm.cpp(31,15): error C2039: 'CommandForm': is not a member of 'Display::Display'
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ViewCommandForm.h(4,11): message : see declaration of 'Display::Display'
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\CommandForm.cpp(31,15): error C3083: 'CommandForm': the symbol to the left of a '::' must be a type
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\CommandForm.cpp(31,28): error C2039: 'reload': is not a member of 'Display::Display'
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ViewCommandForm.h(4,11): message : see declaration of 'Display::Display'
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\CommandForm.cpp(32,65): error C2065: 'cr': undeclared identifier
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\CommandForm.cpp(34,2): error C2355: 'this': can only be referenced inside non-static member functions or non-static data member initializers
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\CommandForm.cpp(58,15): error C2039: 'CommandForm': is not a member of 'Display::Display'
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ViewCommandForm.h(4,11): message : see declaration of 'Display::Display'
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\CommandForm.cpp(58,15): error C3083: 'CommandForm': the symbol to the left of a '::' must be a type
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\CommandForm.cpp(58,28): error C2039: 'initDataGridView': is not a member of 'Display::Display'
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ViewCommandForm.h(4,11): message : see declaration of 'Display::Display'
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\CommandForm.cpp(59,2): error C2065: 'cr': undeclared identifier
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\CommandForm.cpp(59,37): error C2065: 'my_bdd': undeclared identifier
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\CommandForm.cpp(63,2): error C2355: 'this': can only be referenced inside non-static member functions or non-static data member initializers
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\CommandForm.cpp(66,2): error C2355: 'this': can only be referenced inside non-static member functions or non-static data member initializers
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\CommandForm.cpp(69,2): error C2355: 'this': can only be referenced inside non-static member functions or non-static data member initializers
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\CommandForm.cpp(72,2): error C2355: 'this': can only be referenced inside non-static member functions or non-static data member initializers
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ModifCommandForm.h(8,19): fatal  error C1075: '{': no matching token found
+  CommandObject.cpp
+  CommandRepo.cpp
+  main.cpp
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ClientForm.h(21,37): warning C4677: 'insertAdresses': signature of non-private member contains assembly private type 'Object::ClientObject'
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ClientObject.h(7,15): message : see declaration of 'Object::ClientObject'
+  MainForm.cpp
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ClientForm.h(21,37): warning C4677: 'insertAdresses': signature of non-private member contains assembly private type 'Object::ClientObject'
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ClientObject.h(7,15): message : see declaration of 'Object::ClientObject'
+  ModifClientForm.cpp
+>>>>>>> temp-branch
 C:\cours\A2\bloc 2 (POO)\projet\code\Project2\AddAdressForm.h(15,16): warning C4677: 'AddAdressForm': signature of non-private member contains assembly private type 'Object::AdressObject'
 C:\cours\A2\bloc 2 (POO)\projet\code\Project2\AdressObject.h(5,12): message : see declaration of 'Object::AdressObject'
 C:\cours\A2\bloc 2 (POO)\projet\code\Project2\AddAdressForm.h(19,20): warning C4677: 'ao': signature of non-private member contains assembly private type 'Object::AdressObject'
 C:\cours\A2\bloc 2 (POO)\projet\code\Project2\AdressObject.h(5,12): message : see declaration of 'Object::AdressObject'
+<<<<<<< HEAD
 C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ModifPersonnelForm.h(18,21): warning C4677: 'ModifPersonnelForm': signature of non-private member contains assembly private type 'Object::PersonnelObject'
 C:\cours\A2\bloc 2 (POO)\projet\code\Project2\PersonnelObject.h(6,15): message : see declaration of 'Object::PersonnelObject'
 C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ModifPersonnelForm.h(22,23): warning C4677: 'po': signature of non-private member contains assembly private type 'Object::PersonnelObject'
@@ -25,3 +115,33 @@ C:\cours\A2\bloc 2 (POO)\projet\code\Project2\PersonnelObject.h(6,15): message :
   AddAdressForm.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
   Project2.vcxproj -> C:\cours\A2\bloc 2 (POO)\projet\code\x64\Debug\Project2.exe
 >>>>>>> parent of 37375e6 (Client finito)
+=======
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ModifClientForm.h(13,18): warning C4677: 'ModifClientForm': signature of non-private member contains assembly private type 'Object::ClientObject'
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ClientObject.h(7,15): message : see declaration of 'Object::ClientObject'
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ModifClientForm.h(17,20): warning C4677: 'co': signature of non-private member contains assembly private type 'Object::ClientObject'
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ClientObject.h(7,15): message : see declaration of 'Object::ClientObject'
+  ModifCommandForm.cpp
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ModifCommandForm.h(19,19): warning C4677: 'ModifCommandForm': signature of non-private member contains assembly private type 'Object::CommandObject'
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\CommandObject.h(9,12): message : see declaration of 'Object::CommandObject'
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ModifCommandForm.h(23,21): warning C4677: 'co': signature of non-private member contains assembly private type 'Object::CommandObject'
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\CommandObject.h(9,12): message : see declaration of 'Object::CommandObject'
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ModifCommandForm.h(327,13): warning C4101: 'remise': unreferenced local variable
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ModifCommandForm.h(330,8): warning C4101: 'id_adresse_livraison': unreferenced local variable
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ModifCommandForm.h(332,8): warning C4101: 'id_adresse_facturation': unreferenced local variable
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ModifCommandForm.h(329,8): warning C4101: 'retrait': unreferenced local variable
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ModifCommandForm.h(331,8): warning C4101: 'numero_client': unreferenced local variable
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ModifCommandForm.h(328,13): warning C4101: 'total_remise': unreferenced local variable
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ModifCommandForm.h(324,12): warning C4101: 'reference_commande': unreferenced local variable
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ModifCommandForm.h(325,12): warning C4101: 'date_livraison': unreferenced local variable
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ModifCommandForm.h(326,12): warning C4101: 'date_emmision': unreferenced local variable
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ModifCommandForm.h(8,19): fatal  error C1075: '{': no matching token found
+  ViewClientForm.cpp
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ViewClientForm.h(12,17): warning C4677: 'ViewClientForm': signature of non-private member contains assembly private type 'Object::ClientObject'
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ClientObject.h(7,15): message : see declaration of 'Object::ClientObject'
+  ViewCommandForm.cpp
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ViewCommandForm.h(20,18): warning C4677: 'ViewCommandForm': signature of non-private member contains assembly private type 'Object::CommandObject'
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\CommandObject.h(9,12): message : see declaration of 'Object::CommandObject'
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ViewCommandForm.h(186,31): error C2039: 'getDateEmission': is not a member of 'Object::CommandObject'
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\CommandObject.h(9,12): message : see declaration of 'Object::CommandObject'
+  Generating Code...
+>>>>>>> temp-branch

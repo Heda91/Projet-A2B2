@@ -56,13 +56,11 @@ String^ ArticleObject::getDesignation()
 String^ ArticleObject::getPrixHT()
 {
 	return this->prixHT->ToString();
-//	return this->prixHT->ToString()->Replace("{", "")->Replace("}", "");
 }
 
 String^ ArticleObject::getTVA()
 {
 	return this->TVA->ToString();
-//	return this->TVA->ToString()->Replace("{", "")->Replace("}", "");
 }
 
 String^ ArticleObject::getQuantiteStock()

@@ -5,10 +5,10 @@
 
 namespace Display {
 
-	public ref class ItemsForm : public PrincipalForm
+	public ref class ArticleForm : public PrincipalForm
 	{
 	public:
-		ItemsForm(BDD^ bdd) : PrincipalForm(bdd, "Articles") {};
+		ArticleForm(BDD^ bdd) : PrincipalForm(bdd, "Articles") {};
 		void reload() override;
 
 	protected:

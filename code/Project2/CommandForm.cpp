@@ -15,7 +15,11 @@ void Display::CommandForm::buttonModifClick(System::Object^ sender, System::Even
 	add_command_form->ShowDialog();
 }
 void Display::CommandForm::buttonViewClick(System::Object^ sender, System::EventArgs^ e) {
+<<<<<<< HEAD
 	ViewCommandForm^ view_command_form = gcnew ViewCommandForm((CommandObject^)this->data_grid_view->SelectedRows[0]->Tag);
+=======
+	Display::ViewCommandForm^ view_command_form = gcnew Display::ViewCommandForm((CommandObject^)this->data_grid_view->SelectedRows[0]->Tag);
+>>>>>>> temp-branch
 	view_command_form->ShowDialog();
 }
 
@@ -34,6 +38,10 @@ void Display::CommandForm::reload() {
 	this->data_grid_view->Rows->Clear();
 	for each (CommandObject ^ command in Commands) {
 		if (!command->isDeleted()) {
+<<<<<<< HEAD
+=======
+			/*
+>>>>>>> temp-branch
 			DataGridViewRow^ dgvr = gcnew DataGridViewRow();
 			DataGridViewTextBoxCell^ dgvtbc = gcnew DataGridViewTextBoxCell();
 			dgvtbc->Value = Convert::ToString(command->getReferenceCommand());
@@ -49,7 +57,11 @@ void Display::CommandForm::reload() {
 			dgvr->Cells->Add(dgvtbc4);
 
 			dgvr->Tag = command;
+<<<<<<< HEAD
 			this->data_grid_view->Rows->Add(dgvr);
+=======
+			this->data_grid_view->Rows->Add(dgvr);*/
+>>>>>>> temp-branch
 		}
 	}
 }

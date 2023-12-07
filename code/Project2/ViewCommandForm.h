@@ -184,7 +184,11 @@ namespace Display {
 			this->textBox1->Size = System::Drawing::Size(100, 22);
 			this->textBox1->TabIndex = 45;
 			this->textBox1->Text = co->getDateEmission();
+<<<<<<< HEAD
 			
+=======
+
+>>>>>>> temp-branch
 			// 
 			// label2
 			// 

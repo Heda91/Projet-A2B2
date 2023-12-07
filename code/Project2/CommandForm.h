@@ -2,7 +2,10 @@
 #include "BDD.h"
 #include "PrincipalForm.h"
 #include "CommandRepo.h"
+<<<<<<< HEAD
 #include "CommandObject.h"
+=======
+>>>>>>> temp-branch
 
 namespace Display {
 
@@ -19,7 +22,14 @@ namespace Display {
 		void buttonDelClick(System::Object^ sender, System::EventArgs^ e) override;
 
 		void initDataGridView() override;
+<<<<<<< HEAD
 	private :
 		Repository::CommandRepo^ cr;
+=======
+	private:
+		Repository::CommandRepo^ cr;
+
+>>>>>>> temp-branch
 	};
 }
+

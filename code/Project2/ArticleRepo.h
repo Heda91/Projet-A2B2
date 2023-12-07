@@ -19,7 +19,11 @@ namespace Repository {
 
         List<ArticleObject^>^ getArticles();
 
+<<<<<<< HEAD
 		void editArticle(ArticleObject^ u);
+=======
+        void editArticle(ArticleObject^ u);
+>>>>>>> temp-branch
         void editArticleDesignation(ArticleObject^ u);
         void editArticlePrixHT(ArticleObject^ u);
         void editArticleTVA(ArticleObject^ u);

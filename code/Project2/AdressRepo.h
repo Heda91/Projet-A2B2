@@ -13,8 +13,6 @@ namespace Repository {
     public:
         AdressRepo(BDD^ bdd) :bdd(bdd) {}
 
-        AdressObject^ selectAdress(int id);
-
         void deleteAdress(AdressObject^ u);
 
         void insertAdress(AdressObject^ u);
