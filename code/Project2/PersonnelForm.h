@@ -13,7 +13,6 @@ namespace Display {
 		void reload() override;
 
 	protected:
-		void dataGridViewCellClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) override;
 		void buttonAddClick(System::Object^ sender, System::EventArgs^ e) override;
 		void buttonModifClick(System::Object^ sender, System::EventArgs^ e) override;
 		void buttonViewClick(System::Object^ sender, System::EventArgs^ e) override;

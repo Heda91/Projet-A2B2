@@ -105,6 +105,12 @@
     <ClCompile Include="CommandForm2.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
+<<<<<<< HEAD
+=======
+    <ClCompile Include="ReglementObject.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+>>>>>>> 7ef1d78cb8aff5e92b49a905218ea661d186dac9
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BDD.h">
@@ -119,9 +125,12 @@
     <ClInclude Include="ClientForm.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
+<<<<<<< HEAD
     <ClInclude Include="CommandForm.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
+=======
+>>>>>>> 7ef1d78cb8aff5e92b49a905218ea661d186dac9
     <ClInclude Include="ArticleForm.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
@@ -194,5 +203,14 @@
     <ClInclude Include="CommandForm2.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
+<<<<<<< HEAD
+=======
+    <ClInclude Include="CommandForm.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="ReglementObject.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+>>>>>>> 7ef1d78cb8aff5e92b49a905218ea661d186dac9
   </ItemGroup>
 </Project>

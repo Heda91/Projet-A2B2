@@ -305,7 +305,7 @@ namespace Display {
 				if (this->txtbx_designation->Text != "'" && this->txtbx_designation->Text->Replace("'", "") != ""){
 				designation = this->txtbx_designation->Text->Replace("'"," ");
 				this->txtbx_designation->BackColor = System::Drawing::Color::White;
-				}
+			}
 				else {
 					reussi = false;
 					this->txtbx_designation->BackColor = System::Drawing::Color::Red;
@@ -321,8 +321,8 @@ namespace Display {
 			try {
 				if (this->txtbx_prixHT->Text != "'" && this->txtbx_prixHT->Text->Replace("'", "") != "" && Convert::ToSingle(this->txtbx_prixHT->Text->Replace("'", "")) > 0) {
 					prixHT = Convert::ToDecimal(this->txtbx_prixHT->Text->Replace("'", " "));
-					this->txtbx_prixHT->BackColor = System::Drawing::Color::White;
-				}
+				this->txtbx_prixHT->BackColor = System::Drawing::Color::White;
+			}
 				else {
 					reussi = false;
 					this->txtbx_prixHT->BackColor = System::Drawing::Color::Red;
@@ -343,8 +343,8 @@ namespace Display {
 			try {
 				if (this->txtbx_TVA->Text != "'" && this->txtbx_TVA->Text->Replace("'", "") != "" && Convert::ToSingle(this->txtbx_TVA->Text->Replace("'", "")) > 0) {
 					TVA = Convert::ToDecimal(this->txtbx_TVA->Text->Replace("'", " "));
-					this->txtbx_TVA->BackColor = System::Drawing::Color::White;
-				}
+				this->txtbx_TVA->BackColor = System::Drawing::Color::White;
+			}
 				else {
 					reussi = false;
 					this->txtbx_TVA->BackColor = System::Drawing::Color::Red;
@@ -362,8 +362,8 @@ namespace Display {
 			try {
 				if (this->txtbx_seuil_reaprovisionnement->Text != "'" && this->txtbx_seuil_reaprovisionnement->Text->Replace("'", "") != "" && Convert::ToInt16(this->txtbx_seuil_reaprovisionnement->Text->Replace("'", "")) > 0) {
 					seuil_reaprovisionnement = Convert::ToInt16(this->txtbx_seuil_reaprovisionnement->Text->Replace("'", " "));
-					this->txtbx_seuil_reaprovisionnement->BackColor = System::Drawing::Color::White;
-				}
+				this->txtbx_seuil_reaprovisionnement->BackColor = System::Drawing::Color::White;
+			}
 				else {
 					reussi = false;
 					this->txtbx_seuil_reaprovisionnement->BackColor = System::Drawing::Color::Red;
@@ -381,8 +381,8 @@ namespace Display {
 			try {
 				if (this->txtbx_quantite_stock->Text != "'" && this->txtbx_quantite_stock->Text->Replace("'", "") != "" && Convert::ToInt16(this->txtbx_quantite_stock->Text->Replace("'", "")) > 0) {
 					quantite_stock = Convert::ToInt16(this->txtbx_quantite_stock->Text->Replace("'", " "));
-					this->txtbx_quantite_stock->BackColor = System::Drawing::Color::White;
-				}
+				this->txtbx_quantite_stock->BackColor = System::Drawing::Color::White;
+			}
 				else {
 					reussi = false;
 					this->txtbx_quantite_stock->BackColor = System::Drawing::Color::Red;
@@ -400,8 +400,8 @@ namespace Display {
 			try {
 				if (this->txtbx_prix_achat->Text != "'" && this->txtbx_prix_achat->Text->Replace("'", "") != "" && Convert::ToSingle(this->txtbx_prix_achat->Text->Replace("'", "")) > 0) {
 					prix_achat = Convert::ToDecimal(this->txtbx_prix_achat->Text->Replace("'", " "));
-					this->txtbx_prix_achat->BackColor = System::Drawing::Color::White;
-				}
+				this->txtbx_prix_achat->BackColor = System::Drawing::Color::White;
+			}
 				else {
 					reussi = false;
 					this->txtbx_prix_achat->BackColor = System::Drawing::Color::Red;

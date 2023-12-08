@@ -2,10 +2,19 @@
 #include "AdressObject.h"
 #include "ClientObject.h"
 #include "ArticleObject.h"
+#include "ReglementObject.h"
 
 using namespace System;
 
 namespace Object {
+	typedef ref struct Cart
+	{
+		Cart(int quantite, ArticleObject^ article): quantite(quantite), article(article){}
+		int quantite;
+		ArticleObject^ article;
+
+		Decimal getTotalTTC();
+	};
 	ref class CommandObject
 	{
 	private:
@@ -18,7 +27,8 @@ namespace Object {
 		ClientObject^ client = nullptr;
 		AdressObject^ adresse_livraison = nullptr;
 		AdressObject^ adresse_facturation = nullptr;
-		List<ArticleObject^>^ articles = gcnew List<ArticleObject^>();
+		List<Cart^>^ panier = gcnew List<Cart^>();
+		List<ReglementObject^>^ reglement = gcnew List<ReglementObject^>();
 		bool supprime;
 
 	public:
@@ -31,6 +41,8 @@ namespace Object {
 		void setClient(ClientObject^ client);
 		void setAdresseLivraison(AdressObject^ adresse);
 		void setAdresseFacturation(AdressObject^ adresse);
+		void addArticle(int, ArticleObject^);
+		void addReglement(ReglementObject^);
 
 		void deleteCommande();
 		bool isDeleted();
@@ -46,6 +58,8 @@ namespace Object {
 		ClientObject^ getClient();
 		AdressObject^ getAdresseLivraison();
 		AdressObject^ getAdresseFacturation();
+		List<Cart^>^ getPanier();
+		List<ReglementObject^>^ getReglement();
 
 		//String^ ToString() override;
 	};

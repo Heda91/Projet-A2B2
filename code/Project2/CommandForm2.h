@@ -18,7 +18,7 @@ namespace Display {
 
 		void initDataGridView() override;
 	private:
-		Repository::CommandRepo^ cr;
+		Repository::CommandRepo^ cr = nullptr;
 	};
 }
 

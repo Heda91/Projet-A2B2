@@ -33,23 +33,22 @@ void CommandForm2::reload() {
 	this->data_grid_view->Rows->Clear();
 	for each (CommandObject ^ command in Commands) {
 		if (!command->isDeleted()) {
-			/*
-			DataGridViewRow^ dgvr = gcnew DataGridViewRow();
-			DataGridViewTextBoxCell^ dgvtbc = gcnew DataGridViewTextBoxCell();
+			Forms::DataGridViewRow^ dgvr = gcnew Forms::DataGridViewRow();
+			Forms::DataGridViewTextBoxCell^ dgvtbc = gcnew Forms::DataGridViewTextBoxCell();
 			dgvtbc->Value = Convert::ToString(command->getReferenceCommand());
 			dgvr->Cells->Add(dgvtbc);
-			DataGridViewTextBoxCell^ dgvtbc2 = gcnew DataGridViewTextBoxCell();
-			dgvtbc2->Value = command->getNumeroClient();
+			Forms::DataGridViewTextBoxCell^ dgvtbc2 = gcnew Forms::DataGridViewTextBoxCell();
+			dgvtbc2->Value = command->getClient()->getNumeroClient();
 			dgvr->Cells->Add(dgvtbc2);
-			DataGridViewTextBoxCell^ dgvtbc3 = gcnew DataGridViewTextBoxCell();
+			Forms::DataGridViewTextBoxCell^ dgvtbc3 = gcnew Forms::DataGridViewTextBoxCell();
 			dgvtbc3->Value = command->getTotalCommand();
 			dgvr->Cells->Add(dgvtbc3);
-			DataGridViewTextBoxCell^ dgvtbc4 = gcnew DataGridViewTextBoxCell();
+			Forms::DataGridViewTextBoxCell^ dgvtbc4 = gcnew Forms::DataGridViewTextBoxCell();
 			dgvtbc4->Value = command->getRemise();
 			dgvr->Cells->Add(dgvtbc4);
 
 			dgvr->Tag = command;
-			this->data_grid_view->Rows->Add(dgvr);*/
+			this->data_grid_view->Rows->Add(dgvr);
 		}
 	}
 }

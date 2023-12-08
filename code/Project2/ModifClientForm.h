@@ -168,8 +168,9 @@ namespace Display {
 			this->label_adresse_livraison->Name = L"label_adresse_livraison";
 			this->label_adresse_livraison->Text = L"Adresse de livraison";
 			// 
-			// view adresse livraison
+			// label4
 			// 
+			//this->label4->AutoSize = true;
 			this->cbobx_adresse_livraison->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->cbobx_adresse_livraison->Location = System::Drawing::Point(pos_x_view, 4 * (size_y + step_y) + pos_y_start);

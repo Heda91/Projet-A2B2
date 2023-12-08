@@ -25,7 +25,7 @@ List<ArticleObject^>^ ArticleRepo::getArticles(void) {
 };
 
 void ArticleRepo::editArticle(ArticleObject^ u) { // a concatener
-    /*editArticleDesignation(u);
+	/*editArticleDesignation(u);
     editArticlePrixHT(u);
     editArticleTVA(u);
     editArticleQuantiteStock(u);
