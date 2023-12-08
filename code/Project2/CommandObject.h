@@ -21,15 +21,15 @@ namespace Object {
 		String^ reference_commande = "";
 		DateTime^ date_livraison = nullptr;
 		DateTime^ date_emission = nullptr;
-		Decimal^ remise;
-		Decimal^ total_commande;
+		Decimal^ remise = Decimal::Zero;
+		Decimal^ total_commande = Decimal::Zero;
 		String^ retrait = "";
-		ClientObject^ client = nullptr;
-		AdressObject^ adresse_livraison = nullptr;
-		AdressObject^ adresse_facturation = nullptr;
+		ClientObject^ client = gcnew ClientObject();
+		AdressObject^ adresse_livraison = gcnew AdressObject();
+		AdressObject^ adresse_facturation = gcnew AdressObject();
 		List<Cart^>^ panier = gcnew List<Cart^>();
 		List<ReglementObject^>^ reglement = gcnew List<ReglementObject^>();
-		bool supprime;
+		bool supprime = false;
 
 	public:
 		void setReferenceCommand(String^ reference_commande);

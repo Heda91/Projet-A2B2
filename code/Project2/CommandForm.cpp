@@ -12,9 +12,9 @@ void CommandForm::buttonAddClick(System::Object^ sender, System::EventArgs^ e) {
 	add_command_form->ShowDialog();
 }
 void CommandForm::buttonModifClick(System::Object^ sender, System::EventArgs^ e) {
-	CommandObject^ co = gcnew CommandObject();
-	ModifCommandForm^ add_command_form = gcnew ModifCommandForm(co);
-	add_command_form->ShowDialog();
+	CommandObject^ co = (CommandObject^)this->data_grid_view->SelectedRows[0]->Tag; //gcnew CommandObject();
+	ModifCommandForm^ modif_command_form = gcnew ModifCommandForm(co);
+	modif_command_form->ShowDialog();
 }
 void CommandForm::buttonViewClick(System::Object^ sender, System::EventArgs^ e) {
 	ViewCommandForm^ view_command_form = gcnew ViewCommandForm((CommandObject^)this->data_grid_view->SelectedRows[0]->Tag);

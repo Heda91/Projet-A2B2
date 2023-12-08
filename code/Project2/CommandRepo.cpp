@@ -102,7 +102,7 @@ void CommandRepo::editCommand(CommandObject^ co) {
     String^ query = "UPDATE [Commande] SET date_livraison = '" + co->getDateLivraison() + "', date_emission = '" + co->getDateEmission() + "', remise = '" + co->getRemise() + "'";
     query += ", total_commande = '" + co->getTotalCommand() + "', retrait = '" + co->getRetrait() + "', id_adresse_livraison = " + co->getAdresseLivraison()->getIdAdresse();
     query += ", id_adresse_facturation = " + co->getAdresseFacturation()->getIdAdresse();
-    query += " WHERE reference_commande = " + co->getReferenceCommand();
+    query += " WHERE reference_commande = '" + co->getReferenceCommand() + "'";
     //edit client ?
     bdd->executeQuery(query);
 }
@@ -113,5 +113,7 @@ void CommandRepo::deleteCommand(CommandObject^ u) {
 }
 void CommandRepo::insertCommand(CommandObject^ u) {
     //int reference_commande = 
-    this->bdd->executeInsert("INSERT INTO [Commande](date_livraison, date_emission, remise, total_commande, retrait) VALUES ('" + u->getDateLivraison() + "', '" + u->getDateEmission() + "', '" + u->getRemise() + "', '" + u->getTotalCommand() + "', '" + u->getRetrait() + "')");
+    String^ query = "INSERT INTO [Commande](reference_commande, date_livraison, date_emission, remise, total_commande, retrait, id_adresse_livraison, id_adresse_facturation, numero_client)";
+    query += " VALUES('"+ u->getReferenceCommand() + "', '" + u->getDateLivraison() + "', '" + u->getDateEmission() + "', " + u->getRemise() + ", " + u->getTotalCommand() + ", '" + u->getRetrait() + "', " + u->getAdresseLivraison()->getIdAdresse() + ", " + u->getAdresseFacturation()->getIdAdresse() + ", " + u->getClient()->getNumeroClient() + ")";
+    this->bdd->executeInsert(query);
 }

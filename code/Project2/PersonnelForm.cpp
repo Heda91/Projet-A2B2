@@ -5,9 +5,6 @@
 #include "PersonnelRepo.h"
 
 
-
-
-
 void Display::PersonnelForm::buttonAddClick(System::Object^ sender, System::EventArgs^ e) {
 	PersonnelObject^ po = gcnew PersonnelObject();
 	ModifPersonnelForm^ add_personnel_form = gcnew ModifPersonnelForm(po);

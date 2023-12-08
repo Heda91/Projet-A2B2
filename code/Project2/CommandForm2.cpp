@@ -10,11 +10,15 @@ void CommandForm2::buttonAddClick(System::Object^ sender, System::EventArgs^ e) 
 	CommandObject^ co = gcnew CommandObject();
 	ModifCommandForm^ add_command_form = gcnew ModifCommandForm(co);
 	add_command_form->ShowDialog();
+	this->cr->insertCommand(co);
+	this->reload();
 }
 void CommandForm2::buttonModifClick(System::Object^ sender, System::EventArgs^ e) {
-	CommandObject^ co = gcnew CommandObject();
+	CommandObject^ co = (CommandObject^)this->data_grid_view->SelectedRows[0]->Tag;
 	ModifCommandForm^ add_command_form = gcnew ModifCommandForm(co);
 	add_command_form->ShowDialog();
+	this->cr->editCommand(co);
+	this->reload();
 }
 void CommandForm2::buttonViewClick(System::Object^ sender, System::EventArgs^ e) {
 	ViewCommandForm^ view_command_form = gcnew ViewCommandForm((CommandObject^)this->data_grid_view->SelectedRows[0]->Tag);
@@ -54,6 +58,7 @@ void CommandForm2::reload() {
 }
 void CommandForm2::initDataGridView() {
 	cr = gcnew Repository::CommandRepo(my_bdd);
+	this->button_add->Enabled = false;
 
 	Forms::DataGridViewTextBoxColumn^ dgvtbc = gcnew Forms::DataGridViewTextBoxColumn();
 	dgvtbc->Name = "Reference";

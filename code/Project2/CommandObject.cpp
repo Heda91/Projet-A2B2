@@ -52,16 +52,20 @@ String^ CommandObject::getReferenceCommand() {
 	return this->reference_commande;
 }
 String^ CommandObject::getDateLivraison() {
+	if (date_livraison == nullptr) { return "NULL"; }
 	return this->date_livraison->ToString("MM/dd/yyyy");
 }
 String^ CommandObject::getDateLivraisonAff() {
+	if (date_livraison == nullptr) { return ""; }
 	return this->date_livraison->ToString("dd/MM/yyyy");
 }
 String^ CommandObject::getDateEmission() {
+	if (date_emission == nullptr) { return "NULL"; }
 	return this->date_emission->ToString("MM/dd/yyyy");
 }
 String^ CommandObject::getDateEmissionAff() {
-	return this->date_emission->ToString("dd/MM/yyyy");
+	if (date_emission == nullptr) { return ""; }
+	else { return this->date_emission->ToString("dd/MM/yyyy"); }
 }
 String^ CommandObject::getRemise() {
 	return this->remise->ToString();

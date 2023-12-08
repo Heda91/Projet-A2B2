@@ -163,32 +163,79 @@ namespace Display {
 		void buttonValidClick(System::Object^ sender, System::EventArgs^ e) {
 			bool reussi = true;
 			int num = 0;
+			String^ code_postale = "0";
+			String^ rue = "";
+			String^ ville = "";
 			//numero
 			try {
-				num = Convert::ToInt32(this->txtbx_numero->Text);
-				this->txtbx_numero->BackColor = System::Drawing::Color::White;
+				if (this->txtbx_numero->Text != "'" && this->txtbx_numero->Text->Replace("'", "") != "" && Convert::ToInt16(this->txtbx_numero->Text->Replace("'", "")) > 0) {
+					num = Convert::ToInt16(this->txtbx_numero->Text->Replace("'", " ") == "" ? "0" : txtbx_numero->Text);
+					this->txtbx_numero->BackColor = System::Drawing::Color::White;
+				}
+				else {
+					reussi = false;
+					this->txtbx_numero->BackColor = System::Drawing::Color::Red;
+				}
 			}
 			catch (System::FormatException^) {
 				reussi = false;
 				this->txtbx_numero->BackColor = System::Drawing::Color::Red;
 			}
+			catch (System::OverflowException^) {
+				reussi = false;
+				this->txtbx_numero->BackColor = System::Drawing::Color::Red;
+			}
 			//rue
+			try {
+				if (this->txtbx_rue->Text != "'" && this->txtbx_rue->Text->Replace("'", "") != "") {
+					rue = this->txtbx_rue->Text->Replace("'", " ");
+					this->txtbx_rue->BackColor = System::Drawing::Color::White;
+				}
+				else {
+					reussi = false;
+					this->txtbx_rue->BackColor = System::Drawing::Color::Red;
+				}
+			}
+			catch (System::FormatException^) {
+				reussi = false;
+				this->txtbx_rue->BackColor = System::Drawing::Color::Red;
+			}
 			//code postale
-			try { 
-				Convert::ToInt32(this->txtbx_code_postale->Text);
-				this->txtbx_code_postale->BackColor = System::Drawing::Color::White;
+			try {
+				if (this->txtbx_code_postale->Text != "'" && this->txtbx_code_postale->Text->Replace("'", "") != "" && Convert::ToInt32(this->txtbx_code_postale->Text->Replace("'", "")) > 0  && this->txtbx_code_postale->Text->Replace("'", "")->Length == 5) {
+					code_postale = Convert::ToString(this->txtbx_code_postale->Text->Replace("'", " ") == "" ? "0" : txtbx_code_postale->Text->Replace("'", " "));
+					this->txtbx_code_postale->BackColor = System::Drawing::Color::White;
+				}
+				else {
+					reussi = false;
+					this->txtbx_code_postale->BackColor = System::Drawing::Color::Red;
+				}
 			}
 			catch (System::FormatException^) {
 				reussi = false;
 				this->txtbx_code_postale->BackColor = System::Drawing::Color::Red;
 			}
 			//Ville
+			try {
+				if (this->txtbx_ville->Text != "'" && this->txtbx_ville->Text->Replace("'", "") != "") {
+					rue = this->txtbx_ville->Text->Replace("'", " ");
+					this->txtbx_ville->BackColor = System::Drawing::Color::White;
+				}
+				else {
+					reussi = false;
+					this->txtbx_ville->BackColor = System::Drawing::Color::Red;
+				}
+			}
+			catch (System::FormatException^) {
+				reussi = false;
+				this->txtbx_ville->BackColor = System::Drawing::Color::Red;
+			}
 
 			if (reussi) {
 				ao->setNumero(num);
-				ao->setRue(txtbx_rue->Text);
-				ao->setCodePostale(txtbx_code_postale->Text);
-				ao->setVille(txtbx_ville->Text);
+				ao->setRue(rue);
+				ao->setCodePostale(code_postale);
+				ao->setVille(ville);
 				this->Close();
 			}
 		};
