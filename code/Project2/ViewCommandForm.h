@@ -17,25 +17,10 @@ namespace Display {
 	public ref class ViewCommandForm : public System::Windows::Forms::Form
 	{
 	public:
-		ViewCommandForm(CommandObject^ co)
-		{
-			InitializeComponent(co);
-			//
-			//TODO: ajoutez ici le code du constructeur
-			//
-		}
+		ViewCommandForm(CommandObject^ co) { InitializeComponent(co); }
 
 	protected:
-		/// <summary>
-		/// Nettoyage des ressources utilis�es.
-		/// </summary>
-		~ViewCommandForm()
-		{
-			if (components)
-			{
-				delete components;
-			}
-		}
+		~ViewCommandForm() { if (components) { delete components; } }
 	private: System::Windows::Forms::TextBox^ textBox3;
 	protected:
 	private: System::Windows::Forms::Label^ label3;
@@ -55,16 +40,9 @@ namespace Display {
 	private: System::Windows::Forms::DataGridView^ dataGridView1;
 
 	private:
-		/// <summary>
-		/// Variable n�cessaire au concepteur.
-		/// </summary>
 		System::ComponentModel::Container^ components;
 
 #pragma region Windows Form Designer generated code
-		/// <summary>
-		/// M�thode requise pour la prise en charge du concepteur - ne modifiez pas
-		/// le contenu de cette m�thode avec l'�diteur de code.
-		/// </summary>
 		void InitializeComponent(CommandObject^ co)
 		{
 			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
@@ -184,11 +162,6 @@ namespace Display {
 			this->textBox1->Size = System::Drawing::Size(100, 22);
 			this->textBox1->TabIndex = 45;
 			this->textBox1->Text = co->getDateEmission();
-<<<<<<< HEAD
-			
-=======
-
->>>>>>> temp-branch
 			// 
 			// label2
 			// 
@@ -211,7 +184,6 @@ namespace Display {
 			this->label1->Size = System::Drawing::Size(198, 29);
 			this->label1->TabIndex = 43;
 			this->label1->Text = L"Date D\'�mission";
-			this->label1->Click += gcnew System::EventHandler(this, &ViewCommandForm::label1_Click);
 			// 
 			// textBox6
 			// 
@@ -258,8 +230,7 @@ namespace Display {
 			this->PerformLayout();
 
 		}
+
 #pragma endregion
-	private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e) {
-	}
 	};
 }
