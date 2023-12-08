@@ -2,6 +2,11 @@
 
 using namespace Object;
 
+Decimal Cart::getTotalTTC() {
+	Decimal TVA = 1+ (Convert::ToDecimal(this->article->getTVA())/100);
+	return this->quantite * Convert::ToDecimal(this->article->getPrixHT()) * TVA;
+}
+
 void CommandObject::setReferenceCommand(String^ reference_commande) {
 	this->reference_commande = reference_commande;
 }
@@ -28,6 +33,12 @@ void CommandObject::setAdresseLivraison(AdressObject^ ao) {
 }
 void CommandObject::setAdresseFacturation(AdressObject^ ao) {
 	this->adresse_facturation = ao;
+}
+void CommandObject::addArticle(int qtd, ArticleObject^ article) {
+	this->panier->Add(gcnew Cart(qtd, article));
+}
+void CommandObject::addReglement(ReglementObject^ reglement) {
+	this->reglement->Add(reglement);
 }
 
 void CommandObject::deleteCommande() {
@@ -66,3 +77,7 @@ ClientObject^ CommandObject::getClient() {
 }
 AdressObject^ CommandObject::getAdresseLivraison() { return this->adresse_livraison; }
 AdressObject^ CommandObject::getAdresseFacturation() { return this->adresse_facturation; }
+List<Cart^>^ CommandObject::getPanier() { return this->panier; }
+List<ReglementObject^>^ CommandObject::getReglement() { return this->reglement; }
+
+

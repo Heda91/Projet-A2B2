@@ -3,259 +3,398 @@
 
 namespace Display {
 
-	using namespace System;
-	using namespace System::ComponentModel;
-	using namespace System::Collections;
-	using namespace System::Windows::Forms;
-	using namespace System::Data;
-	using namespace System::Drawing;
+	using namespace System::Windows;
 	using namespace Object;
 
-	/// <summary>
-	/// Description r�sum�e de ViewCommand
-	/// </summary>
 	public ref class ViewCommandForm : public System::Windows::Forms::Form
 	{
 	public:
-		ViewCommandForm(CommandObject^ co)
-		{
-			InitializeComponent(co);
-			//
-			//TODO: ajoutez ici le code du constructeur
-			//
-		}
+		ViewCommandForm(CommandObject^ co) { InitializeComponent(co); }
 
 	protected:
-		/// <summary>
-		/// Nettoyage des ressources utilis�es.
-		/// </summary>
-		~ViewCommandForm()
-		{
-			if (components)
-			{
-				delete components;
-			}
-		}
-	private: System::Windows::Forms::TextBox^ textBox3;
-	protected:
-	private: System::Windows::Forms::Label^ label3;
-	private: System::Windows::Forms::TextBox^ textBox5;
-	private: System::Windows::Forms::Label^ label7;
-	private: System::Windows::Forms::TextBox^ textBox4;
-	private: System::Windows::Forms::Label^ label6;
-
-	private: System::Windows::Forms::Label^ label5;
-
-	private: System::Windows::Forms::Label^ label4;
-	private: System::Windows::Forms::TextBox^ textBox2;
-	private: System::Windows::Forms::TextBox^ textBox1;
-	private: System::Windows::Forms::Label^ label2;
-	private: System::Windows::Forms::Label^ label1;
-	private: System::Windows::Forms::TextBox^ textBox6;
-	private: System::Windows::Forms::DataGridView^ dataGridView1;
+		~ViewCommandForm() { if (components) { delete components; } }
+	private:
+		Forms::Label^ label_reference_commande;
+		Forms::Label^ label_view_reference_commande;
+		Forms::Label^ label_numero_client;
+		Forms::Label^ label_view_numero_client;
+		Forms::Label^ label_date_livraison;
+		Forms::Label^ label_view_date_livraison;
+		Forms::Label^ label_adresse_livraison;
+		Forms::Label^ label_view_adresse_livraison;
+		Forms::Label^ label_date_emission;
+		Forms::Label^ label_view_date_emission;
+		Forms::Label^ label_adresse_emission;
+		Forms::Label^ label_view_adresse_emission;
+		Forms::Label^ label_retrait;
+		Forms::Label^ label_view_retrait;
+		Forms::Label^ label_remise;
+		Forms::Label^ label_view_remise;
+		Forms::Label^ label_total_commande;
+		Forms::Label^ label_view_total_commande;
+		Forms::Label^ label_reglement;
+		Forms::DataGridView^ dgv_reglement;
+		Forms::Label^ label_article;
+		Forms::DataGridView^ dgv_article;
 
 	private:
-		/// <summary>
-		/// Variable n�cessaire au concepteur.
-		/// </summary>
 		System::ComponentModel::Container^ components;
 
 #pragma region Windows Form Designer generated code
-		/// <summary>
-		/// M�thode requise pour la prise en charge du concepteur - ne modifiez pas
-		/// le contenu de cette m�thode avec l'�diteur de code.
-		/// </summary>
+
 		void InitializeComponent(CommandObject^ co)
 		{
-			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
-			this->label3 = (gcnew System::Windows::Forms::Label());
-			this->textBox5 = (gcnew System::Windows::Forms::TextBox());
-			this->label7 = (gcnew System::Windows::Forms::Label());
-			this->textBox4 = (gcnew System::Windows::Forms::TextBox());
-			this->label6 = (gcnew System::Windows::Forms::Label());
-			this->label5 = (gcnew System::Windows::Forms::Label());
-			this->label4 = (gcnew System::Windows::Forms::Label());
-			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
-			this->label2 = (gcnew System::Windows::Forms::Label());
-			this->label1 = (gcnew System::Windows::Forms::Label());
-			this->textBox6 = (gcnew System::Windows::Forms::TextBox());
-			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
+			this->label_reference_commande = gcnew Forms::Label;
+			this->label_view_reference_commande = gcnew Forms::Label;
+			this->label_numero_client = gcnew Forms::Label;
+			this->label_view_numero_client = gcnew Forms::Label;
+			this->label_date_livraison = gcnew Forms::Label;
+			this->label_view_date_livraison = gcnew Forms::Label;
+			this->label_adresse_livraison = gcnew Forms::Label;
+			this->label_view_adresse_livraison = gcnew Forms::Label;
+			this->label_date_emission = gcnew Forms::Label;
+			this->label_view_date_emission = gcnew Forms::Label;
+			this->label_adresse_emission = gcnew Forms::Label;
+			this->label_view_adresse_emission = gcnew Forms::Label;
+			this->label_retrait = gcnew Forms::Label;
+			this->label_view_retrait = gcnew Forms::Label;
+			this->label_total_commande = gcnew Forms::Label;
+			this->label_view_total_commande = gcnew Forms::Label;
+			this->label_reglement = gcnew Forms::Label;
+			this->dgv_reglement = gcnew Forms::DataGridView;
+			this->label_article = gcnew Forms::Label;
+			this->dgv_article = gcnew Forms::DataGridView;
+
 			this->SuspendLayout();
-			// 
-			// date_livraison
-			// 
-			this->textBox3->Location = System::Drawing::Point(301, 65);
-			this->textBox3->Name = L"textBox3";
-			this->textBox3->ReadOnly = true;
-			this->textBox3->Size = System::Drawing::Size(100, 22);
-			this->textBox3->TabIndex = 56;
-			this->textBox3->Text = co->getDateLivraison();
+			//set size
+			const int size_x = 280;
+			const int size_x_view = 400;
+			const int size_y = 30;			
+			const int pos_x = 15;
+			const int pos_y_start = 15;
+			const int step_y = 15;
+			const int pos_x_view = 15 + pos_x + size_x;
+			const int size_x_form = 30 + pos_x_view + size_x_view;
+			const int size_y_form = 19 * (size_y + step_y) + pos_y_start; 
 
+			const int size_x_dgv = size_x_form - (2 * pos_x);
+			const int size_y_dgv = 4*size_y;
 			// 
-			// date_livraison
+			// Reference commande
 			// 
-			this->label3->AutoSize = true;
-			this->label3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label_reference_commande->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label3->Location = System::Drawing::Point(12, 65);
-			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(202, 29);
-			this->label3->TabIndex = 55;
-			this->label3->Text = L"Date de livraison";
+			this->label_reference_commande->Location = System::Drawing::Point(pos_x, pos_y_start);
+			this->label_reference_commande->Size = System::Drawing::Size(size_x, size_y);
+			this->label_reference_commande->TabStop = true;
+			this->label_reference_commande->Name = L"label_reference_commande";
+			this->label_reference_commande->Text = L"Reference commande";
 			// 
-			// Type_retrait
+			// view Reference commande
 			// 
-			this->textBox5->Location = System::Drawing::Point(301, 230);
-			this->textBox5->Name = L"textBox5";
-			this->textBox5->ReadOnly = true;
-			this->textBox5->Size = System::Drawing::Size(100, 22);
-			this->textBox5->TabIndex = 54;
-			this->textBox5->Text = co->getRetrait();
-			// 
-			// label7
-			// 
-			this->label7->AutoSize = true;
-			this->label7->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label_view_reference_commande->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label7->Location = System::Drawing::Point(12, 230);
-			this->label7->Name = L"label7";
-			this->label7->Size = System::Drawing::Size(175, 29);
-			this->label7->TabIndex = 53;
-			this->label7->Text = L"Type de retrait";
+			this->label_view_reference_commande->Location = System::Drawing::Point(pos_x_view, pos_y_start);
+			this->label_view_reference_commande->Size = System::Drawing::Size(size_x_view, size_y);
+			this->label_view_reference_commande->TabIndex = 1;
+			this->label_view_reference_commande->Name = L"label_view_reference_commande";
+			this->label_view_reference_commande->Text = co->getReferenceCommand();
+			this->label_view_reference_commande->BorderStyle = Forms::BorderStyle::FixedSingle;
 			// 
-			// textBox4
+			// Numero client
 			// 
-			this->textBox4->Location = System::Drawing::Point(301, 9);
-			this->textBox4->Name = L"textBox4";
-			this->textBox4->ReadOnly = true;
-			this->textBox4->Size = System::Drawing::Size(100, 22);
-			this->textBox4->TabIndex = 52;
-			this->textBox4->Text = co->getReferenceCommand();
-			// 
-			// label6
-			// 
-			this->label6->AutoSize = true;
-			this->label6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label_numero_client->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label6->Location = System::Drawing::Point(12, 9);
-			this->label6->Name = L"label6";
-			this->label6->Size = System::Drawing::Size(191, 29);
-			this->label6->TabIndex = 51;
-			this->label6->Text = L"Ref Commande";
+			this->label_numero_client->Location = System::Drawing::Point(pos_x, 1 * (size_y + step_y) + pos_y_start); //15+30+5
+			this->label_numero_client->Size = System::Drawing::Size(size_x, size_y);
+			this->label_numero_client->TabStop = true;
+			this->label_numero_client->Name = L"label_numero_client";
+			this->label_numero_client->Text = L"Numero client";
 			// 
-			// label5
+			// view Numero client
 			// 
-			this->label5->AutoSize = true;
-			this->label5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label_view_numero_client->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label5->Location = System::Drawing::Point(12, 339);
-			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(97, 29);
-			this->label5->TabIndex = 49;
-			this->label5->Text = L"Articles";
+			this->label_view_numero_client->Location = System::Drawing::Point(pos_x_view, 1 * (size_y + step_y) + pos_y_start);
+			this->label_view_numero_client->Size = System::Drawing::Size(size_x_view, size_y);
+			this->label_view_numero_client->TabIndex = 2;
+			this->label_view_numero_client->Name = L"label_view_numero_client";
+			this->label_view_numero_client->Text = co->getClient()->getNumeroClient();
+			this->label_view_numero_client->BorderStyle = Forms::BorderStyle::FixedSingle;
 			// 
-			// label4
+			// Date livraison
 			// 
-			this->label4->AutoSize = true;
-			this->label4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label_date_livraison->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label4->Location = System::Drawing::Point(12, 282);
-			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(56, 29);
-			this->label4->TabIndex = 47;
-			this->label4->Text = L"Prix";
+			this->label_date_livraison->Location = System::Drawing::Point(pos_x, 2 * (size_y + step_y) + pos_y_start);//50+30+5
+			this->label_date_livraison->Size = System::Drawing::Size(size_x, size_y);
+			this->label_date_livraison->TabStop = true;
+			this->label_date_livraison->Name = L"label_date_livraison";
+			this->label_date_livraison->Text = L"Date livraison";
 			// 
-			// textBox2
+			// view Date livraison
 			// 
-			this->textBox2->Location = System::Drawing::Point(301, 178);
-			this->textBox2->Name = L"textBox2";
-			this->textBox2->ReadOnly = true;
-			this->textBox2->Size = System::Drawing::Size(100, 22);
-			this->textBox2->TabIndex = 46;
-			this->textBox2->Text = co->getRemise();
+			this->label_view_date_livraison->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label_view_date_livraison->Location = System::Drawing::Point(pos_x_view, 2 * (size_y + step_y) + pos_y_start);
+			this->label_view_date_livraison->Size = System::Drawing::Size(size_x_view, size_y);
+			this->label_view_date_livraison->TabIndex = 3;
+			this->label_view_date_livraison->Name = L"label_view_date_livraison";
+			this->label_view_date_livraison->Text = co->getDateLivraisonAff();
+			this->label_view_date_livraison->BorderStyle = Forms::BorderStyle::FixedSingle;
 			// 
-			// textBox1
+			// adresse livraison
 			// 
-			this->textBox1->Location = System::Drawing::Point(301, 119);
-			this->textBox1->Name = L"textBox1";
-			this->textBox1->ReadOnly = true;
-			this->textBox1->Size = System::Drawing::Size(100, 22);
-			this->textBox1->TabIndex = 45;
-			this->textBox1->Text = co->getDateEmission();
+			this->label_adresse_livraison->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label_adresse_livraison->Location = System::Drawing::Point(pos_x, 3 * (size_y + step_y) + pos_y_start);//85+30+5
+			this->label_adresse_livraison->Size = System::Drawing::Size(size_x, size_y);
+			this->label_adresse_livraison->TabStop = true;
+			this->label_adresse_livraison->Name = L"label_adresse_livraison";
+			this->label_adresse_livraison->Text = L"Adresse livraison";
+			// 
+			// view adresse livraison
+			// 
+			this->label_view_adresse_livraison->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label_view_adresse_livraison->Location = System::Drawing::Point(pos_x_view, 3 * (size_y + step_y) + pos_y_start);
+			this->label_view_adresse_livraison->Size = System::Drawing::Size(size_x_view, size_y);
+			this->label_view_adresse_livraison->TabIndex = 4;
+			this->label_view_adresse_livraison->Name = L"label_view_adresse_livraison";
+			this->label_view_adresse_livraison->Text = co->getAdresseLivraison()->ToString();
+			this->label_view_adresse_livraison->BorderStyle = Forms::BorderStyle::FixedSingle;
+			// 
+			// date emission
+			// 
+			this->label_date_emission->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label_date_emission->Location = System::Drawing::Point(pos_x, 4 * (size_y + step_y) + pos_y_start); //120+30+5
+			this->label_date_emission->Size = System::Drawing::Size(size_x, size_y);
+			this->label_date_emission->TabStop = true;
+			this->label_date_emission->Name = L"label_date_emission";
+			this->label_date_emission->Text = L"Date emission";
+			// 
+			// view date emission
+			// 
+			this->label_view_date_emission->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label_view_date_emission->Location = System::Drawing::Point(pos_x_view, 4 * (size_y + step_y) + pos_y_start);
+			this->label_view_date_emission->Size = System::Drawing::Size(size_x_view, size_y);
+			this->label_view_date_emission->TabIndex = 5;
+			this->label_view_date_emission->Name = L"label_view_date_emission";
+			this->label_view_date_emission->Text = co->getDateEmissionAff();
+			this->label_view_date_emission->BorderStyle = Forms::BorderStyle::FixedSingle;
+			//
+			// adresse emission
+			// 
+			this->label_adresse_emission->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label_adresse_emission->Location = System::Drawing::Point(pos_x, 5 * (size_y + step_y) + pos_y_start);//155+30+5
+			this->label_adresse_emission->Size = System::Drawing::Size(size_x, size_y);
+			this->label_adresse_emission->TabStop = true;
+			this->label_adresse_emission->Name = L"label_adresse_emission";
+			this->label_adresse_emission->Text = L"Adresse facturation";
+			// 
+			// view adresse emission
+			// 
+			this->label_view_adresse_emission->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label_view_adresse_emission->Location = System::Drawing::Point(pos_x_view, 5 * (size_y + step_y) + pos_y_start);
+			this->label_view_adresse_emission->Size = System::Drawing::Size(size_x_view, size_y);
+			this->label_view_adresse_emission->TabIndex = 6;
+			this->label_view_adresse_emission->Name = L"label_view_adresse_emission";
+			this->label_view_adresse_emission->Text = co->getAdresseFacturation()->ToString();
+			this->label_view_adresse_emission->BorderStyle = Forms::BorderStyle::FixedSingle;
+			//
+			// retrait
+			// 
+			this->label_retrait->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label_retrait->Location = System::Drawing::Point(pos_x, 6 * (size_y + step_y) + pos_y_start);//155+30+5
+			this->label_retrait->Size = System::Drawing::Size(size_x, size_y);
+			this->label_retrait->TabStop = true;
+			this->label_retrait->Name = L"label_retrait";
+			this->label_retrait->Text = L"Moyen de retrait";
+			// 
+			// view retrait
+			// 
+			this->label_view_retrait->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label_view_retrait->Location = System::Drawing::Point(pos_x_view, 6 * (size_y + step_y) + pos_y_start);
+			this->label_view_retrait->Size = System::Drawing::Size(size_x_view, size_y);
+			this->label_view_retrait->TabIndex = 7;
+			this->label_view_retrait->Name = L"label_view_retrait";
+			this->label_view_retrait->Text = co->getRetrait();
+			this->label_view_retrait->BorderStyle = Forms::BorderStyle::FixedSingle;
+			//
+			// total commande
+			// 
+			this->label_total_commande->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label_total_commande->Location = System::Drawing::Point(pos_x, 17 * (size_y + step_y) + pos_y_start);//155+30+5
+			this->label_total_commande->Size = System::Drawing::Size(size_x, size_y);
+			this->label_total_commande->TabStop = true;
+			this->label_total_commande->Name = L"label_total_commande";
+			this->label_total_commande->Text = L"Total de la commande";
+			// 
+			// view total commande
+			// 
+			this->label_view_total_commande->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label_view_total_commande->Location = System::Drawing::Point(pos_x_view, 17 * (size_y + step_y) + pos_y_start);
+			this->label_view_total_commande->Size = System::Drawing::Size(size_x_view, size_y);
+			this->label_view_total_commande->TabIndex = 8;
+			this->label_view_total_commande->Name = L"label_view_total_commande";
+			this->label_view_total_commande->Text = co->getTotalCommand();
+			this->label_view_total_commande->BorderStyle = Forms::BorderStyle::FixedSingle;
+			//
+			// reglements
+			// 
+			this->label_reglement->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label_reglement->Location = System::Drawing::Point(pos_x, 7 * (size_y + step_y) + pos_y_start);//155+30+5
+			this->label_reglement->Size = System::Drawing::Size(size_x, size_y);
+			this->label_reglement->TabStop = true;
+			this->label_reglement->Name = L"label_reglement";
+			this->label_reglement->Text = L"Reglements";
+			// 
+			// data grid view reglements
+			// 
+			this->dgv_reglement->ColumnHeadersHeightSizeMode = Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->dgv_reglement->Location = System::Drawing::Point(pos_x, 8 * (size_y + step_y) + pos_y_start);
+			this->dgv_reglement->Size = System::Drawing::Size(size_x_dgv, size_y_dgv);
+			this->dgv_reglement->Margin = Forms::Padding(1);
+			this->dgv_reglement->Name = L"dgv_reglement";
+			this->dgv_reglement->RowHeadersWidth = 50;
+			this->dgv_reglement->TabIndex = 9;
+			this->dgv_reglement->ReadOnly = true;
+			this->dgv_reglement->MultiSelect = false;
+			this->dgv_reglement->SelectionMode = Forms::DataGridViewSelectionMode::FullRowSelect;
+			this->dgv_reglement->AutoSizeColumnsMode = Forms::DataGridViewAutoSizeColumnsMode::Fill;
+			Forms::DataGridViewTextBoxColumn^ dgvtbc = gcnew Forms::DataGridViewTextBoxColumn();
+			dgvtbc->Name = "Date paiement";
+			this->dgv_reglement->Columns->Add(dgvtbc);
+			Forms::DataGridViewTextBoxColumn^ dgvtbc2 = gcnew Forms::DataGridViewTextBoxColumn();
+			dgvtbc2->Name = "Solde paiement";
+			this->dgv_reglement->Columns->Add(dgvtbc2);
+			Forms::DataGridViewTextBoxColumn^ dgvtbc3 = gcnew Forms::DataGridViewTextBoxColumn();
+			dgvtbc3->Name = "moyen paiement";
+			this->dgv_reglement->Columns->Add(dgvtbc3);
+			for each (ReglementObject ^ reglement in co->getReglement()) {
+				Forms::DataGridViewRow^ dgvr = gcnew Forms::DataGridViewRow();
+				Forms::DataGridViewTextBoxCell^ dgvtbc = gcnew Forms::DataGridViewTextBoxCell();
+				dgvtbc->Value = Convert::ToString(reglement->getDatePaiementAff());
+				dgvr->Cells->Add(dgvtbc);
+				Forms::DataGridViewTextBoxCell^ dgvtbc2 = gcnew Forms::DataGridViewTextBoxCell();
+				dgvtbc2->Value = Convert::ToString(reglement->getSoldePaiement());
+				dgvr->Cells->Add(dgvtbc2);
+				Forms::DataGridViewTextBoxCell^ dgvtbc3 = gcnew Forms::DataGridViewTextBoxCell();
+				dgvtbc3->Value = Convert::ToString(reglement->getMoyenPaiement());
+				dgvr->Cells->Add(dgvtbc3);
 
+				dgvr->Tag = reglement;
+				this->dgv_reglement->Rows->Add(dgvr);
+			}
+			//
+			// article
 			// 
-			// label2
-			// 
-			this->label2->AutoSize = true;
-			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label_article->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label2->Location = System::Drawing::Point(12, 178);
-			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(100, 29);
-			this->label2->TabIndex = 44;
-			this->label2->Text = L"Remise";
+			this->label_article->Location = System::Drawing::Point(pos_x, 8* (size_y + step_y) + pos_y_start+size_y_dgv);//155+30+5
+			this->label_article->Size = System::Drawing::Size(size_x, size_y);
+			this->label_article->TabStop = true;
+			this->label_article->Name = L"label_article";
+			this->label_article->Text = L"Panier";
 			// 
-			// label1
+			// data grid view article
 			// 
-			this->label1->AutoSize = true;
-			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->label1->Location = System::Drawing::Point(12, 119);
-			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(198, 29);
-			this->label1->TabIndex = 43;
-			this->label1->Text = L"Date D\'�mission";
-			this->label1->Click += gcnew System::EventHandler(this, &ViewCommandForm::label1_Click);
+			this->dgv_article->ColumnHeadersHeightSizeMode = Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->dgv_article->Location = System::Drawing::Point(pos_x, 9 * (size_y + step_y) + pos_y_start+size_y_dgv);
+			this->dgv_article->Size = System::Drawing::Size(size_x_dgv, size_y_dgv*2);
+			this->dgv_article->Margin = Forms::Padding(1);
+			this->dgv_article->Name = L"dgv_article";
+			this->dgv_article->RowHeadersWidth = 50;
+			this->dgv_article->TabIndex = 10;
+			this->dgv_article->ReadOnly = true;
+			this->dgv_article->MultiSelect = false;
+			this->dgv_article->SelectionMode = Forms::DataGridViewSelectionMode::FullRowSelect;
+			this->dgv_article->AutoSizeColumnsMode = Forms::DataGridViewAutoSizeColumnsMode::Fill;
+			Forms::DataGridViewTextBoxColumn^ dgvtbc_1 = gcnew Forms::DataGridViewTextBoxColumn();
+			dgvtbc_1->Name = "Id article";
+			this->dgv_article->Columns->Add(dgvtbc_1);
+			Forms::DataGridViewTextBoxColumn^ dgvtbc_2 = gcnew Forms::DataGridViewTextBoxColumn();
+			dgvtbc_2->Name = "Nom";
+			this->dgv_article->Columns->Add(dgvtbc_2);
+			Forms::DataGridViewTextBoxColumn^ dgvtbc_3 = gcnew Forms::DataGridViewTextBoxColumn();
+			dgvtbc_3->Name = "quantite";
+			this->dgv_article->Columns->Add(dgvtbc_3);
+			Forms::DataGridViewTextBoxColumn^ dgvtbc_4 = gcnew Forms::DataGridViewTextBoxColumn();
+			dgvtbc_4->Name = "Prix HT";
+			this->dgv_article->Columns->Add(dgvtbc_4);
+			Forms::DataGridViewTextBoxColumn^ dgvtbc_5 = gcnew Forms::DataGridViewTextBoxColumn();
+			dgvtbc_5->Name = "TVA";
+			this->dgv_article->Columns->Add(dgvtbc_5);
+			Forms::DataGridViewTextBoxColumn^ dgvtbc_6 = gcnew Forms::DataGridViewTextBoxColumn();
+			dgvtbc_6->Name = "Prix TTC";
+			this->dgv_article->Columns->Add(dgvtbc_6);
+			for each (Cart^ cart in co->getPanier()) {
+				Forms::DataGridViewRow^ dgvr = gcnew Forms::DataGridViewRow();
+				Forms::DataGridViewTextBoxCell^ dgvtbc = gcnew Forms::DataGridViewTextBoxCell();
+				dgvtbc->Value = Convert::ToString(cart->article->getIdArticle());
+				dgvr->Cells->Add(dgvtbc);
+				Forms::DataGridViewTextBoxCell^ dgvtbc2 = gcnew Forms::DataGridViewTextBoxCell();
+				dgvtbc2->Value = Convert::ToString(cart->article->getDesignation());
+				dgvr->Cells->Add(dgvtbc2);
+				Forms::DataGridViewTextBoxCell^ dgvtbc3 = gcnew Forms::DataGridViewTextBoxCell();
+				dgvtbc3->Value = Convert::ToString(cart->quantite);
+				dgvr->Cells->Add(dgvtbc3);
+				Forms::DataGridViewTextBoxCell^ dgvtbc4 = gcnew Forms::DataGridViewTextBoxCell();
+				dgvtbc4->Value = Convert::ToString(cart->article->getPrixHT());
+				dgvr->Cells->Add(dgvtbc4);
+				Forms::DataGridViewTextBoxCell^ dgvtbc5 = gcnew Forms::DataGridViewTextBoxCell();
+				dgvtbc5->Value = Convert::ToString(cart->article->getTVA());
+				dgvr->Cells->Add(dgvtbc5);
+				Forms::DataGridViewTextBoxCell^ dgvtbc6 = gcnew Forms::DataGridViewTextBoxCell();
+				dgvtbc6->Value = Convert::ToString(cart->getTotalTTC());
+				dgvr->Cells->Add(dgvtbc6);
+
+				dgvr->Tag = cart;
+				this->dgv_article->Rows->Add(dgvr);
+			}
 			// 
-			// textBox6
-			// 
-			this->textBox6->Location = System::Drawing::Point(301, 289);
-			this->textBox6->Name = L"textBox6";
-			this->textBox6->ReadOnly = true;
-			this->textBox6->Size = System::Drawing::Size(100, 22);
-			this->textBox6->TabIndex = 57;
-			this->textBox6->Text = co->getTotalCommand();
-			// 
-			// dataGridView1
-			// 
-			this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dataGridView1->Location = System::Drawing::Point(17, 379);
-			this->dataGridView1->Name = L"dataGridView1";
-			this->dataGridView1->RowHeadersWidth = 51;
-			this->dataGridView1->RowTemplate->Height = 24;
-			this->dataGridView1->Size = System::Drawing::Size(384, 150);
-			this->dataGridView1->TabIndex = 58;
-			// 
-			// ViewCommand
+			// ViewClient
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(417, 541);
-			this->Controls->Add(this->dataGridView1);
-			this->Controls->Add(this->textBox6);
-			this->Controls->Add(this->textBox3);
-			this->Controls->Add(this->label3);
-			this->Controls->Add(this->textBox5);
-			this->Controls->Add(this->label7);
-			this->Controls->Add(this->textBox4);
-			this->Controls->Add(this->label6);
-			this->Controls->Add(this->label5);
-			this->Controls->Add(this->label4);
-			this->Controls->Add(this->textBox2);
-			this->Controls->Add(this->textBox1);
-			this->Controls->Add(this->label2);
-			this->Controls->Add(this->label1);
-			this->Name = L"ViewCommandForm";
-			this->Text = L"ViewCommand";
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
+			this->Size = System::Drawing::Size(size_x_form, size_y_form);//190+30+5
+			this->MinimumSize = this->Size;
+			this->MaximumSize = this->Size;
+			this->Controls->Add(this->label_reference_commande);
+			this->Controls->Add(this->label_view_reference_commande);
+			this->Controls->Add(this->label_numero_client);
+			this->Controls->Add(this->label_view_numero_client);
+			this->Controls->Add(this->label_date_livraison);
+			this->Controls->Add(this->label_view_date_livraison);
+			this->Controls->Add(this->label_adresse_livraison);
+			this->Controls->Add(this->label_view_adresse_livraison);
+			this->Controls->Add(this->label_date_emission);
+			this->Controls->Add(this->label_view_date_emission);
+			this->Controls->Add(this->label_adresse_emission);
+			this->Controls->Add(this->label_view_adresse_emission);
+			this->Controls->Add(this->label_retrait);
+			this->Controls->Add(this->label_view_retrait);
+			this->Controls->Add(this->label_total_commande);
+			this->Controls->Add(this->label_view_total_commande);
+			this->Controls->Add(this->label_reglement);
+			this->Controls->Add(this->dgv_reglement);
+			this->Controls->Add(this->label_article);
+			this->Controls->Add(this->dgv_article);
+			this->Name = L"ViewClientForm";
+			this->Text = L"Commande: " + co->getReferenceCommand();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
 		}
 #pragma endregion
-	private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e) {
-	}
 	};
 }

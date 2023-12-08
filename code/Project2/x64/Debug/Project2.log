@@ -1,9 +1,41 @@
-﻿  MainForm.cpp
-C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ClientForm.h(21,37): warning C4677: 'insertAdresses': signature of non-private member contains assembly private type 'Object::ClientObject'
-C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ClientObject.h(7,15): message : see declaration of 'Object::ClientObject'
-  main.cpp
-C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ClientForm.h(21,37): warning C4677: 'insertAdresses': signature of non-private member contains assembly private type 'Object::ClientObject'
-C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ClientObject.h(7,15): message : see declaration of 'Object::ClientObject'
+﻿  CommandForm.cpp
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\CommandObject.h(17,3): warning C4091: 'typedef ': ignored on left of 'Object::Cart' when no variable is declared
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ModifCommandForm.h(17,19): warning C4677: 'ModifCommandForm': signature of non-private member contains assembly private type 'Object::CommandObject'
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\CommandObject.h(18,12): message : see declaration of 'Object::CommandObject'
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ModifCommandForm.h(21,21): warning C4677: 'co': signature of non-private member contains assembly private type 'Object::CommandObject'
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\CommandObject.h(18,12): message : see declaration of 'Object::CommandObject'
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ModifCommandForm.h(325,13): warning C4101: 'remise': unreferenced local variable
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ModifCommandForm.h(328,8): warning C4101: 'id_adresse_livraison': unreferenced local variable
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ModifCommandForm.h(330,8): warning C4101: 'id_adresse_facturation': unreferenced local variable
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ModifCommandForm.h(327,8): warning C4101: 'retrait': unreferenced local variable
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ModifCommandForm.h(329,8): warning C4101: 'numero_client': unreferenced local variable
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ModifCommandForm.h(326,13): warning C4101: 'total_remise': unreferenced local variable
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ModifCommandForm.h(322,12): warning C4101: 'reference_commande': unreferenced local variable
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ModifCommandForm.h(323,12): warning C4101: 'date_livraison': unreferenced local variable
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ModifCommandForm.h(324,12): warning C4101: 'date_emmision': unreferenced local variable
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ViewCommandForm.h(12,18): warning C4677: 'ViewCommandForm': signature of non-private member contains assembly private type 'Object::CommandObject'
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\CommandObject.h(18,12): message : see declaration of 'Object::CommandObject'
+  CommandForm2.cpp
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\CommandObject.h(17,3): warning C4091: 'typedef ': ignored on left of 'Object::Cart' when no variable is declared
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ModifCommandForm.h(17,19): warning C4677: 'ModifCommandForm': signature of non-private member contains assembly private type 'Object::CommandObject'
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\CommandObject.h(18,12): message : see declaration of 'Object::CommandObject'
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ModifCommandForm.h(21,21): warning C4677: 'co': signature of non-private member contains assembly private type 'Object::CommandObject'
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\CommandObject.h(18,12): message : see declaration of 'Object::CommandObject'
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ModifCommandForm.h(325,13): warning C4101: 'remise': unreferenced local variable
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ModifCommandForm.h(328,8): warning C4101: 'id_adresse_livraison': unreferenced local variable
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ModifCommandForm.h(330,8): warning C4101: 'id_adresse_facturation': unreferenced local variable
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ModifCommandForm.h(327,8): warning C4101: 'retrait': unreferenced local variable
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ModifCommandForm.h(329,8): warning C4101: 'numero_client': unreferenced local variable
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ModifCommandForm.h(326,13): warning C4101: 'total_remise': unreferenced local variable
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ModifCommandForm.h(322,12): warning C4101: 'reference_commande': unreferenced local variable
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ModifCommandForm.h(323,12): warning C4101: 'date_livraison': unreferenced local variable
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ModifCommandForm.h(324,12): warning C4101: 'date_emmision': unreferenced local variable
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ViewCommandForm.h(12,18): warning C4677: 'ViewCommandForm': signature of non-private member contains assembly private type 'Object::CommandObject'
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\CommandObject.h(18,12): message : see declaration of 'Object::CommandObject'
+  ViewCommandForm.cpp
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\CommandObject.h(17,3): warning C4091: 'typedef ': ignored on left of 'Object::Cart' when no variable is declared
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ViewCommandForm.h(12,18): warning C4677: 'ViewCommandForm': signature of non-private member contains assembly private type 'Object::CommandObject'
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\CommandObject.h(18,12): message : see declaration of 'Object::CommandObject'
   Generating Code...
   AddAdressForm.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
   Project2.vcxproj -> C:\cours\A2\bloc 2 (POO)\projet\code\x64\Debug\Project2.exe

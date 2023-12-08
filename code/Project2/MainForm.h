@@ -30,10 +30,6 @@ namespace Display {
 		{
 			my_bdd = bdd;
 			InitializeComponent();
-			//
-			//TODO: ajoutez ici le code du constructeur
-			//
-			printf("%s\n", "b");
 			System::Diagnostics::Debug::WriteLine("Connexion ok");
 		}
 

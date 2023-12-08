@@ -4,7 +4,7 @@
 using namespace Repository;
 
 List<PersonnelObject^>^ PersonnelRepo::getPersonnels() {
-    String^ query = "SELECT id_personnel, nom,  prenom, date_embauchage, id_superieur, [Personnel].supprime, [Personnel].id_adresse, numero_rue, rue, code_postale, [Adresse].supprime, ville";
+    String^ query = "SELECT id_personnel, nom,  prenom, date_embauche, id_superieur, [Personnel].supprime, [Personnel].id_adresse, numero_rue, rue, code_postale, [Adresse].supprime, ville";
     query += " FROM [Personnel] JOIN [Adresse] ON [Personnel].id_adresse = [Adresse].id_adresse";
     DataSet^ ds = bdd->executeQuery(query);
 
@@ -17,7 +17,7 @@ List<PersonnelObject^>^ PersonnelRepo::getPersonnels() {
             u->setIdPersonnel((int)row["id_personnel"]);
             u->setNom((String^)row["nom"]);
             u->setPrenom((String^)row["prenom"]);
-            if (!row->IsNull("date_embauchage")) { u->setDateEmbauche((DateTime^)row["date_embauchage"]); }
+            if (!row->IsNull("date_embauche")) { u->setDateEmbauche((DateTime^)row["date_embauche"]); }
             else { u->setDateEmbauche(nullptr); }
             if (!row->IsNull("id_superieur")) { u->setIdSuperieur((int)row["id_superieur"]); }
             else { u->setIdSuperieur(0); }
@@ -40,7 +40,7 @@ List<PersonnelObject^>^ PersonnelRepo::getPersonnels() {
 
 void PersonnelRepo::editPersonnel(PersonnelObject^ u) {
     String^ query = "UPDATE [Personnel] SET [nom] = '" + u->getNom() + "', [prenom]= '" + u->getPrenom() + "'";
-    query += ", [date_embauchage] = '" + u->getDateEmbauche() + "', [id_superieur] = " + u->getIdSuperieur();
+    query += ", [date_embauche] = '" + u->getDateEmbauche() + "', [id_superieur] = " + u->getIdSuperieur();
     query += ", id_adresse = " + u->getAdresseVar()->getIdAdresse() + " WHERE[id_personnel] = " + u->getIdPersonnel();
     bdd->executeNonQuery(query);
 }
@@ -52,7 +52,7 @@ void PersonnelRepo::deletePersonnel(PersonnelObject^ u) {
 }
 
 void PersonnelRepo::insertPersonnel(PersonnelObject^ u) {
-    String^ query = "INSERT INTO [Personnel] (nom, prenom, date_embauchage, id_superieur, supprime, id_adresse)";
+    String^ query = "INSERT INTO [Personnel] (nom, prenom, date_embauche, id_superieur, supprime, id_adresse)";
     query += " VALUES ('" + u->getNom() + "', '" + u->getPrenom() + "', '" + u->getDateEmbauche() + "', " + u->getIdSuperieur() + ", 0, "+u->getAdresseVar()->getIdAdresse() + ")";
     int idUser = this->bdd->executeInsert(query);
     u->setIdPersonnel(idUser);
