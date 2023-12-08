@@ -64,3 +64,5 @@ String^ CommandObject::getRetrait() {
 ClientObject^ CommandObject::getClient() {
 	return this->client;
 }
+AdressObject^ CommandObject::getAdresseLivraison() { return this->adresse_livraison; }
+AdressObject^ CommandObject::getAdresseFacturation() { return this->adresse_facturation; }

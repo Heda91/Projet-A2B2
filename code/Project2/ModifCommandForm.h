@@ -1,6 +1,4 @@
-﻿
-
-#pragma once
+﻿#pragma once
 #include "CommandObject.h"
 #include <iostream>
 #include <string>
@@ -284,7 +282,7 @@ namespace Display {
 			this->button_valid->Name = L"button_valid";
 			this->button_valid->Text = L"Valider";
 			this->button_valid->TabIndex = 8;
-			this->button_valid->Click += gcnew System::EventHandler(this, &Display::ModifCommandForm::buttonValidClick);
+			this->button_valid->Click += gcnew System::EventHandler(this, &ModifCommandForm::buttonValidClick);
 			// 
 			// ViewClient
 			// 
@@ -333,3 +331,4 @@ namespace Display {
 
 		};
 	};
+}

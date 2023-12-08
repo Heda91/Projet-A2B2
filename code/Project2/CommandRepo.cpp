@@ -67,5 +67,5 @@ void CommandRepo::deleteCommand(CommandObject^ u) {
 }
 void CommandRepo::insertCommand(CommandObject^ u) {
     //int reference_commande = 
-    this->bdd->executeInsert("INSERT INTO [Commande](date_livraison, date_emission, remise, total_commande, retrait) VALUES ('" + u->getDateLivraison() + "', '" + u->getDateFacturation() + "', '" + u->getRemise() + "', '" + u->getTotalCommand() + "', '" + u->getRetrait() + "')");
+    this->bdd->executeInsert("INSERT INTO [Commande](date_livraison, date_emission, remise, total_commande, retrait) VALUES ('" + u->getDateLivraison() + "', '" + u->getDateEmission() + "', '" + u->getRemise() + "', '" + u->getTotalCommand() + "', '" + u->getRetrait() + "')");
 }

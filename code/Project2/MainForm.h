@@ -2,7 +2,7 @@
 #include "BDD.h"
 #include "PersonnelForm.h"
 #include "ClientForm.h"
-#include "CommandForm.h"
+#include "CommandForm2.h"
 #include "ArticleForm.h"
 #include "StatisticsForm.h"
 #include <stdio.h>
@@ -167,7 +167,7 @@ namespace Display {
 		Client.ShowDialog();
 	}
 	private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
-		CommandForm Command(my_bdd);
+		CommandForm2 Command(my_bdd);
 		Command.ShowDialog(); // Affichez MyForm1
 	}
 	private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {

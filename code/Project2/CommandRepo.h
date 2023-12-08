@@ -20,13 +20,6 @@ namespace Repository {
 
         List<CommandObject^>^ getCommands(void);
 
-        //void editCommandReferenceCommande(CommandObject^ u);
-        void editCommandDateLivraison(CommandObject^ u);
-        void editCommandDateEmission(CommandObject^ u);
-        void editCommandRemise(CommandObject^ u);
-        void editCommandTotalCommande(CommandObject^ u);
-        void editCommandRetrait(CommandObject^ u);
-
         void editCommand(CommandObject^ co);
 
         void deleteCommand(CommandObject^ co);
