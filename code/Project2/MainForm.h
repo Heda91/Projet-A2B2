@@ -2,8 +2,8 @@
 #include "BDD.h"
 #include "PersonnelForm.h"
 #include "ClientForm.h"
-#include "CommandForm.h"
-#include "ItemsForm.h"
+#include "CommandForm2.h"
+#include "ArticleForm.h"
 #include "StatisticsForm.h"
 #include <stdio.h>
 #include <iostream>
@@ -138,6 +138,8 @@ namespace Display {
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(556, 453);
+			this->MaximumSize = this->Size;
+			this->MinimumSize = this->Size;
 			this->Controls->Add(this->button6);
 			this->Controls->Add(this->button4);
 			this->Controls->Add(this->button3);
@@ -150,12 +152,6 @@ namespace Display {
 
 		}
 #pragma endregion
-	private: System::Void MyForm_Load(System::Object^ sender, System::EventArgs^ e) {
-	}
-	private: System::Void webBrowser1_DocumentCompleted(System::Object^ sender, System::Windows::Forms::WebBrowserDocumentCompletedEventArgs^ e) {
-	}
-	private: System::Void textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-	}
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 		System::Diagnostics::Debug::WriteLine("aaa\n\n\n\n\n\n\n\n\n\n\n\naaa");
 		//MyForm1^ form1 = gcnew MyForm1(); // Creez une instance de MyForm1
@@ -167,12 +163,12 @@ namespace Display {
 		Client.ShowDialog();
 	}
 	private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
-		CommandForm Command(my_bdd);
+		CommandForm2 Command(my_bdd);
 		Command.ShowDialog(); // Affichez MyForm1
 	}
 	private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
-		ItemsForm Items(my_bdd);
-		Items.ShowDialog(); // Affichez MyForm1
+		ArticleForm Article(my_bdd);
+		Article.ShowDialog(); // Affichez MyForm1
 	}
 	private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e) {
 		StatistiquesForm Statistiques;

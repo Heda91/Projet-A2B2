@@ -5,6 +5,9 @@
 #include "PersonnelRepo.h"
 
 
+
+
+
 void Display::PersonnelForm::buttonAddClick(System::Object^ sender, System::EventArgs^ e) {
 	PersonnelObject^ po = gcnew PersonnelObject();
 	ModifPersonnelForm^ add_personnel_form = gcnew ModifPersonnelForm(po);
@@ -13,8 +16,8 @@ void Display::PersonnelForm::buttonAddClick(System::Object^ sender, System::Even
 		Repository::AdressRepo^ ar = gcnew Repository::AdressRepo(this->my_bdd);
 		ar->insertAdress(po->getAdresseVar());
 		this->pr->insertPersonnel(po); 
+		this->reload();
 	}
-	this->reload();
 }
 void Display::PersonnelForm::buttonModifClick(System::Object^ sender, System::EventArgs^ e) {
 	PersonnelObject^ po = (PersonnelObject^)this->data_grid_view->SelectedRows[0]->Tag;
@@ -58,9 +61,10 @@ void Display::PersonnelForm::reload() {
 			dgvtbc3->Value = personnel->getPrenom();
 			dgvr->Cells->Add(dgvtbc3);
 			Forms::DataGridViewTextBoxCell^ dgvtbc4 = gcnew Forms::DataGridViewTextBoxCell();
-			dgvtbc4->Value = personnel->getDateEmbauche();
+			dgvtbc4->Value = personnel->getDateEmbaucheAff();
 			dgvr->Cells->Add(dgvtbc4);
-		
+			
+			
 			dgvr->Tag = personnel;
 			this->data_grid_view->Rows->Add(dgvr);
 		}

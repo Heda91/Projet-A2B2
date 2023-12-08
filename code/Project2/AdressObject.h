@@ -8,7 +8,7 @@ namespace Object {
 		int id_adresse = 0;
 		int numero = 0;
 		String^ rue = "";
-		String^ code_postale = "00000";
+		String^ code_postale = "";
 		String^ ville = "";
 		bool supprime = false;
 	public:
@@ -26,5 +26,7 @@ namespace Object {
 		String^ getRue();
 		String^ getCodePostale();
 		String^ getVille();
+
+		String^ ToString() override;
 	};
 }

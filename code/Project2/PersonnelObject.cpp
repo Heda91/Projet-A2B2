@@ -52,6 +52,18 @@ String^ PersonnelObject::getDateEmbauche() {
         return month + "/" + day + "/" + Convert::ToString(date_embauche->Year);
     }
 }
+String^ PersonnelObject::getDateEmbaucheAff() {
+    if (this->date_embauche == nullptr) { return "NULL"; }
+    else {
+        String^ day, ^ month;
+        if (date_embauche->Day < 10) { day = "0" + Convert::ToString(date_embauche->Day); }
+        else { day = Convert::ToString(date_embauche->Day); }
+        if (date_embauche->Month < 10) { month = "0" + Convert::ToString(date_embauche->Month); }
+        else { month = Convert::ToString(date_embauche->Month); }
+        return day + "/" + month + "/" + Convert::ToString(date_embauche->Year);
+    }
+}
+
 
 bool PersonnelObject::isDelete() { return this->supprime; }
 
@@ -61,7 +73,7 @@ String^ PersonnelObject::getIdSuperieur() {
 }
 
 String^ PersonnelObject::getAdresse() {
-    return adresse->getNumero() +" "+ adresse->getRue()+", "+adresse->getCodePostale();
+    return this->adresse->ToString();
 }
 
 AdressObject^ PersonnelObject::getAdresseVar() {

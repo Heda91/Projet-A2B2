@@ -32,7 +32,7 @@ System::Data::DataSet^ BDD::executeQuery(String^ sql)
     // Cr�ation d'un DataSet
     System::Data::DataSet^ ds = gcnew System::Data::DataSet();
     // Remplissage du DataSet avec le SqlDataAdapter
-    da->Fill(ds);
+     da->Fill(ds);
 
     return ds;
 }
