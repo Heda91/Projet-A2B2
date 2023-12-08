@@ -308,21 +308,25 @@ namespace Display {
 				this->txtbx_id_superieur->BackColor = System::Drawing::Color::Red;
 			}
 			
+
 			//date embauche
-			if (Convert::ToSingle(this->txtbx_date_embauche->Text) < 0) {    // date < 0 ?????? 
-				reussi = false;
-				this->txtbx_date_embauche->BackColor = System::Drawing::Color::Red;
-			}
-			else {
-				try {
-					date = Convert::ToDateTime(this->txtbx_date_embauche->Text);
+			try {
+				if (this->txtbx_date_embauche->Text != "'" && this->txtbx_date_embauche->Text->Replace("'", "") != "" && Convert::ToSingle(this->txtbx_id_superieur->Text->Replace("'", "")) > 0) {
+					date = Convert::ToDateTime(this->txtbx_date_embauche->Text == "" ? "01/01/2000" : txtbx_date_embauche->Text);
 					this->txtbx_date_embauche->BackColor = System::Drawing::Color::White;
 				}
-				catch (System::FormatException^) {
+				else {
 					reussi = false;
 					this->txtbx_date_embauche->BackColor = System::Drawing::Color::Red;
 				}
 			}
+			catch (System::FormatException^) {
+				reussi = false;
+				this->txtbx_date_embauche->BackColor = System::Drawing::Color::Red;
+			}
+
+
+
 			//adresse
 			if (po->getAdresseVar()->getNumero() == "0") {//dans le cas du "Add" regarde si il a modifie l'adresse
 				reussi = false;

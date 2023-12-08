@@ -167,7 +167,7 @@ namespace Display {
 		Article.ShowDialog(); // Affichez MyForm1
 	}
 	private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e) {
-		StatistiquesForm Statistiques;
+		StatisticsForm Statistiques;
 		Statistiques.ShowDialog(); // Affichez MyForm1
 	}
 	};
