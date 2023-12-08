@@ -138,6 +138,8 @@ namespace Display {
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(556, 453);
+			this->MaximumSize = this->Size;
+			this->MinimumSize = this->Size;
 			this->Controls->Add(this->button6);
 			this->Controls->Add(this->button4);
 			this->Controls->Add(this->button3);
@@ -150,12 +152,6 @@ namespace Display {
 
 		}
 #pragma endregion
-	private: System::Void MyForm_Load(System::Object^ sender, System::EventArgs^ e) {
-	}
-	private: System::Void webBrowser1_DocumentCompleted(System::Object^ sender, System::Windows::Forms::WebBrowserDocumentCompletedEventArgs^ e) {
-	}
-	private: System::Void textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-	}
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 		System::Diagnostics::Debug::WriteLine("aaa\n\n\n\n\n\n\n\n\n\n\n\naaa");
 		//MyForm1^ form1 = gcnew MyForm1(); // Creez une instance de MyForm1

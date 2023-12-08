@@ -4,7 +4,7 @@ using namespace Repository;
 
 List<ClientObject^>^ ClientRepo::getClients(void) {
     String^ query = "SELECT [Client].numero_client, nom, prenom, date_naissance,[Client].supprime, type_adresse, [Posseder].id_adresse, numero_rue, rue, code_postale, ville, [Adresse].supprime";
-    query += " FROM [Client] LEFT JOIN [POSSEDER] ON [Client].numero_client = [POSSEDER].numero_client LEFT JOIN [Adresse] ON [POSSEDER].id_adresse = [Adresse].id_adresse WHERE [Client].supprime = 0 AND [Adresse].supprime = 0";
+    query += " FROM [Client] LEFT JOIN [POSSEDER] ON [Client].numero_client = [POSSEDER].numero_client LEFT JOIN [Adresse] ON [POSSEDER].id_adresse = [Adresse].id_adresse WHERE [Client].supprime = 0";
     DataSet^ ds = bdd->executeQuery(query);
 
     List<ClientObject^>^ list = gcnew List<ClientObject^>();
@@ -37,14 +37,16 @@ List<ClientObject^>^ ClientRepo::getClients(void) {
             list->Add(u);
         }
         if (!row->IsNull("supprime1")) {
-            AdressObject^ ao = gcnew AdressObject();
-            if ((bool)row["type_adresse"] == true) { u->addAdresseLivraison(ao); }
-            else { u->addAdresseEmission(ao); }
-            ao->setIdAdresse((int)row["id_adresse"]);
-            ao->setNumero((int)row["numero_rue"]);
-            ao->setRue((String^)row["rue"]);
-            ao->setCodePostale((String^)row["code_postale"]);
-            ao->setVille((String^)row["ville"]);
+            if (!(bool)row["supprime1"]) {
+                AdressObject^ ao = gcnew AdressObject();
+                if ((bool)row["type_adresse"] == true) { u->addAdresseLivraison(ao); }
+                else { u->addAdresseEmission(ao); }
+                ao->setIdAdresse((int)row["id_adresse"]);
+                ao->setNumero((int)row["numero_rue"]);
+                ao->setRue((String^)row["rue"]);
+                ao->setCodePostale((String^)row["code_postale"]);
+                ao->setVille((String^)row["ville"]);
+            }
         }
     }
     return list;
