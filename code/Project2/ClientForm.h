@@ -1,6 +1,7 @@
 #pragma once
 #include "BDD.h"
 #include "ClientRepo.h"
+#include "ClientObject.h"
 #include "PrincipalForm.h"
 
 namespace Display {
@@ -15,8 +16,9 @@ namespace Display {
 		void buttonAddClick(System::Object^ sender, System::EventArgs^ e) override;
 		void buttonModifClick(System::Object^ sender, System::EventArgs^ e) override;
 		void buttonViewClick(System::Object^ sender, System::EventArgs^ e) override;
-		//void buttonDelClick(System::Object^ sender, System::EventArgs^ e) override;
+		void buttonDelClick(System::Object^ sender, System::EventArgs^ e) override;
 
+		void insertAdresses(ClientObject^);
 		void initDataGridView() override;
 	private:
 		Repository::ClientRepo^ cr;

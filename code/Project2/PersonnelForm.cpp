@@ -5,8 +5,20 @@
 #include "PersonnelRepo.h"
 
 void Display::PersonnelForm::buttonAddClick(System::Object^ sender, System::EventArgs^ e) {
+<<<<<<< HEAD
 	ModifPersonnelForm add_personnel_form;
 	add_personnel_form.ShowDialog();
+=======
+	PersonnelObject^ po = gcnew PersonnelObject();
+	ModifPersonnelForm^ add_personnel_form = gcnew ModifPersonnelForm(po);
+	add_personnel_form->ShowDialog();
+	if (po->getDateEmbauche() != "NULL") {//regarde si la date embauche n'est pas NULL (donc a validé)
+		Repository::AdressRepo^ ar = gcnew Repository::AdressRepo(this->my_bdd);
+		ar->insertAdress(po->getAdresseVar());
+		this->pr->insertPersonnel(po); 
+		this->reload();
+	}
+>>>>>>> a67132f0a5a18b9a958c96b6f624187e3e6c0286
 }
 void Display::PersonnelForm::buttonModifClick(System::Object^ sender, System::EventArgs^ e) {
 	ModifPersonnelForm modif_personnel_form;
@@ -41,8 +53,13 @@ void Display::PersonnelForm::reload() {
 			DataGridViewTextBoxCell^ dgvtbc3 = gcnew DataGridViewTextBoxCell();
 			dgvtbc3->Value = personnel->getPrenom();
 			dgvr->Cells->Add(dgvtbc3);
+<<<<<<< HEAD
 			DataGridViewTextBoxCell^ dgvtbc4 = gcnew DataGridViewTextBoxCell();
 			dgvtbc4->Value = personnel->getDateEmbauche();
+=======
+			Forms::DataGridViewTextBoxCell^ dgvtbc4 = gcnew Forms::DataGridViewTextBoxCell();
+			dgvtbc4->Value = personnel->getDateEmbaucheAff();
+>>>>>>> a67132f0a5a18b9a958c96b6f624187e3e6c0286
 			dgvr->Cells->Add(dgvtbc4);
 		
 			dgvr->Tag = personnel;

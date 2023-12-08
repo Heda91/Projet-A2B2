@@ -1,15 +1,14 @@
-<<<<<<< HEAD
 #pragma once
 #include "BDD.h"
+#include "ArticleRepo.h"
 #include "PrincipalForm.h"
-#include "CommandRepo.h"
 
 namespace Display {
 
-	public ref class CommandForm : public PrincipalForm
+	public ref class ArticleForm : public PrincipalForm
 	{
 	public:
-		CommandForm(BDD^ bdd) : PrincipalForm(bdd, "Commandes") {};
+		ArticleForm(BDD^ bdd) : PrincipalForm(bdd, "Articles") {};
 		void reload() override;
 
 	protected:
@@ -19,10 +18,7 @@ namespace Display {
 		void buttonDelClick(System::Object^ sender, System::EventArgs^ e) override;
 
 		void initDataGridView() override;
-	private :
-		Repository::CommandRepo^ cr;
+	private:
+		Repository::ArticleRepo^ ar;
 	};
 }
-=======
-#pragma once
->>>>>>> a67132f0a5a18b9a958c96b6f624187e3e6c0286

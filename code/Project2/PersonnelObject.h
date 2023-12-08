@@ -33,9 +33,13 @@ namespace Object {
         String^ getPrenom();
 
         String^ getDateEmbauche();
+<<<<<<< HEAD
 
         bool isDelete();
 
+=======
+        String^ getDateEmbaucheAff();
+>>>>>>> a67132f0a5a18b9a958c96b6f624187e3e6c0286
         String^ getIdSuperieur();
 
         String^ ToString() override;

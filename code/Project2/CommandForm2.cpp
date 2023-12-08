@@ -1,40 +1,39 @@
-<<<<<<< HEAD
-#include "CommandForm.h"
+#include "CommandForm2.h"
 #include "ModifCommandForm.h"
 #include "ViewCommandForm.h"
 #include "CommandRepo.h"
 #include "CommandObject.h"
 
-void Display::CommandForm::buttonAddClick(System::Object^ sender, System::EventArgs^ e) {
+using namespace Display;
+
+void CommandForm2::buttonAddClick(System::Object^ sender, System::EventArgs^ e) {
 	CommandObject^ co = gcnew CommandObject();
 	ModifCommandForm^ add_command_form = gcnew ModifCommandForm(co);
 	add_command_form->ShowDialog();
 }
-void Display::CommandForm::buttonModifClick(System::Object^ sender, System::EventArgs^ e) {
+void CommandForm2::buttonModifClick(System::Object^ sender, System::EventArgs^ e) {
 	CommandObject^ co = gcnew CommandObject();
 	ModifCommandForm^ add_command_form = gcnew ModifCommandForm(co);
 	add_command_form->ShowDialog();
 }
-void Display::CommandForm::buttonViewClick(System::Object^ sender, System::EventArgs^ e) {
+void CommandForm2::buttonViewClick(System::Object^ sender, System::EventArgs^ e) {
 	ViewCommandForm^ view_command_form = gcnew ViewCommandForm((CommandObject^)this->data_grid_view->SelectedRows[0]->Tag);
 	view_command_form->ShowDialog();
 }
-
-void Display::CommandForm::buttonDelClick(System::Object^ sender, System::EventArgs^ e)
-{
+void CommandForm2::buttonDelClick(System::Object^ sender, System::EventArgs^ e){
 	CommandObject^ co = (CommandObject^)this->data_grid_view->SelectedRows[0]->Tag;
 	//	ModifItemsForm^ modif_items_form = gcnew ModifItemsForm(ao);
 	cr->deleteCommand(co);
 	this->reload();
 }
 
-
-void Display::CommandForm::reload() {
+void CommandForm2::reload() {
 	System::Collections::Generic::List<CommandObject^>^ Commands = cr->getCommands();
 
 	this->data_grid_view->Rows->Clear();
 	for each (CommandObject ^ command in Commands) {
 		if (!command->isDeleted()) {
+			/*
 			DataGridViewRow^ dgvr = gcnew DataGridViewRow();
 			DataGridViewTextBoxCell^ dgvtbc = gcnew DataGridViewTextBoxCell();
 			dgvtbc->Value = Convert::ToString(command->getReferenceCommand());
@@ -50,12 +49,11 @@ void Display::CommandForm::reload() {
 			dgvr->Cells->Add(dgvtbc4);
 
 			dgvr->Tag = command;
-			this->data_grid_view->Rows->Add(dgvr);
+			this->data_grid_view->Rows->Add(dgvr);*/
 		}
 	}
 }
-
-void Display::CommandForm::initDataGridView() {
+void CommandForm2::initDataGridView() {
 	cr = gcnew Repository::CommandRepo(my_bdd);
 
 	Forms::DataGridViewTextBoxColumn^ dgvtbc = gcnew Forms::DataGridViewTextBoxColumn();
@@ -71,8 +69,3 @@ void Display::CommandForm::initDataGridView() {
 	dgvtbc4->Name = "remise (%)";
 	this->data_grid_view->Columns->Add(dgvtbc4);
 }
-
-
-=======
-#include "CommandForm.h"
->>>>>>> a67132f0a5a18b9a958c96b6f624187e3e6c0286

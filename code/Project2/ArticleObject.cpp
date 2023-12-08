@@ -56,13 +56,21 @@ String^ ArticleObject::getDesignation()
 String^ ArticleObject::getPrixHT()
 {
 	return this->prixHT->ToString();
+<<<<<<< HEAD
 //	return this->prixHT->ToString()->Replace("{", "")->Replace("}", "");
+=======
+	//	return this->prixHT->ToString()->Replace("{", "")->Replace("}", "");
+>>>>>>> a67132f0a5a18b9a958c96b6f624187e3e6c0286
 }
 
 String^ ArticleObject::getTVA()
 {
 	return this->TVA->ToString();
+<<<<<<< HEAD
 //	return this->TVA->ToString()->Replace("{", "")->Replace("}", "");
+=======
+	//	return this->TVA->ToString()->Replace("{", "")->Replace("}", "");
+>>>>>>> a67132f0a5a18b9a958c96b6f624187e3e6c0286
 }
 
 String^ ArticleObject::getQuantiteStock()

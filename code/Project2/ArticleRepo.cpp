@@ -17,7 +17,11 @@ List<ArticleObject^>^ ArticleRepo::getArticles(void) {
         u->setQuantiteStock((int)row[4]);
         u->setSeuilReapprovisionnement((int)row[5]);
         u->setPrixAchat(Convert::ToDecimal(row[6]));
+<<<<<<< HEAD
 		if ((bool)row[7] == true) { u->deleteArticle(); }
+=======
+        if ((bool)row[7] == true) { u->deleteArticle(); }
+>>>>>>> a67132f0a5a18b9a958c96b6f624187e3e6c0286
         list->Add(u);
     }
 
@@ -25,19 +29,32 @@ List<ArticleObject^>^ ArticleRepo::getArticles(void) {
 };
 
 void ArticleRepo::editArticle(ArticleObject^ u) { // a concatener
+<<<<<<< HEAD
 	editArticleDesignation(u);
 	editArticlePrixHT(u);
 	editArticleTVA(u);
 	editArticleQuantiteStock(u);
 	editArticleSeuilReapprovisionnement(u);
 	editArticlePrixAchat(u);
+=======
+    editArticleDesignation(u);
+    editArticlePrixHT(u);
+    editArticleTVA(u);
+    editArticleQuantiteStock(u);
+    editArticleSeuilReapprovisionnement(u);
+    editArticlePrixAchat(u);
+>>>>>>> a67132f0a5a18b9a958c96b6f624187e3e6c0286
 }
 
 void ArticleRepo::editArticleDesignation(ArticleObject^ u) {
     bdd->executeNonQuery("UPDATE [Article] SET designation = '" + u->getDesignation() + "' WHERE [id_article] = " + u->getIdArticle());
 }
 void ArticleRepo::editArticlePrixHT(ArticleObject^ u) {
+<<<<<<< HEAD
     bdd->executeNonQuery("UPDATE [Article] SET prixHT = '" + u->getPrixHT()->Replace(",",".") + "' WHERE [id_article] = " + u->getIdArticle());
+=======
+    bdd->executeNonQuery("UPDATE [Article] SET prixHT = '" + u->getPrixHT()->Replace(",", ".") + "' WHERE [id_article] = " + u->getIdArticle());
+>>>>>>> a67132f0a5a18b9a958c96b6f624187e3e6c0286
 }
 void ArticleRepo::editArticleTVA(ArticleObject^ u) {
     bdd->executeNonQuery("UPDATE [Article] SET TVA = '" + u->getTVA()->Replace(",", ".") + "' WHERE [id_article] = " + u->getIdArticle());

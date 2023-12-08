@@ -77,6 +77,7 @@ void PrincipalForm::InitializeComponent() {
 	this->data_grid_view->ReadOnly = true;
 	this->data_grid_view->MultiSelect = false;
 	this->data_grid_view->SelectionMode = Forms::DataGridViewSelectionMode::FullRowSelect;
+	this->data_grid_view->AutoSizeColumnsMode = Forms::DataGridViewAutoSizeColumnsMode::Fill;
 	//
 	//PrincipalForm
 	//

@@ -184,7 +184,11 @@ namespace Display {
 			this->textBox1->Size = System::Drawing::Size(100, 22);
 			this->textBox1->TabIndex = 45;
 			this->textBox1->Text = co->getDateEmission();
+<<<<<<< HEAD
 			
+=======
+
+>>>>>>> a67132f0a5a18b9a958c96b6f624187e3e6c0286
 			// 
 			// label2
 			// 
