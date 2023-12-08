@@ -1,9 +1,0 @@
-﻿  MainForm.cpp
-C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ClientForm.h(21,37): warning C4677: 'insertAdresses': signature of non-private member contains assembly private type 'Object::ClientObject'
-C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ClientObject.h(7,15): message : see declaration of 'Object::ClientObject'
-  main.cpp
-C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ClientForm.h(21,37): warning C4677: 'insertAdresses': signature of non-private member contains assembly private type 'Object::ClientObject'
-C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ClientObject.h(7,15): message : see declaration of 'Object::ClientObject'
-  Generating Code...
-  AddAdressForm.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
-  Project2.vcxproj -> C:\cours\A2\bloc 2 (POO)\projet\code\x64\Debug\Project2.exe
