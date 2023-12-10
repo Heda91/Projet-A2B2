@@ -1,0 +1,58 @@
+﻿  MainForm.cpp
+C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git4\code\Project2\ClientForm.h(21,37): warning C4677: 'insertAdresses' : la signature de membre non privée contient un type privé d'assembly 'Object::ClientObject'
+  (compiler le fichier source 'MainForm.cpp')
+  C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git4\code\Project2\ClientObject.h(7,15):
+  voir la déclaration de 'Object::ClientObject'
+  
+C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git4\code\Project2\CommandObject.h(17,3): warning C4091: 'typedef ' : ignoré à gauche de 'Object::Cart' quand aucune variable n'est déclarée
+  (compiler le fichier source 'MainForm.cpp')
+  
+C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git4\code\Project2\VarStatisticsForm.h(30,22): warning C4677: 'sr' : la signature de membre non privée contient un type privé d'assembly 'Repository::StatisticsRepo'
+  (compiler le fichier source 'MainForm.cpp')
+  C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git4\code\Project2\StatisticsRepo.h(10,15):
+  voir la déclaration de 'Repository::StatisticsRepo'
+  
+C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git4\code\Project2\StatisticsForm.h(30,22): warning C4677: 'sr' : la signature de membre non privée contient un type privé d'assembly 'Repository::StatisticsRepo'
+  (compiler le fichier source 'MainForm.cpp')
+  C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git4\code\Project2\StatisticsRepo.h(10,15):
+  voir la déclaration de 'Repository::StatisticsRepo'
+  
+  StatisticsForm.cpp
+C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git4\code\Project2\VarStatisticsForm.h(30,22): warning C4677: 'sr' : la signature de membre non privée contient un type privé d'assembly 'Repository::StatisticsRepo'
+  (compiler le fichier source 'StatisticsForm.cpp')
+  C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git4\code\Project2\StatisticsRepo.h(10,15):
+  voir la déclaration de 'Repository::StatisticsRepo'
+  
+C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git4\code\Project2\StatisticsForm.h(30,22): warning C4677: 'sr' : la signature de membre non privée contient un type privé d'assembly 'Repository::StatisticsRepo'
+  (compiler le fichier source 'StatisticsForm.cpp')
+  C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git4\code\Project2\StatisticsRepo.h(10,15):
+  voir la déclaration de 'Repository::StatisticsRepo'
+  
+  VarStatisticsForm.cpp
+C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git4\code\Project2\VarStatisticsForm.h(30,22): warning C4677: 'sr' : la signature de membre non privée contient un type privé d'assembly 'Repository::StatisticsRepo'
+  (compiler le fichier source 'VarStatisticsForm.cpp')
+  C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git4\code\Project2\StatisticsRepo.h(10,15):
+  voir la déclaration de 'Repository::StatisticsRepo'
+  
+  main.cpp
+C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git4\code\Project2\ClientForm.h(21,37): warning C4677: 'insertAdresses' : la signature de membre non privée contient un type privé d'assembly 'Object::ClientObject'
+  (compiler le fichier source 'main.cpp')
+  C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git4\code\Project2\ClientObject.h(7,15):
+  voir la déclaration de 'Object::ClientObject'
+  
+C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git4\code\Project2\CommandObject.h(17,3): warning C4091: 'typedef ' : ignoré à gauche de 'Object::Cart' quand aucune variable n'est déclarée
+  (compiler le fichier source 'main.cpp')
+  
+C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git4\code\Project2\VarStatisticsForm.h(30,22): warning C4677: 'sr' : la signature de membre non privée contient un type privé d'assembly 'Repository::StatisticsRepo'
+  (compiler le fichier source 'main.cpp')
+  C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git4\code\Project2\StatisticsRepo.h(10,15):
+  voir la déclaration de 'Repository::StatisticsRepo'
+  
+C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git4\code\Project2\StatisticsForm.h(30,22): warning C4677: 'sr' : la signature de membre non privée contient un type privé d'assembly 'Repository::StatisticsRepo'
+  (compiler le fichier source 'main.cpp')
+  C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git4\code\Project2\StatisticsRepo.h(10,15):
+  voir la déclaration de 'Repository::StatisticsRepo'
+  
+  Génération de code en cours...
+  AddAdressForm.obj : module MSIL détecté ; liens incrémentiels désactivés pour MSIL ; édition de liens complète en cours
+  Project2.vcxproj -> C:\Users\aleo5\Desktop\bureau\travail\A2\Bloc 2 - POO\projet\git4\code\x64\Debug\Project2.exe

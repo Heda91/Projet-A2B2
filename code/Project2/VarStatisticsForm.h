@@ -24,9 +24,11 @@ namespace Display {
 			//
 			//TODO: Add the constructor code here
 			//
+
 		}
-		BDD^ bdd;
-		StatisticsRepo^ sr = gcnew Repository::StatisticsRepo(bdd);
+		BDD^ bdd = gcnew BDD;
+		StatisticsRepo^ sr = gcnew StatisticsRepo(bdd);
+
 
 
 
@@ -179,13 +181,13 @@ namespace Display {
 			this->comboBox1->Size = System::Drawing::Size(259, 24);
 			this->comboBox1->TabIndex = 10;
 			this->comboBox1->SelectedIndexChanged += gcnew System::EventHandler(this, &VarStatisticsForm::comboBox1_SelectedIndexChanged);
-			//DataSet^ Items = sr->articlesMoins(); /*à l'origine de probleme*/
-			/*int i = 0;
-			while (i < Items->Tables[0]->Rows->Count) {
-				this->comboBox1->Items->Add(Convert::ToString(Items->Tables[0]->Rows[i]));
+			DataSet^ Items1 = sr->articlesMoins(); /*à l'origine de probleme*/
+			int i = 0;
+			while (i < Items1->Tables[0]->Rows->Count) {
+				this->comboBox1->Items->Add(Convert::ToString(Items1->Tables[0]->Rows[i]->ItemArray[0]));
 				i++;
 			}
-			*/
+			
 			/*
 			this->comboBox1->Items->AddRange(gcnew cli::array< System::Object^  >() {
 				Items;
@@ -249,13 +251,17 @@ namespace Display {
 	*/
 
 	private: System::Void comboBox1_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
+		updatePrixFinal();
+	}
+
+	void updatePrixFinal() {
 		String^ articleSelectionne = comboBox1->SelectedItem->ToString();
 
 		String^ sqlQuery = "SELECT prixHT FROM Article WHERE designation = '" + articleSelectionne + "'";
 		DataSet^ result = bdd->executeQuery(sqlQuery);
 
 		if (result && result->Tables->Count > 0 && result->Tables[0]->Rows->Count > 0) {
-			double prixInitial = Convert::ToDouble(result->Tables[0]->Rows[0]/*["prixHT"]*/);
+			double prixInitial = Convert::ToDouble(result->Tables[0]->Rows[0]->ItemArray[0]);
 
 			//Remise
 			double remisePourcentage = Convert::ToDouble(textBox1->Text);
@@ -272,8 +278,8 @@ namespace Display {
 		result = bdd->executeQuery(sqlQuery);
 
 		if (result && result->Tables->Count > 0 && result->Tables[0]->Rows->Count > 0) {
-			double prixHT = Convert::ToDouble(result->Tables[0]->Rows[0]/*["prixHT"]*/);
-			double prixAchat = Convert::ToDouble(result->Tables[0]->Rows[0]/*["prix_achat"]*/ );
+			double prixHT = Convert::ToDouble(result->Tables[0]->Rows[0]->ItemArray[0]);
+			double prixAchat = Convert::ToDouble(result->Tables[0]->Rows[0]->ItemArray[1]);
 
 			double margeCommerciale = prixHT - prixAchat;
 			textBox3->Text = margeCommerciale.ToString();
@@ -282,6 +288,11 @@ namespace Display {
 			textBox3->Text = "Erreur de marge commerciale";
 		}
 	}
+
+
+
+		//this->textBox4->Text = 
 	};
-}
+};
+
 
