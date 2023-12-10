@@ -3,18 +3,32 @@
 #include "ViewCommandForm.h"
 #include "CommandRepo.h"
 #include "CommandObject.h"
+#include <vcclr.h>
 
 using namespace Display;
+using namespace System;
 
 void CommandForm2::buttonAddClick(System::Object^ sender, System::EventArgs^ e) {
+	Repository::CommandRepo^ cr = gcnew Repository::CommandRepo(this->my_bdd);
 	CommandObject^ co = gcnew CommandObject();
-	ModifCommandForm^ add_command_form = gcnew ModifCommandForm(co);
+	DateTime^ now = gcnew DateTime();
+	co->setDateEmission(now->Today);
+	ModifCommandForm^ add_command_form = gcnew ModifCommandForm(co, cr);
+	add_command_form->Text = "Ajouter Commande";
 	add_command_form->ShowDialog();
+	if (co->getDateEmission() != "NULL") {
+		this->cr->insertCommand(co);
+		this->reload();
+	}
 }
 void CommandForm2::buttonModifClick(System::Object^ sender, System::EventArgs^ e) {
-	CommandObject^ co = gcnew CommandObject();
-	ModifCommandForm^ add_command_form = gcnew ModifCommandForm(co);
-	add_command_form->ShowDialog();
+	CommandObject^ co = (CommandObject^)this->data_grid_view->SelectedRows[0]->Tag;
+	ModifCommandForm^ modif_command_form = gcnew ModifCommandForm(co, this->cr);
+	modif_command_form->button_id_client->Enabled = false;
+	modif_command_form->Text = "Modifier commande: " + co->getReferenceCommand();
+	modif_command_form->ShowDialog();
+	this->cr->editCommand(co);
+	this->reload();
 }
 void CommandForm2::buttonViewClick(System::Object^ sender, System::EventArgs^ e) {
 	ViewCommandForm^ view_command_form = gcnew ViewCommandForm((CommandObject^)this->data_grid_view->SelectedRows[0]->Tag);
@@ -54,6 +68,7 @@ void CommandForm2::reload() {
 }
 void CommandForm2::initDataGridView() {
 	cr = gcnew Repository::CommandRepo(my_bdd);
+	//this->button_add->Enabled = false;
 
 	Forms::DataGridViewTextBoxColumn^ dgvtbc = gcnew Forms::DataGridViewTextBoxColumn();
 	dgvtbc->Name = "Reference";

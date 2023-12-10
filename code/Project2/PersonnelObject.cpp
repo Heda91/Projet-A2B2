@@ -43,25 +43,11 @@ String^ PersonnelObject::getPrenom() {
 
 String^ PersonnelObject::getDateEmbauche() {
     if (this->date_embauche == nullptr) { return "NULL"; }
-    else {
-        String^ day, ^ month;
-        if (date_embauche->Day < 10) { day = "0" + Convert::ToString(date_embauche->Day); }
-        else { day = Convert::ToString(date_embauche->Day); }
-        if (date_embauche->Month < 10) { month = "0" + Convert::ToString(date_embauche->Month); }
-        else { month = Convert::ToString(date_embauche->Month); }
-        return month + "/" + day + "/" + Convert::ToString(date_embauche->Year);
-    }
+    else { return this->date_embauche->ToString("MM/dd/yyy"); }
 }
 String^ PersonnelObject::getDateEmbaucheAff() {
     if (this->date_embauche == nullptr) { return "NULL"; }
-    else {
-        String^ day, ^ month;
-        if (date_embauche->Day < 10) { day = "0" + Convert::ToString(date_embauche->Day); }
-        else { day = Convert::ToString(date_embauche->Day); }
-        if (date_embauche->Month < 10) { month = "0" + Convert::ToString(date_embauche->Month); }
-        else { month = Convert::ToString(date_embauche->Month); }
-        return day + "/" + month + "/" + Convert::ToString(date_embauche->Year);
-    }
+    else { return this->date_embauche->ToString("dd/MM/yyy"); }
 }
 
 

@@ -130,6 +130,8 @@
     <ClCompile Include="ClientForm.cpp" />
     <ClCompile Include="ClientObject.cpp" />
     <ClCompile Include="ClientRepo.cpp" />
+    <ClCompile Include="CommandAddArticleForm.cpp" />
+    <ClCompile Include="CommandAddClientForm.cpp" />
     <ClCompile Include="CommandForm.cpp" />
     <ClCompile Include="CommandForm2.cpp" />
     <ClCompile Include="CommandObject.cpp" />
@@ -148,9 +150,6 @@
     <ClCompile Include="PrincipalForm.cpp" />
     <ClCompile Include="ReglementObject.cpp" />
     <ClCompile Include="StatisticsForm.cpp" />
-    <ClCompile Include="StatisticsObject.cpp" />
-    <ClCompile Include="StatisticsRepo.cpp" />
-    <ClCompile Include="VarStatisticsForm.cpp" />
     <ClCompile Include="ViewClientForm.cpp" />
     <ClCompile Include="ViewCommandForm.cpp" />
     <ClCompile Include="ViewIArticleForm.cpp" />
@@ -166,6 +165,8 @@
     <ClInclude Include="ClientForm.h" />
     <ClInclude Include="ClientObject.h" />
     <ClInclude Include="ClientRepo.h" />
+    <ClInclude Include="CommandAddArticleForm.h" />
+    <ClInclude Include="CommandAddClientForm.h" />
     <ClInclude Include="CommandForm.h" />
     <ClInclude Include="CommandForm2.h" />
     <ClInclude Include="CommandObject.h" />
@@ -185,9 +186,6 @@
     <ClInclude Include="PrincipalForm.h" />
     <ClInclude Include="ReglementObject.h" />
     <ClInclude Include="StatisticsForm.h" />
-    <ClInclude Include="StatisticsObject.h" />
-    <ClInclude Include="StatisticsRepo.h" />
-    <ClInclude Include="VarStatisticsForm.h" />
     <ClInclude Include="ViewClientForm.h" />
     <ClInclude Include="ViewCommandForm.h" />
     <ClInclude Include="ViewArticleForm.h" />

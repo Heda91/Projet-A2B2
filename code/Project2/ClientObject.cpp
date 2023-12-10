@@ -17,5 +17,5 @@ String^ ClientObject::getDateNaissanceAff() {
 List<AdressObject^>^ ClientObject::getAdresseLivraison() { return this->adresse_livraison; }
 List<AdressObject^>^ ClientObject::getAdresseEmission() { return this->adresse_emission; }
 
-
+String^ ClientObject::ToString() { return this->getNumeroClient() + ": " + this->getNom() + " " + this->getPrenom(); }
 

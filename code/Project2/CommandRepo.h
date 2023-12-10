@@ -20,11 +20,17 @@ namespace Repository {
 
         List<CommandObject^>^ getCommands(void);
 
+        int getNombreCommand(CommandObject^ co);
+        DateTime^ getFirstCommand(ClientObject^ co);
+
         void editCommand(CommandObject^ co);
 
         void deleteCommand(CommandObject^ co);
 
         void insertCommand(CommandObject^ co);
+
+        void linkCommandArticle(String^ ref_commande, int id_article, int quantite);
+        void delinkCommandArticle(String^ ref_commande, int id_article);
     };
 
 }

@@ -27,6 +27,8 @@ namespace Repository {
         void insertClient(ClientObject^ u);
 
         void linkClientAdresse(int client, int adresse, int type);
+
+        void delinkClientAdresse(int client, int adresse, int type);
     };
 
 }

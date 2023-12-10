@@ -28,14 +28,14 @@ namespace Display {
 		Forms::Label^ label_view_adresse_emission;
 		Forms::Label^ label_retrait;
 		Forms::Label^ label_view_retrait;
-		Forms::Label^ label_remise;
-		Forms::Label^ label_view_remise;
-		Forms::Label^ label_total_commande;
-		Forms::Label^ label_view_total_commande;
 		Forms::Label^ label_reglement;
 		Forms::DataGridView^ dgv_reglement;
 		Forms::Label^ label_article;
 		Forms::DataGridView^ dgv_article;
+		Forms::Label^ label_remise;
+		Forms::Label^ label_view_remise;
+		Forms::Label^ label_total_commande;
+		Forms::Label^ label_view_total_commande;
 
 	private:
 		System::ComponentModel::Container^ components;
@@ -58,27 +58,29 @@ namespace Display {
 			this->label_view_adresse_emission = gcnew Forms::Label;
 			this->label_retrait = gcnew Forms::Label;
 			this->label_view_retrait = gcnew Forms::Label;
-			this->label_total_commande = gcnew Forms::Label;
-			this->label_view_total_commande = gcnew Forms::Label;
 			this->label_reglement = gcnew Forms::Label;
 			this->dgv_reglement = gcnew Forms::DataGridView;
 			this->label_article = gcnew Forms::Label;
 			this->dgv_article = gcnew Forms::DataGridView;
+			this->label_total_commande = gcnew Forms::Label;
+			this->label_view_total_commande = gcnew Forms::Label;
+			this->label_remise = gcnew Forms::Label;
+			this->label_view_remise = gcnew Forms::Label;
 
 			this->SuspendLayout();
 			//set size
-			const int size_x = 280;
-			const int size_x_view = 400;
+			const int size_x = 300;
+			const int size_x_view = 500;
 			const int size_y = 30;			
 			const int pos_x = 15;
 			const int pos_y_start = 15;
 			const int step_y = 15;
 			const int pos_x_view = 15 + pos_x + size_x;
 			const int size_x_form = 30 + pos_x_view + size_x_view;
-			const int size_y_form = 19 * (size_y + step_y) + pos_y_start; 
+			const int size_y_form = 18 * (size_y + step_y) + pos_y_start; 
 
 			const int size_x_dgv = size_x_form - (2 * pos_x);
-			const int size_y_dgv = 4*size_y;
+			const int size_y_dgv = 2 * (size_y + step_y);
 			// 
 			// Reference commande
 			// 
@@ -227,27 +229,6 @@ namespace Display {
 			this->label_view_retrait->Text = co->getRetrait();
 			this->label_view_retrait->BorderStyle = Forms::BorderStyle::FixedSingle;
 			//
-			// total commande
-			// 
-			this->label_total_commande->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->label_total_commande->Location = System::Drawing::Point(pos_x, 17 * (size_y + step_y) + pos_y_start);//155+30+5
-			this->label_total_commande->Size = System::Drawing::Size(size_x, size_y);
-			this->label_total_commande->TabStop = true;
-			this->label_total_commande->Name = L"label_total_commande";
-			this->label_total_commande->Text = L"Total de la commande";
-			// 
-			// view total commande
-			// 
-			this->label_view_total_commande->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->label_view_total_commande->Location = System::Drawing::Point(pos_x_view, 17 * (size_y + step_y) + pos_y_start);
-			this->label_view_total_commande->Size = System::Drawing::Size(size_x_view, size_y);
-			this->label_view_total_commande->TabIndex = 8;
-			this->label_view_total_commande->Name = L"label_view_total_commande";
-			this->label_view_total_commande->Text = co->getTotalCommand();
-			this->label_view_total_commande->BorderStyle = Forms::BorderStyle::FixedSingle;
-			//
 			// reglements
 			// 
 			this->label_reglement->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
@@ -332,7 +313,7 @@ namespace Display {
 			dgvtbc_4->Name = "Prix HT";
 			this->dgv_article->Columns->Add(dgvtbc_4);
 			Forms::DataGridViewTextBoxColumn^ dgvtbc_5 = gcnew Forms::DataGridViewTextBoxColumn();
-			dgvtbc_5->Name = "TVA";
+			dgvtbc_5->Name = "TVA (%)";
 			this->dgv_article->Columns->Add(dgvtbc_5);
 			Forms::DataGridViewTextBoxColumn^ dgvtbc_6 = gcnew Forms::DataGridViewTextBoxColumn();
 			dgvtbc_6->Name = "Prix TTC";
@@ -361,6 +342,48 @@ namespace Display {
 				dgvr->Tag = cart;
 				this->dgv_article->Rows->Add(dgvr);
 			}
+			//
+			// remise
+			// 
+			this->label_remise->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label_remise->Location = System::Drawing::Point(pos_x, 15 * (size_y + step_y) + pos_y_start);//155+30+5
+			this->label_remise->Size = System::Drawing::Size(size_x, size_y);
+			this->label_remise->TabStop = true;
+			this->label_remise->Name = L"label_remise";
+			this->label_remise->Text = L"Remise commande (%)";
+			// 
+			// view remise
+			// 
+			this->label_view_remise->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label_view_remise->Location = System::Drawing::Point(pos_x_view, 15 * (size_y + step_y) + pos_y_start);
+			this->label_view_remise->Size = System::Drawing::Size(size_x_view, size_y);
+			this->label_view_remise->TabIndex = 8;
+			this->label_view_remise->Name = L"label_view_remise";
+			this->label_view_remise->Text = co->getRemise();
+			this->label_view_remise->BorderStyle = Forms::BorderStyle::FixedSingle;
+			//
+			// total commande
+			// 
+			this->label_total_commande->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label_total_commande->Location = System::Drawing::Point(pos_x, 16 * (size_y + step_y) + pos_y_start);//155+30+5
+			this->label_total_commande->Size = System::Drawing::Size(size_x, size_y);
+			this->label_total_commande->TabStop = true;
+			this->label_total_commande->Name = L"label_total_commande";
+			this->label_total_commande->Text = L"Total commande";
+			// 
+			// view total commande
+			// 
+			this->label_view_total_commande->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label_view_total_commande->Location = System::Drawing::Point(pos_x_view, 16 * (size_y + step_y) + pos_y_start);
+			this->label_view_total_commande->Size = System::Drawing::Size(size_x_view, size_y);
+			this->label_view_total_commande->TabIndex = 8;
+			this->label_view_total_commande->Name = L"label_view_total_commande";
+			this->label_view_total_commande->Text = co->getTotalCommand();
+			this->label_view_total_commande->BorderStyle = Forms::BorderStyle::FixedSingle;
 			// 
 			// ViewClient
 			// 
@@ -383,12 +406,14 @@ namespace Display {
 			this->Controls->Add(this->label_view_adresse_emission);
 			this->Controls->Add(this->label_retrait);
 			this->Controls->Add(this->label_view_retrait);
-			this->Controls->Add(this->label_total_commande);
-			this->Controls->Add(this->label_view_total_commande);
 			this->Controls->Add(this->label_reglement);
 			this->Controls->Add(this->dgv_reglement);
 			this->Controls->Add(this->label_article);
 			this->Controls->Add(this->dgv_article);
+			this->Controls->Add(this->label_total_commande);
+			this->Controls->Add(this->label_view_total_commande);
+			this->Controls->Add(this->label_remise);
+			this->Controls->Add(this->label_view_remise);
 			this->Name = L"ViewClientForm";
 			this->Text = L"Commande: " + co->getReferenceCommand();
 			this->ResumeLayout(false);

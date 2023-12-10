@@ -32,9 +32,8 @@
     <ClCompile Include="ViewCommandForm.cpp" />
     <ClCompile Include="ViewIArticleForm.cpp" />
     <ClCompile Include="ViewPersonnelForm.cpp" />
-    <ClCompile Include="StatisticsRepo.cpp" />
-    <ClCompile Include="StatisticsObject.cpp" />
-    <ClCompile Include="VarStatisticsForm.cpp" />
+    <ClCompile Include="CommandAddArticleForm.cpp" />
+    <ClCompile Include="CommandAddClientForm.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AddAdressForm.h" />
@@ -67,8 +66,7 @@
     <ClInclude Include="ViewCommandForm.h" />
     <ClInclude Include="ViewArticleForm.h" />
     <ClInclude Include="ViewPersonnelForm.h" />
-    <ClInclude Include="StatisticsRepo.h" />
-    <ClInclude Include="StatisticsObject.h" />
-    <ClInclude Include="VarStatisticsForm.h" />
+    <ClInclude Include="CommandAddArticleForm.h" />
+    <ClInclude Include="CommandAddClientForm.h" />
   </ItemGroup>
 </Project>

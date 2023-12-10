@@ -4,7 +4,7 @@
 #include "ClientForm.h"
 #include "CommandForm2.h"
 #include "ArticleForm.h"
-#include "StatisticsForm.h"
+//#include "StatisticsForm.h"
 #include <stdio.h>
 #include <iostream>
 
@@ -128,6 +128,7 @@ namespace Display {
 			this->button6->Text = L"Statistiques";
 			this->button6->UseVisualStyleBackColor = true;
 			this->button6->Click += gcnew System::EventHandler(this, &MainForm::button6_Click);
+			this->button6->Enabled = false;
 			// 
 			// MyForm
 			// 
@@ -149,6 +150,8 @@ namespace Display {
 		}
 #pragma endregion
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+		System::Diagnostics::Debug::WriteLine("aaa\n\n\n\n\n\n\n\n\n\n\n\naaa");
+		//MyForm1^ form1 = gcnew MyForm1(); // Creez une instance de MyForm1
 		PersonnelForm Personnel(my_bdd);
 		Personnel.ShowDialog(); // Affichez MyForm1
 	}
@@ -165,8 +168,8 @@ namespace Display {
 		Article.ShowDialog(); // Affichez MyForm1
 	}
 	private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e) {
-		StatisticsForm Statistiques;
-		Statistiques.ShowDialog(); // Affichez MyForm1
+		//StatisticsForm Statistiques;
+		//Statistiques.ShowDialog(); // Affichez MyForm1
 	}
 	};
 }

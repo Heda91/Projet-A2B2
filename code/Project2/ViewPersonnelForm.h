@@ -72,7 +72,7 @@ namespace Display {
 			this->label_id_personnel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label_id_personnel->Location = System::Drawing::Point(pos_x, pos_y_start);
-			this->label_id_personnel->Size = System::Drawing::Size(size_x, 30);
+			this->label_id_personnel->Size = System::Drawing::Size(size_x, size_y);
 			this->label_id_personnel->TabStop = true;
 			this->label_id_personnel->Name = L"label_id_personnel";
 			this->label_id_personnel->Text = L"id personnel";
