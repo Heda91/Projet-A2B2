@@ -149,8 +149,6 @@ namespace Display {
 		}
 #pragma endregion
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
-		System::Diagnostics::Debug::WriteLine("aaa\n\n\n\n\n\n\n\n\n\n\n\naaa");
-		//MyForm1^ form1 = gcnew MyForm1(); // Creez une instance de MyForm1
 		PersonnelForm Personnel(my_bdd);
 		Personnel.ShowDialog(); // Affichez MyForm1
 	}

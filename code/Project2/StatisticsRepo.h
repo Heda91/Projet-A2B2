@@ -19,13 +19,13 @@ namespace Repository {
 
         double chiffreA();
 
-        List<String^>^ Repository::StatisticsRepo::seuilStock();
+        DataSet^ seuilStock();
 
-        double totalAchat();
+        DataSet^ totalAchat();
 
-        List<String^>^ Repository::StatisticsRepo::articlesPlus();
+        DataSet^ articlesPlus();
 
-        List<String^>^ Repository::StatisticsRepo::articlesMoins();
+        DataSet^ articlesMoins();
 
         double valeurCommerciale();
 

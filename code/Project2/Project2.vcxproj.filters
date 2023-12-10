@@ -34,6 +34,7 @@
     <ClCompile Include="ViewPersonnelForm.cpp" />
     <ClCompile Include="StatisticsRepo.cpp" />
     <ClCompile Include="StatisticsObject.cpp" />
+    <ClCompile Include="VarStatisticsForm.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AddAdressForm.h" />
@@ -68,5 +69,6 @@
     <ClInclude Include="ViewPersonnelForm.h" />
     <ClInclude Include="StatisticsRepo.h" />
     <ClInclude Include="StatisticsObject.h" />
+    <ClInclude Include="VarStatisticsForm.h" />
   </ItemGroup>
 </Project>

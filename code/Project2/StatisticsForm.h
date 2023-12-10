@@ -1,9 +1,11 @@
 ﻿#pragma once
 #include "BDD.h"
 #include "StatisticsRepo.h"
+#include "VarStatisticsForm.h"
 
 namespace Display {
 
+	using namespace Repository;
 	using namespace System;
 	using namespace System::ComponentModel;
 	using namespace System::Collections;
@@ -24,7 +26,8 @@ namespace Display {
 			//TODO: Add the constructor code here
 			//
 		}
-		BDD^ bdd;
+		BDD^ my_bdd = gcnew BDD();
+		StatisticsRepo^ sr = gcnew StatisticsRepo(my_bdd);
 
 	protected:
 		/// <summary>
@@ -38,28 +41,12 @@ namespace Display {
 			}
 		}
 
-
-
-
-
-	protected:
-		void buttonVariations(System::Object^ sender, System::EventArgs^ e) {};
-	private: System::Windows::Forms::TextBox^ textBox1;
-	private: System::Windows::Forms::TextBox^ textBox2;
-	private: System::Windows::Forms::TextBox^ textBox3;
-	private: System::Windows::Forms::TextBox^ textBox4;
-	private: System::Windows::Forms::Label^ label1;
-	private: System::Windows::Forms::Label^ label2;
-
-
-
-	private: System::Windows::Forms::Label^ label4;
-	private: System::Windows::Forms::Label^ label3;
-
+	private: System::Windows::Forms::DataGridView^ dataGridView1;
 
 	private: System::Windows::Forms::ComboBox^ comboBox1;
-	private: System::Windows::Forms::RadioButton^ radioButton1;
+	private: System::Windows::Forms::Label^ label1;
 	protected:
+		void buttonVariations(System::Object^ sender, System::EventArgs^ e) {};
 
 	private:
 		/// <summary>
@@ -74,188 +61,267 @@ namespace Display {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox4 = (gcnew System::Windows::Forms::TextBox());
-			this->label1 = (gcnew System::Windows::Forms::Label());
-			this->label2 = (gcnew System::Windows::Forms::Label());
-			this->label4 = (gcnew System::Windows::Forms::Label());
-			this->label3 = (gcnew System::Windows::Forms::Label());
+			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
 			this->comboBox1 = (gcnew System::Windows::Forms::ComboBox());
-			this->radioButton1 = (gcnew System::Windows::Forms::RadioButton());
+			this->label1 = (gcnew System::Windows::Forms::Label());
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			this->SuspendLayout();
 			// 
-			// textBox1
+			// dataGridView1
 			// 
-			this->textBox1->Location = System::Drawing::Point(304, 94);
-			this->textBox1->Multiline = true;
-			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(200, 50);
-			this->textBox1->TabIndex = 0;
-			// 
-			// textBox2
-			// 
-			this->textBox2->Location = System::Drawing::Point(304, 173);
-			this->textBox2->Multiline = true;
-			this->textBox2->Name = L"textBox2";
-			this->textBox2->Size = System::Drawing::Size(200, 50);
-			this->textBox2->TabIndex = 1;
-			// 
-			// textBox3
-			// 
-			this->textBox3->Location = System::Drawing::Point(304, 368);
-			this->textBox3->Multiline = true;
-			this->textBox3->Name = L"textBox3";
-			this->textBox3->Size = System::Drawing::Size(200, 50);
-			this->textBox3->TabIndex = 2;
-			// 
-			// textBox4
-			// 
-			this->textBox4->Location = System::Drawing::Point(304, 255);
-			this->textBox4->Multiline = true;
-			this->textBox4->Name = L"textBox4";
-			this->textBox4->Size = System::Drawing::Size(200, 50);
-			this->textBox4->TabIndex = 3;
-			// 
-			// label1
-			// 
-			this->label1->AutoSize = true;
-			this->label1->Location = System::Drawing::Point(361, 147);
-			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(95, 16);
-			this->label1->TabIndex = 5;
-			this->label1->Text = L"Remise (en %)";
-			// 
-			// label2
-			// 
-			this->label2->AutoSize = true;
-			this->label2->Location = System::Drawing::Point(374, 226);
-			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(46, 16);
-			this->label2->TabIndex = 6;
-			this->label2->Text = L"Marge";
-			// 
-			// label4
-			// 
-			this->label4->AutoSize = true;
-			this->label4->Location = System::Drawing::Point(374, 421);
-			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(59, 16);
-			this->label4->TabIndex = 7;
-			this->label4->Text = L"Prix final:";
-			// 
-			// label3
-			// 
-			this->label3->AutoSize = true;
-			this->label3->Location = System::Drawing::Point(362, 308);
-			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(71, 16);
-			this->label3->TabIndex = 9;
-			this->label3->Text = L"Demarque";
+			this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->dataGridView1->Location = System::Drawing::Point(204, 71);
+			this->dataGridView1->Name = L"dataGridView1";
+			this->dataGridView1->RowHeadersWidth = 51;
+			this->dataGridView1->RowTemplate->Height = 24;
+			this->dataGridView1->Size = System::Drawing::Size(270, 311);
+			this->dataGridView1->TabIndex = 9;
 			// 
 			// comboBox1
 			// 
+			this->comboBox1->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
 			this->comboBox1->FormattingEnabled = true;
-			this->comboBox1->Location = System::Drawing::Point(12, 46);
+			this->comboBox1->Items->AddRange(gcnew cli::array< System::Object^  >(9) {
+				L"Panier moyen", L"Chiffre d\'affaire", L"Produit sous le seuil de réapprovisionnement",
+					L"Montant totale (Client)", L"Articles les plus vendus", L"Articles les moins vendus", L"Valeur commerciale", L"Valeur d\'achat du stock",
+					L"Variations commerciales"
+			});
+			this->comboBox1->Location = System::Drawing::Point(12, 71);
 			this->comboBox1->Name = L"comboBox1";
-			this->comboBox1->Size = System::Drawing::Size(259, 24);
-			this->comboBox1->TabIndex = 10;
+			this->comboBox1->Size = System::Drawing::Size(175, 24);
+			this->comboBox1->TabIndex = 11;
 			this->comboBox1->SelectedIndexChanged += gcnew System::EventHandler(this, &StatisticsForm::comboBox1_SelectedIndexChanged);
 			// 
-			// radioButton1
+			// label1
 			// 
-			this->radioButton1->AutoSize = true;
-			this->radioButton1->Location = System::Drawing::Point(377, 46);
-			this->radioButton1->Name = L"radioButton1";
-			this->radioButton1->Size = System::Drawing::Size(55, 20);
-			this->radioButton1->TabIndex = 11;
-			this->radioButton1->TabStop = true;
-			this->radioButton1->Text = L"TVA";
-			this->radioButton1->UseVisualStyleBackColor = true;
-			this->radioButton1->CheckedChanged += gcnew System::EventHandler(this, &StatisticsForm::radioButton1_CheckedChanged);
+			this->label1->BackColor = System::Drawing::SystemColors::HighlightText;
+			this->label1->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->label1->Location = System::Drawing::Point(30, 126);
+			this->label1->Name = L"label1";
+			this->label1->Size = System::Drawing::Size(138, 23);
+			this->label1->TabIndex = 12;
+			this->label1->Text = L"Variations prix";
+			this->label1->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			this->label1->Click += gcnew System::EventHandler(this, &StatisticsForm::label1_Click);
 			// 
 			// StatisticsForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(531, 444);
-			this->Controls->Add(this->radioButton1);
-			this->Controls->Add(this->comboBox1);
-			this->Controls->Add(this->label3);
-			this->Controls->Add(this->label4);
-			this->Controls->Add(this->label2);
+			this->ClientSize = System::Drawing::Size(515, 444);
 			this->Controls->Add(this->label1);
-			this->Controls->Add(this->textBox4);
-			this->Controls->Add(this->textBox3);
-			this->Controls->Add(this->textBox2);
-			this->Controls->Add(this->textBox1);
+			this->Controls->Add(this->comboBox1);
+			this->Controls->Add(this->dataGridView1);
 			this->Name = L"StatisticsForm";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
-			this->Text = L"Simulations";
+			this->Text = L"StatisticsForm";
 			this->Load += gcnew System::EventHandler(this, &StatisticsForm::StatisticsForm_Load);
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
 			this->ResumeLayout(false);
-			this->PerformLayout();
 
 		}
-
 #pragma endregion
 	private: System::Void StatisticsForm_Load(System::Object^ sender, System::EventArgs^ e) {
 	}
 
-	private: System::Void radioButton1_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-		/*String^*/Object^ articleSelectionne = comboBox1->SelectedItem/*->ToString()*/;
-
-		String^ sqlQuery = "SELECT prixHT FROM Articles WHERE designation = '" + articleSelectionne + "'";
-		DataSet^ result = bdd->executeQuery(sqlQuery);
-		if (result && result->Tables->Count > 0 && result->Tables[0]->Rows->Count > 0) {
-			double prixInitial = Convert::ToDouble(result->Tables[0]->Rows[0]/*["prixHT"]*/);
-
-			double tva = 20.0;
-			double prixTva = prixInitial * (tva / 100);
-			if (radioButton1->Checked) {
-				double prixFinaleAvecTVA = prixInitial + prixTva;
-				textBox3->Text = prixFinaleAvecTVA.ToString();
-			}
-			else {
-				textBox3->Text = "Article non sélectioné";
-			}
-		}
-	}
-
 	private: System::Void comboBox1_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
-		String^ articleSelectionne = comboBox1->SelectedItem->ToString();
+		String^ selectedStat = comboBox1->SelectedItem->ToString();
 
-		String^ sqlQuery1 = "SELECT prixHT FROM Article WHERE designation = '" + articleSelectionne + "'";
-		DataSet^ result1 = bdd->executeQuery(sqlQuery1);
 
-		if (result1 && result1->Tables->Count > 0 && result1->Tables[0]->Rows->Count > 0) {
-			double prixInitial1 = Convert::ToDouble(result1->Tables[0]->Rows[0]/*["prixHT"]*/);
 
-			//Remise
-			double remisePourcentage = Convert::ToDouble(textBox1->Text);
-			double remise = prixInitial1 * (remisePourcentage / 100);
-			double prixAvecRemise = prixInitial1 - remise;
-			textBox3->Text = prixAvecRemise.ToString();
+
+		if (selectedStat == "Panier moyen") {
+			dtgv_panier_moyen();
 		}
-		else {
-			textBox3->Text = "Remise invalide";
+		else if (selectedStat == "Chiffre d'affaire") {
+			dtgv_chiffre_d_affaire();
 		}
-
-		//Marge commerciale
-		String^ sqlQuery2 = "SELECT prixHT, prix_achat FROM Article WHERE designation = '" + articleSelectionne + "'";
-		DataSet^ result2 = bdd->executeQuery(sqlQuery2);
-
-		if (result2 && result2->Tables->Count > 0 && result2->Tables[0]->Rows->Count > 0) {
-			double prixHT = Convert::ToDouble(result2->Tables[0]->Rows[0]/*["prixHT"] */ );
-			double prixAchat = Convert::ToDouble(result2->Tables[0]->Rows[0]/*["prix_achat"]*/);
-
-			double margeCommerciale = prixHT - prixAchat;
-			textBox3->Text = margeCommerciale.ToString();
+		else if (selectedStat == "Produit sous le seuil de réapprovisionnement") {
+			dtgv_seuil_stock();
 		}
-		else {
-			textBox3->Text = "Erreur de marge commerciale";
+		else if (selectedStat == "Montant totale (Client)") {
+			dtgv_total_achat();
+		}
+		else if (selectedStat == "Articles les plus vendus") {
+			dtgv_articles_plus();
+		}
+		else if (selectedStat == "Articles les moins vendus") {
+			dtgv_articles_moins();
+		}
+		else if (selectedStat == "Valeur commerciale") {
+			dtgv_valeur_commerciale();
+		}
+		else if (selectedStat == "Valeur d\'achat du stock") {
+			dtgv_valeur_achat();
+		}
+		else if (selectedStat == "Variations prix") {
+
 		}
 	}
+	
+		private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e) {
+			VarStatisticsForm^ varStats = gcnew VarStatisticsForm();
+			varStats->Show();
+	
+		}
+	
+		void clear_data() {
+			dataGridView1->Rows->Clear();
+			dataGridView1->Columns->Clear();
+		}
+		void dtgv_panier_moyen() {
+			clear_data();
+
+			DataGridViewTextBoxColumn^ dgvtbco = gcnew DataGridViewTextBoxColumn();
+			dgvtbco->Name = "panier_moyen";
+			this->dataGridView1->Columns->Add(dgvtbco);
+
+			DataGridViewRow^ dgvr = gcnew DataGridViewRow();
+			DataGridViewTextBoxCell^ dgvtbc = gcnew DataGridViewTextBoxCell();
+			dgvtbc->Value = Convert::ToString(sr->panierMoyen());
+			dgvr->Cells->Add(dgvtbc);
+			this->dataGridView1->Rows->Add(dgvr);
+		}
+
+		void dtgv_chiffre_d_affaire() {
+			clear_data();
+
+			DataGridViewTextBoxColumn^ dgvtbcoca = gcnew DataGridViewTextBoxColumn();
+			dgvtbcoca->Name = "chiffre d'affaire";
+			this->dataGridView1->Columns->Add(dgvtbcoca);
+
+			DataGridViewRow^ dgvrca = gcnew DataGridViewRow();
+			DataGridViewTextBoxCell^ dgvtbcca = gcnew DataGridViewTextBoxCell();
+			dgvtbcca->Value = Convert::ToString(sr->chiffreA());
+			dgvrca->Cells->Add(dgvtbcca);
+			this->dataGridView1->Rows->Add(dgvrca);
+		}
+
+		void dtgv_seuil_stock() {
+			clear_data();
+
+			DataGridViewTextBoxColumn^ dgvtbcost = gcnew DataGridViewTextBoxColumn();
+			dgvtbcost->Name = "designation";
+			this->dataGridView1->Columns->Add(dgvtbcost);
+			DataGridViewTextBoxColumn^ dgvtbcost1 = gcnew DataGridViewTextBoxColumn();
+			dgvtbcost1->Name = "id_article";
+			this->dataGridView1->Columns->Add(dgvtbcost1);
+			DataSet^ ds = sr->seuilStock();
+			for (int i = 0; i < ds->Tables[0]->Rows->Count; i++) {
+				DataGridViewRow^ dgvrst = gcnew DataGridViewRow();
+				DataGridViewTextBoxCell^ dgvtbcst = gcnew DataGridViewTextBoxCell();
+				dgvtbcst->Value = Convert::ToString(ds->Tables[0]->Rows[i]->ItemArray[0]);
+				dgvrst->Cells->Add(dgvtbcst);
+				DataGridViewTextBoxCell^ dgvtbcst1 = gcnew DataGridViewTextBoxCell();
+				dgvtbcst1->Value = Convert::ToString(ds->Tables[0]->Rows[i]->ItemArray[1]);
+				dgvrst->Cells->Add(dgvtbcst1);
+				this->dataGridView1->Rows->Add(dgvrst);
+			}
+		}
+		void dtgv_total_achat() {
+			clear_data();
+			DataGridViewTextBoxColumn^ dgvtbcprenom = gcnew DataGridViewTextBoxColumn();
+			dgvtbcprenom->Name = "prenom";
+			this->dataGridView1->Columns->Add(dgvtbcprenom);
+
+			DataGridViewTextBoxColumn^ dgvtbcnom = gcnew DataGridViewTextBoxColumn();
+			dgvtbcnom->Name = "nom";
+			this->dataGridView1->Columns->Add(dgvtbcnom);
+
+			DataGridViewTextBoxColumn^ dgvtbctotal = gcnew DataGridViewTextBoxColumn();
+			dgvtbctotal->Name = "total";
+			this->dataGridView1->Columns->Add(dgvtbctotal);
+
+			DataSet^ ds = sr->totalAchat();
+			for (int i = 0; i < ds->Tables[0]->Rows->Count; i++) {
+				DataGridViewRow^ dgvr = gcnew DataGridViewRow();
+				DataGridViewTextBoxCell^ dgvtbc = gcnew DataGridViewTextBoxCell();
+				dgvtbc->Value = Convert::ToString(ds->Tables[0]->Rows[i]->ItemArray[0]);
+				dgvr->Cells->Add(dgvtbc);
+				DataGridViewTextBoxCell^ dgvtbc1 = gcnew DataGridViewTextBoxCell();
+				dgvtbc1->Value = Convert::ToString(ds->Tables[0]->Rows[i]->ItemArray[1]);
+				dgvr->Cells->Add(dgvtbc1);
+				DataGridViewTextBoxCell^ dgvtbc2 = gcnew DataGridViewTextBoxCell();
+				dgvtbc2->Value = Convert::ToString(ds->Tables[0]->Rows[i]->ItemArray[2]);
+				dgvr->Cells->Add(dgvtbc2);
+				this->dataGridView1->Rows->Add(dgvr);
+			}
+		}
+
+		void dtgv_articles_plus() {
+			clear_data();
+			DataGridViewTextBoxColumn^ dgvtbcprenom = gcnew DataGridViewTextBoxColumn();
+			dgvtbcprenom->Name = "id_article";
+			this->dataGridView1->Columns->Add(dgvtbcprenom);
+
+			DataGridViewTextBoxColumn^ dgvtbcnom = gcnew DataGridViewTextBoxColumn();
+			dgvtbcnom->Name = "designation";
+			this->dataGridView1->Columns->Add(dgvtbcnom);
+
+
+			DataSet^ ds = sr->articlesPlus();
+			for (int i = 0; i < ds->Tables[0]->Rows->Count; i++) {
+				DataGridViewRow^ dgvr = gcnew DataGridViewRow();
+				DataGridViewTextBoxCell^ dgvtbc = gcnew DataGridViewTextBoxCell();
+				dgvtbc->Value = Convert::ToString(ds->Tables[0]->Rows[i]->ItemArray[0]);
+				dgvr->Cells->Add(dgvtbc);
+				DataGridViewTextBoxCell^ dgvtbc1 = gcnew DataGridViewTextBoxCell();
+				dgvtbc1->Value = Convert::ToString(ds->Tables[0]->Rows[i]->ItemArray[1]);
+				dgvr->Cells->Add(dgvtbc1);
+				this->dataGridView1->Rows->Add(dgvr);
+			}
+		}
+
+		void dtgv_articles_moins() {
+			clear_data();
+			DataGridViewTextBoxColumn^ dgvtbcprenom = gcnew DataGridViewTextBoxColumn();
+			dgvtbcprenom->Name = "id_article";
+			this->dataGridView1->Columns->Add(dgvtbcprenom);
+
+			DataGridViewTextBoxColumn^ dgvtbcnom = gcnew DataGridViewTextBoxColumn();
+			dgvtbcnom->Name = "designation";
+			this->dataGridView1->Columns->Add(dgvtbcnom);
+
+
+			DataSet^ ds = sr->articlesMoins();
+			for (int i = 0; i < ds->Tables[0]->Rows->Count; i++) {
+				DataGridViewRow^ dgvr = gcnew DataGridViewRow();
+				DataGridViewTextBoxCell^ dgvtbc = gcnew DataGridViewTextBoxCell();
+				dgvtbc->Value = Convert::ToString(ds->Tables[0]->Rows[i]->ItemArray[0]);
+				dgvr->Cells->Add(dgvtbc);
+				DataGridViewTextBoxCell^ dgvtbc1 = gcnew DataGridViewTextBoxCell();
+				dgvtbc1->Value = Convert::ToString(ds->Tables[0]->Rows[i]->ItemArray[1]);
+				dgvr->Cells->Add(dgvtbc1);
+				this->dataGridView1->Rows->Add(dgvr);
+			}
+		}
+
+		void dtgv_valeur_commerciale() {
+			clear_data();
+
+			DataGridViewTextBoxColumn^ dgvtbco = gcnew DataGridViewTextBoxColumn();
+			dgvtbco->Name = "valeur_commerciale";
+			this->dataGridView1->Columns->Add(dgvtbco);
+
+			DataGridViewRow^ dgvr = gcnew DataGridViewRow();
+			DataGridViewTextBoxCell^ dgvtbc = gcnew DataGridViewTextBoxCell();
+			dgvtbc->Value = Convert::ToString(sr->valeurCommerciale());
+			dgvr->Cells->Add(dgvtbc);
+			this->dataGridView1->Rows->Add(dgvr);
+		}
+		void dtgv_valeur_achat() {
+			clear_data();
+
+			DataGridViewTextBoxColumn^ dgvtbco = gcnew DataGridViewTextBoxColumn();
+			dgvtbco->Name = "valeur_achat";
+			this->dataGridView1->Columns->Add(dgvtbco);
+
+			DataGridViewRow^ dgvr = gcnew DataGridViewRow();
+			DataGridViewTextBoxCell^ dgvtbc = gcnew DataGridViewTextBoxCell();
+			dgvtbc->Value = Convert::ToString(sr->valeurAchat());
+			dgvr->Cells->Add(dgvtbc);
+			this->dataGridView1->Rows->Add(dgvr);
+		}
+
 	};
 }

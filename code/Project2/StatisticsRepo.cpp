@@ -13,7 +13,7 @@ double Repository::StatisticsRepo::panierMoyen() {
 }
 
 double Repository::StatisticsRepo::chiffreA() {
-    String^ sqlQuery = "SELECT prixHT * quantite AS chiffreAffaire FROM Article JOIN CONTENIR ON Article.id_article = CONTENIR.id_article JOIN Commande ON CONTENIR.reference_commande = Commande.reference_commande WHERE MONTH(Commande.date_livraison) = 12 AND YEAR(Commande.date_livraison) = 2023; ";
+    String^ sqlQuery = "SELECT SUM(prixHT * quantite) AS chiffreAffaire FROM Article JOIN CONTENIR ON Article.id_article = CONTENIR.id_article JOIN Commande ON CONTENIR.reference_commande = Commande.reference_commande WHERE MONTH(Commande.date_livraison) = 12 AND YEAR(Commande.date_livraison) = 2023; ";
     DataSet^ result = bdd->executeQuery(sqlQuery);
     if (result && result->Tables->Count > 0 && result->Tables[0]->Rows->Count > 0) {
         DataRow^ firstRow = result->Tables[0]->Rows[0];
@@ -22,37 +22,27 @@ double Repository::StatisticsRepo::chiffreA() {
     }
 }
 
-List<String^>^ Repository::StatisticsRepo::seuilStock() {
-    List<String^>^ articles = gcnew List<String^>();
+DataSet^ Repository::StatisticsRepo::seuilStock() {
+    
 
     String^ sqlQuery = "SELECT designation, id_article FROM Article WHERE quantite_stock < seuil_reaprovisionnement; ";
     DataSet^ result = bdd->executeQuery(sqlQuery);
-    if (result && result->Tables->Count > 0 && result->Tables[0]->Rows->Count > 0) {
-        for (int i = 0; i < result->Tables[0]->Rows->Count; i++) {
-            String^ valeurColonne1 = result->Tables[0]->Rows[i]["designation"]->ToString();
-            String^ valeurColonne2 = result->Tables[0]->Rows[i]["id_article"]->ToString();
-            articles->Add(valeurColonne1 + ", " + valeurColonne2);
-        }
-    }
-    return articles;
+
+    return result;
 }
 
 
-double Repository::StatisticsRepo::totalAchat() {
+DataSet^ Repository::StatisticsRepo::totalAchat() {
     String^ sqlQuery = "SELECT Client.prenom, Client.nom, SUM(total_commande) AS total FROM Commande JOIN Client ON Commande.numero_client = Client.numero_client GROUP BY prenom, nom; ";
     DataSet^ result = bdd->executeQuery(sqlQuery);
-    if (result && result->Tables->Count > 0 && result->Tables[0]->Rows->Count > 0) {
-        DataRow^ firstRow = result->Tables[0]->Rows[0];
-        double total = Convert::ToDouble(firstRow["total"]);
-        return total;
-    }
+    return result;
 }
 
-List<String^>^ Repository::StatisticsRepo::articlesPlus() {
-    List<String^>^ articles = gcnew List<String^>();
+DataSet^ Repository::StatisticsRepo::articlesPlus() {
 
     String^ sqlQuery = "SELECT designation, CONTENIR.id_article FROM Article JOIN CONTENIR ON Article.id_article = CONTENIR.id_article GROUP BY designation, CONTENIR.id_article HAVING COUNT(*) > 1 ORDER BY COUNT(*) DESC; ";
     DataSet^ result = bdd->executeQuery(sqlQuery);
+    /*
     if (result && result->Tables->Count > 0 && result->Tables[0]->Rows->Count > 0) {
         for (int i = 0; i < result->Tables[0]->Rows->Count; i++) {
             String^ valeurColonne1 = result->Tables[0]->Rows[i]["designation"]->ToString();
@@ -60,23 +50,17 @@ List<String^>^ Repository::StatisticsRepo::articlesPlus() {
             articles->Add(valeurColonne1 + ", " + valeurColonne2);
         }
     }
-    return articles;
+    */
+    return result;
 }
 
 
-List<String^>^ Repository::StatisticsRepo::articlesMoins() {
-    List<String^>^ articles = gcnew List<String^>();
+DataSet^ Repository::StatisticsRepo::articlesMoins() {
 
     String^ sqlQuery = "SELECT designation, CONTENIR.id_article FROM Article JOIN CONTENIR ON Article.id_article = CONTENIR.id_article GROUP BY designation, CONTENIR.id_article HAVING COUNT(*) > 1 ORDER BY COUNT(*) ASC; ";
     DataSet^ result = bdd->executeQuery(sqlQuery);
-    if (result && result->Tables->Count > 0 && result->Tables[0]->Rows->Count > 0) {
-        for (int i = 0; i < result->Tables[0]->Rows->Count; i++) {
-            String^ valeurColonne1 = result->Tables[0]->Rows[i]["designation"]->ToString();
-            String^ valeurColonne2 = result->Tables[0]->Rows[i]["id_article"]->ToString();
-            articles->Add(valeurColonne1 + ", " + valeurColonne2);
-        }
-    }
-    return articles;
+
+    return result;
 }
 
 double Repository::StatisticsRepo::valeurCommerciale() {
@@ -94,7 +78,7 @@ double Repository::StatisticsRepo::valeurAchat() {
     DataSet^ result = bdd->executeQuery(sqlQuery);
     if (result && result->Tables->Count > 0 && result->Tables[0]->Rows->Count > 0) {
         DataRow^ firstRow = result->Tables[0]->Rows[0];
-        double valeurAchat = Convert::ToDouble(firstRow["Valeur d'achat"]);
+        double valeurAchat = Convert::ToDouble(firstRow["Valeur dachat"]);
         return valeurAchat;
     }
 }
