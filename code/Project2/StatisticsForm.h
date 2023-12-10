@@ -26,8 +26,8 @@ namespace Display {
 			//TODO: Add the constructor code here
 			//
 		}
-		BDD^ my_bdd = gcnew BDD();
-		StatisticsRepo^ sr = gcnew StatisticsRepo(my_bdd);
+		BDD^ bdd = gcnew BDD();
+		StatisticsRepo^ sr = gcnew StatisticsRepo(bdd);
 
 	protected:
 		/// <summary>
@@ -81,10 +81,9 @@ namespace Display {
 			// 
 			this->comboBox1->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
 			this->comboBox1->FormattingEnabled = true;
-			this->comboBox1->Items->AddRange(gcnew cli::array< System::Object^  >(9) {
+			this->comboBox1->Items->AddRange(gcnew cli::array< System::Object^  >(8) {
 				L"Panier moyen", L"Chiffre d\'affaire", L"Produit sous le seuil de réapprovisionnement",
-					L"Montant totale (Client)", L"Articles les plus vendus", L"Articles les moins vendus", L"Valeur commerciale", L"Valeur d\'achat du stock",
-					L"Variations commerciales"
+					L"Montant totale (Client)", L"Articles les plus vendus", L"Articles les moins vendus", L"Valeur commerciale", L"Valeur d\'achat du stock"
 			});
 			this->comboBox1->Location = System::Drawing::Point(12, 71);
 			this->comboBox1->Name = L"comboBox1";
@@ -126,10 +125,6 @@ namespace Display {
 
 	private: System::Void comboBox1_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
 		String^ selectedStat = comboBox1->SelectedItem->ToString();
-
-
-
-
 		if (selectedStat == "Panier moyen") {
 			dtgv_panier_moyen();
 		}
@@ -154,15 +149,12 @@ namespace Display {
 		else if (selectedStat == "Valeur d\'achat du stock") {
 			dtgv_valeur_achat();
 		}
-		else if (selectedStat == "Variations prix") {
 
-		}
 	}
 	
 		private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e) {
 			VarStatisticsForm^ varStats = gcnew VarStatisticsForm();
 			varStats->Show();
-	
 		}
 	
 		void clear_data() {

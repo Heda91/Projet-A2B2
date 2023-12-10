@@ -10,6 +10,7 @@ namespace Display {
 	using namespace System::Windows::Forms;
 	using namespace System::Data;
 	using namespace System::Drawing;
+	using namespace Repository;
 
 	/// <summary>
 	/// Summary for VarStatisticsForm
@@ -25,6 +26,8 @@ namespace Display {
 			//
 		}
 		BDD^ bdd;
+		StatisticsRepo^ sr = gcnew Repository::StatisticsRepo(bdd);
+
 
 
 	protected:
@@ -51,6 +54,8 @@ namespace Display {
 	private: System::Windows::Forms::TextBox^ textBox4;
 	private: System::Windows::Forms::Label^ label1;
 	private: System::Windows::Forms::Label^ label2;
+	private: System::Windows::Forms::Label^ labelTVA;
+	private: System::Windows::Forms::TextBox^ textBoxTVA;
 
 
 
@@ -59,7 +64,7 @@ namespace Display {
 
 
 	private: System::Windows::Forms::ComboBox^ comboBox1;
-	private: System::Windows::Forms::RadioButton^ radioButton1;
+	//private: System::Windows::Forms::RadioButton^ radioButton1;
 	protected:
 
 	private:
@@ -83,8 +88,9 @@ namespace Display {
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->label4 = (gcnew System::Windows::Forms::Label());
 			this->label3 = (gcnew System::Windows::Forms::Label());
+			this->labelTVA = (gcnew System::Windows::Forms::Label());
 			this->comboBox1 = (gcnew System::Windows::Forms::ComboBox());
-			this->radioButton1 = (gcnew System::Windows::Forms::RadioButton());
+			this->textBoxTVA = (gcnew System::Windows::Forms::TextBox());
 			this->SuspendLayout();
 			// 
 			// textBox1
@@ -118,6 +124,15 @@ namespace Display {
 			this->textBox4->Name = L"textBox4";
 			this->textBox4->Size = System::Drawing::Size(200, 50);
 			this->textBox4->TabIndex = 3;
+			//
+			//label TVA
+			//
+			this->labelTVA->AutoSize = true;
+			this->labelTVA->Location = System::Drawing::Point(374, 70);
+			this->labelTVA->Name = L"labelTVA";
+			this->labelTVA->Size = System::Drawing::Size(30, 16);
+			this->labelTVA->TabIndex = 4;
+			this->labelTVA->Text = L"TVA";
 			// 
 			// label1
 			// 
@@ -157,31 +172,38 @@ namespace Display {
 			// 
 			// comboBox1
 			// 
+
 			this->comboBox1->FormattingEnabled = true;
 			this->comboBox1->Location = System::Drawing::Point(12, 46);
 			this->comboBox1->Name = L"comboBox1";
 			this->comboBox1->Size = System::Drawing::Size(259, 24);
 			this->comboBox1->TabIndex = 10;
 			this->comboBox1->SelectedIndexChanged += gcnew System::EventHandler(this, &VarStatisticsForm::comboBox1_SelectedIndexChanged);
-			// 
-			// radioButton1
-			// 
-			this->radioButton1->AutoSize = true;
-			this->radioButton1->Location = System::Drawing::Point(377, 46);
-			this->radioButton1->Name = L"radioButton1";
-			this->radioButton1->Size = System::Drawing::Size(55, 20);
-			this->radioButton1->TabIndex = 11;
-			this->radioButton1->TabStop = true;
-			this->radioButton1->Text = L"TVA";
-			this->radioButton1->UseVisualStyleBackColor = true;
-			this->radioButton1->CheckedChanged += gcnew System::EventHandler(this, &VarStatisticsForm::radioButton1_CheckedChanged);
+			//DataSet^ Items = sr->articlesMoins(); /*à l'origine de probleme*/
+			/*int i = 0;
+			while (i < Items->Tables[0]->Rows->Count) {
+				this->comboBox1->Items->Add(Convert::ToString(Items->Tables[0]->Rows[i]));
+				i++;
+			}
+			*/
+			/*
+			this->comboBox1->Items->AddRange(gcnew cli::array< System::Object^  >() {
+				Items;
+			});
+			*/
+			this->textBoxTVA->Location = System::Drawing::Point(304, 10);
+			this->textBoxTVA->Multiline = true;
+			this->textBoxTVA->Name = L"textBoxTVA";
+			this->textBoxTVA->Size = System::Drawing::Size(200, 50);
+			this->textBoxTVA->TabIndex = 0;
 			// 
 			// VarStatisticsForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(531, 444);
-			this->Controls->Add(this->radioButton1);
+			this->Controls->Add(this->textBoxTVA);
+			this->Controls->Add(this->labelTVA);
 			this->Controls->Add(this->comboBox1);
 			this->Controls->Add(this->label3);
 			this->Controls->Add(this->label4);
@@ -204,13 +226,14 @@ namespace Display {
 	private: System::Void VarStatisticsForm_Load(System::Object^ sender, System::EventArgs^ e) {
 	}
 
+		   /*
 	private: System::Void radioButton1_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
 		String^ articleSelectionne = comboBox1->SelectedItem->ToString();
 
 		String^ sqlQuery = "SELECT prixHT FROM Articles WHERE designation = '" + articleSelectionne + "'";
 		DataSet^ result = bdd->executeQuery(sqlQuery);
 		if (result && result->Tables->Count > 0 && result->Tables[0]->Rows->Count > 0) {
-			double prixInitial = Convert::ToDouble(result->Tables[0]->Rows[0]/*["prixHT"]*/);
+			double prixInitial = Convert::ToDouble(result->Tables[0]->Rows[0]["prixHT"]);
 
 			double tva = 20.0;
 			double prixTva = prixInitial * (tva / 100);
@@ -223,6 +246,7 @@ namespace Display {
 			}
 		}
 	}
+	*/
 
 	private: System::Void comboBox1_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
 		String^ articleSelectionne = comboBox1->SelectedItem->ToString();
