@@ -130,6 +130,8 @@
     <ClCompile Include="ClientForm.cpp" />
     <ClCompile Include="ClientObject.cpp" />
     <ClCompile Include="ClientRepo.cpp" />
+    <ClCompile Include="CommandAddArticleForm.cpp" />
+    <ClCompile Include="CommandAddClientForm.cpp" />
     <ClCompile Include="CommandForm.cpp" />
     <ClCompile Include="CommandForm2.cpp" />
     <ClCompile Include="CommandObject.cpp" />
@@ -163,6 +165,8 @@
     <ClInclude Include="ClientForm.h" />
     <ClInclude Include="ClientObject.h" />
     <ClInclude Include="ClientRepo.h" />
+    <ClInclude Include="CommandAddArticleForm.h" />
+    <ClInclude Include="CommandAddClientForm.h" />
     <ClInclude Include="CommandForm.h" />
     <ClInclude Include="CommandForm2.h" />
     <ClInclude Include="CommandObject.h" />

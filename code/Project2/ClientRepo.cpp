@@ -61,3 +61,7 @@ void ClientRepo::linkClientAdresse(int client, int adresse, int type) {
     query += " VALUES (" + client + ", " + adresse + ", " + type + ")";
     bdd->executeQuery(query);
 }
+void ClientRepo::delinkClientAdresse(int client, int adresse, int type) {
+    String^ query = "DELETE FROM [POSSEDER] WHERE numero_client = " + client + " AND id_adresse = " + adresse + " AND type_adresse = " + type;
+    bdd->executeQuery(query);
+}

@@ -11,11 +11,6 @@ void Display::ArticleForm::buttonAddClick(System::Object^ sender, System::EventA
 	ArticleObject^ ao = gcnew ArticleObject();
 	ModifArticleForm^ add_personnel_form = gcnew ModifArticleForm(ao);
 	add_personnel_form->ShowDialog();
-	//if (ao->getDateEmbauche() != "NULL") {//regarde si la date embauche n'est pas NULL (donc a valid�)
-//		ArticleRepo^ ar = gcnew AdressRepo(this->my_bdd);
-//		ar->insertAdress(po->getAdresseVar());
-//		this->pr->insertPersonnel(po);
-	//}
 	ar->insertArticle(ao);
 
 	this->reload();
@@ -24,10 +19,6 @@ void Display::ArticleForm::buttonModifClick(System::Object^ sender, System::Even
 	ArticleObject^ ao = (ArticleObject^)this->data_grid_view->SelectedRows[0]->Tag;
 	ModifArticleForm^ modif_article_form = gcnew ModifArticleForm(ao);
 	modif_article_form->ShowDialog();
-	//	if (po->getAdresseVar()->getIdAdresse() == "0") {//nouvelle adresse
-	//		Repository::AdressRepo^ ar = gcnew Repository::AdressRepo(this->my_bdd);
-	//		ar->insertAdress(po->getAdresseVar());;
-		//}
 	ar->editArticle(ao);
 	this->reload();
 }

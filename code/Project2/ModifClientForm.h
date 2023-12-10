@@ -283,7 +283,7 @@ namespace Display {
 			this->Controls->Add(this->button_del_emission);
 			this->Controls->Add(this->button_valid);
 			this->Name = L"ModifClientForm";
-			this->Text = L"Client: " + co->getNom() + " " + co->getPrenom();
+			this->Text = L"Client "+co->ToString();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 

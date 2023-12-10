@@ -18,7 +18,7 @@ namespace Display {
 		void buttonViewClick(System::Object^ sender, System::EventArgs^ e) override;
 		void buttonDelClick(System::Object^ sender, System::EventArgs^ e) override;
 
-		void insertAdresses(ClientObject^);
+		void checkAdresses(ClientObject^);
 		void initDataGridView() override;
 	private:
 		Repository::ClientRepo^ cr;

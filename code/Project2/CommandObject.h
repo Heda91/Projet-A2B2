@@ -12,9 +12,10 @@ namespace Object {
 		Cart(int quantite, ArticleObject^ article): quantite(quantite), article(article){}
 		int quantite;
 		ArticleObject^ article;
+		bool supprime = false;
 
 		Decimal getTotalTTC();
-	};
+	}Cart;
 	ref class CommandObject
 	{
 	private:
@@ -52,6 +53,7 @@ namespace Object {
 		String^ getDateLivraisonAff();
 		String^ getDateEmission();
 		String^ getDateEmissionAff();
+		DateTime^ getDateEmissionVar() { return date_emission; }
 		String^ getRemise();
 		String^ getTotalCommand();
 		String^ getRetrait();

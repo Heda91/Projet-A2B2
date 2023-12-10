@@ -31,10 +31,13 @@ namespace Object {
         String^ getPrenom();
         String^ getDateNaissance();
         String^ getDateNaissanceAff();
+        DateTime^ getDateNaissanceVar() { return this->date_naissance; }
         List<AdressObject^>^ getAdresseLivraison();
         List<AdressObject^>^ getAdresseEmission();
 
         bool isDeleted() { return supprime; }
         void deleteClient() { this->supprime = true; }
+
+        String^ ToString() override;
     };
 }

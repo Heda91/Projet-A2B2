@@ -6,19 +6,25 @@
 
 using namespace Object;
 
-void Display::ClientForm::insertAdresses(ClientObject^ co) {
+void Display::ClientForm::checkAdresses(ClientObject^ co) {
 	Repository::AdressRepo^ ar = gcnew Repository::AdressRepo(this->my_bdd);
 	for each (AdressObject ^ ao in co->getAdresseEmission()) {
 		if (ao->getIdAdresse() == "0") { 
 			ar->insertAdress(ao); 
 			this->cr->linkClientAdresse(Convert::ToInt32(co->getNumeroClient()), Convert::ToInt32(ao->getIdAdresse()), 0);
 		}//nouvelle adresse
+		if (ao->isDelete()) {
+			this->cr->delinkClientAdresse(Convert::ToInt32(co->getNumeroClient()), Convert::ToInt32(ao->getIdAdresse()), 0);
+		}
 	}
 	for each (AdressObject ^ ao in co->getAdresseLivraison()) {
 		if (ao->getIdAdresse() == "0") { 
 			ar->insertAdress(ao);
 			this->cr->linkClientAdresse(Convert::ToInt32(co->getNumeroClient()), Convert::ToInt32(ao->getIdAdresse()), 1);
 		}//nouvelle adresse
+		if (ao->isDelete()) {
+			this->cr->delinkClientAdresse(Convert::ToInt32(co->getNumeroClient()), Convert::ToInt32(ao->getIdAdresse()), 1);
+		}
 	}
 }
 
@@ -28,7 +34,7 @@ void Display::ClientForm::buttonAddClick(System::Object^ sender, System::EventAr
 	modif_client_form->ShowDialog();
 	if (co->getNom() != "") {//regarde si le nom n'est pas vide (donc a valide)
 		this->cr->insertClient(co);
-		this->insertAdresses(co);
+		this->checkAdresses(co);
 		this->reload();
 	}
 }
@@ -36,7 +42,7 @@ void Display::ClientForm::buttonModifClick(System::Object^ sender, System::Event
 	ClientObject^ co = (ClientObject^)this->data_grid_view->SelectedRows[0]->Tag;
 	ModifClientForm^ modif_client_form = gcnew ModifClientForm(co);
 	modif_client_form->ShowDialog();
-	this->insertAdresses(co);
+	this->checkAdresses(co);
 	this->cr->editClient(co);
 	this->reload();
 }

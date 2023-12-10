@@ -106,8 +106,6 @@ void CommandRepo::editCommand(CommandObject^ co) {
     //edit client ?
     bdd->executeQuery(query);
 }
-
-
 void CommandRepo::deleteCommand(CommandObject^ u) {
     bdd->executeNonQuery("UPDATE [Commande] SET supprime = 1 WHERE [reference_commande] = '" + u->getReferenceCommand() + "'");// attention, supprime = true ( pas 1 ), peut etre source de probleme
 }
@@ -115,5 +113,28 @@ void CommandRepo::insertCommand(CommandObject^ u) {
     //int reference_commande = 
     String^ query = "INSERT INTO [Commande](reference_commande, date_livraison, date_emission, remise, total_commande, retrait, id_adresse_livraison, id_adresse_facturation, numero_client)";
     query += " VALUES('"+ u->getReferenceCommand() + "', '" + u->getDateLivraison() + "', '" + u->getDateEmission() + "', " + u->getRemise() + ", " + u->getTotalCommand() + ", '" + u->getRetrait() + "', " + u->getAdresseLivraison()->getIdAdresse() + ", " + u->getAdresseFacturation()->getIdAdresse() + ", " + u->getClient()->getNumeroClient() + ")";
-    this->bdd->executeInsert(query);
+    this->bdd->executeNonQuery(query);
 }
+
+int CommandRepo::getNombreCommand(CommandObject^ co) {
+    String^ query = "SELECT reference_commande FROM [Commande] WHERE YEAR(date_emission) = " + co->getDateEmission()->Substring(6, 4);
+    return this->bdd->executeNonQuery(query);
+}
+DateTime^ CommandRepo::getFirstCommand(ClientObject^ co) {
+    String^ query = "SELECT TOP(1) date_emission FROM[Commande] WHERE numero_client = 5 ORDER BY date_emission";
+    System::Data::DataSet^ ds = bdd->executeQuery(query);
+    DataRow^ row = ds->Tables[0]->Rows[0];
+    return (DateTime^)row[0];
+}
+
+void CommandRepo::linkCommandArticle(String^ ref_commande, int id_article, int quantite) {
+    String^ query = "INSERT INTO [CONTENIR](reference_commande, id_article, quantite)";
+    query += "VALUES ('" + ref_commande + "', " + id_article + ", " + quantite + ")";
+    bdd->executeQuery(query);
+}
+void CommandRepo::delinkCommandArticle(String^ ref_commande, int id_article) {
+    String^ query = "DELETE FROM [CONTENIR] WHERE reference_commande = '"+ref_commande+"' AND id_article = "+id_article;
+    bdd->executeQuery(query);
+}
+
+
