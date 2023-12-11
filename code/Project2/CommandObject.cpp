@@ -34,8 +34,8 @@ void CommandObject::setAdresseLivraison(AdressObject^ ao) {
 void CommandObject::setAdresseFacturation(AdressObject^ ao) {
 	this->adresse_facturation = ao;
 }
-void CommandObject::addArticle(int qtd, ArticleObject^ article) {
-	this->panier->Add(gcnew Cart(qtd, article));
+void CommandObject::addArticle(int qtd, ArticleObject^ article, bool nouveau) {
+	this->panier->Add(gcnew Cart(qtd, article, nouveau));
 }
 void CommandObject::addReglement(ReglementObject^ reglement) {
 	this->reglement->Add(reglement);

@@ -1,11 +1,11 @@
 ﻿CREATE TABLE Article(
    id_article INT IDENTITY(1,1),
    designation VARCHAR(50) NOT NULL,
-   prixHT VARCHAR(50) NOT NULL,
+   prixHT DECIMAL(7,2) NOT NULL,
    TVA DECIMAL(5,2) NOT NULL,
    quantite_stock INT,
    seuil_reaprovisionnement INT,
-   prix_achat MONEY,
+   prix_achat DECIMAL(7,2),
    supprime BIT NOT NULL,
    PRIMARY KEY(id_article)
 );
@@ -22,18 +22,19 @@ CREATE TABLE Client(
    nom VARCHAR(50),
    prenom VARCHAR(50),
    date_naissance DATE,
+   supprime BIT NOT NULL,
    PRIMARY KEY(numero_client)
 );
-insert into Client (nom, prenom, date_naissance) values ('Aleevy', 'Garreth', '2003-06-11');
-insert into Client (nom, prenom, date_naissance) values ('Kinver', 'Pammy', '2001-06-27');
-insert into Client (nom, prenom, date_naissance) values ('Mulhall', 'Erasmus', '2001-01-11');
-insert into Client (nom, prenom, date_naissance) values ('Roberto', 'Carmon', '2002-11-01');
-insert into Client (nom, prenom, date_naissance) values ('Dwane', 'Fabian', '2004-05-16');
-insert into Client (nom, prenom, date_naissance) values ('Butts', 'Garwin', '2003-03-19');
-insert into Client (nom, prenom, date_naissance) values ('Dovington', 'Caresa', '2004-05-02');
-insert into Client (nom, prenom, date_naissance) values ('Pitkin', 'Marian', '2004-07-31');
-insert into Client (nom, prenom, date_naissance) values ('Goggey', 'Clarinda', '2003-05-29');
-insert into Client (nom, prenom, date_naissance) values ('Stirrip', 'Dunn', '2002-01-08');
+insert into Client (nom, prenom, date_naissance,supprime) values ('Aleevy', 'Garreth', '2003-06-11', 0);
+insert into Client (nom, prenom, date_naissance,supprime) values ('Kinver', 'Pammy', '2001-06-27', 0);
+insert into Client (nom, prenom, date_naissance,supprime) values ('Mulhall', 'Erasmus', '2001-01-11', 0);
+insert into Client (nom, prenom, date_naissance,supprime) values ('Roberto', 'Carmon', '2002-11-01', 0);
+insert into Client (nom, prenom, date_naissance,supprime) values ('Dwane', 'Fabian', '2004-05-16', 0);
+insert into Client (nom, prenom, date_naissance,supprime) values ('Butts', 'Garwin', '2003-03-19', 0);
+insert into Client (nom, prenom, date_naissance,supprime) values ('Dovington', 'Caresa', '2004-05-02', 0);
+insert into Client (nom, prenom, date_naissance,supprime) values ('Pitkin', 'Marian', '2004-07-31', 0);
+insert into Client (nom, prenom, date_naissance,supprime) values ('Goggey', 'Clarinda', '2003-05-29', 0);
+insert into Client (nom, prenom, date_naissance,supprime) values ('Stirrip', 'Dunn', '2002-01-08', 0);
 
 CREATE TABLE Adresse(
    id_adresse INT IDENTITY(1,1),
@@ -101,8 +102,8 @@ CREATE TABLE Commande(
    date_livraison DATE,
    date_emission DATE,
    remise DECIMAL(5,2),
-   total_commande MONEY,
-   retrait INT,
+   total_commande DECIMAL(7,2),
+   retrait VARCHAR(50),
    supprime BIT NOT NULL,
    id_adresse_livraison INT NOT NULL,
    numero_client INT NOT NULL,
@@ -113,32 +114,33 @@ CREATE TABLE Commande(
    FOREIGN KEY(id_adresse_facturation) REFERENCES Adresse(id_adresse)
 );
 
-insert into Commande (reference_commande, date_livraison, date_emission, remise, total_commande, retrait, supprime, id_adresse_livraison, id_adresse_facturation, numero_client) values ('GaAl2023Man1', '2023-12-05', '2023-03-29', 8.7, 1684.54, 3, 0, 46, 31, 1);
-insert into Commande (reference_commande, date_livraison, date_emission, remise, total_commande, retrait, supprime, id_adresse_livraison, id_adresse_facturation, numero_client) values ('CaRo2023Lai1', '2023-12-06', '2023-03-16', 11.43, 172.17, 2, 0, 47, 28, 4);
-insert into Commande (reference_commande, date_livraison, date_emission, remise, total_commande, retrait, supprime, id_adresse_livraison, id_adresse_facturation, numero_client) values ('FaDw2023Tor1', '2023-12-09', '2023-10-21', 1.21, 2227.09, 2, 1, 33, 20, 5);
-insert into Commande (reference_commande, date_livraison, date_emission, remise, total_commande, retrait, supprime, id_adresse_livraison, id_adresse_facturation, numero_client) values ('FaDw2023Tor2', '2023-12-09', '2023-10-21', 1.21, 2227.09, 2, 0, 33, 20, 5);
+insert into Commande (reference_commande, date_livraison, date_emission, remise, total_commande, retrait, supprime, id_adresse_facturation, id_adresse_livraison, numero_client) values ('GaAl2023Man1', '2023-12-05', '2023-03-29', 8.7, 1684.54, 'domicile', 0, 46, 31, 1);
+insert into Commande (reference_commande, date_livraison, date_emission, remise, total_commande, retrait, supprime, id_adresse_facturation, id_adresse_livraison, numero_client) values ('CaRo2023Lai1', '2023-12-06', '2023-03-16', 11.43, 172.17, 'magasin', 0, 47, 28, 4);
+insert into Commande (reference_commande, date_livraison, date_emission, remise, total_commande, retrait, supprime, id_adresse_facturation, id_adresse_livraison, numero_client) values ('FaDw2023Tor1', '2023-12-09', '2023-10-21', 1.21, 2227.09, 'domicile', 1, 33, 20, 5);
+insert into Commande (reference_commande, date_livraison, date_emission, remise, total_commande, retrait, supprime, id_adresse_facturation, id_adresse_livraison, numero_client) values ('FaDw2023Tor2', '2023-12-09', '2023-10-21', 1.21, 2227.09, 'domicile', 0, 33, 20, 5);
 
 CREATE TABLE Reglement(
    id_reglement INT IDENTITY(1,1),
    moyen_paiement VARCHAR(50) NOT NULL,
    date_paiement DATE NOT NULL,
-   solde_reglement INT NOT NULL,
+   solde_reglement DECIMAL(7,2) NOT NULL,
    reference_commande VARCHAR(14) NOT NULL,
+   supprime BIT NOT NULL,
    PRIMARY KEY(id_reglement),
    FOREIGN KEY(reference_commande) REFERENCES Commande(reference_commande)
 );
 
-insert into Reglement (moyen_paiement, date_paiement, solde_reglement, reference_commande) values ('Apple Pay', '2023-12-02', 1000, 'GaAl2023Man1');
-insert into Reglement (moyen_paiement, date_paiement, solde_reglement, reference_commande) values ('credit card', '2023-12-02', 684.54, 'GaAl2023Man1');
-insert into Reglement (moyen_paiement, date_paiement, solde_reglement, reference_commande) values ('cash', '2023-12-02', 12.69, 'CaRo2023Lai1');
-insert into Reglement (moyen_paiement, date_paiement, solde_reglement, reference_commande) values ('debit card', '2023-12-02', 54.21, 'CaRo2023Lai1');
-insert into Reglement (moyen_paiement, date_paiement, solde_reglement, reference_commande) values ('Apple Pay', '2023-12-02', 2227.09, 'FaDw2023Tor1');
+insert into Reglement (moyen_paiement, date_paiement, solde_reglement, reference_commande, supprime) values ('Apple Pay', '2023-12-02', 1000, 'GaAl2023Man1', 0);
+insert into Reglement (moyen_paiement, date_paiement, solde_reglement, reference_commande, supprime) values ('credit card', '2023-12-02', 684.54, 'GaAl2023Man1', 0);
+insert into Reglement (moyen_paiement, date_paiement, solde_reglement, reference_commande, supprime) values ('cash', '2023-12-02', 12.69, 'CaRo2023Lai1', 0);
+insert into Reglement (moyen_paiement, date_paiement, solde_reglement, reference_commande, supprime) values ('debit card', '2023-12-02', 54.21, 'CaRo2023Lai1', 0);
+insert into Reglement (moyen_paiement, date_paiement, solde_reglement, reference_commande, supprime) values ('Apple Pay', '2023-12-02', 2227.09, 'FaDw2023Tor1', 0);
 
 CREATE TABLE Personnel(
    id_personnel INT IDENTITY(1,1),
    nom VARCHAR(50) NOT NULL,
    prenom VARCHAR(50) NOT NULL,
-   date_embauchage DATE,
+   date_embauche DATE,
    id_superieur INT,
    supprime BIT NOT NULL,
    id_adresse INT NOT NULL,
@@ -146,16 +148,16 @@ CREATE TABLE Personnel(
    UNIQUE(id_adresse),
    FOREIGN KEY(id_adresse) REFERENCES Adresse(id_adresse)
 );
-insert into Personnel (nom, prenom, date_embauchage, id_superieur, supprime, id_adresse) values ('McPeake', 'Deny', '2023-01-13', 7, 0, 9);
-insert into Personnel (nom, prenom, date_embauchage, id_superieur, supprime, id_adresse) values ('Dobrovolny', 'Rustin', '2023-01-03', 4, 0, 20);
-insert into Personnel (nom, prenom, date_embauchage, id_superieur, supprime, id_adresse) values ('Urling', 'Vassili', '2023-11-29', 6, 0, 7);
-insert into Personnel (nom, prenom, date_embauchage, id_superieur, supprime, id_adresse) values ('Shackesby', 'Gasper', '2023-03-08', 4, 0, 4);
-insert into Personnel (nom, prenom, date_embauchage, id_superieur, supprime, id_adresse) values ('Calveley', 'Farrah', '2023-05-01', 1, 0, 10);
-insert into Personnel (nom, prenom, date_embauchage, id_superieur, supprime, id_adresse) values ('Fattore', 'Benedict', '2023-10-03', 1, 0, 5);
-insert into Personnel (nom, prenom, date_embauchage, id_superieur, supprime, id_adresse) values ('Sked', 'Pierce', '2023-10-13', null, 0, 12);
-insert into Personnel (nom, prenom, date_embauchage, id_superieur, supprime, id_adresse) values ('Nash', 'Theressa', '2023-01-25', 3, 0, 17);
-insert into Personnel (nom, prenom, date_embauchage, id_superieur, supprime, id_adresse) values ('Fumagallo', 'Leeanne', '2023-08-06', 7, 0, 14);
-insert into Personnel (nom, prenom, date_embauchage, id_superieur, supprime, id_adresse) values ('Leonie', 'Mathice', '2023-01-20', 3, 1, 1);
+insert into Personnel (nom, prenom, date_embauche, id_superieur, supprime, id_adresse) values ('McPeake', 'Deny', '2023-01-13', 7, 0, 9);
+insert into Personnel (nom, prenom, date_embauche, id_superieur, supprime, id_adresse) values ('Dobrovolny', 'Rustin', '2023-01-03', 4, 0, 20);
+insert into Personnel (nom, prenom, date_embauche, id_superieur, supprime, id_adresse) values ('Urling', 'Vassili', '2023-11-29', 6, 0, 7);
+insert into Personnel (nom, prenom, date_embauche, id_superieur, supprime, id_adresse) values ('Shackesby', 'Gasper', '2023-03-08', 4, 0, 4);
+insert into Personnel (nom, prenom, date_embauche, id_superieur, supprime, id_adresse) values ('Calveley', 'Farrah', '2023-05-01', 1, 0, 10);
+insert into Personnel (nom, prenom, date_embauche, id_superieur, supprime, id_adresse) values ('Fattore', 'Benedict', '2023-10-03', 1, 0, 5);
+insert into Personnel (nom, prenom, date_embauche, id_superieur, supprime, id_adresse) values ('Sked', 'Pierce', '2023-10-13', null, 0, 12);
+insert into Personnel (nom, prenom, date_embauche, id_superieur, supprime, id_adresse) values ('Nash', 'Theressa', '2023-01-25', 3, 0, 17);
+insert into Personnel (nom, prenom, date_embauche, id_superieur, supprime, id_adresse) values ('Fumagallo', 'Leeanne', '2023-08-06', 7, 0, 14);
+insert into Personnel (nom, prenom, date_embauche, id_superieur, supprime, id_adresse) values ('Leonie', 'Mathice', '2023-01-20', 3, 1, 1);
 
 
 CREATE TABLE CONTENIR(

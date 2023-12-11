@@ -132,6 +132,10 @@
     <ClCompile Include="ClientRepo.cpp" />
     <ClCompile Include="CommandAddArticleForm.cpp" />
     <ClCompile Include="CommandAddClientForm.cpp" />
+<<<<<<< HEAD
+=======
+    <ClCompile Include="CommandAddReglementForm.cpp" />
+>>>>>>> rendu
     <ClCompile Include="CommandForm.cpp" />
     <ClCompile Include="CommandForm2.cpp" />
     <ClCompile Include="CommandObject.cpp" />
@@ -149,6 +153,7 @@
     <ClCompile Include="PersonnelRepo.cpp" />
     <ClCompile Include="PrincipalForm.cpp" />
     <ClCompile Include="ReglementObject.cpp" />
+    <ClCompile Include="ReglementRepo.cpp" />
     <ClCompile Include="StatisticsForm.cpp" />
     <ClCompile Include="ViewClientForm.cpp" />
     <ClCompile Include="ViewCommandForm.cpp" />
@@ -167,6 +172,10 @@
     <ClInclude Include="ClientRepo.h" />
     <ClInclude Include="CommandAddArticleForm.h" />
     <ClInclude Include="CommandAddClientForm.h" />
+<<<<<<< HEAD
+=======
+    <ClInclude Include="CommandAddReglementForm.h" />
+>>>>>>> rendu
     <ClInclude Include="CommandForm.h" />
     <ClInclude Include="CommandForm2.h" />
     <ClInclude Include="CommandObject.h" />
@@ -185,6 +194,7 @@
     <ClInclude Include="PersonnelRepo.h" />
     <ClInclude Include="PrincipalForm.h" />
     <ClInclude Include="ReglementObject.h" />
+    <ClInclude Include="ReglementRepo.h" />
     <ClInclude Include="StatisticsForm.h" />
     <ClInclude Include="ViewClientForm.h" />
     <ClInclude Include="ViewCommandForm.h" />

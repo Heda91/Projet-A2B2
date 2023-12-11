@@ -3,6 +3,10 @@
 #include "ViewCommandForm.h"
 #include "CommandRepo.h"
 #include "CommandObject.h"
+<<<<<<< HEAD
+=======
+#include "ReglementRepo.h"
+>>>>>>> rendu
 #include <vcclr.h>
 
 using namespace Display;
@@ -15,9 +19,39 @@ void CommandForm2::buttonAddClick(System::Object^ sender, System::EventArgs^ e) 
 	co->setDateEmission(now->Today);
 	ModifCommandForm^ add_command_form = gcnew ModifCommandForm(co, cr);
 	add_command_form->Text = "Ajouter Commande";
+<<<<<<< HEAD
 	add_command_form->ShowDialog();
 	if (co->getDateEmission() != "NULL") {
 		this->cr->insertCommand(co);
+=======
+	add_command_form->button_del_article->Enabled = false;
+	add_command_form->button_add_article->Enabled = false;
+	add_command_form->button_del_reglement->Enabled = false;
+	add_command_form->button_add_reglement->Enabled = false;
+	add_command_form->ShowDialog();
+	if (co->getDateLivraison() != "NULL") {
+		//ref commande -> PpNnAAAAVvvNNN
+		String^ prenom = co->getClient()->getPrenom() + "..";
+		String^ nom = co->getClient()->getNom() + "..";
+		String^ ref = prenom->Substring(0, 2) + nom->Substring(0, 2);
+		ref += co->getDateEmission()->Substring(6, 4);
+		String^ ville = co->getAdresseLivraison()->getVille() + "...";
+		ref += ville->Substring(0, 3);
+		DataSet^ ds = cr->getNombreCommand(co);
+		DataRow^ dr = ds->Tables[0]->Rows[0];
+		ref += ((int)dr[0]).ToString();
+		co->setReferenceCommand(ref);
+		this->cr->insertCommand(co);
+		for each (Cart ^ cart in co->getPanier()) {
+			if (cart->nouveau && !cart->supprime) {	cr->linkCommandArticle(co->getReferenceCommand(), Convert::ToInt32(cart->article->getIdArticle()), cart->quantite);	}
+			else if (!cart->nouveau && cart->supprime) { cr->delinkCommandArticle(co->getReferenceCommand(), Convert::ToInt32(cart->article->getIdArticle())); }
+		}
+		Repository::ReglementRepo^ rr = gcnew Repository::ReglementRepo(my_bdd);
+		for each (ReglementObject ^ ro in co->getReglement()) {
+			if (ro->isDelete() && ro->getIdReglement() != "0") { rr->deleteReglement(ro); }
+			else if (!ro->isDelete() && ro->getIdReglement() == "0") { rr->insertReglement(ro, co->getReferenceCommand()); }
+		}
+>>>>>>> rendu
 		this->reload();
 	}
 }
@@ -27,6 +61,18 @@ void CommandForm2::buttonModifClick(System::Object^ sender, System::EventArgs^ e
 	modif_command_form->button_id_client->Enabled = false;
 	modif_command_form->Text = "Modifier commande: " + co->getReferenceCommand();
 	modif_command_form->ShowDialog();
+<<<<<<< HEAD
+=======
+	for each (Cart ^ cart in co->getPanier()) {
+		if (cart->nouveau && !cart->supprime) { cr->linkCommandArticle(co->getReferenceCommand(), Convert::ToInt32(cart->article->getIdArticle()), cart->quantite); }
+		else if (!cart->nouveau && cart->supprime) { cr->delinkCommandArticle(co->getReferenceCommand(), Convert::ToInt32(cart->article->getIdArticle())); }
+	}
+	Repository::ReglementRepo^ rr = gcnew Repository::ReglementRepo(my_bdd);
+	for each (ReglementObject ^ ro in co->getReglement()) {
+		if (ro->isDelete() && ro->getIdReglement() != "0") { rr->deleteReglement(ro); }
+		else if (!ro->isDelete() && ro->getIdReglement() == "0") { rr->insertReglement(ro, co->getReferenceCommand()); }
+	}
+>>>>>>> rendu
 	this->cr->editCommand(co);
 	this->reload();
 }

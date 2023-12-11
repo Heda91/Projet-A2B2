@@ -222,7 +222,11 @@ namespace Display {
 			//Ville
 			try {
 				if (this->txtbx_ville->Text != "'" && this->txtbx_ville->Text->Replace("'", "") != "") {
+<<<<<<< HEAD
 					rue = this->txtbx_ville->Text->Replace("'", " ");
+=======
+					ville = this->txtbx_ville->Text->Replace("'", " ");
+>>>>>>> rendu
 					this->txtbx_ville->BackColor = System::Drawing::Color::White;
 				}
 				else {
@@ -243,8 +247,5 @@ namespace Display {
 				this->Close();
 			}
 		};
-		void buttonAddAdresseClick(System::Object^ sender, System::EventArgs^ e) {
-
-		}
 	};
 }

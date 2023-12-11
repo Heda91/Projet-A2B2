@@ -34,6 +34,11 @@
     <ClCompile Include="ViewPersonnelForm.cpp" />
     <ClCompile Include="CommandAddArticleForm.cpp" />
     <ClCompile Include="CommandAddClientForm.cpp" />
+<<<<<<< HEAD
+=======
+    <ClCompile Include="ReglementRepo.cpp" />
+    <ClCompile Include="CommandAddReglementForm.cpp" />
+>>>>>>> rendu
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AddAdressForm.h" />
@@ -68,5 +73,10 @@
     <ClInclude Include="ViewPersonnelForm.h" />
     <ClInclude Include="CommandAddArticleForm.h" />
     <ClInclude Include="CommandAddClientForm.h" />
+<<<<<<< HEAD
+=======
+    <ClInclude Include="ReglementRepo.h" />
+    <ClInclude Include="CommandAddReglementForm.h" />
+>>>>>>> rendu
   </ItemGroup>
 </Project>

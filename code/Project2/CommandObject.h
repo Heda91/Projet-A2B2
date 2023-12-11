@@ -9,9 +9,13 @@ using namespace System;
 namespace Object {
 	typedef ref struct Cart
 	{
-		Cart(int quantite, ArticleObject^ article): quantite(quantite), article(article){}
+		Cart(int quantite, ArticleObject^ article, bool nouveau): quantite(quantite), article(article), nouveau(nouveau){}
 		int quantite;
 		ArticleObject^ article;
+<<<<<<< HEAD
+=======
+		bool nouveau;
+>>>>>>> rendu
 		bool supprime = false;
 
 		Decimal getTotalTTC();
@@ -42,7 +46,7 @@ namespace Object {
 		void setClient(ClientObject^ client);
 		void setAdresseLivraison(AdressObject^ adresse);
 		void setAdresseFacturation(AdressObject^ adresse);
-		void addArticle(int, ArticleObject^);
+		void addArticle(int quantite, ArticleObject^ ao, bool nouveau);
 		void addReglement(ReglementObject^);
 
 		void deleteCommande();
