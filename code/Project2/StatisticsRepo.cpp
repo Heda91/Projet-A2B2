@@ -25,7 +25,7 @@ double Repository::StatisticsRepo::chiffreA() {
 DataSet^ Repository::StatisticsRepo::seuilStock() {
 
 
-    String^ sqlQuery = "SELECT designation, id_article FROM Article WHERE quantite_stock < seuil_reaprovisionnement; ";
+    String^ sqlQuery = "SELECT id_article, designation, quantite_stock, seuil_reaprovisionnement FROM Article WHERE quantite_stock < seuil_reaprovisionnement; ";
     DataSet^ result = bdd->executeQuery(sqlQuery);
 
     return result;

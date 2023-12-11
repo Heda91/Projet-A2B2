@@ -208,20 +208,33 @@ namespace Display {
 			   clear_data();
 
 			   DataGridViewTextBoxColumn^ dgvtbcost = gcnew DataGridViewTextBoxColumn();
-			   dgvtbcost->Name = "designation";
+			   dgvtbcost->Name = "id_article";
 			   this->dataGridView1->Columns->Add(dgvtbcost);
 			   DataGridViewTextBoxColumn^ dgvtbcost1 = gcnew DataGridViewTextBoxColumn();
-			   dgvtbcost1->Name = "id_article";
+			   dgvtbcost1->Name = "designation";
 			   this->dataGridView1->Columns->Add(dgvtbcost1);
+			   DataGridViewTextBoxColumn^ dgvtbcost2 = gcnew DataGridViewTextBoxColumn();
+			   dgvtbcost2->Name = "quantite";
+			   this->dataGridView1->Columns->Add(dgvtbcost2);
+			   DataGridViewTextBoxColumn^ dgvtbcost3 = gcnew DataGridViewTextBoxColumn();
+			   dgvtbcost3->Name = "seuil reaprovisionnement";
+			   this->dataGridView1->Columns->Add(dgvtbcost3);
 			   DataSet^ ds = sr->seuilStock();
 			   for (int i = 0; i < ds->Tables[0]->Rows->Count; i++) {
 				   DataGridViewRow^ dgvrst = gcnew DataGridViewRow();
+
 				   DataGridViewTextBoxCell^ dgvtbcst = gcnew DataGridViewTextBoxCell();
 				   dgvtbcst->Value = Convert::ToString(ds->Tables[0]->Rows[i]->ItemArray[0]);
 				   dgvrst->Cells->Add(dgvtbcst);
 				   DataGridViewTextBoxCell^ dgvtbcst1 = gcnew DataGridViewTextBoxCell();
 				   dgvtbcst1->Value = Convert::ToString(ds->Tables[0]->Rows[i]->ItemArray[1]);
 				   dgvrst->Cells->Add(dgvtbcst1);
+				   DataGridViewTextBoxCell^ dgvtbcst2 = gcnew DataGridViewTextBoxCell();
+				   dgvtbcst2->Value = Convert::ToString(ds->Tables[0]->Rows[i]->ItemArray[2]);
+				   dgvrst->Cells->Add(dgvtbcst2);
+				   DataGridViewTextBoxCell^ dgvtbcst3 = gcnew DataGridViewTextBoxCell();
+				   dgvtbcst3->Value = Convert::ToString(ds->Tables[0]->Rows[i]->ItemArray[3]);
+				   dgvrst->Cells->Add(dgvtbcst3);
 				   this->dataGridView1->Rows->Add(dgvrst);
 			   }
 		   }

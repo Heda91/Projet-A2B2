@@ -555,6 +555,18 @@ namespace Display {
 			bool reussi = true;
 			DateTime^ date_liv, ^date_emi;
 			String^ retrait;
+
+
+			//adresse_livraison
+			if (cbobx_adresse_livraison->SelectedIndex == -1) {
+				this->cbobx_adresse_livraison->BackColor = System::Drawing::Color::Red;
+				reussi = false;
+			}
+			//adresse_emission
+			if (cbobx_adresse_emission->SelectedIndex == -1) {
+				this->cbobx_adresse_emission->BackColor = System::Drawing::Color::Red;
+				reussi = false;
+			}
 			//date livraison
 			try {
 				date_liv = Convert::ToDateTime(this->txtbx_date_livraison->Text);
