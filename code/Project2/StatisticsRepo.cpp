@@ -23,7 +23,7 @@ double Repository::StatisticsRepo::chiffreA() {
 }
 
 DataSet^ Repository::StatisticsRepo::seuilStock() {
-    
+
 
     String^ sqlQuery = "SELECT designation, id_article FROM Article WHERE quantite_stock < seuil_reaprovisionnement; ";
     DataSet^ result = bdd->executeQuery(sqlQuery);
@@ -31,13 +31,11 @@ DataSet^ Repository::StatisticsRepo::seuilStock() {
     return result;
 }
 
-
 DataSet^ Repository::StatisticsRepo::totalAchat() {
     String^ sqlQuery = "SELECT Client.prenom, Client.nom, SUM(total_commande) AS total FROM Commande JOIN Client ON Commande.numero_client = Client.numero_client GROUP BY prenom, nom; ";
     DataSet^ result = bdd->executeQuery(sqlQuery);
     return result;
 }
-
 DataSet^ Repository::StatisticsRepo::articlesPlus() {
 
     String^ sqlQuery = "SELECT designation, CONTENIR.id_article FROM Article JOIN CONTENIR ON Article.id_article = CONTENIR.id_article GROUP BY designation, CONTENIR.id_article HAVING COUNT(*) > 1 ORDER BY COUNT(*) DESC; ";

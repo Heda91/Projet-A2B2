@@ -110,17 +110,6 @@ void CommandRepo::deleteCommand(CommandObject^ u) {
     bdd->executeNonQuery("UPDATE [Commande] SET supprime = 1 WHERE [reference_commande] = '" + u->getReferenceCommand() + "'");// attention, supprime = true ( pas 1 ), peut etre source de probleme
 }
 void CommandRepo::insertCommand(CommandObject^ u) {
-<<<<<<< HEAD
-    //int reference_commande = 
-    String^ query = "INSERT INTO [Commande](reference_commande, date_livraison, date_emission, remise, total_commande, retrait, id_adresse_livraison, id_adresse_facturation, numero_client)";
-    query += " VALUES('"+ u->getReferenceCommand() + "', '" + u->getDateLivraison() + "', '" + u->getDateEmission() + "', " + u->getRemise() + ", " + u->getTotalCommand() + ", '" + u->getRetrait() + "', " + u->getAdresseLivraison()->getIdAdresse() + ", " + u->getAdresseFacturation()->getIdAdresse() + ", " + u->getClient()->getNumeroClient() + ")";
-    this->bdd->executeNonQuery(query);
-}
-
-int CommandRepo::getNombreCommand(CommandObject^ co) {
-    String^ query = "SELECT reference_commande FROM [Commande] WHERE YEAR(date_emission) = " + co->getDateEmission()->Substring(6, 4);
-    return this->bdd->executeNonQuery(query);
-=======
     String^ query = "INSERT INTO [Commande](reference_commande, date_livraison, date_emission, remise, total_commande, retrait, id_adresse_livraison, id_adresse_facturation, numero_client, supprime)";
     query += " VALUES('"+ u->getReferenceCommand() + "', '" + u->getDateLivraison() + "', '" + u->getDateEmission() + "', " + u->getRemise() + ", " + u->getTotalCommand() + ", '" + u->getRetrait() + "', " + u->getAdresseLivraison()->getIdAdresse() + ", " + u->getAdresseFacturation()->getIdAdresse() + ", " + u->getClient()->getNumeroClient() + ", 0)";
     this->bdd->executeNonQuery(query);
@@ -129,7 +118,6 @@ int CommandRepo::getNombreCommand(CommandObject^ co) {
 DataSet^ CommandRepo::getNombreCommand(CommandObject^ co) {
     String^ query = "SELECT COUNT(reference_commande) FROM [Commande] WHERE YEAR(date_emission) = " + co->getDateEmission()->Substring(6, 4) + " AND numero_client = "+co->getClient()->getNumeroClient();
     return this->bdd->executeQuery(query);
->>>>>>> rendu
 }
 DateTime^ CommandRepo::getFirstCommand(ClientObject^ co) {
     String^ query = "SELECT TOP(1) date_emission FROM[Commande] WHERE numero_client = 5 ORDER BY date_emission";

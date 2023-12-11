@@ -12,10 +12,7 @@ namespace Object {
 		Cart(int quantite, ArticleObject^ article, bool nouveau): quantite(quantite), article(article), nouveau(nouveau){}
 		int quantite;
 		ArticleObject^ article;
-<<<<<<< HEAD
-=======
 		bool nouveau;
->>>>>>> rendu
 		bool supprime = false;
 
 		Decimal getTotalTTC();

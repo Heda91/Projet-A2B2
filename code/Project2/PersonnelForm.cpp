@@ -7,7 +7,7 @@
 
 void Display::PersonnelForm::buttonAddClick(System::Object^ sender, System::EventArgs^ e) {
 	PersonnelObject^ po = gcnew PersonnelObject();
-	ModifPersonnelForm^ add_personnel_form = gcnew ModifPersonnelForm(po);
+	ModifPersonnelForm^ add_personnel_form = gcnew ModifPersonnelForm(this->my_bdd, po);
 	add_personnel_form->ShowDialog();
 	if (po->getDateEmbauche() != "NULL") {//regarde si la date embauche n'est pas NULL (donc a validé)
 		Repository::AdressRepo^ ar = gcnew Repository::AdressRepo(this->my_bdd);
@@ -18,7 +18,7 @@ void Display::PersonnelForm::buttonAddClick(System::Object^ sender, System::Even
 }
 void Display::PersonnelForm::buttonModifClick(System::Object^ sender, System::EventArgs^ e) {
 	PersonnelObject^ po = (PersonnelObject^)this->data_grid_view->SelectedRows[0]->Tag;
-	ModifPersonnelForm^ modif_personnel_form = gcnew ModifPersonnelForm(po);
+	ModifPersonnelForm^ modif_personnel_form = gcnew ModifPersonnelForm(this->my_bdd, po);
 	modif_personnel_form->ShowDialog();
 	if (po->getAdresseVar()->getIdAdresse() == "0"){//nouvelle adresse
 		Repository::AdressRepo^ ar = gcnew Repository::AdressRepo(this->my_bdd);

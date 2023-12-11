@@ -132,10 +132,7 @@
     <ClCompile Include="ClientRepo.cpp" />
     <ClCompile Include="CommandAddArticleForm.cpp" />
     <ClCompile Include="CommandAddClientForm.cpp" />
-<<<<<<< HEAD
-=======
     <ClCompile Include="CommandAddReglementForm.cpp" />
->>>>>>> rendu
     <ClCompile Include="CommandForm.cpp" />
     <ClCompile Include="CommandForm2.cpp" />
     <ClCompile Include="CommandObject.cpp" />
@@ -148,6 +145,7 @@
     <ClCompile Include="ModifCommandForm.cpp" />
     <ClCompile Include="ModifArticleForm.cpp" />
     <ClCompile Include="ModifPersonnelForm.cpp" />
+    <ClCompile Include="PersonnelAddSuperieurForm.cpp" />
     <ClCompile Include="PersonnelForm.cpp" />
     <ClCompile Include="PersonnelObject.cpp" />
     <ClCompile Include="PersonnelRepo.cpp" />
@@ -155,6 +153,9 @@
     <ClCompile Include="ReglementObject.cpp" />
     <ClCompile Include="ReglementRepo.cpp" />
     <ClCompile Include="StatisticsForm.cpp" />
+    <ClCompile Include="StatisticsObject.cpp" />
+    <ClCompile Include="StatisticsRepo.cpp" />
+    <ClCompile Include="VarStatisticsForm.cpp" />
     <ClCompile Include="ViewClientForm.cpp" />
     <ClCompile Include="ViewCommandForm.cpp" />
     <ClCompile Include="ViewIArticleForm.cpp" />
@@ -172,10 +173,7 @@
     <ClInclude Include="ClientRepo.h" />
     <ClInclude Include="CommandAddArticleForm.h" />
     <ClInclude Include="CommandAddClientForm.h" />
-<<<<<<< HEAD
-=======
     <ClInclude Include="CommandAddReglementForm.h" />
->>>>>>> rendu
     <ClInclude Include="CommandForm.h" />
     <ClInclude Include="CommandForm2.h" />
     <ClInclude Include="CommandObject.h" />
@@ -189,6 +187,7 @@
     <ClInclude Include="ModifCommandForm.h" />
     <ClInclude Include="ModifArticleForm.h" />
     <ClInclude Include="ModifPersonnelForm.h" />
+    <ClInclude Include="PersonnelAddSuperieurForm.h" />
     <ClInclude Include="PersonnelForm.h" />
     <ClInclude Include="PersonnelObject.h" />
     <ClInclude Include="PersonnelRepo.h" />
@@ -196,6 +195,9 @@
     <ClInclude Include="ReglementObject.h" />
     <ClInclude Include="ReglementRepo.h" />
     <ClInclude Include="StatisticsForm.h" />
+    <ClInclude Include="StatisticsObject.h" />
+    <ClInclude Include="StatisticsRepo.h" />
+    <ClInclude Include="VarStatisticsForm.h" />
     <ClInclude Include="ViewClientForm.h" />
     <ClInclude Include="ViewCommandForm.h" />
     <ClInclude Include="ViewArticleForm.h" />

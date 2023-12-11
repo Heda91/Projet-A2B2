@@ -20,7 +20,7 @@ namespace Display {
 			this->button_del->Enabled = false;
 
 			this->button_valid = gcnew Forms::Button();
-			this->button_valid->Location = System::Drawing::Point(450, 5);
+			this->button_valid->Location = System::Drawing::Point(445, 5);
 			this->button_valid->Margin = Forms::Padding(4);
 			this->button_valid->Size = System::Drawing::Size(70, 25);
 			this->button_valid->UseVisualStyleBackColor = true;
@@ -77,13 +77,7 @@ namespace Display {
 			}
 			if (reussi) {
 				ArticleObject^ ao = (ArticleObject^)this->data_grid_view->SelectedRows[0]->Tag;
-<<<<<<< HEAD
-				this->co->addArticle(qtd, ao);
-				Repository::CommandRepo^ cr = gcnew Repository::CommandRepo(this->my_bdd);
-				cr->linkCommandArticle(this->co->getReferenceCommand(), Convert::ToInt32(ao->getIdArticle()), qtd);
-=======
 				this->co->addArticle(qtd, ao, true);
->>>>>>> rendu
 				Decimal TVA = 1 + (Convert::ToDecimal(ao->getTVA()) / 100);
 				this->prixTTC =  qtd * Convert::ToDecimal(ao->getPrixHT()) * TVA;
 				this->Close();

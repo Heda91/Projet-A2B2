@@ -2,10 +2,7 @@
 #include "CommandObject.h"
 #include "CommandAddArticleForm.h"
 #include "CommandAddClientForm.h"
-<<<<<<< HEAD
-=======
 #include "CommandAddReglementForm.h"
->>>>>>> rendu
 #include "CommandRepo.h"
 #include <vcclr.h>
 
@@ -19,13 +16,10 @@ namespace Display {
 	public:
 		ModifCommandForm(CommandObject^ co, Repository::CommandRepo^ cr) { InitializeComponent(co); this->cr = cr; }
 		Forms::Button^ button_id_client;
-<<<<<<< HEAD
-=======
 		Forms::Button^ button_add_reglement;
 		Forms::Button^ button_del_reglement;
 		Forms::Button^ button_add_article;
 		Forms::Button^ button_del_article;
->>>>>>> rendu
 	protected:
 		~ModifCommandForm() { if (components) { delete components; } }
 		CommandObject^ co = nullptr;
@@ -46,17 +40,8 @@ namespace Display {
 		Forms::Label^ label_retrait;
 		Forms::TextBox^ txtbx_retrait;
 		Forms::Label^ label_reglement;
-<<<<<<< HEAD
-		Forms::Button^ button_add_reglement;
-		Forms::Button^ button_del_reglement;
 		Forms::DataGridView^ dgv_reglement;
 		Forms::Label^ label_article;
-		Forms::Button^ button_add_article;
-		Forms::Button^ button_del_article;
-=======
-		Forms::DataGridView^ dgv_reglement;
-		Forms::Label^ label_article;
->>>>>>> rendu
 		Forms::DataGridView^ dgv_article;
 		Forms::Label^ label_remise;
 		Forms::Label^ label_view_remise;
@@ -157,11 +142,7 @@ namespace Display {
 			this->label_view_numero_client->Location = System::Drawing::Point(pos_x_view, 1 * (size_y + step_y) + pos_y_start);
 			this->label_view_numero_client->Size = System::Drawing::Size(size_x_view - size_x_valid, size_y);
 			this->label_view_numero_client->Name = L"label_view_numero_client";
-<<<<<<< HEAD
-			this->label_view_numero_client->Text = co->getClient()->getNumeroClient();
-=======
 			this->label_view_numero_client->Text = co->getClient()->ToString();
->>>>>>> rendu
 			this->label_view_numero_client->BorderStyle = Forms::BorderStyle::FixedSingle;
 			//
 			// bouton modif client
@@ -306,10 +287,6 @@ namespace Display {
 			this->button_add_reglement->Text = L"Ajouter";
 			this->button_add_reglement->TabIndex = 8;
 			this->button_add_reglement->Click += gcnew System::EventHandler(this, &Display::ModifCommandForm::buttonAddReglement);
-<<<<<<< HEAD
-			this->button_add_reglement->Enabled = false;
-=======
->>>>>>> rendu
 			//
 			// bouton del reglement
 			// 
@@ -321,10 +298,6 @@ namespace Display {
 			this->button_del_reglement->Text = L"Supprimer";
 			this->button_del_reglement->TabIndex = 9;
 			this->button_del_reglement->Click += gcnew System::EventHandler(this, &Display::ModifCommandForm::buttonDelReglement);
-<<<<<<< HEAD
-			this->button_del_reglement->Enabled = false;
-=======
->>>>>>> rendu
 			// 
 			// data grid view reglements
 			// 
@@ -369,10 +342,6 @@ namespace Display {
 			this->button_add_article->Text = L"Ajouter";
 			this->button_add_article->TabIndex = 11;
 			this->button_add_article->Click += gcnew System::EventHandler(this, &Display::ModifCommandForm::buttonAddArticle);
-<<<<<<< HEAD
-			this->button_add_article->Enabled = false;
-=======
->>>>>>> rendu
 			//
 			// bouton del article
 			// 
@@ -384,10 +353,6 @@ namespace Display {
 			this->button_del_article->Text = L"Supprimer";
 			this->button_del_article->TabIndex = 12;
 			this->button_del_article->Click += gcnew System::EventHandler(this, &Display::ModifCommandForm::buttonDelArticle);
-<<<<<<< HEAD
-			this->button_del_article->Enabled = false;
-=======
->>>>>>> rendu
 			// 
 			// data grid view article
 			// 
@@ -517,10 +482,6 @@ namespace Display {
 
 		}
 #pragma endregion
-<<<<<<< HEAD
-		void buttonAddReglement(System::Object^ sender, System::EventArgs^ e) {}
-		void buttonDelReglement(System::Object^ sender, System::EventArgs^ e) {}
-=======
 		void buttonAddReglement(System::Object^ sender, System::EventArgs^ e) {
 			ReglementObject^ ro = gcnew ReglementObject();
 			CommandAddReglementForm^ command_add_reg_form = gcnew CommandAddReglementForm(ro);
@@ -536,19 +497,14 @@ namespace Display {
 			ro->deleteReglement();
 			this->reload();
 		}
->>>>>>> rendu
 		void buttonAddArticle(System::Object^ sender, System::EventArgs^ e) {
 			CommandAddArticleForm^ command_add_art_form = gcnew CommandAddArticleForm(this->cr->bdd, this->co);
 			command_add_art_form->ShowDialog();
 			//calcule montant
 			Decimal prixTTC = command_add_art_form->getPrixTTC();
 			if (prixTTC != Decimal::Zero) {
-<<<<<<< HEAD
-				co->setTotalCommand(prixTTC * (1 - Convert::ToDecimal(co->getRemise())) + Convert::ToDecimal(co->getTotalCommand()));
-=======
 				Decimal apres_remise = prixTTC * (1 - Convert::ToDecimal(co->getRemise())/100);
 				co->setTotalCommand(apres_remise + Convert::ToDecimal(co->getTotalCommand()));
->>>>>>> rendu
 				this->label_view_total_commande->Text = co->getTotalCommand();
 			}
 			this->reload();
@@ -560,13 +516,9 @@ namespace Display {
 			Repository::CommandRepo^ cr = gcnew Repository::CommandRepo(this->cr->bdd);
 			cr->delinkCommandArticle(this->co->getReferenceCommand(), Convert::ToInt32(panier->article->getIdArticle()));
 			//calcule montant
-<<<<<<< HEAD
-			co->setTotalCommand(Convert::ToDecimal(co->getTotalCommand()) - (panier->getTotalTTC()) * (1 - Convert::ToDecimal(co->getRemise())));
-=======
 			Decimal prixTTC = panier->getTotalTTC();
 			Decimal apres_remise = prixTTC * (1 - Convert::ToDecimal(co->getRemise()) / 100);
 			co->setTotalCommand(Convert::ToDecimal(co->getTotalCommand()) - apres_remise);
->>>>>>> rendu
 			this->label_view_total_commande->Text = co->getTotalCommand();
 			this->reload();
 			this->Refresh();
@@ -591,27 +543,11 @@ namespace Display {
 				co->setRemise(Decimal(5));
 			}
 			this->label_view_remise->Text = co->getRemise();
-<<<<<<< HEAD
-			//ref commande -> PpNnAAAAVvvNNN
-			String^ prenom = co->getClient()->getPrenom() + "..";
-			String^ nom = co->getClient()->getNom() + "..";
-			String^ ref = prenom->Substring(0, 2) + nom->Substring(0, 2);
-			ref += co->getDateEmission()->Substring(6, 4);
-			ref += co->getAdresseLivraison()->getVille()->Substring(0, 3);
-			ref += cr->getNombreCommand(co).ToString();
-			co->setReferenceCommand(ref);
-			this->label_view_reference_commande->Text = co->getReferenceCommand();
-			this->button_add_article->Enabled = true;
-			this->button_del_article->Enabled = true;
-			this->button_add_reglement->Enabled = true;
-			this->button_add_reglement->Enabled = true;
-=======
 			
 			this->button_add_article->Enabled = true;
 			this->button_del_article->Enabled = true;
 			this->button_add_reglement->Enabled = true;
 			this->button_del_reglement->Enabled = true;
->>>>>>> rendu
 			this->Refresh();
 		}
 
@@ -669,46 +605,6 @@ namespace Display {
 			//reload data grid view
 			this->dgv_article->Rows->Clear();
 			for each (Cart ^ cart in co->getPanier()) {
-<<<<<<< HEAD
-				Forms::DataGridViewRow^ dgvr = gcnew Forms::DataGridViewRow();
-				Forms::DataGridViewTextBoxCell^ dgvtbc = gcnew Forms::DataGridViewTextBoxCell();
-				dgvtbc->Value = Convert::ToString(cart->article->getIdArticle());
-				dgvr->Cells->Add(dgvtbc);
-				Forms::DataGridViewTextBoxCell^ dgvtbc2 = gcnew Forms::DataGridViewTextBoxCell();
-				dgvtbc2->Value = Convert::ToString(cart->article->getDesignation());
-				dgvr->Cells->Add(dgvtbc2);
-				Forms::DataGridViewTextBoxCell^ dgvtbc3 = gcnew Forms::DataGridViewTextBoxCell();
-				dgvtbc3->Value = Convert::ToString(cart->quantite);
-				dgvr->Cells->Add(dgvtbc3);
-				Forms::DataGridViewTextBoxCell^ dgvtbc4 = gcnew Forms::DataGridViewTextBoxCell();
-				dgvtbc4->Value = Convert::ToString(cart->article->getPrixHT());
-				dgvr->Cells->Add(dgvtbc4);
-				Forms::DataGridViewTextBoxCell^ dgvtbc5 = gcnew Forms::DataGridViewTextBoxCell();
-				dgvtbc5->Value = Convert::ToString(cart->article->getTVA());
-				dgvr->Cells->Add(dgvtbc5);
-				Forms::DataGridViewTextBoxCell^ dgvtbc6 = gcnew Forms::DataGridViewTextBoxCell();
-				dgvtbc6->Value = Convert::ToString(cart->getTotalTTC());
-				dgvr->Cells->Add(dgvtbc6);
-
-				dgvr->Tag = cart;
-				this->dgv_article->Rows->Add(dgvr);
-			}
-			this->dgv_reglement->Rows->Clear();
-			for each (ReglementObject ^ reglement in co->getReglement()) {
-				Forms::DataGridViewRow^ dgvr = gcnew Forms::DataGridViewRow();
-				Forms::DataGridViewTextBoxCell^ dgvtbc = gcnew Forms::DataGridViewTextBoxCell();
-				dgvtbc->Value = Convert::ToString(reglement->getDatePaiementAff());
-				dgvr->Cells->Add(dgvtbc);
-				Forms::DataGridViewTextBoxCell^ dgvtbc2 = gcnew Forms::DataGridViewTextBoxCell();
-				dgvtbc2->Value = Convert::ToString(reglement->getSoldePaiement());
-				dgvr->Cells->Add(dgvtbc2);
-				Forms::DataGridViewTextBoxCell^ dgvtbc3 = gcnew Forms::DataGridViewTextBoxCell();
-				dgvtbc3->Value = Convert::ToString(reglement->getMoyenPaiement());
-				dgvr->Cells->Add(dgvtbc3);
-
-				dgvr->Tag = reglement;
-				this->dgv_reglement->Rows->Add(dgvr);
-=======
 				if (cart->supprime == false) {
 					Forms::DataGridViewRow^ dgvr = gcnew Forms::DataGridViewRow();
 					Forms::DataGridViewTextBoxCell^ dgvtbc = gcnew Forms::DataGridViewTextBoxCell();
@@ -751,7 +647,6 @@ namespace Display {
 					dgvr->Tag = reglement;
 					this->dgv_reglement->Rows->Add(dgvr);
 				}
->>>>>>> rendu
 			}
 		}
 	};

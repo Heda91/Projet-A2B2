@@ -1,6 +1,7 @@
 ﻿#pragma once
 #include "PersonnelObject.h"
 #include "AddAdressForm.h"
+#include "PersonnelAddSuperieurForm.h"
 #include <iostream>
 #include <string>
 
@@ -16,8 +17,8 @@ namespace Display {
 	public ref class ModifPersonnelForm : public System::Windows::Forms::Form
 	{
 	public:
-		ModifPersonnelForm(PersonnelObject^ po) { InitializeComponent(po); }
-
+		ModifPersonnelForm(BDD^ bdd, PersonnelObject^ po) { InitializeComponent(po); this->bdd = bdd; }
+		BDD^ bdd = nullptr;
 	protected:
 		~ModifPersonnelForm() { if (components) { delete components; } }
 		PersonnelObject^ po = nullptr;
@@ -29,7 +30,8 @@ namespace Display {
 		Forms::Label^ label_prenom;
 		Forms::TextBox^ txtbx_prenom;
 		Forms::Label^ label_id_superieur;
-		Forms::TextBox^ txtbx_id_superieur;
+		Forms::Label^ label_view_id_superieur;
+		Forms::Button^ button_id_superieur;
 		Forms::Label^ label_date_embauche;
 		Forms::TextBox^ txtbx_date_embauche;
 		Forms::Label^ label_adresse;
@@ -51,7 +53,8 @@ namespace Display {
 			this->label_prenom = (gcnew System::Windows::Forms::Label());
 			this->txtbx_prenom = (gcnew System::Windows::Forms::TextBox());
 			this->label_id_superieur = (gcnew System::Windows::Forms::Label());
-			this->txtbx_id_superieur = (gcnew System::Windows::Forms::TextBox());
+			this->label_view_id_superieur = (gcnew System::Windows::Forms::Label());
+			this->button_id_superieur = gcnew Forms::Button();
 			this->label_date_embauche = (gcnew System::Windows::Forms::Label());
 			this->txtbx_date_embauche = (gcnew System::Windows::Forms::TextBox());
 			this->label_adresse = (gcnew System::Windows::Forms::Label());
@@ -145,13 +148,24 @@ namespace Display {
 			// 
 			// view id superieur
 			// 
-			this->txtbx_id_superieur->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label_view_id_superieur->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->txtbx_id_superieur->Location = System::Drawing::Point(pos_x_view, 3 * (size_y + step_y) + pos_y_start);
-			this->txtbx_id_superieur->Size = System::Drawing::Size(size_x_view, size_y);
-			this->txtbx_id_superieur->TabIndex = 4;
-			this->txtbx_id_superieur->Name = L"txtbx_id_superieur";
-			this->txtbx_id_superieur->Text = po->getIdSuperieur()=="NULL"?"":po->getIdSuperieur();
+			this->label_view_id_superieur->Location = System::Drawing::Point(pos_x_view, 3 * (size_y + step_y) + pos_y_start);
+			this->label_view_id_superieur->Size = System::Drawing::Size(size_x_view-size_x_valid, size_y);
+			this->label_view_id_superieur->Name = L"label_view_id_superieur";
+			this->label_view_id_superieur->Text = po->getIdSuperieur()=="NULL"?"":po->getIdSuperieur();
+			this->label_view_id_superieur->BorderStyle = Forms::BorderStyle::FixedSingle;
+			//
+			// button id superieur
+			// 
+			this->button_id_superieur->Location = System::Drawing::Point(pos_x_view + size_x_view - size_x_valid, 3 * (size_y + step_y) + pos_y_start);
+			this->button_id_superieur->Margin = Forms::Padding(1);
+			this->button_id_superieur->Size = System::Drawing::Size(size_x_valid, size_y);
+			this->button_id_superieur->UseVisualStyleBackColor = true;
+			this->button_id_superieur->Name = L"button_id_superieur";
+			this->button_id_superieur->Text = L"Modifier";
+			this->button_id_superieur->TabIndex = 4;
+			this->button_id_superieur->Click += gcnew System::EventHandler(this, &Display::ModifPersonnelForm::buttonAddPersonnel);
 			// 
 			// date embauche
 			// 
@@ -231,7 +245,8 @@ namespace Display {
 			this->Controls->Add(this->label_prenom);
 			this->Controls->Add(this->txtbx_prenom);
 			this->Controls->Add(this->label_id_superieur);
-			this->Controls->Add(this->txtbx_id_superieur);
+			this->Controls->Add(this->label_view_id_superieur);
+			this->Controls->Add(this->button_id_superieur);
 			this->Controls->Add(this->label_date_embauche);
 			this->Controls->Add(this->txtbx_date_embauche);
 			this->Controls->Add(this->label_adresse);
@@ -247,11 +262,10 @@ namespace Display {
 #pragma endregion
 		void buttonValidClick(System::Object^ sender, System::EventArgs^ e) {
 			bool reussi = true;
-			int id_sup=0, id_ad=0;
+			int id_ad=0;
 			String^ nom = "";
 			String^ prenom = "";
 			DateTime date;
-
 
 			//nom
 			try {
@@ -284,34 +298,9 @@ namespace Display {
 				reussi = false;
 				this->txtbx_prenom->BackColor = System::Drawing::Color::Red;
 			}
-
-
-
-			//id_superieur
-			
-			try {
-				if (this->txtbx_id_superieur->Text != "'" && this->txtbx_id_superieur->Text->Replace("'", "") != "" && Convert::ToInt16(this->txtbx_id_superieur->Text->Replace("'", "")) > 0) {
-					id_sup = Convert::ToInt16(this->txtbx_id_superieur->Text == "" ? "0" : txtbx_id_superieur->Text);
-					this->txtbx_id_superieur->BackColor = System::Drawing::Color::White;
-				}
-				else {
-					reussi = false;
-					this->txtbx_id_superieur->BackColor = System::Drawing::Color::Red;
-				}
-			}
-			catch (System::FormatException^) {
-				reussi = false;
-				this->txtbx_id_superieur->BackColor = System::Drawing::Color::Red;
-			}
-			catch (System::OverflowException^) {
-				reussi = false;
-				this->txtbx_id_superieur->BackColor = System::Drawing::Color::Red;
-			}
-			
-
 			//date embauche
 			try {
-				if (this->txtbx_date_embauche->Text != "'" && this->txtbx_date_embauche->Text->Replace("'", "") != "" && Convert::ToSingle(this->txtbx_id_superieur->Text->Replace("'", "")) > 0) {
+				if (this->txtbx_date_embauche->Text != "'" && this->txtbx_date_embauche->Text->Replace("'", "") != "" && Convert::ToSingle(this->label_view_id_superieur->Text->Replace("'", "")) > 0) {
 					date = Convert::ToDateTime(this->txtbx_date_embauche->Text == "" ? "01/01/2000" : txtbx_date_embauche->Text);
 					this->txtbx_date_embauche->BackColor = System::Drawing::Color::White;
 				}
@@ -324,31 +313,19 @@ namespace Display {
 				reussi = false;
 				this->txtbx_date_embauche->BackColor = System::Drawing::Color::Red;
 			}
-
-
-
 			//adresse
 			if (po->getAdresseVar()->getNumero() == "0") {//dans le cas du "Add" regarde si il a modifie l'adresse
 				reussi = false;
 				this->label_view_adresse->BackColor = System::Drawing::Color::Red;
 			}
 			else { this->label_view_adresse->BackColor = System::Drawing::Color::White; }
-			
-			
-			
-			
-			
-			
 			if (reussi) { 
 				po->setNom(nom);
 				po->setPrenom(prenom);
-				po->setIdSuperieur(id_sup);
 				po->setDateEmbauche(date);
 				//adresse deja valider
 				this->Close();
 			}
-
-
 		};
 		void buttonAddAdresseClick(System::Object^ sender, System::EventArgs^ e){
 			AdressObject^ adress_obj = gcnew AdressObject();
@@ -359,6 +336,11 @@ namespace Display {
 				this->label_view_adresse->Text = po->getAdresse();
 				this->Refresh();
 			}//adresse créer
+		}
+		void buttonAddPersonnel(System::Object^ sender, System::EventArgs^ e) {
+			PersonnelAddSuperieur^ pas = gcnew PersonnelAddSuperieur(this->bdd, this->po);
+			pas->ShowDialog();
+			this->label_view_id_superieur->Text = this->po->getIdSuperieur();
 		}
 	};
 }

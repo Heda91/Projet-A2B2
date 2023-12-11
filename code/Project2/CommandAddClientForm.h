@@ -15,7 +15,7 @@ namespace Display {
 			this->button_del->Enabled = false;
 
 			this->button_valid = gcnew Forms::Button();
-			this->button_valid->Location = System::Drawing::Point(450, 5);
+			this->button_valid->Location = System::Drawing::Point(445, 5);
 			this->button_valid->Margin = Forms::Padding(4);
 			this->button_valid->Size = System::Drawing::Size(70, 25);
 			this->button_valid->UseVisualStyleBackColor = true;

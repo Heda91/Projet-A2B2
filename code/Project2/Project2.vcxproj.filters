@@ -34,11 +34,12 @@
     <ClCompile Include="ViewPersonnelForm.cpp" />
     <ClCompile Include="CommandAddArticleForm.cpp" />
     <ClCompile Include="CommandAddClientForm.cpp" />
-<<<<<<< HEAD
-=======
     <ClCompile Include="ReglementRepo.cpp" />
     <ClCompile Include="CommandAddReglementForm.cpp" />
->>>>>>> rendu
+    <ClCompile Include="StatisticsObject.cpp" />
+    <ClCompile Include="StatisticsRepo.cpp" />
+    <ClCompile Include="VarStatisticsForm.cpp" />
+    <ClCompile Include="PersonnelAddSuperieurForm.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AddAdressForm.h" />
@@ -73,10 +74,11 @@
     <ClInclude Include="ViewPersonnelForm.h" />
     <ClInclude Include="CommandAddArticleForm.h" />
     <ClInclude Include="CommandAddClientForm.h" />
-<<<<<<< HEAD
-=======
     <ClInclude Include="ReglementRepo.h" />
     <ClInclude Include="CommandAddReglementForm.h" />
->>>>>>> rendu
+    <ClInclude Include="StatisticsObject.h" />
+    <ClInclude Include="StatisticsRepo.h" />
+    <ClInclude Include="VarStatisticsForm.h" />
+    <ClInclude Include="PersonnelAddSuperieurForm.h" />
   </ItemGroup>
 </Project>

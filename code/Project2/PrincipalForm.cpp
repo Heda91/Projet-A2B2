@@ -84,6 +84,9 @@ void PrincipalForm::InitializeComponent() {
 	this->AutoScaleDimensions = SizeF(8, 16);
 	this->AutoScaleMode = Forms::AutoScaleMode::Font;
 	this->ClientSize = System::Drawing::Size(700, 500);
+	this->MaximumSize = System::Drawing::Size(700, 500);
+	this->MinimumSize = System::Drawing::Size(700, 500);
+
 
 	this->Controls->Add(this->button_add);
 	this->Controls->Add(this->button_modif);

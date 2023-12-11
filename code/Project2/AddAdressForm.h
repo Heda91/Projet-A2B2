@@ -215,18 +215,10 @@ namespace Display {
 				reussi = false;
 				this->txtbx_code_postale->BackColor = System::Drawing::Color::Red;
 			}
-			catch (System::OverflowException^) {
-				reussi = false;
-				this->txtbx_numero->BackColor = System::Drawing::Color::Red;
-			}
 			//Ville
 			try {
 				if (this->txtbx_ville->Text != "'" && this->txtbx_ville->Text->Replace("'", "") != "") {
-<<<<<<< HEAD
-					rue = this->txtbx_ville->Text->Replace("'", " ");
-=======
 					ville = this->txtbx_ville->Text->Replace("'", " ");
->>>>>>> rendu
 					this->txtbx_ville->BackColor = System::Drawing::Color::White;
 				}
 				else {

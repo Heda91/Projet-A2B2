@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #include "BDD.h"
 #include "StatisticsRepo.h"
 
@@ -66,7 +66,7 @@ namespace Display {
 
 
 	private: System::Windows::Forms::ComboBox^ comboBox1;
-	//private: System::Windows::Forms::RadioButton^ radioButton1;
+		   //private: System::Windows::Forms::RadioButton^ radioButton1;
 	protected:
 
 	private:
@@ -182,13 +182,13 @@ namespace Display {
 			this->comboBox1->Size = System::Drawing::Size(259, 24);
 			this->comboBox1->TabIndex = 10;
 			this->comboBox1->SelectedIndexChanged += gcnew System::EventHandler(this, &VarStatisticsForm::comboBox1_SelectedIndexChanged);
-			DataSet^ Items1 = sr->articlesMoins(); /*� l'origine de probleme*/
+			DataSet^ Items1 = sr->articlesMoins(); /*à l'origine de probleme*/
 			int i = 0;
 			while (i < Items1->Tables[0]->Rows->Count) {
 				this->comboBox1->Items->Add(Convert::ToString(Items1->Tables[0]->Rows[i]->ItemArray[0]));
 				i++;
 			}
-			
+
 			// 
 	// textBoxTVA
 	//
@@ -232,113 +232,110 @@ namespace Display {
 		updatePrixFinal();
 	}
 
-	void updatePrixFinal() {
-		double  prixInitial = 0;
-		double Qte_stock = 0;
-		double TVA = 0;
-		double  Remise = 0;
-		double Marge = 0;
-		double Demarque = 0;
-		String^ articleSelectionne = comboBox1->SelectedItem->ToString();
+		   void updatePrixFinal() {
+			   double  prixInitial = 0;
+			   double Qte_stock = 0;
+			   double TVA = 0;
+			   double  Remise = 0;
+			   double Marge = 0;
+			   double Demarque = 0;
+			   String^ articleSelectionne = comboBox1->SelectedItem->ToString();
 
-		String^ sqlQuery = "SELECT prixHT FROM Article WHERE designation = '" + articleSelectionne + "'";
-		DataSet^ result = bdd->executeQuery(sqlQuery);
+			   String^ sqlQuery = "SELECT prixHT FROM Article WHERE designation = '" + articleSelectionne + "'";
+			   DataSet^ result = bdd->executeQuery(sqlQuery);
 
-		String^ sqlQuery1 = "SELECT quantite_stock FROM Article WHERE designation = '" + articleSelectionne + "'";
-		DataSet^ result1 = bdd->executeQuery(sqlQuery1);
-
-
-		prixInitial = Convert::ToDouble(result->Tables[0]->Rows[0]->ItemArray[0]);
-		Qte_stock = Convert::ToDouble(result1->Tables[0]->Rows[0]->ItemArray[0]);
+			   String^ sqlQuery1 = "SELECT quantite_stock FROM Article WHERE designation = '" + articleSelectionne + "'";
+			   DataSet^ result1 = bdd->executeQuery(sqlQuery1);
 
 
-		try {
-			if (this->textBoxTVA->Text != "'" && this->textBoxTVA->Text->Replace("'", "") != "" && Convert::ToInt16(this->textBoxTVA->Text->Replace("'", "")) > 0) {
-				TVA = Convert::ToInt16(this->textBoxTVA->Text->Replace("'", " ") == "" ? "0" : textBoxTVA->Text);
-				this->textBoxTVA->BackColor = System::Drawing::Color::White;
-			}
-			else {
-				this->textBoxTVA->Text = "0";
-				this->textBoxTVA->BackColor = System::Drawing::Color::Red;
-			}
-		}
-		catch (System::FormatException^) {
-			this->textBoxTVA->Text = "0";
-			this->textBoxTVA->BackColor = System::Drawing::Color::Red;
-		}
-		catch (System::OverflowException^) {
-			this->textBoxTVA->Text = "0";
-			this->textBoxTVA->BackColor = System::Drawing::Color::Red;
-		}
+			   prixInitial = Convert::ToDouble(result->Tables[0]->Rows[0]->ItemArray[0]);
+			   Qte_stock = Convert::ToDouble(result1->Tables[0]->Rows[0]->ItemArray[0]);
 
 
-
-		try {
-			if (this->textBox1->Text != "'" && this->textBox1->Text->Replace("'", "") != "" && Convert::ToInt16(this->textBox1->Text->Replace("'", "")) > 0) {
-				Remise = Convert::ToInt16(this->textBox1->Text->Replace("'", " ") == "" ? "0" : textBox1->Text);
-				this->textBox1->BackColor = System::Drawing::Color::White;
-			}
-			else {
-				this->textBox1->Text = "0";
-				this->textBox1->BackColor = System::Drawing::Color::Red;
-			}
-		}
-		catch (System::FormatException^) {
-			this->textBox1->Text = "0";
-			this->textBox1->BackColor = System::Drawing::Color::Red;
-		}
-		catch (System::OverflowException^) {
-			this->textBox1->Text = "0";
-			this->textBox1->BackColor = System::Drawing::Color::Red;
-		}
-
-
-		try {
-			if (this->textBox2->Text != "'" && this->textBox2->Text->Replace("'", "") != "" && Convert::ToInt16(this->textBox2->Text->Replace("'", "")) > 0) {
-				Marge = Convert::ToInt16(this->textBox2->Text->Replace("'", " ") == "" ? "0" : textBox2->Text);
-				this->textBox2->BackColor = System::Drawing::Color::White;
-			}
-			else {
-				this->textBox2->Text = "0";
-				this->textBox2->BackColor = System::Drawing::Color::Red;
-			}
-		}
-		catch (System::FormatException^) {
-			this->textBox2->Text = "0";
-			this->textBox2->BackColor = System::Drawing::Color::Red;
-		}
-		catch (System::OverflowException^) {
-			this->textBox2->Text = "0";
-			this->textBox2->BackColor = System::Drawing::Color::Red;
-		}
-
-
-		try {
-			if (this->textBox4->Text != "'" && this->textBox4->Text->Replace("'", "") != "" && Convert::ToInt16(this->textBox4->Text->Replace("'", "")) > 0) {
-				Demarque = Convert::ToInt16(this->textBox4->Text->Replace("'", " ") == "" ? "0" : textBox4->Text);
-				this->textBox4->BackColor = System::Drawing::Color::White;
-			}
-			else {
-				this->textBox4->Text = "0";
-				this->textBox4->BackColor = System::Drawing::Color::Red;
-			}
-		}
-		catch (System::FormatException^) {
-			this->textBox4->Text = "0";
-			this->textBox4->BackColor = System::Drawing::Color::Red;
-		}
-		catch (System::OverflowException^) {
-			this->textBox4->Text = "0";
-			this->textBox4->BackColor = System::Drawing::Color::Red;
-		}
-
-		double prix_final = prixInitial * (1 - Remise / 100) * (1 + TVA / 100) * (1 - Demarque / 100) + Marge;
-		double gain = (prix_final - prixInitial) * Qte_stock;
-		textBox3->Text = gain.ToString();
-	}
+			   try {
+				   if (this->textBoxTVA->Text != "'" && this->textBoxTVA->Text->Replace("'", "") != "" && Convert::ToInt16(this->textBoxTVA->Text->Replace("'", "")) > 0) {
+					   TVA = Convert::ToInt16(this->textBoxTVA->Text->Replace("'", " ") == "" ? "0" : textBoxTVA->Text);
+					   this->textBoxTVA->BackColor = System::Drawing::Color::White;
+				   }
+				   else {
+					   this->textBoxTVA->Text = "0";
+					   this->textBoxTVA->BackColor = System::Drawing::Color::Red;
+				   }
+			   }
+			   catch (System::FormatException^) {
+				   this->textBoxTVA->Text = "0";
+				   this->textBoxTVA->BackColor = System::Drawing::Color::Red;
+			   }
+			   catch (System::OverflowException^) {
+				   this->textBoxTVA->Text = "0";
+				   this->textBoxTVA->BackColor = System::Drawing::Color::Red;
+			   }
 
 
 
+			   try {
+				   if (this->textBox1->Text != "'" && this->textBox1->Text->Replace("'", "") != "" && Convert::ToInt16(this->textBox1->Text->Replace("'", "")) > 0) {
+					   Remise = Convert::ToInt16(this->textBox1->Text->Replace("'", " ") == "" ? "0" : textBox1->Text);
+					   this->textBox1->BackColor = System::Drawing::Color::White;
+				   }
+				   else {
+					   this->textBox1->Text = "0";
+					   this->textBox1->BackColor = System::Drawing::Color::Red;
+				   }
+			   }
+			   catch (System::FormatException^) {
+				   this->textBox1->Text = "0";
+				   this->textBox1->BackColor = System::Drawing::Color::Red;
+			   }
+			   catch (System::OverflowException^) {
+				   this->textBox1->Text = "0";
+				   this->textBox1->BackColor = System::Drawing::Color::Red;
+			   }
+
+
+			   try {
+				   if (this->textBox2->Text != "'" && this->textBox2->Text->Replace("'", "") != "" && Convert::ToInt16(this->textBox2->Text->Replace("'", "")) > 0) {
+					   Marge = Convert::ToInt16(this->textBox2->Text->Replace("'", " ") == "" ? "0" : textBox2->Text);
+					   this->textBox2->BackColor = System::Drawing::Color::White;
+				   }
+				   else {
+					   this->textBox2->Text = "0";
+					   this->textBox2->BackColor = System::Drawing::Color::Red;
+				   }
+			   }
+			   catch (System::FormatException^) {
+				   this->textBox2->Text = "0";
+				   this->textBox2->BackColor = System::Drawing::Color::Red;
+			   }
+			   catch (System::OverflowException^) {
+				   this->textBox2->Text = "0";
+				   this->textBox2->BackColor = System::Drawing::Color::Red;
+			   }
+
+
+			   try {
+				   if (this->textBox4->Text != "'" && this->textBox4->Text->Replace("'", "") != "" && Convert::ToInt16(this->textBox4->Text->Replace("'", "")) > 0) {
+					   Demarque = Convert::ToInt16(this->textBox4->Text->Replace("'", " ") == "" ? "0" : textBox4->Text);
+					   this->textBox4->BackColor = System::Drawing::Color::White;
+				   }
+				   else {
+					   this->textBox4->Text = "0";
+					   this->textBox4->BackColor = System::Drawing::Color::Red;
+				   }
+			   }
+			   catch (System::FormatException^) {
+				   this->textBox4->Text = "0";
+				   this->textBox4->BackColor = System::Drawing::Color::Red;
+			   }
+			   catch (System::OverflowException^) {
+				   this->textBox4->Text = "0";
+				   this->textBox4->BackColor = System::Drawing::Color::Red;
+			   }
+
+			   double prix_final = prixInitial * (1 - Remise / 100) * (1 + TVA / 100) * (1 - Demarque / 100) + Marge;
+			   double gain = (prix_final - prixInitial) * Qte_stock;
+			   textBox3->Text = gain.ToString();
+		   }
 	};
 };
 
