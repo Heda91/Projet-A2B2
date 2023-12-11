@@ -1,42 +1,27 @@
-﻿  CommandAddArticleForm.cpp
-  CommandAddClientForm.cpp
+﻿  CommandForm2.cpp
 C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ClientForm.h(21,36): warning C4677: 'checkAdresses': signature of non-private member contains assembly private type 'Object::ClientObject'
 C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ClientObject.h(7,15): message : see declaration of 'Object::ClientObject'
-  CommandForm2.cpp
-C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ClientForm.h(21,36): warning C4677: 'checkAdresses': signature of non-private member contains assembly private type 'Object::ClientObject'
-C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ClientObject.h(7,15): message : see declaration of 'Object::ClientObject'
-C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ModifCommandForm.h(16,19): warning C4677: 'ModifCommandForm': signature of non-private member contains assembly private type 'Object::CommandObject'
-C:\cours\A2\bloc 2 (POO)\projet\code\Project2\CommandObject.h(19,12): message : see declaration of 'Object::CommandObject'
-C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ModifCommandForm.h(16,19): warning C4677: 'ModifCommandForm': signature of non-private member contains assembly private type 'Repository::CommandRepo'
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ModifCommandForm.h(17,19): warning C4677: 'ModifCommandForm': signature of non-private member contains assembly private type 'Object::CommandObject'
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\CommandObject.h(20,12): message : see declaration of 'Object::CommandObject'
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ModifCommandForm.h(17,19): warning C4677: 'ModifCommandForm': signature of non-private member contains assembly private type 'Repository::CommandRepo'
 C:\cours\A2\bloc 2 (POO)\projet\code\Project2\CommandRepo.h(13,15): message : see declaration of 'Repository::CommandRepo'
-C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ModifCommandForm.h(20,21): warning C4677: 'co': signature of non-private member contains assembly private type 'Object::CommandObject'
-C:\cours\A2\bloc 2 (POO)\projet\code\Project2\CommandObject.h(19,12): message : see declaration of 'Object::CommandObject'
-C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ModifCommandForm.h(21,31): warning C4677: 'cr': signature of non-private member contains assembly private type 'Repository::CommandRepo'
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ModifCommandForm.h(25,21): warning C4677: 'co': signature of non-private member contains assembly private type 'Object::CommandObject'
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\CommandObject.h(20,12): message : see declaration of 'Object::CommandObject'
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ModifCommandForm.h(26,31): warning C4677: 'cr': signature of non-private member contains assembly private type 'Repository::CommandRepo'
 C:\cours\A2\bloc 2 (POO)\projet\code\Project2\CommandRepo.h(13,15): message : see declaration of 'Repository::CommandRepo'
 C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ViewCommandForm.h(12,18): warning C4677: 'ViewCommandForm': signature of non-private member contains assembly private type 'Object::CommandObject'
-C:\cours\A2\bloc 2 (POO)\projet\code\Project2\CommandObject.h(19,12): message : see declaration of 'Object::CommandObject'
-  CommandObject.cpp
-  CommandRepo.cpp
-  MainForm.cpp
-C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ClientForm.h(21,36): warning C4677: 'checkAdresses': signature of non-private member contains assembly private type 'Object::ClientObject'
-C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ClientObject.h(7,15): message : see declaration of 'Object::ClientObject'
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\CommandObject.h(20,12): message : see declaration of 'Object::CommandObject'
   ModifCommandForm.cpp
 C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ClientForm.h(21,36): warning C4677: 'checkAdresses': signature of non-private member contains assembly private type 'Object::ClientObject'
 C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ClientObject.h(7,15): message : see declaration of 'Object::ClientObject'
-C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ModifCommandForm.h(16,19): warning C4677: 'ModifCommandForm': signature of non-private member contains assembly private type 'Object::CommandObject'
-C:\cours\A2\bloc 2 (POO)\projet\code\Project2\CommandObject.h(19,12): message : see declaration of 'Object::CommandObject'
-C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ModifCommandForm.h(16,19): warning C4677: 'ModifCommandForm': signature of non-private member contains assembly private type 'Repository::CommandRepo'
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ModifCommandForm.h(17,19): warning C4677: 'ModifCommandForm': signature of non-private member contains assembly private type 'Object::CommandObject'
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\CommandObject.h(20,12): message : see declaration of 'Object::CommandObject'
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ModifCommandForm.h(17,19): warning C4677: 'ModifCommandForm': signature of non-private member contains assembly private type 'Repository::CommandRepo'
 C:\cours\A2\bloc 2 (POO)\projet\code\Project2\CommandRepo.h(13,15): message : see declaration of 'Repository::CommandRepo'
-C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ModifCommandForm.h(20,21): warning C4677: 'co': signature of non-private member contains assembly private type 'Object::CommandObject'
-C:\cours\A2\bloc 2 (POO)\projet\code\Project2\CommandObject.h(19,12): message : see declaration of 'Object::CommandObject'
-C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ModifCommandForm.h(21,31): warning C4677: 'cr': signature of non-private member contains assembly private type 'Repository::CommandRepo'
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ModifCommandForm.h(25,21): warning C4677: 'co': signature of non-private member contains assembly private type 'Object::CommandObject'
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\CommandObject.h(20,12): message : see declaration of 'Object::CommandObject'
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ModifCommandForm.h(26,31): warning C4677: 'cr': signature of non-private member contains assembly private type 'Repository::CommandRepo'
 C:\cours\A2\bloc 2 (POO)\projet\code\Project2\CommandRepo.h(13,15): message : see declaration of 'Repository::CommandRepo'
-  ViewCommandForm.cpp
-C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ViewCommandForm.h(12,18): warning C4677: 'ViewCommandForm': signature of non-private member contains assembly private type 'Object::CommandObject'
-C:\cours\A2\bloc 2 (POO)\projet\code\Project2\CommandObject.h(19,12): message : see declaration of 'Object::CommandObject'
-  main.cpp
-C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ClientForm.h(21,36): warning C4677: 'checkAdresses': signature of non-private member contains assembly private type 'Object::ClientObject'
-C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ClientObject.h(7,15): message : see declaration of 'Object::ClientObject'
   Generating Code...
   AddAdressForm.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
   Project2.vcxproj -> C:\cours\A2\bloc 2 (POO)\projet\code\x64\Debug\Project2.exe

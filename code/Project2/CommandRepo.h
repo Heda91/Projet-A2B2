@@ -20,7 +20,7 @@ namespace Repository {
 
         List<CommandObject^>^ getCommands(void);
 
-        int getNombreCommand(CommandObject^ co);
+        DataSet^ getNombreCommand(CommandObject^ co);
         DateTime^ getFirstCommand(ClientObject^ co);
 
         void editCommand(CommandObject^ co);

@@ -10,6 +10,7 @@ namespace Object {
 		String^ moyen_paiement = "";
 		DateTime^ date_paiement = nullptr;
 		Decimal^ solde_paiement = Decimal::Zero;
+		bool supprime = false;
 	public:
 		void setIdReglement(int id) { this->id_reglement = id; }
 		void setMoyenPaiement(String^ moyen) { this->moyen_paiement = moyen; }
@@ -21,5 +22,8 @@ namespace Object {
 		String^ getDatePaiement() { return this->date_paiement->ToString("MM/dd/yyyy"); }
 		String^ getDatePaiementAff() { return this->date_paiement->ToString("dd/MM/yyyy"); }
 		String^ getSoldePaiement() { return this->solde_paiement->ToString(); }
+
+		void deleteReglement() { this->supprime = true; }
+		bool isDelete() { return this->supprime; }
 	};
 }

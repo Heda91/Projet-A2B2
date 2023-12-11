@@ -77,9 +77,7 @@ namespace Display {
 			}
 			if (reussi) {
 				ArticleObject^ ao = (ArticleObject^)this->data_grid_view->SelectedRows[0]->Tag;
-				this->co->addArticle(qtd, ao);
-				Repository::CommandRepo^ cr = gcnew Repository::CommandRepo(this->my_bdd);
-				cr->linkCommandArticle(this->co->getReferenceCommand(), Convert::ToInt32(ao->getIdArticle()), qtd);
+				this->co->addArticle(qtd, ao, true);
 				Decimal TVA = 1 + (Convert::ToDecimal(ao->getTVA()) / 100);
 				this->prixTTC =  qtd * Convert::ToDecimal(ao->getPrixHT()) * TVA;
 				this->Close();

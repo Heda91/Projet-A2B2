@@ -9,6 +9,7 @@ C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ClientObject.cpp;C:\cours\A2\bloc 
 C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ClientRepo.cpp;C:\cours\A2\bloc 2 (POO)\projet\code\Project2\x64\Debug\ClientRepo.obj
 C:\cours\A2\bloc 2 (POO)\projet\code\Project2\CommandAddArticleForm.cpp;C:\cours\A2\bloc 2 (POO)\projet\code\Project2\x64\Debug\CommandAddArticleForm.obj
 C:\cours\A2\bloc 2 (POO)\projet\code\Project2\CommandAddClientForm.cpp;C:\cours\A2\bloc 2 (POO)\projet\code\Project2\x64\Debug\CommandAddClientForm.obj
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\CommandAddReglementForm.cpp;C:\cours\A2\bloc 2 (POO)\projet\code\Project2\x64\Debug\CommandAddReglementForm.obj
 C:\cours\A2\bloc 2 (POO)\projet\code\Project2\CommandForm.cpp;C:\cours\A2\bloc 2 (POO)\projet\code\Project2\x64\Debug\CommandForm.obj
 C:\cours\A2\bloc 2 (POO)\projet\code\Project2\CommandForm2.cpp;C:\cours\A2\bloc 2 (POO)\projet\code\Project2\x64\Debug\CommandForm2.obj
 C:\cours\A2\bloc 2 (POO)\projet\code\Project2\CommandObject.cpp;C:\cours\A2\bloc 2 (POO)\projet\code\Project2\x64\Debug\CommandObject.obj
@@ -26,6 +27,7 @@ C:\cours\A2\bloc 2 (POO)\projet\code\Project2\PersonnelObject.cpp;C:\cours\A2\bl
 C:\cours\A2\bloc 2 (POO)\projet\code\Project2\PersonnelRepo.cpp;C:\cours\A2\bloc 2 (POO)\projet\code\Project2\x64\Debug\PersonnelRepo.obj
 C:\cours\A2\bloc 2 (POO)\projet\code\Project2\PrincipalForm.cpp;C:\cours\A2\bloc 2 (POO)\projet\code\Project2\x64\Debug\PrincipalForm.obj
 C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ReglementObject.cpp;C:\cours\A2\bloc 2 (POO)\projet\code\Project2\x64\Debug\ReglementObject.obj
+C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ReglementRepo.cpp;C:\cours\A2\bloc 2 (POO)\projet\code\Project2\x64\Debug\ReglementRepo.obj
 C:\cours\A2\bloc 2 (POO)\projet\code\Project2\StatisticsForm.cpp;C:\cours\A2\bloc 2 (POO)\projet\code\Project2\x64\Debug\StatisticsForm.obj
 C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ViewClientForm.cpp;C:\cours\A2\bloc 2 (POO)\projet\code\Project2\x64\Debug\ViewClientForm.obj
 C:\cours\A2\bloc 2 (POO)\projet\code\Project2\ViewCommandForm.cpp;C:\cours\A2\bloc 2 (POO)\projet\code\Project2\x64\Debug\ViewCommandForm.obj
