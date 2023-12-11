@@ -486,8 +486,10 @@ namespace Display {
 			ReglementObject^ ro = gcnew ReglementObject();
 			CommandAddReglementForm^ command_add_reg_form = gcnew CommandAddReglementForm(ro);
 			command_add_reg_form->ShowDialog();
-			this->co->addReglement(ro);
-			this->reload();
+			if (ro->getMoyenPaiement() != "") {//a valider
+				this->co->addReglement(ro);
+				this->reload();
+			}
 		}
 		void buttonDelReglement(System::Object^ sender, System::EventArgs^ e) {
 			ReglementObject^ ro = (ReglementObject^)this->dgv_reglement->SelectedRows[0]->Tag;
@@ -545,7 +547,7 @@ namespace Display {
 			this->button_add_article->Enabled = true;
 			this->button_del_article->Enabled = true;
 			this->button_add_reglement->Enabled = true;
-			this->button_add_reglement->Enabled = true;
+			this->button_del_reglement->Enabled = true;
 			this->Refresh();
 		}
 
